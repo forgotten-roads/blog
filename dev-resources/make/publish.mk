@@ -1,4 +1,4 @@
-DOCS_DIR = $(ROOT_DIR)/blog
+DOCS_DIR = $(ROOT_DIR)/docs
 REPO = $(shell git config --get remote.origin.url)
 DOCS_BUILD_DIR = $(DOCS_DIR)/build
 DOCS_PROD_DIR = $(DOCS_DIR)/master
