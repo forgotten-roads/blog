@@ -1,7 +1,8 @@
 PROJ = blog
 ROOT_DIR = $(shell pwd)
 
-include dev-resources/make/code.mk
 include dev-resources/make/publish.mk
+include dev-resources/make/setup.mk
+include dev-resources/make/code.mk
 include dev-resources/make/test.mk
 include dev-resources/make/git.mk

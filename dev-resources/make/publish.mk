@@ -2,22 +2,26 @@ DOCS_DIR = $(ROOT_DIR)/docs
 REPO = $(shell git config --get remote.origin.url)
 LOCAL_DOCS_HOST = localhost
 LOCAL_DOCS_PORT = 5099
+COLOUR_THEME = dark-green
 
 .PHONY: blog
 
-clean-blog:
+blog-clean:
 	@echo "\nCleaning old blog build ..."
 
-pre-blog:
+blog-pre:
 	@echo "\nBuilding blog ...\n"
 
-clojure-blog:
+blog-css:
+	@lessc less/styles-$(COLOUR_THEME).less docs/css/styles.css
+
+blog-clojure:
 	@echo 'Add a `lein` command here ...'
 
-local-blog: pre-blog clojure-blog
+blog-local: blog-pre blog-css blog-clojure
 
-blog: clean-blog local-blog
+blog: blog-clean blog-local
 
-devblog: blog
+blog-dev: blog
 	@echo "\nRunning blog server on http://$(LOCAL_DOCS_HOST):$(LOCAL_DOCS_PORT)..."
 	@lein simpleton $(LOCAL_DOCS_PORT) file :from $(DOCS_DIR)
