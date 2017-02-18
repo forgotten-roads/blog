@@ -2,7 +2,8 @@ DOCS_DIR = $(ROOT_DIR)/docs
 REPO = $(shell git config --get remote.origin.url)
 LOCAL_DOCS_HOST = localhost
 LOCAL_DOCS_PORT = 5099
-COLOUR_THEME = dark-green
+#COLOUR_THEME = dark-green
+COLOUR_THEME = elegantblue
 
 .PHONY: blog
 
