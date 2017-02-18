@@ -2,7 +2,6 @@ DOCS_DIR = $(ROOT_DIR)/blog
 REPO = $(shell git config --get remote.origin.url)
 DOCS_BUILD_DIR = $(DOCS_DIR)/build
 DOCS_PROD_DIR = $(DOCS_DIR)/master
-CURRENT = $(DOCS_PROD_DIR)/current
 DOCS_GIT_HACK = $(DOCS_DIR)/.git
 LOCAL_DOCS_HOST = localhost
 LOCAL_DOCS_PORT = 5099
@@ -14,13 +13,12 @@ $(DOCS_GIT_HACK):
 
 clean-blog:
 	@echo "\nCleaning old blog build ..."
-	@rm -rf $(CURRENT)
 
 pre-blog:
 	@echo "\nBuilding blog ...\n"
 
 clojure-blog:
-	@lein codox
+	@echo 'Add a `lein` command here ...'
 
 local-blog: pre-blog clojure-blog
 
@@ -28,7 +26,7 @@ blog: clean-blog local-blog
 
 devblog: blog
 	@echo "\nRunning blog server on http://$(LOCAL_DOCS_HOST):$(LOCAL_DOCS_PORT)..."
-	@lein simpleton $(LOCAL_DOCS_PORT) file :from $(CURRENT)
+	@lein simpleton $(LOCAL_DOCS_PORT) file :from $(DOCS_PROD_DIR)
 
 prod-blog: clean-blog $(DOCS_GIT_HACK) local-blog
 

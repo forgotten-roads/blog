@@ -2,7 +2,7 @@ PROJ = forgotten-roads.github.io
 NAME = blog
 ROOT_DIR = $(shell pwd)
 
-include dev-resource/make/code.mk
-include dev-resource/make/publish.mk
-include dev-resource/make/test.mk
-include dev-resource/make/git.mk
+include dev-resources/make/code.mk
+include dev-resources/make/publish.mk
+include dev-resources/make/test.mk
+include dev-resources/make/git.mk
