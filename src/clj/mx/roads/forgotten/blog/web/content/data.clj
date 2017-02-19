@@ -18,24 +18,22 @@
   [req]
   (merge
     (base req)
-    {:active "about"
-     :subtitle " :: About"}))
+    {:active "about"}))
 
 (defn credits
   [req]
   (merge
     (base req)
-    {:active "credits"
-     :subtitle " :: Credits"}))
+    {:active "credits"}))
 
 (defn starter
   [req]
   (merge
     (base req)
-    {:subtitle " :: Starter Page"}))
+    {}))
 
 (defn post
   [req]
   (merge
     (base req)
-    {:subtitle " :: Blog Post"}))
+    {}))
