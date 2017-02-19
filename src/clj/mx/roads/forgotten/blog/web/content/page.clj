@@ -25,3 +25,11 @@
     (selmer/render-file
       "templates/credits.html"
       (data/credits req))))
+
+(defn starter
+  ([]
+    (starter {}))
+  ([req]
+    (selmer/render-file
+      "templates/starter.html"
+      (data/starter req))))

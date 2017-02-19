@@ -11,14 +11,12 @@
 (defn index
   [req]
   (merge
-    req
     (base req)
     {:active "index"}))
 
 (defn about
   [req]
   (merge
-    req
     (base req)
     {:active "about"
      :subtitle " :: About"}))
@@ -26,7 +24,12 @@
 (defn credits
   [req]
   (merge
-    req
     (base req)
     {:active "credits"
      :subtitle " :: Credits"}))
+
+(defn starter
+  [req]
+  (merge
+    (base req)
+    {:subtitle " :: Starter Page"}))
