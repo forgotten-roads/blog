@@ -33,3 +33,9 @@
   (merge
     (base req)
     {:subtitle " :: Starter Page"}))
+
+(defn post
+  [req]
+  (merge
+    (base req)
+    {:subtitle " :: Blog Post"}))

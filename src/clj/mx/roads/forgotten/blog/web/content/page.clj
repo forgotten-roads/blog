@@ -33,3 +33,11 @@
     (selmer/render-file
       "templates/starter.html"
       (data/starter req))))
+
+(defn post
+  ([]
+    (post {}))
+  ([req]
+    (selmer/render-file
+      "templates/post.html"
+      (data/post req))))
