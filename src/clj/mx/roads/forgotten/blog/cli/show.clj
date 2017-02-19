@@ -23,6 +23,8 @@
   ```
     config          Display the current blog configuration
     port            Display the HTTP port configuration
+    metadata        Display the metadata for all posts
+    metadata POST   Display the metadata for a given blog post
   ```"
   [[cmd & args]]
   (log/debug "Got cmd:" cmd)
@@ -30,5 +32,8 @@
   (case cmd
     :all (pprint (config/blog))
     :port (pprint (config/get-port))
+    :metadata (if-let [post (first args)]
+                (pprint (metadata/get post))
+                (pprint (metadata/get-all)))
     :help (help-cmd args)
     (pprint (config/blog))))
