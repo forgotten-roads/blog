@@ -3,14 +3,18 @@
             [mx.roads.forgotten.blog.util :as util]
             [taoensso.timbre :as log]))
 
-(defn lookup
+(defn all
   []
-  (:blog (project/read)))
+  (project/read))
+
+(defn blog
+  []
+  (:blog (all)))
 
 (defn get-port
   []
-  (:dev-port (lookup)))
+  (:dev-port (blog)))
 
 (defn get-output-dir
   []
-  (:output-dir (lookup)))
+  (:output-dir (blog)))
