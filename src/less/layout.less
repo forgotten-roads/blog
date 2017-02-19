@@ -2,8 +2,8 @@
 
 /* Masthead is the upper part of the header, containing logo and navigation*/
 .masthead {
-    padding-top:55px;
-    padding-bottom:55px;
+    padding-top:5px;
+    padding-bottom:10px;
 
     #logo {
         float:left;
@@ -17,22 +17,22 @@
             margin-top:-10px;
         }
 
-    } 
+    }
 }
 
 /* Widewrappers that span the whole width of the page */
 .widewrapper {
     background-color: @background;
-    
+
     &.main {
-        .box-shadow(inset 1px 10px 8px -8px @background-shadow);    
+        .box-shadow(inset 1px 10px 8px -8px @background-shadow);
     }
 
     &.masthead {
         background-color:@masthead-background;
         color:@masthead-text;
     }
-    
+
     &.subheader {
         background-color:@subheader-background;
         color:@subheader-text; //Breadcrumb is separately defined in elements.less
