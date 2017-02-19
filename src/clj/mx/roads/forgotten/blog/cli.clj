@@ -1,7 +1,7 @@
 (ns mx.roads.forgotten.blog.cli
   (:require [clojure.pprint :refer [pprint]]
             [clojusc.twig :as logger]
-            [mx.roads.forgotten.blog.config :as config]
+            [mx.roads.forgotten.blog.cli.config :as config]
             [mx.roads.forgotten.blog.generator :as generator]
             [mx.roads.forgotten.blog.util :as util]
             [mx.roads.forgotten.blog.web :as web]
@@ -40,13 +40,13 @@
     usage information about the particular command in question, e.g.:
 
   ```
-    $ frmx gen help
+    $ frmx config help
   ```"
   [[cmd & args]]
   (log/debug "Got cmd:" cmd)
   (log/debug "Got args:" args)
   (case cmd
-    :config (pprint (config/blog))
+    :config (config/run args)
     :gen (generator/run args)
     :run (web/run)
     :help (help-cmd args)

@@ -9,7 +9,8 @@
   {"/index.html" (page/front-page)
    "/about.html" (page/about)
    "/credits.html" (page/credits)
-   "/starter.html" (page/starter)})
+   "/starter.html" (page/starter)
+   "/post.html" (page/post)})
 
 (def app (stasis/serve-pages routes))
 
