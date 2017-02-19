@@ -22,3 +22,11 @@
     (base req)
     {:active "about"
      :subtitle " :: About"}))
+
+(defn credits
+  [req]
+  (merge
+    req
+    (base req)
+    {:active "credits"
+     :subtitle " :: Credits"}))

@@ -7,7 +7,8 @@
 
 (def routes
   {"/index.html" (page/front-page)
-   "/about.html" (page/about)})
+   "/about.html" (page/about)
+   "/credits.html" (page/credits)})
 
 (def app (stasis/serve-pages routes))
 

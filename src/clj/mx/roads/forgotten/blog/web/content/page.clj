@@ -17,3 +17,11 @@
     (selmer/render-file
       "templates/about.html"
       (data/about req))))
+
+(defn credits
+  ([]
+    (credits {}))
+  ([req]
+    (selmer/render-file
+      "templates/credits.html"
+      (data/credits req))))
