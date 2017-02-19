@@ -13,7 +13,7 @@
     [me.raynes/cegdown "0.1.1"]
     [org.clojure/clojure "1.8.0"]
     [selmer "1.10.6"]
-    [stasis "2.3.0" :exclusions [ring/ring-codec]]]
+    [stasis "2.3.0"]]
   :source-paths ["src/clj"]
   :blog {
     :dev-port 5099
@@ -31,10 +31,9 @@
       :plugins [
         [lein-simpleton "1.3.0"]]
       :dependencies [
+        [http-kit "2.2.0"]
         [leiningen-core "2.7.1"]
-        [org.clojure/tools.namespace "0.2.11"]
-        [javax.servlet/servlet-api "2.5"]
-        [ring/ring-core "1.6.0-beta7"]]
+        [org.clojure/tools.namespace "0.2.11"]]
       ;:pedantic? :warn
       }
     :test {
