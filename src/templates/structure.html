@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js"> <!--<![endif]-->
+    {% block head-prepends %}
+    {% endblock %}
+  <head>
+    <meta charset="utf-8">
+    <title>
+    {% block page-title %}
+      FRMX 🛣 Blog
+      {% block page-subtitle %}
+      {% endblock %}
+    {% endblock %}
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CPT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/styles.css" id="theme-styles">
+
+    <!--[if lt IE 9]>
+        <script src="assets/respond/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    <script src="//code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/jquery/dist/jquery.min.js"><\/script>')</script>
+    {% block head-postpends %}
+    {% endblock %}
+  </head>
+  <body>
+   {% block header %}
+    <header>
+      {% block header-content %}
+      {% endblock %}
+    </header>
+    {% endblock %}
+    {% block main %}
+    <main id="main-content">
+      {% block main-content %}
+      <div class="widewrapper main">
+        <div class="container">
+        {% block wrapped-main-content %}
+        {% endblock %}
+        </div>
+      </div>
+      {% endblock %}
+    </main>
+    {% endblock %}
+    {% block footer %}
+    <footer>
+      {% block footer-content %}
+      {% endblock %}
+    </footer>
+    {% endblock %}
+    {% block post-scripts %}
+    {% endblock %}
+  </body>
+</html>
