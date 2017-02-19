@@ -5,7 +5,8 @@ LOCAL_DOCS_HOST = localhost
 LOCAL_DOCS_PORT = $(lastword $(shell grep dev-port project.clj))
 LESS_DIR = src/less
 #COLOUR_THEME = dark-green
-COLOUR_THEME = elegantblue
+#COLOUR_THEME = elegantblue
+COLOUR_THEME = frmx
 
 blog: blog-clean blog-local
 
