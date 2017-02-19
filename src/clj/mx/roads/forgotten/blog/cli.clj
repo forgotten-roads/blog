@@ -1,6 +1,7 @@
 (ns mx.roads.forgotten.blog.cli
   (:require [clojure.pprint :refer [pprint]]
             [clojusc.twig :as logger]
+            [mx.roads.forgotten.blog.config :as config]
             [mx.roads.forgotten.blog.generator :as generator]
             [mx.roads.forgotten.blog.util :as util]
             [mx.roads.forgotten.blog.web :as web]
@@ -26,6 +27,7 @@
 
   Commands:
   ```
+    config   Display the current blog configuration
     gen      Generate update static content for blog
     run      Run the FRMX Blog locally as a Ring app
     help     Display this usage message
@@ -45,7 +47,7 @@
   (log/debug "Got cmd:" cmd)
   (log/debug "Got args:" args)
   (case cmd
-    :config ()
+    :config (pprint (config/lookup))
     :gen (generator/run args)
     :run (web/run)
     :help (help-cmd args)

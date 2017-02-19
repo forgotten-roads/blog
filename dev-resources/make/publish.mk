@@ -1,7 +1,9 @@
 DOCS_DIR = $(ROOT_DIR)/docs
+CSS_DIR = $(DOCS_DIR)/css
 REPO = $(shell git config --get remote.origin.url)
 LOCAL_DOCS_HOST = localhost
 LOCAL_DOCS_PORT = 5099
+LESS_DIR = src/less
 #COLOUR_THEME = dark-green
 COLOUR_THEME = elegantblue
 
@@ -14,7 +16,7 @@ blog-pre:
 	@echo "\nBuilding blog ...\n"
 
 blog-css:
-	@lessc less/styles-$(COLOUR_THEME).less docs/css/styles.css
+	@lessc $(LESS_DIR)/styles-$(COLOUR_THEME).less $(CSS_DIR)/styles.css
 
 blog-clojure:
 	@frmx gen
