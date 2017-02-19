@@ -46,10 +46,12 @@
     <main id="main-content">
       {% block main-content %}
       <div class="widewrapper main">
-        <div class="container">
         {% block wrapped-main-content %}
-        {% endblock %}
+        <div class="container">
+          {% block contained-main-content %}
+          {% endblock %}
         </div>
+        {% endblock %}
       </div>
       {% endblock %}
     </main>
