@@ -13,11 +13,14 @@
     [me.raynes/cegdown "0.1.1"]
     [org.clojure/clojure "1.8.0"]
     [selmer "1.10.6"]
-    [stasis "2.3.0"]]
+    [stasis "2.3.0"]
+    [tentacles "0.5.1"]]
   :source-paths ["src/clj"]
   :blog {
     :dev-port 5099
-    :output-dir "docs"}
+    :output-dir "docs"
+    :cli {
+      :log-level :info}}
   :profiles {
     :uberjar {:aot :all}
     :dev {

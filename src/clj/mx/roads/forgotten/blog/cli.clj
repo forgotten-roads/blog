@@ -43,7 +43,6 @@
     $ frmx gen help
   ```"
   [[cmd & args]]
-  (logger/set-level! ['mx.roads.forgotten.blog] :info)
   (log/debug "Got cmd:" cmd)
   (log/debug "Got args:" args)
   (case cmd

@@ -18,3 +18,11 @@
 (defn get-output-dir
   []
   (:output-dir (blog)))
+
+(defn cli
+  []
+  (:cli (blog)))
+
+(defn log-level
+  []
+  (:log-level (cli)))

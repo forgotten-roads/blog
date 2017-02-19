@@ -1,7 +1,8 @@
 (ns mx.roads.forgotten.blog.main
   (:require [clojusc.twig :as logger]
-            [mx.roads.forgotten.blog.web :as web]
             [mx.roads.forgotten.blog.cli :as cli]
+            [mx.roads.forgotten.blog.config :as config]
+            [mx.roads.forgotten.blog.web :as web]
             [taoensso.timbre :as log])
   (:gen-class))
 
@@ -17,7 +18,7 @@
   ([mode & args]
     ;; Set the initial log-level before the components set the log-levels for
     ;; the configured namespaces
-    (logger/set-level! ['mx.roads.forgotten.blog] :info)
+    (logger/set-level! ['mx.roads.forgotten.blog] (config/log-level))
     (log/infof "Running FRMX Blog application in %s mode ..." mode)
     (log/debug "Passing the following args to the application:" args)
     (case (keyword mode)
