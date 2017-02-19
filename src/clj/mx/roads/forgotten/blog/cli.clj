@@ -43,11 +43,11 @@
     $ frmx gen help
   ```"
   [[cmd & args]]
-  (logger/set-level! ['ngap.onboarding] :info)
+  (logger/set-level! ['mx.roads.forgotten.blog] :info)
   (log/debug "Got cmd:" cmd)
   (log/debug "Got args:" args)
   (case cmd
-    :config (pprint (config/lookup))
+    :config (pprint (config/blog))
     :gen (generator/run args)
     :run (web/run)
     :help (help-cmd args)
