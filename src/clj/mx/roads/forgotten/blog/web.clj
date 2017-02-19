@@ -6,7 +6,8 @@
             [taoensso.timbre :as log]))
 
 (def routes
-  {"/index.html" (page/front-page {})})
+  {"/index.html" (page/front-page)
+   "/about.html" (page/about)})
 
 (def app (stasis/serve-pages routes))
 

@@ -3,13 +3,17 @@
             [selmer.parser :as selmer]))
 
 (defn front-page
-  [req]
-  (selmer/render-file
-    "templates/front-page.html"
-    (data/base-page req)))
+  ([]
+    (front-page {}))
+  ([req]
+    (selmer/render-file
+      "templates/front-page.html"
+      (data/index req))))
 
 (defn about
-  [req]
-  (selmer/render-file
-    "templates/page.html"
-    (data/base-page req)))
+  ([]
+    (about {}))
+  ([req]
+    (selmer/render-file
+      "templates/about.html"
+      (data/about req))))
