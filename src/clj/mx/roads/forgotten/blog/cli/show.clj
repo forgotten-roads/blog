@@ -1,27 +1,28 @@
-(ns mx.roads.forgotten.blog.cli.config
+(ns mx.roads.forgotten.blog.cli.show
   (:require [clojure.pprint :refer [pprint]]
             [clojusc.twig :as logger]
             [mx.roads.forgotten.blog.config :as config]
+            [mx.roads.forgotten.blog.meta :as meta]
             [mx.roads.forgotten.blog.util :as util]
             [taoensso.timbre :as log]))
 
 (defn help-cmd
   [& args]
-  (util/print-docstring 'mx.roads.forgotten.blog.cli.config 'run))
+  (util/print-docstring 'mx.roads.forgotten.blog.cli.show 'run))
 
 (defn run
   "
   Usage:
   ```
-    frmx config [SUBCOMMAND | help]
+    frmx show [SUBCOMMAND | help]
   ```
 
-  If no SUBCOMMAND is provided, the default 'all' will be used.
+  If no SUBCOMMAND is provided, the default 'config' will be used.
 
   Subcommands:
   ```
-    all      Display the current blog configuration
-    port     Display the HTTP port configuration
+    config          Display the current blog configuration
+    port            Display the HTTP port configuration
   ```"
   [[cmd & args]]
   (log/debug "Got cmd:" cmd)
