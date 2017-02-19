@@ -33,4 +33,4 @@ blog-dev-generated: blog
 blog-dev:
 	@echo "\nRunning blog server from code ..."
 	@echo "URL: http://$(LOCAL_DOCS_HOST):$(LOCAL_DOCS_PORT)"
-	@lein ring server-headless $(LOCAL_DOCS_PORT)
+	@frmx run
