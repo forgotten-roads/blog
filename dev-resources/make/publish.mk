@@ -7,7 +7,7 @@ LESS_DIR = src/less
 #COLOUR_THEME = dark-green
 COLOUR_THEME = elegantblue
 
-.PHONY: blog
+blog: blog-clean blog-local
 
 blog-clean:
 	@echo "\nCleaning old blog build ..."
@@ -20,10 +20,9 @@ blog-css:
 
 blog-clojure:
 	@frmx gen
+	@echo
 
 blog-local: blog-pre blog-css blog-clojure
-
-blog: blog-clean blog-local
 
 blog-dev-generated: blog
 	@echo "\nRunning blog server from generated static content ..."
@@ -34,3 +33,5 @@ blog-dev:
 	@echo "\nRunning blog server from code ..."
 	@echo "URL: http://$(LOCAL_DOCS_HOST):$(LOCAL_DOCS_PORT)"
 	@frmx run
+
+.PHONY: blog

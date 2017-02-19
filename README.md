@@ -11,6 +11,12 @@ $ make setup
 ## Generating Blog Content
 
 ```bash
+$ make
+```
+
+Or, more explicitely:
+
+```bash
 $ make blog
 ```
 
