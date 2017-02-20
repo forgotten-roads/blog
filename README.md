@@ -9,10 +9,11 @@
 $ make setup
 ```
 
-Set the `PATH` to include the project's executable:
+Set the `PATH` to include the project's executable and setup auto-completion:
 
 ```bash
-export PATH=$PATH:`pwd`/bin
+$ export PATH=$PATH:`pwd`/bin
+$ source dev-resources/shell/frmx-bash-autocompletion
 ```
 
 
