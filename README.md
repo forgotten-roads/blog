@@ -1,6 +1,6 @@
 # blog.forgotten.roads.mx
 
-*The Blog of Forgotten Roads MX*
+*The Forgotten Roads Blog for Motorcycle Excursionists*
 
 
 ## Prerequisites
