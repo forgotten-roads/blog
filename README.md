@@ -1,4 +1,4 @@
-# forgotten-roads.github.io
+# blog.forgotten.roads.mx
 
 *The Blog of Forgotten Roads MX*
 
@@ -16,7 +16,22 @@ export PATH=$PATH:`pwd`/bin
 ```
 
 
-## Generating Blog Content
+## Creating Post Stubs
+
+```bash
+$ frmx new post md
+```
+
+or, for example,
+
+```bash
+$ frmx new post html
+```
+
+For more options see `frmx new post help`.
+
+
+## Generating Static Files
 
 ```bash
 $ frmx gen
@@ -28,3 +43,12 @@ Or, more explicitely:
 $ make blog
 ```
 
+
+## Checking Metadata and Content
+
+TBD
+
+
+## Publishing Content
+
+TBD
