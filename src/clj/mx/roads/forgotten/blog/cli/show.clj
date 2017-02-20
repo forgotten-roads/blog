@@ -4,7 +4,8 @@
             [mx.roads.forgotten.blog.config :as config]
             [mx.roads.forgotten.blog.meta :as meta]
             [mx.roads.forgotten.blog.util :as util]
-            [taoensso.timbre :as log]))
+            [taoensso.timbre :as log])
+  (:refer-clojure :exclude [meta]))
 
 (defn help-cmd
   [& args]
@@ -33,7 +34,7 @@
     :all (pprint (config/blog))
     :port (pprint (config/get-port))
     :metadata (if-let [post (first args)]
-                (pprint (metadata/get post))
-                (pprint (metadata/get-all)))
+                (pprint (meta/get post))
+                (pprint (meta/get-all)))
     :help (help-cmd args)
     (pprint (config/blog))))

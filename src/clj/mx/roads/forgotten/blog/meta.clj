@@ -2,11 +2,12 @@
   (:require [clojure.pprint :refer [pprint]]
             [clojusc.twig :as logger]
             [mx.roads.forgotten.blog.util :as util]
-            [taoensso.timbre :as log]))
+            [taoensso.timbre :as log])
+  (:refer-clojure :exclude [get]))
 
 (defn get
   [post]
-  post))
+  post)
 
 (defn get-all
   []
