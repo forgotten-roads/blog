@@ -37,10 +37,11 @@ For more options see `frmx new post help`.
 $ frmx gen
 ```
 
-Or, more explicitely:
+If you'd like to run a dev web server with the generated content served at the
+doc root, you can use this `make` target:
 
-```bash
-$ make blog
+```
+$ make blog-dev-generated
 ```
 
 
