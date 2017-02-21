@@ -8,7 +8,7 @@
             [taoensso.timbre :as log]))
 
 (def stub-metadata
-  "{:title \"REQUIRED\"
+"{:title \"REQUIRED\"
  :subtitle \"\"
  :excerpt \"\"
  :author \"REQUIRED\"
@@ -16,16 +16,65 @@
  :tags []
  :comment-link \"\"}\n")
 
+(def clj-content
+"(defn metadata
+  []
+  {:title \"REQUIRED\"
+   :subtitle \"\"
+   :excerpt \"\"
+   :author \"REQUIRED\"
+   :category \"REQUIRED\"
+   :tags []
+   :comment-link \"\"})\n
+(defn content
+  []
+  \"REQUIRED\")\n")
+
+(def edn-content
+"{:title \"REQUIRED\"
+ :subtitle \"\"
+ :excerpt \"\"
+ :author \"REQUIRED\"
+ :category \"REQUIRED\"
+ :tags []
+ :comment-link \"\"
+ :content \"REQUIRED\"}\n")
+
+;; Note that rfc5322-content uses the standard field names, when something
+;; close exists. The following show how the RFC 5322 fields map to our metadata
+;; fields:
+;;
+;; * Subject -> title
+;; * From -> author (Fistname Lastname)
+;; * Keywords -> tags (comma-separated)
+;; * Comments -> comment-link
+;;
+;; The rest of the fields used are defined as "optional" in RFC 5322:
+;;
+;; * Subtitle
+;; * Excerpt
+;; * Category
+;; * Content-Type
+
 (def rfc5322-content
-  "TBD")
+"Subject: REQUIRED (title)
+Subtitle:
+Excerpt:
+From: REQUIRED (author)
+Category:
+Keywords:
+Comments:
+Content-Type: md
+
+[content goes here]\n")
 
 (defn stub-content
   [content-type]
   (case content-type
     :md ""
     :html ""
-    :clj "(defn content [] \"REQUIRED\")"
-    :edn "{:content \"REQUIRED\"}"
+    :clj clj-content
+    :edn edn-content
     :rfc5322 rfc5322-content))
 
 (defn write-content
@@ -45,7 +94,10 @@
     (log/infof "Writing content and metadata files to %s ..." path)
     (io/make-parents (str path "/child"))
     (write-content path content-type)
-    (write-edn path)))
+    (when-not (or (= content-type :rfc5322)
+                  (= content-type :edn)
+                  (= content-type :clj))
+      (write-edn path))))
 
 (defn make-markdown-post
   [date]

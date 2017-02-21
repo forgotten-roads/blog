@@ -9,12 +9,17 @@
     :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :dependencies [
     [clojusc/env-ini "0.3.0-SNAPSHOT"]
+    [clojusc/rfc5322 "0.3.0-SNAPSHOT"]
     [clojusc/twig "0.3.1-SNAPSHOT"]
     [me.raynes/cegdown "0.1.1"]
     [org.clojure/clojure "1.8.0"]
     [selmer "1.10.6"]
     [stasis "2.3.0"]
-    [tentacles "0.5.1"]]
+    [tentacles "0.5.1"]
+    ;; XXX remove these:
+    [org.clojure/java.classpath "0.2.3"]
+
+    ]
   :source-paths ["src/clj"]
   :blog {
     :dev-port 5099
