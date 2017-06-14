@@ -37,3 +37,15 @@ blog-dev:
 
 .PHONY: blog
 
+publish-prep:
+	cp resources/site-verification/* docs/
+	cp resources/sitemaps/* docs/
+
+publish-aws-all: publish-prep
+	@aws --profile=frmx s3 cp docs/ s3://blog.forgotten.roads.mx/ --recursive
+
+publish-aws: publish-prep
+	@for f in `git status|grep modified|awk '{print $$2}'|egrep '^docs/'` ; do \
+		aws --profile=frmx s3 \
+			cp "$$f" s3://blog.forgotten.roads.mx/`echo $$f|sed -e 's/^docs\///'` ; \
+	done
