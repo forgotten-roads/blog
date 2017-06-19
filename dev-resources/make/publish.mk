@@ -4,8 +4,6 @@ REPO = $(shell git config --get remote.origin.url)
 LOCAL_DOCS_HOST = localhost
 LOCAL_DOCS_PORT = $(lastword $(shell grep dev-port project.clj))
 LESS_DIR = src/less
-#COLOUR_THEME = dark-green
-#COLOUR_THEME = elegantblue
 COLOUR_THEME = frmx
 AWS_BUCKET = forgotten.roads.mx/blog
 
@@ -26,7 +24,7 @@ blog-clojure:
 
 blog-local: blog-pre blog-css blog-clojure
 
-blog-dev-generated: blog
+blog-dev-gen: blog
 	@echo "\nRunning blog server from generated static content ..."
 	@echo "URL: http://$(LOCAL_DOCS_HOST):$(LOCAL_DOCS_PORT)"
 	@lein simpleton $(LOCAL_DOCS_PORT) file :from $(DOCS_DIR)
