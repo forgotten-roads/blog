@@ -7,6 +7,7 @@ LESS_DIR = src/less
 #COLOUR_THEME = dark-green
 #COLOUR_THEME = elegantblue
 COLOUR_THEME = frmx
+AWS_BUCKET = forgotten.roads.mx/blog
 
 blog: blog-clean blog-local
 
@@ -42,10 +43,10 @@ publish-prep:
 	cp resources/sitemaps/* docs/
 
 publish-aws-all: publish-prep
-	@aws --profile=frmx s3 cp docs/ s3://blog.forgotten.roads.mx/ --recursive
+	@aws --profile=frmx s3 cp docs/ s3://$(AWS_BUCKET)/ --recursive
 
 publish-aws: publish-prep
 	@for f in `git status|grep modified|awk '{print $$2}'|egrep '^docs/'` ; do \
 		aws --profile=frmx s3 \
-			cp "$$f" s3://blog.forgotten.roads.mx/`echo $$f|sed -e 's/^docs\///'` ; \
+			cp "$$f" s3://$(AWS_BUCKET)`echo $$f|sed -e 's/^docs\///'` ; \
 	done
