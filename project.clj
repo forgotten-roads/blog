@@ -1,18 +1,23 @@
 (defproject mx.roads.forgotten/blog "0.1.0-SNAPSHOT"
   :description "Blog for Forgotten Roads MX"
-  :url "https://blog.forgotten.roads.mx/"
+  :url "https://forgotten.roads.mx/blog/"
   :scm {
     :name "git"
-    :url "https://github.com/forgotten-roads/forgotten-roads.github.io"}
+    :url "https://github.com/forgotten-roads/blog"}
   :license {
     :name "Apache License, Version 2.0"
     :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :dependencies [
     [clojusc/env-ini "0.3.0-SNAPSHOT"]
     [clojusc/rfc5322 "0.3.0-SNAPSHOT"]
+    [clojusc/trifl "0.1.0-SNAPSHOT"]
     [clojusc/twig "0.3.1-SNAPSHOT"]
+    [dragon "0.1.0-SNAPSHOT"]
+    [markdown-clj "0.9.97"]
     [me.raynes/cegdown "0.1.1"]
     [org.clojure/clojure "1.8.0"]
+    [org.clojure/data.xml "0.0.8"]
+    [ring/ring-core "1.6.0-RC1"]
     [selmer "1.10.6"]
     [stasis "2.3.0"]
     [tentacles "0.5.1"]
@@ -21,11 +26,17 @@
 
     ]
   :source-paths ["src/clj"]
-  :blog {
-    :dev-port 5099
+  :dragon {
+    :domain "forgotten.roads.mx/blog"
+    :name "Blog for Forgotten Roads MX"
+    :description "Articles, Reviews, & Explorations for the Motorcycle Excursionist"
+    :dev-port 5096
     :output-dir "docs"
+    :posts-path "/archives"
+    :feed-count 20
     :cli {
-      :log-level :info}}
+      :log-level :info
+      :log-ns [mx.roads dragon]}}
   :profiles {
     :uberjar {:aot :all}
     :dev {

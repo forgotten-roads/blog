@@ -1,16 +1,20 @@
 (ns mx.roads.forgotten.blog.cli
   (:require [clojure.pprint :refer [pprint]]
             [clojusc.twig :as logger]
+            [dragon.config :as config]
+            [dragon.generator :as gen]
+            [dragon.util :as util]
+            [dragon.web :as web]
             [mx.roads.forgotten.blog.cli.new :as new]
             [mx.roads.forgotten.blog.cli.show :as show]
-            [mx.roads.forgotten.blog.generator :as generator]
-            [mx.roads.forgotten.blog.util :as util]
-            [mx.roads.forgotten.blog.web :as web]
-            [taoensso.timbre :as log]))
+            [mx.roads.forgotten.blog.routes :refer [routes]]
+            [taoensso.timbre :as log]
+            [trifl.core :refer [sys-prop]]
+            [trifl.docs :as docs]))
 
 (defn help-cmd
   [& args]
-  (util/print-docstring 'mx.roads.forgotten.blog.cli 'run))
+  (docs/print-docstring 'mx.roads.forgotten.blog.cli 'run))
 
 (defn version-cmd
   []
@@ -50,8 +54,8 @@
   (case cmd
     :new (new/run args)
     :show (show/run args)
-    :gen (generator/run args)
-    :run (web/run)
+    :gen (gen/run (routes (config/posts-path)) (config/output-dir))
+    :run (web/run (routes (config/posts-path)) (config/port))
     :help (help-cmd args)
     :version (version-cmd)
     ;; Aliases

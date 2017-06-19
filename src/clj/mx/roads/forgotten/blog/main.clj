@@ -1,8 +1,9 @@
 (ns mx.roads.forgotten.blog.main
   (:require [clojusc.twig :as logger]
+            [dragon.config :as config]
+            [dragon.web :as web]
             [mx.roads.forgotten.blog.cli :as cli]
-            [mx.roads.forgotten.blog.config :as config]
-            [mx.roads.forgotten.blog.web :as web]
+            [mx.roads.forgotten.blog.routes :refer [routes]]
             [taoensso.timbre :as log])
   (:gen-class))
 
@@ -22,5 +23,6 @@
     (log/infof "Running FRMX Blog application in %s mode ..." mode)
     (log/debug "Passing the following args to the application:" args)
     (case (keyword mode)
-      :web (web/run)
+      :web (web/run (routes (config/posts-path))
+                    (config/port))
       :cli (cli/run (map keyword args)))))

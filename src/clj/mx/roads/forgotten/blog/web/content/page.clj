@@ -1,43 +1,81 @@
 (ns mx.roads.forgotten.blog.web.content.page
   (:require [mx.roads.forgotten.blog.web.content.data :as data]
-            [selmer.parser :as selmer]))
-
-(defn front-page
-  ([]
-    (front-page {}))
-  ([req]
-    (selmer/render-file
-      "templates/front-page.html"
-      (data/index req))))
+            [dragon.blog :as blog]
+            [dragon.web.content :as content]))
 
 (defn about
-  ([]
-    (about {}))
-  ([req]
-    (selmer/render-file
-      "templates/about.html"
-      (data/about req))))
+  []
+  (content/render
+    "templates/about.html"
+    (data/about)))
 
-(defn credits
-  ([]
-    (credits {}))
-  ([req]
-    (selmer/render-file
-      "templates/credits.html"
-      (data/credits req))))
-
-(defn starter
-  ([]
-    (starter {}))
-  ([req]
-    (selmer/render-file
-      "templates/starter.html"
-      (data/starter req))))
+(defn community
+  []
+  (content/render
+    "templates/community.html"
+    (data/community)))
 
 (defn post
-  ([]
-    (post {}))
-  ([req]
-    (selmer/render-file
-      "templates/post.html"
-      (data/post req))))
+  [data]
+  (content/render
+    "templates/post.html"
+    (data/post data)))
+
+(defn front-page
+  [data]
+  (content/render
+    "templates/front-page.html"
+    (data/front-page
+      data
+      :post-count 5
+      :column-count 2)))
+
+(defn archives
+  [data]
+  (content/render
+    "templates/archives.html"
+    (-> data
+        (blog/data-for-archives)
+        (data/archives))))
+
+(defn categories
+  [data]
+  (content/render
+    "templates/categories.html"
+    (-> data
+        (blog/data-for-categories)
+        (data/categories))))
+
+(defn tags
+  [data]
+  (content/render
+    "templates/tags.html"
+    (-> data
+        (blog/data-for-tags)
+        (data/tags))))
+
+(defn authors
+  [data]
+  (content/render
+    "templates/authors.html"
+    (-> data
+        (blog/data-for-authors)
+        (data/authors))))
+
+(defn design
+  []
+  (content/render
+    "templates/design.html"
+    (data/design)))
+
+(defn bootstrap-theme
+  []
+  (content/render
+    "templates/bootstrap-theme.html"
+    (data/design)))
+
+(defn blog-example
+  []
+  (content/render
+    "templates/blog-example.html"
+    (data/design)))

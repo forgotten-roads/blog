@@ -1,12 +1,13 @@
 (ns mx.roads.forgotten.blog.cli.new.post
   (:require [clojure.pprint :refer [pprint]]
-            [mx.roads.forgotten.blog.stub :as stub]
-            [mx.roads.forgotten.blog.util :as util]
-            [taoensso.timbre :as log]))
+            [dragon.stub :as stub]
+            [dragon.util :as util]
+            [taoensso.timbre :as log]
+            [trifl.docs :as docs]))
 
 (defn help-cmd
   [& args]
-  (util/print-docstring 'mx.roads.forgotten.blog.cli.new.post 'run))
+  (docs/print-docstring 'mx.roads.forgotten.blog.cli.new.post 'run))
 
 (defn run
   "
