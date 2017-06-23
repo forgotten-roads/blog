@@ -73,6 +73,14 @@ hr {
 .masthead #logo img {
   margin-top: -10px;
 }
+
+.page-header {
+  margin: 0;
+}
+
+.page-header img {
+  max-width: 100%;
+}
 /* Widewrappers that span the whole width of the page */
 .widewrapper {
   background-color: #feffff;
@@ -526,7 +534,7 @@ hr {
   }
 }
 .blog-aside {
-  padding-top: 125px;
+  padding-top: 0px;
 }
 @media (max-width: 767px) {
   .blog-aside {
