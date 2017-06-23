@@ -65,7 +65,7 @@
 
         </div>
 
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <aside class="col-md-4 blog-aside">
 
           <div class="sidebar-module sidebar-module-inset">
             <p class="social">
@@ -81,15 +81,21 @@
             </p>
           </div>
 
-          <div class="sidebar-module">
-            <h4>Category</h4>
+
+
+          <div class="aside-widget">
+            <header>
+              <h3>Category</h3>
+            </header>
             <p>
               <a href="{{ page-data.base-path }}/categories/#{{post-data.category}}">{{ post-data.category }}</a>
             </p>
           </div>
 
-          <div class="sidebar-module">
-            <h4>Tags</h4>
+          <div class="aside-widget">
+            <header>
+              <h3>Tags</h3>
+            </header>
             <p>
               {% for tag in tags %}
               <a href="{{ page-data.base-path }}/tags/#{{tag}}">{{ tag }}</a>
@@ -97,15 +103,19 @@
             </p>
           </div>
 
-          <div class="sidebar-module">
-            <h4>Post Data</h4>
+          <div class="aside-widget">
+            <header>
+              <h3>Post Data</h3>
+            </header>
             <p>Words: {{ post-data.word-count }}</p>
             <p>Characters: {{ post-data.char-count }}</p>
             </p>
           </div>
 
-          <div class="sidebar-module">
-            <h4>Neighboring Posts</h4>
+          <div class="aside-widget">
+            <header>
+              <h3>Neighboring Posts</h3>
+            </header>
             <div class="row">
               <div class="col-xs-6">Previous</div>
               <div class="col-xs-6">Next</div>
@@ -135,8 +145,8 @@
               </div>
             </div>
           </div>
+        </aside>
 
-        </div>
       </div>
 
     </div>
