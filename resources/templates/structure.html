@@ -4,8 +4,9 @@
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en" class="no-js"> <!--<![endif]-->
-    {% block head-prepends %}
-    {% endblock %}
+  {% block head-prepends %}
+  {% endblock %}
+  {% block head-content %}
   <head>
     <meta charset="utf-8">
     <title>
@@ -19,24 +20,34 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    {% block pre-css %}
+    {% endblock %}
+    <link rel="stylesheet" href="{{ page-data.base-path }}/assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ page-data.base-path }}/assets/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{{ page-data.base-path }}/assets/font-awesome/css/font-awesome.min.css">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CPT+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="css/styles.css" id="theme-styles">
+    <link rel="stylesheet" href="{{ page-data.base-path }}/css/styles.css" id="theme-styles">
 
     <!--[if lt IE 9]>
         <script src="assets/respond/html5-3.6-respond-1.1.0.min.js"></script>
     <![endif]-->
 
     <script src="//code.jquery.com/jquery-2.2.3.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/jquery/dist/jquery.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="{{ page-data.base-path }}/assets/jquery/dist/jquery.min.js"><\/script>')</script>
+    {% block post-css %}
+    {% endblock %}
+    {% block pre-head-scripts %}
+    {% endblock %}
+    {% block post-head-scripts %}
+    {% endblock %}
     {% block head-postpends %}
     {% endblock %}
   </head>
+  {% endblock %}
   <body>
+  {% block body-content %}
    {% block header %}
     <header>
       {% block header-content %}
@@ -73,5 +84,6 @@
       ga('create', 'UA-101039165-2', 'auto');
       ga('send', 'pageview');
     </script>
+  {% endblock %}
   </body>
 </html>

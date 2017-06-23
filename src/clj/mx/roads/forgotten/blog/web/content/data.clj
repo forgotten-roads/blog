@@ -8,7 +8,8 @@
   ([data]
     (merge
       data
-      {:site-title (config/name)
+      {:base-path "/blog"
+       :site-title (config/name)
        :site-description (config/description)
        :index "index"
        :about "about"

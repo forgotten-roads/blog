@@ -31,12 +31,12 @@
     :name "Blog for Forgotten Roads MX"
     :description "Articles, Reviews, & Explorations for the Motorcycle Excursionist"
     :dev-port 5096
-    :output-dir "docs"
-    :posts-path "/archives"
+    :output-dir "."
+    :posts-path "/blog/archives"
     :feed-count 20
     :cli {
-      :log-level :info
-      :log-ns [mx.roads dragon]}}
+      :log-level :debug
+      :log-ns [mx.roads dragon stasis]}}
   :profiles {
     :uberjar {:aot :all}
     :dev {

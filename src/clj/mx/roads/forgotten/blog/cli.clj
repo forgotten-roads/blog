@@ -49,13 +49,13 @@
     $ frmx new help
   ```"
   [[cmd & args]]
-  (log/debug "Got cmd:" cmd)
-  (log/debug "Got args:" args)
+  (log/debug "CLI got cmd:" cmd)
+  (log/debug "CLI got args:" args)
   (case cmd
     :new (new/run args)
     :show (show/run args)
     :gen (gen/run (routes (config/posts-path)) (config/output-dir))
-    :run (web/run (routes (config/posts-path)) (config/port))
+    :run (web/run (routes (config/posts-path)) (config/port) "blog")
     :help (help-cmd args)
     :version (version-cmd)
     ;; Aliases

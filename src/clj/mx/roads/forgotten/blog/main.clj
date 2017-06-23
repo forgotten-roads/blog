@@ -19,10 +19,11 @@
   ([mode & args]
     ;; Set the initial log-level before the components set the log-levels for
     ;; the configured namespaces
-    (logger/set-level! ['mx.roads.forgotten.blog] (config/log-level))
+    (logger/set-level! (config/log-ns) (config/log-level))
     (log/infof "Running FRMX Blog application in %s mode ..." mode)
     (log/debug "Passing the following args to the application:" args)
     (case (keyword mode)
       :web (web/run (routes (config/posts-path))
-                    (config/port))
+                    (config/port)
+                    "blog")
       :cli (cli/run (map keyword args)))))

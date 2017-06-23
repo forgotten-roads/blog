@@ -1,8 +1,8 @@
 {% extends "templates/base-1-col.html" %}
 
-{% block content_title %}Tags{% endblock %}
+{% block content-title %}Tags{% endblock %}
 
-{% block content_body %}
+{% block content-body %}
   <p class="lead">Tags are listed below, alphabetically, with any posts labeled as such.</p>
   {% for tags-data in posts-data %}
   <a name="{{ tags-data.tag }}"></a><br />

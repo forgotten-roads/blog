@@ -18,14 +18,14 @@
 (defn static-routes
   []
   (log/info "Generating pages for static pages ...")
-  {"/about.html" (page/about)})
+  {"/blog/about.html" (page/about)})
 
 (defn design-routes
   []
   (log/info "Generating pages for design pages ...")
-  {"/design/index.html" (page/design)
-   "/design/bootstrap-theme.html" (page/bootstrap-theme)
-   "/design/example-blog.html" (page/blog-example)})
+  {"/blog/design/index.html" (page/design)
+   "/blog/design/bootstrap-theme.html" (page/bootstrap-theme)
+   "/blog/design/example-blog.html" (page/blog-example)})
 
 (defn post-routes
   [uri-base data]
@@ -38,16 +38,16 @@
 (defn index-routes
   [data]
   (log/info "Generating pages for front page, archives, categories, etc. ...")
-  {"/index.html" (page/front-page data)
-   "/archives/index.html" (page/archives data)
-   "/categories/index.html" (page/categories data)
-   "/tags/index.html" (page/tags data)
-   "/authors/index.html" (page/authors data)})
+  {"/blog/index.html" (page/front-page data)
+   "/blog/archives/index.html" (page/archives data)
+   "/blog/categories/index.html" (page/categories data)
+   "/blog/tags/index.html" (page/tags data)
+   "/blog/authors/index.html" (page/authors data)})
 
 (defn reader-routes
   [uri-base data]
   (log/info "Generating XML for feeds ...")
-  (let [route "/atom.xml"]
+  (let [route "/blog/atom.xml"]
     {route (reader/atom-feed
              uri-base route (take (config/feed-count) data))}))
 

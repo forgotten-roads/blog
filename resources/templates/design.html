@@ -1,6 +1,6 @@
 {% extends "templates/base.html" %}
 
-{% block main_content %}
+{% block main-content %}
     <div class="container">
       <div class="page-header" id="banner">
 
@@ -14,10 +14,10 @@
         <div class="row">
           <div class="col-lg-3 col-md-3 col-sm-4">
             <div class="list-group table-of-contents">
-              <a class="list-group-item active" href="/design/index.html">DESIGN</a>
-              <a class="list-group-item" href="/design/bootstrap-theme.html">A
+              <a class="list-group-item active" href="{{ page-data.base-path }}/design/index.html">DESIGN</a>
+              <a class="list-group-item" href="{{ page-data.base-path }}/design/bootstrap-theme.html">A
                 demo of the Bootstrap theme</a>
-              <a class="list-group-item" href="/design/example-blog.html">An
+              <a class="list-group-item" href="{{ page-data.base-path }}/design/example-blog.html">An
                 example blog page</a>
             </div>
           </div>

@@ -5,7 +5,7 @@
         <div class="container">
           <a href="index.html" id="logo">
           {% block content-title %}
-            <img src="img/logo-3-long-small.png" alt="Forgotten Roads Blog">
+            <img src="{{ page-data.base-path }}/img/logo-3-long-small.png" alt="Forgotten Roads Blog">
             {% block content-subtitle %}
             {{subtitle}}
             {% endblock %}
@@ -20,23 +20,24 @@
 
           <nav class="pull-right tales-nav">
             <div class="collapse navbar-collapse">
-              <ul class="nav nav-pills navbar-nav">
-                <li class="dropdown {% ifequal active index %}active{% endifequal %}">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    Blog
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="index.html">Blog</a></li>
-                    <li><a href="post.html">Sample Post</a></li>
-                  </ul>
+              <ul class="nav nav-pills navbar-nav navbar-right">
+
+                <li class="{% ifequal page-data.active page-data.archives %}active{% endifequal %}">
+                  <a href="{{ page-data.base-path }}/archives/">Archives</a>
                 </li>
-                <li class="{% ifequal active about %}active{% endifequal %}">
-                  <a href="about.html">About</a>
+                <li class="{% ifequal page-data.active page-data.categories %}active{% endifequal %}">
+                  <a href="{{ page-data.base-path }}/categories/">Categories</a>
                 </li>
-                <li class="{% ifequal active credits %}active{% endifequal %}">
-                  <a href="credits.html">Credits</a>
+                <li class="{% ifequal page-data.active page-data.tags %}active{% endifequal %}">
+                  <a href="{{ page-data.base-path }}/tags/">Tags</a>
                 </li>
+                <li class="{% ifequal page-data.active page-data.authors %}active{% endifequal %}">
+                  <a href="{{ page-data.base-path }}/authors/">Authors</a>
+                </li>
+                <li class="{% ifequal page-data.active page-data.about %}active{% endifequal %}">
+                  <a href="{{ page-data.base-path }}/about.html">About</a>
+                </li>
+
               </ul>
             </div>
           </nav>
@@ -121,6 +122,6 @@
 {% endblock %}
 
 {% block post-scripts %}
-    <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/modernizr/modernizr-custom.js"></script>
+    <script src="{{ page-data.base-path }}/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{{ page-data.base-path }}/assets/modernizr/modernizr-custom.js"></script>
 {% endblock %}
