@@ -40,11 +40,20 @@ publish-prep:
 	cp resources/site-verification/* blog/
 	cp resources/sitemaps/* blog/
 
-publish-aws-all: publish-prep
+publish-aws: publish-prep
 	@aws --profile=frmx s3 cp blog/ s3://$(AWS_BUCKET)/ --recursive
 
-publish-aws: publish-prep
+publish-aws-modified:
 	@for f in `git status|grep modified|awk '{print $$2}'|egrep '^blog/'` ; do \
 		aws --profile=frmx s3 \
 			cp "$$f" s3://$(AWS_BUCKET)`echo $$f|sed -e 's/^blog\///'` ; \
 	done
+
+publish-aws-committed:
+	@for f in `git log --numstat HEAD^.. blog|awk '{print $$3}'|egrep '^blog'` ; do \
+		aws --profile=frmx s3 \
+			cp "$$f" s3://$(AWS_BUCKET)`echo $$f|sed -e 's/^blog\///'` ; \
+	done
+
+sync-aws: publish-prep
+	@aws --profile=frmx s3 sync blog/ s3://$(AWS_BUCKET)/
