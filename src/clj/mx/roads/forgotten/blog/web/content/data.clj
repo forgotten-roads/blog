@@ -21,19 +21,20 @@
        :tags "tags"
        :authors "authors"})))
 
-(defn generic
+(defn markdown-page
   [md-file]
-  {:content (-> md-file
-                (io/resource)
-                (slurp)
-                (markdown/md-to-html-string))})
+  {:content (->> md-file
+                 (str "markdown/")
+                 (io/resource)
+                 (slurp)
+                 (markdown/md-to-html-string))})
 
 (defn about
   []
   {:page-data
     (merge
       (base {:active "about"})
-      (generic "markdown/about.md"))})
+      (markdown-page "about.md"))})
 
 (defn community
   []
