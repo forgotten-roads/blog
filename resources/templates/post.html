@@ -1,7 +1,7 @@
 {% extends "templates/base.html" %}
 
 {% block post-css %}
-<link href="/blog/assets/css/blog.css" rel="stylesheet">
+<link href="{{ page-data.base-path }}/assets/css/blog.css" rel="stylesheet">
 {% endblock %}
 
 {% block main-content %}
@@ -69,20 +69,14 @@
 
           <div class="sidebar-module sidebar-module-inset">
             <p class="social">
-              <a href="/atom.xml">
+              <a href="{{ page-data.base-path }}/atom.xml">
                 <i class="fa fa-feed fa-lg first"></i>
               </a>
-              <a href="http://twitter.com/clojang">
+              <a href="https://twitter.com/forgottenrdsmx">
                 <i class="fa fa-twitter fa-lg"></i>
               </a>
-              <a href="http://github.com/clojang">
+              <a href="http://github.com/forgotten-roads">
                 <i class="fa fa-github fa-lg"></i>
-              </a>
-              <a href="http://clojang.slack.com">
-                <i class="fa fa-slack fa-lg"></i>
-              </a>
-              <a href="https://groups.google.com/forum/#!forum/clojang">
-                <i class="fa fa-envelope fa-lg last"></i>
               </a>
             </p>
           </div>
@@ -90,7 +84,7 @@
           <div class="sidebar-module">
             <h4>Category</h4>
             <p>
-              <a href="/categories/#{{post-data.category}}">{{ post-data.category }}</a>
+              <a href="{{ page-data.base-path }}/categories/#{{post-data.category}}">{{ post-data.category }}</a>
             </p>
           </div>
 
@@ -98,7 +92,7 @@
             <h4>Tags</h4>
             <p>
               {% for tag in tags %}
-              <a href="/tags/#{{tag}}">{{ tag }}</a>
+              <a href="{{ page-data.base-path }}/tags/#{{tag}}">{{ tag }}</a>
               {% endfor %}
             </p>
           </div>
