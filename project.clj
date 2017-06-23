@@ -46,7 +46,10 @@
                                    "type `lein frmx help` for commands\n")}
                        ["run" "-m" "mx.roads.forgotten.blog.main" "cli"]}
       :repl-options {
-        :init-ns mx.roads.forgotten.blog.dev}
+        :init-ns mx.roads.forgotten.blog.dev
+        :prompt (fn [ns] (str "\u001B[35m[\u001B[34m"
+                              ns
+                              "\u001B[35m]\u001B[33m λ\u001B[m=> "))}
       :plugins [
         [lein-simpleton "1.3.0"]]
       :dependencies [
@@ -61,4 +64,19 @@
         [jonase/eastwood "0.2.3" :exclusions [org.clojure/clojure]]
         [lein-bikeshed "0.4.1" :exclusions [org.clojure/tools.namespace]]
         [lein-kibit "0.1.2" :exclusions [org.clojure/clojure]]
-        [venantius/yagni "0.1.4"]]}})
+        [venantius/yagni "0.1.4"]]}}
+  :aliases {
+    "check-deps" ["with-profile" "+test" "ancient" "check" "all"]
+    "lint" ["with-profile" "+test" "kibit"]
+    "docs" ["with-profile" "+docs" "do"
+      ["codox"]
+      ["marg" "--dir" "docs/current"
+              "--file" "marginalia.html"
+              "--name" "sockets"]]
+    "build" ["with-profile" "+test" "do"
+      ["check-deps"]
+      ["lint"]
+      ["test"]
+      ["compile"]
+      ["docs"]
+      ["uberjar"]]})
