@@ -17,19 +17,16 @@
 
 (defn static-routes
   []
-  (log/info "Generating pages for static pages ...")
   {"/blog/about.html" (page/about)})
 
 (defn design-routes
   []
-  (log/info "Generating pages for design pages ...")
   {"/blog/design/index.html" (page/design)
    "/blog/design/bootstrap-theme.html" (page/bootstrap-theme)
    "/blog/design/example-blog.html" (page/blog-example)})
 
 (defn post-routes
   [uri-base data]
-  (log/info "Generating pages for blog posts ...")
   (blog/get-indexed-archive-routes
     (map vector (iterate inc 0) data)
     :gen-func page/post
@@ -37,7 +34,6 @@
 
 (defn index-routes
   [data]
-  (log/info "Generating pages for front page, archives, categories, etc. ...")
   {"/blog/index.html" (page/front-page data)
    "/blog/archives/index.html" (page/archives data)
    "/blog/categories/index.html" (page/categories data)
@@ -46,7 +42,6 @@
 
 (defn reader-routes
   [uri-base data]
-  (log/info "Generating XML for feeds ...")
   (let [route "/blog/atom.xml"]
     {route (reader/atom-feed
              uri-base route (take (config/feed-count) data))}))
@@ -61,3 +56,51 @@
       (post-routes uri-base data)
       (index-routes data)
       (reader-routes uri-base data))))
+
+;;; Generator routes
+
+(defn gen-route
+  [func msg & args]
+  (log/info msg)
+  (apply func args))
+
+(def gen-static-routes
+  (partial
+    gen-route
+    static-routes
+    "Generating pages for static pages ..."))
+
+(def gen-design-routes
+  (partial
+    gen-route
+    design-routes
+    "Generating pages for design pages ..."))
+
+(def gen-post-routes
+  (partial
+    gen-route
+    post-routes
+    "Generating pages for blog posts ..."))
+
+(def gen-index-routes
+  (partial
+    gen-route
+    index-routes
+    "Generating pages for front page, archives, categories, etc. ..."))
+
+(def gen-reader-routes
+  (partial
+    gen-route
+    reader-routes
+    "Generating XML for feeds ..."))
+
+(defn gen-routes
+  [uri-base]
+  (let [data (blog/process uri-base)]
+    (log/trace "Got data:" (pprint (blog/data-minus-body data)))
+    (merge
+      (gen-static-routes)
+      (gen-design-routes)
+      (gen-post-routes uri-base data)
+      (gen-index-routes data)
+      (gen-reader-routes uri-base data))))
