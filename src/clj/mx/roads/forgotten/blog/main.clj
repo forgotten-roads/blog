@@ -1,9 +1,7 @@
 (ns mx.roads.forgotten.blog.main
-  (:require [clojusc.twig :as logger]
-            [dragon.config :as config]
-            [dragon.web :as web]
+  (:require [dragon.config :as config]
             [mx.roads.forgotten.blog.cli :as cli]
-            [mx.roads.forgotten.blog.routes :refer [routes]]
+            [mx.roads.forgotten.blog.core :as core]
             [taoensso.timbre :as log])
   (:gen-class))
 
@@ -19,11 +17,9 @@
   ([mode & args]
     ;; Set the initial log-level before the components set the log-levels for
     ;; the configured namespaces
-    (logger/set-level! (config/log-ns) (config/log-level))
+    (core/set-log-level)
     (log/infof "Running FRMX Blog application in %s mode ..." mode)
     (log/debug "Passing the following args to the application:" args)
     (case (keyword mode)
-      :web (web/run (routes (config/posts-path))
-                    (config/port)
-                    "blog")
+      :web (core/web)
       :cli (cli/run (map keyword args)))))

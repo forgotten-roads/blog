@@ -1,36 +1,14 @@
 (ns mx.roads.forgotten.blog.cli
-  (:require [clojure.pprint :refer [pprint]]
-            [clojusc.twig :as logger]
-            [dragon.config :as config]
-            [dragon.generator :as gen]
-            [dragon.util :as util]
-            [dragon.web :as web]
+  (:require [dragon.config :as config]
             [mx.roads.forgotten.blog.cli.new :as new]
             [mx.roads.forgotten.blog.cli.show :as show]
-            [mx.roads.forgotten.blog.routes :refer [gen-routes routes]]
+            [mx.roads.forgotten.blog.core :as core]
             [taoensso.timbre :as log]
-            [trifl.core :refer [sys-prop]]
             [trifl.docs :as docs]))
 
 (defn help-cmd
   [& args]
   (docs/print-docstring 'mx.roads.forgotten.blog.cli 'run))
-
-(defn version-cmd
-  []
-  (let [version (System/getProperty "blog.version")
-        build (util/get-build)]
-    (print (format "FRMX Blog version %s, build %s\n" version build))))
-
-(defn generate
-  []
-  (gen/run (gen-routes (config/posts-path)) (config/output-dir)))
-
-(defn web
-  []
-  (web/run (routes (config/posts-path))
-                  (config/port)
-                  (config/output-dir)))
 
 (defn run
   "
@@ -59,18 +37,19 @@
     $ frmx new help
   ```"
   [[cmd & args]]
+  (core/set-log-level)
   (log/debug "CLI got cmd:" cmd)
   (log/debug "CLI got args:" args)
   (case cmd
     :new (new/run args)
     :show (show/run args)
-    :gen (generate)
-    :run (web)
+    :gen (core/generate)
+    :run (core/web)
     :help (help-cmd args)
     :version (version-cmd)
     ;; Aliases
     :--help (help-cmd args)
     :--version (version-cmd)
     :-h (help-cmd args)
-    :-v (version-cmd))
+    :-v (print (core/version)))
   (shutdown-agents))
