@@ -7,7 +7,7 @@
             [dragon.web :as web]
             [mx.roads.forgotten.blog.cli.new :as new]
             [mx.roads.forgotten.blog.cli.show :as show]
-            [mx.roads.forgotten.blog.routes :refer [routes]]
+            [mx.roads.forgotten.blog.routes :refer [gen-routes routes]]
             [taoensso.timbre :as log]
             [trifl.core :refer [sys-prop]]
             [trifl.docs :as docs]))
@@ -21,6 +21,16 @@
   (let [version (System/getProperty "blog.version")
         build (util/get-build)]
     (print (format "FRMX Blog version %s, build %s\n" version build))))
+
+(defn generate
+  []
+  (gen/run (gen-routes (config/posts-path)) (config/output-dir)))
+
+(defn web
+  []
+  (web/run (routes (config/posts-path))
+                  (config/port)
+                  (config/output-dir)))
 
 (defn run
   "
@@ -54,8 +64,8 @@
   (case cmd
     :new (new/run args)
     :show (show/run args)
-    :gen (gen/run (routes (config/posts-path)) (config/output-dir))
-    :run (web/run (routes (config/posts-path)) (config/port) "blog")
+    :gen (generate)
+    :run (web)
     :help (help-cmd args)
     :version (version-cmd)
     ;; Aliases
