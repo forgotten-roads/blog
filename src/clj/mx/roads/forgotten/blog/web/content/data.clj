@@ -1,6 +1,8 @@
 (ns mx.roads.forgotten.blog.web.content.data
-  (:require [dragon.blog :as blog]
-            [dragon.config :as config]))
+  (:require [clojure.java.io :as io]
+            [dragon.blog :as blog]
+            [dragon.config :as config]
+            [markdown.core :as markdown]))
 
 (defn base
   ([]
@@ -19,9 +21,19 @@
        :tags "tags"
        :authors "authors"})))
 
+(defn generic
+  [md-file]
+  {:content (-> md-file
+                (io/resource)
+                (slurp)
+                (markdown/md-to-html-string))})
+
 (defn about
   []
-  {:page-data (base {:active "about"})})
+  {:page-data
+    (merge
+      (base {:active "about"})
+      (generic "markdown/about.md"))})
 
 (defn community
   []
