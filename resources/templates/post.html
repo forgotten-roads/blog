@@ -13,6 +13,9 @@
 
           <div class="blog-post">
             <div class="page-header">
+              {% if post-data.header-image %}
+                <img src="{{ page-data.base-path }}/{{ post-data.header-image }}" />
+              {% endif %}
               <h2 class="blog-post-title">{{ post-data.title }}</h2>
               {% if post-data.subtitle %}
               <p class="blog-post-subtitle">{{ post-data.subtitle }}</p>
