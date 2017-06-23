@@ -7,18 +7,20 @@
   :license {
     :name "Apache License, Version 2.0"
     :url "http://www.apache.org/licenses/LICENSE-2.0"}
+  :exclusions [
+    [org.clojure/clojurescript]]
   :dependencies [
-    [clojusc/env-ini "0.3.0-SNAPSHOT"]
-    [clojusc/rfc5322 "0.3.0-SNAPSHOT"]
-    [clojusc/trifl "0.1.0-SNAPSHOT"]
-    [clojusc/twig "0.3.1-SNAPSHOT"]
-    [dragon "0.1.0-SNAPSHOT"]
-    [markdown-clj "0.9.97"]
+    [clojusc/env-ini "0.3.0"]
+    [clojusc/rfc5322 "0.3.0"]
+    [clojusc/trifl "0.1.0"]
+    [clojusc/twig "0.3.2-SNAPSHOT"]
+    [dragon "0.2.0-SNAPSHOT"]
+    [markdown-clj "0.9.99"]
     [me.raynes/cegdown "0.1.1"]
     [org.clojure/clojure "1.8.0"]
     [org.clojure/data.xml "0.0.8"]
-    [ring/ring-core "1.6.0-RC1"]
-    [selmer "1.10.6"]
+    [ring/ring-core "1.6.1"]
+    [selmer "1.10.7"]
     [stasis "2.3.0"]
     [tentacles "0.5.1"]
     ;; XXX remove these:
@@ -68,15 +70,9 @@
   :aliases {
     "check-deps" ["with-profile" "+test" "ancient" "check" "all"]
     "lint" ["with-profile" "+test" "kibit"]
-    "docs" ["with-profile" "+docs" "do"
-      ["codox"]
-      ["marg" "--dir" "docs/current"
-              "--file" "marginalia.html"
-              "--name" "sockets"]]
     "build" ["with-profile" "+test" "do"
       ["check-deps"]
       ["lint"]
       ["test"]
       ["compile"]
-      ["docs"]
       ["uberjar"]]})
