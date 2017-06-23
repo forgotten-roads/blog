@@ -7,9 +7,8 @@ Visit: http://forgotten.roads.mx/blog/
 
 ## Prerequisites
 
-```bash
-$ make setup
-```
+* GNU `make`
+* The `lessc` CSS compiler (which requires having `npm` installed)
 
 Set the `PATH` to include the project's executable and setup auto-completion:
 
