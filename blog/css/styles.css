@@ -13,15 +13,15 @@ body {
   color: #404b55;
   background-color: #feffff;
 }
-a {
-  color: #5b6268;
-}
-a:hover,
-a:focus {
-  color: #5b6268;
-}
 
 a {
+  color: #c68533;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #8f6632;
   text-decoration: none;
 }
 
