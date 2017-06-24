@@ -18,9 +18,13 @@ a {
 }
 a:hover,
 a:focus {
-  text-decoration: none;
   color: #5b6268;
 }
+
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 45px;
   line-height: 60px;
@@ -55,7 +59,14 @@ hr {
   /* Firefox */
   color: #feffff;
 }
+
 /* Layout styles that deal with the overall page structure */
+
+.container {
+  padding-right: 0;
+  margin-right: 0;
+}
+
 /* Masthead is the upper part of the header, containing logo and navigation*/
 .masthead {
   padding-top: 5px;
@@ -99,10 +110,33 @@ hr {
 }
 .widewrapper.subheader {
   background-color: #3A332B;
+  background: url(../img/tire-tread.png) left top repeat-x;
   color: #C8C2B6;
-  font-size: 16px;
-  min-height: 63px;
+  font-size: 8px;
+  min-height: 35px;
 }
+
+.subheader .social {
+  float: right;
+  margin-right: 1em;
+  margin-top: 1em;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.subheader .social li {
+  display: inline;
+  padding-right: 8px;
+}
+
+.subheader .social a {
+  color: #c68533;
+}
+
+.subheader .social .fa {
+  font-size: 18px;
+}
+
 .widewrapper.footer {
   background-color: #3A332B;
   color: #b3b5b7;
@@ -337,98 +371,7 @@ hr {
 .tales-breadcrumb .separator {
   margin: 0 10px 0 10px;
 }
-/* The searchbox in the subheader on top of the site */
-.tales-searchbox {
-  float: right;
-  display: inline-block;
-  min-width: 210px;
-  margin-bottom: 16px;
-  margin-top: 16px;
-}
-.tales-searchbox form {
-  margin: 0;
-}
-.tales-searchbox .fa {
-  color: #3A332B;
-  font-size: 19px;
-}
-.tales-searchbox .searchbutton,
-.tales-searchbox .searchfield {
-  color: #3A332B;
-  background-color: #CDBEAE;
-}
-.tales-searchbox .searchbutton {
-  display: inline-block;
-  border: none;
-  line-height: 20px;
-  padding: 4px 5px 4px 15px;
-  height: 31px;
-  vertical-align: middle;
-  -webkit-border-top-left-radius: 15px;
-  -moz-border-radius-topleft: 15px;
-  border-top-left-radius: 15px;
-  -webkit-border-bottom-left-radius: 15px;
-  -moz-border-radius-bottomleft: 15px;
-  border-bottom-left-radius: 15px;
-  -webkit-box-shadow: inset 3px 5px 0px -4px rgba(0, 0, 0, 0.06);
-  -moz-box-shadow: inset 3px 5px 0px -4px rgba(0, 0, 0, 0.06);
-  box-shadow: inset 3px 5px 0px -4px rgba(0, 0, 0, 0.06);
-}
-.tales-searchbox .searchbutton a:hover,
-.tales-searchbox .searchbutton a:focus {
-  text-decoration: none;
-}
-.tales-searchbox .searchfield {
-  border: none;
-  height: 22px;
-  line-height: 22px;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  padding: 4px 6px 5px 6px;
-  vertical-align: middle;
-  display: inline-block;
-  margin-bottom: 0;
-  width: 160px;
-  font-size: 16px;
-  -webkit-border-top-right-radius: 15px;
-  -moz-border-radius-topright: 15px;
-  border-top-right-radius: 15px;
-  -webkit-border-bottom-right-radius: 15px;
-  -moz-border-radius-bottomright: 15px;
-  border-bottom-right-radius: 15px;
-  -webkit-border-top-left-radius: 0px;
-  -moz-border-radius-topleft: 0px;
-  border-top-left-radius: 0px;
-  -webkit-border-bottom-left-radius: 0px;
-  -moz-border-radius-bottomleft: 0px;
-  border-bottom-left-radius: 0px;
-  -webkit-box-shadow: inset 3px 5px 0px -4px rgba(0, 0, 0, 0.06);
-  -moz-box-shadow: inset 3px 5px 0px -4px rgba(0, 0, 0, 0.06);
-  box-shadow: inset 3px 5px 0px -4px rgba(0, 0, 0, 0.06);
-  margin-left: -4px;
-  outline: none;
-}
-.tales-searchbox .searchfield::-webkit-input-placeholder {
-  color: #3A332B;
-}
-.tales-searchbox .searchfield:-moz-placeholder {
-  color: #3A332B;
-}
-.tales-searchbox .searchfield::-moz-placeholder {
-  color: #3A332B;
-}
-.tales-searchbox .searchfield:-ms-input-placeholder {
-  color: #3A332B;
-}
-.tales-searchbox .searchfield:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-box-shadow: inset 3px 5px 0px -4px rgba(0, 0, 0, 0.06);
-  -moz-box-shadow: inset 3px 5px 0px -4px rgba(0, 0, 0, 0.06);
-  box-shadow: inset 3px 5px 0px -4px rgba(0, 0, 0, 0.06);
-}
+
 /* The list with special bullet points, used both on blog widgets as well as in the footer (both styled here) */
 .tales-list {
   list-style: none;
@@ -572,32 +515,46 @@ hr {
   margin-top: 30px;
   padding-left: 20px;
 }
+
+.aside-widget li,
+.aside-widget p,
+.aside-widget .row {
+  margin: 0;
+  margin-top: 8px;
+  margin-left: 12px;
+}
+
+.aside-widget .row {
+  margin-left: 1px;
+}
+
 .aside-widget a {
   color: #5b6268;
 }
 /* The tags widget */
-.tags {
+.tags-widget ul {
   list-style: none;
-  margin: 0;
   padding-left: 0;
 }
-.tags li {
-  float: left;
+.tags-widget li {
+  display: inline;
 }
-.tags li a {
-  padding: 10px 15px;
-  margin-right: 16px;
-  margin-bottom: 17px;
+.tags-widget li a {
+  padding: 4px 10px;
+  margin-top: 10px;
   display: inline-block;
-  background: #e6e6e6;
+  background: #cce;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.tags li a:focus,
-.tags li a:hover {
-  background-color: #c1d2e1;
+.tags-widget li a:focus,
+.tags-widget li a:hover {
+  background-color: #aae;
+  text-decoration: none;
+  color: white;
 }
+
 /* The blog main page boxes */
 .blog-teaser {
   background-color: #ececec;
