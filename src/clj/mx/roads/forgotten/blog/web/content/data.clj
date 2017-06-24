@@ -9,7 +9,6 @@
     (base {}))
   ([data]
     (merge
-      data
       {:base-path "/blog"
        :site-title (config/name)
        :site-description (config/description)
@@ -19,41 +18,64 @@
        :archives "archives"
        :categories "categories"
        :tags "tags"
-       :authors "authors"})))
+       :authors "authors"
+       :active nil}
+      data)))
+
+(def generic-page
+  {:title nil
+   :subtitle nil})
 
 (defn markdown-page
   [md-file]
-  {:content (->> md-file
-                 (str "markdown/")
-                 (io/resource)
-                 (slurp)
-                 (markdown/md-to-html-string))})
+  (merge
+    generic-page
+    {:body (->> md-file
+                (str "markdown/")
+                (io/resource)
+                (slurp)
+                (markdown/md-to-html-string))}))
 
 (defn about
   []
-  {:page-data
-    (merge
-      (base {:active "about"})
-      (markdown-page "about.md"))})
-
-(defn community
-  []
-  {:page-data (base {:active "community"})})
-
-(defn design
-  []
-  {:page-data (base {:active "design"})})
-
-(defn post
-  [data]
-  {:page-data (base {:active "archives"})
-   :post-data data
-   :tags (blog/tags [data])})
+  {:page-data (base {:active "about"})
+   :content (-> "about.md"
+                (markdown-page)
+                (assoc :title "About"))})
 
 (defn archives
   [data]
   {:page-data (base {:active "archives"})
-   :posts-data data})
+   :posts-data data
+   :content (assoc generic-page :title "Archives")})
+
+(defn categories
+  [data]
+  {:page-data (base {:active "categories"})
+   :posts-data data
+   :content (assoc generic-page :title "Categories")})
+
+(defn tags
+  [data]
+  {:page-data (base {:active "tags"})
+   :posts-data data
+   :content (assoc generic-page :title "Tags")})
+
+(defn authors
+  [data]
+  {:page-data (base {:active "authors"})
+   :posts-data data
+   :content (assoc generic-page :title "Authors")})
+
+(defn community
+  []
+  {:page-data (base {:active "community"})
+   :content (assoc generic-page :title "Community")})
+
+(defn design
+  []
+  {:page-data (base {:active "design"})
+   :content (assoc generic-page :title "Design")})
 
 (defn front-page
   [data & {post-count :post-count column-count :column-count}]
@@ -64,17 +86,8 @@
    :headliner headliner
    :posts-data posts}))
 
-(defn categories
+(defn post
   [data]
-  {:page-data (base {:active "categories"})
-   :posts-data data})
-
-(defn tags
-  [data]
-  {:page-data (base {:active "tags"})
-   :posts-data data})
-
-(defn authors
-  [data]
-  {:page-data (base {:active "authors"})
-   :posts-data data})
+  {:page-data (base {:active "archives"})
+   :post-data data
+   :tags (blog/tags [data])})
