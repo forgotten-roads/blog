@@ -17,7 +17,8 @@
 
 (defn static-routes
   []
-  {"/blog/about.html" (page/about)})
+  {"/blog/about.html" (page/about)
+   "/blog/powered-by.html" (page/powered-by)})
 
 (defn design-routes
   []

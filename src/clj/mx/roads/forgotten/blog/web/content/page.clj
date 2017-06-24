@@ -9,6 +9,12 @@
     "templates/generic.html"
     (data/about)))
 
+(defn powered-by
+  []
+  (content/render
+    "templates/generic.html"
+    (data/powered-by)))
+
 (defn community
   []
   (content/render

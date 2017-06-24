@@ -43,6 +43,13 @@
                 (markdown-page)
                 (assoc :title "About"))})
 
+(defn powered-by
+  []
+  {:page-data (base {:active "about"})
+   :content (-> "powered-by.md"
+                (markdown-page)
+                (assoc :title "Powered By"))})
+
 (defn archives
   [data]
   {:page-data (base {:active "archives"})
