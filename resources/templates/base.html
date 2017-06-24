@@ -47,10 +47,27 @@
 
       <div class="widewrapper subheader">
         <div class="container">
-          <div class="tales-breadcrumb">
           {% block breadcrumb-content %}
-          {% endblock %}
+          <div class="sidebar-module sidebar-module-inset">
+            <ul class="social">
+              <li>
+                <a href="{{ page-data.base-path }}/atom.xml">
+                  <i class="fa fa-feed first"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/forgottenrdsmx">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="http://github.com/forgotten-roads">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+            </ul>
           </div>
+          {% endblock %}
         </div>
       </div>
 {% endblock %}
