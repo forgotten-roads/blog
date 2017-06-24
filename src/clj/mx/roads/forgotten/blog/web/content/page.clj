@@ -6,7 +6,7 @@
 (defn about
   []
   (content/render
-    "templates/generic.html"
+    "templates/generic-2-col.html"
     (data/about)))
 
 (defn community
