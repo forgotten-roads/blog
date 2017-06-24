@@ -64,23 +64,7 @@
 
         </div>
 
-        <aside class="col-md-4 blog-aside">
-
-          <div class="sidebar-module sidebar-module-inset">
-            <p class="social">
-              <a href="{{ page-data.base-path }}/atom.xml">
-                <i class="fa fa-feed fa-lg first"></i>
-              </a>
-              <a href="https://twitter.com/forgottenrdsmx">
-                <i class="fa fa-twitter fa-lg"></i>
-              </a>
-              <a href="http://github.com/forgotten-roads">
-                <i class="fa fa-github fa-lg"></i>
-              </a>
-            </p>
-          </div>
-
-
+        <aside class="col-sm-4 blog-aside">
 
           <div class="aside-widget">
             <header>
@@ -91,15 +75,17 @@
             </p>
           </div>
 
-          <div class="aside-widget">
+          <div class="aside-widget tags-widget">
             <header>
               <h3>Tags</h3>
             </header>
-            <p>
+            <ul>
               {% for tag in tags %}
-              <a href="{{ page-data.base-path }}/tags/#{{tag}}">{{ tag }}</a>
+              <li>
+                <a href="{{ page-data.base-path }}/tags/#{{tag}}">{{ tag }}</a>
+              </li>
               {% endfor %}
-            </p>
+            </ul>
           </div>
 
           <div class="aside-widget">
