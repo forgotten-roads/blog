@@ -46,10 +46,10 @@
     :gen (core/generate)
     :run (core/web)
     :help (help-cmd args)
-    :version (version-cmd)
+    :version (print (core/version))
     ;; Aliases
     :--help (help-cmd args)
-    :--version (version-cmd)
+    :--version (print (core/version))
     :-h (help-cmd args)
     :-v (print (core/version)))
   (shutdown-agents))
