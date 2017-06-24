@@ -5,7 +5,8 @@ LOCAL_BLOG_HOST = localhost
 LOCAL_BLOG_PORT = $(lastword $(shell grep dev-port project.clj))
 LESS_DIR = src/less
 COLOUR_THEME = frmx
-AWS_BUCKET = forgotten.roads.mx/blog
+AWS_BUCKET = forgotten.roads.mx
+AWS_BLOG_BUCKET = $(AWS_BUCKET)/blog
 
 blog: blog-clean blog-local
 
@@ -37,23 +38,41 @@ blog-dev:
 .PHONY: blog
 
 publish-prep:
-	cp resources/site-verification/* blog/
+	cp resources/site-verification/blog.f.r.mx/* blog/
 	cp resources/sitemaps/* blog/
 
-publish-aws: publish-prep
-	@aws --profile=frmx s3 cp blog/ s3://$(AWS_BUCKET)/ --recursive
+publish-verifications-aws:
+	@aws --profile=frmx s3 \
+		cp resources/site-verification/f.r.mx/* \
+		s3://$(AWS_BUCKET)/
+	@aws --profile=frmx s3 \
+		cp resources/site-verification/blog.f.r.mx/* \
+		s3://$(AWS_BLOG_BUCKET)/
+
+publish-redirect-aws:
+	@aws --profile=frmx s3 \
+		cp resources/site-redirects/f.r.mx/index.html \
+		s3://$(AWS_BUCKET)/
+
+publish-robots-aws:
+	@aws --profile=frmx s3 \
+		cp resources/robots.txt \
+		s3://$(AWS_BUCKET)/
+
+publish-aws:
+	@aws --profile=frmx s3 cp blog/ s3://$(AWS_BLOG_BUCKET)/ --recursive
 
 publish-aws-modified:
 	@for f in `git status|grep modified|awk '{print $$2}'|egrep '^blog/'` ; do \
 		aws --profile=frmx s3 \
-			cp "$$f" s3://$(AWS_BUCKET)`echo $$f|sed -e 's/^blog\///'` ; \
+			cp "$$f" s3://$(AWS_BLOG_BUCKET)`echo $$f|sed -e 's/^blog\///'` ; \
 	done
 
 publish-aws-committed:
 	@for f in `git log --numstat HEAD^.. blog|awk '{print $$3}'|egrep '^blog'` ; do \
 		aws --profile=frmx s3 \
-			cp "$$f" s3://$(AWS_BUCKET)`echo $$f|sed -e 's/^blog\///'` ; \
+			cp "$$f" s3://$(AWS_BLOG_BUCKET)`echo $$f|sed -e 's/^blog\///'` ; \
 	done
 
-sync-aws: publish-prep
-	@aws --profile=frmx s3 sync blog/ s3://$(AWS_BUCKET)/
+sync-aws:
+	@aws --profile=frmx s3 sync blog/ s3://$(AWS_BLOG_BUCKET)/
