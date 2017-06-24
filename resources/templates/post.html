@@ -20,7 +20,7 @@
                 <p class="date">{{ post-data.month }}
                                 {{ post-data.date.day }},
                                 {{ post-data.date.year }}</p>
-                <p class="author">by <a href="#">{{ post-data.author }}</a></p>
+                <p class="author">by <a href="{{ page-data.base-path }}/authors/#{{ post-data.author }}">{{ post-data.author }}</a></p>
                 {% if post-data.excerpt %}
                 <p class="lead well">
                   {{ post-data.excerpt|safe }}
