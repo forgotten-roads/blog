@@ -37,10 +37,6 @@ blog-dev:
 
 .PHONY: blog
 
-publish-prep:
-	cp resources/site-verification/blog.f.r.mx/* blog/
-	cp resources/sitemaps/* blog/
-
 publish-verifications-aws:
 	@aws --profile=frmx s3 \
 		cp resources/site-verification/f.r.mx/* \

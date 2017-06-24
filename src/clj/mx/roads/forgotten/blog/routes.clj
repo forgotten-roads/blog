@@ -12,51 +12,72 @@
             [dragon.blog :as blog]
             [dragon.config :as config]
             [mx.roads.forgotten.blog.reader :as reader]
+            [mx.roads.forgotten.blog.sitemapper :as sitemapper]
             [mx.roads.forgotten.blog.web.content.page :as page]
             [taoensso.timbre :as log]))
 
 (defn static-routes
-  []
-  {"/blog/about.html" (page/about)
-   "/blog/powered-by.html" (page/powered-by)})
+  ([]
+    (static-routes {}))
+  ([routes]
+    (merge
+      routes
+      {"/blog/about.html" (page/about)
+       "/blog/powered-by.html" (page/powered-by)})))
 
 (defn design-routes
-  []
-  {"/blog/design/index.html" (page/design)
-   "/blog/design/bootstrap-theme.html" (page/bootstrap-theme)
-   "/blog/design/example-blog.html" (page/blog-example)})
+  [routes]
+  (merge
+    routes
+    {"/blog/design/index.html" (page/design)
+     "/blog/design/bootstrap-theme.html" (page/bootstrap-theme)
+     "/blog/design/example-blog.html" (page/blog-example)}))
 
 (defn post-routes
-  [uri-base data]
-  (blog/get-indexed-archive-routes
-    (map vector (iterate inc 0) data)
-    :gen-func page/post
-    :uri-base uri-base))
+  [uri-base data routes]
+  (merge
+    routes
+    (blog/get-indexed-archive-routes
+      (map vector (iterate inc 0) data)
+      :gen-func page/post
+      :uri-base uri-base)))
 
 (defn index-routes
-  [data]
-  {"/blog/index.html" (page/front-page data)
-   "/blog/archives/index.html" (page/archives data)
-   "/blog/categories/index.html" (page/categories data)
-   "/blog/tags/index.html" (page/tags data)
-   "/blog/authors/index.html" (page/authors data)})
+  [data routes]
+  (merge
+    routes
+    {"/blog/index.html" (page/front-page data)
+     "/blog/archives/index.html" (page/archives data)
+     "/blog/categories/index.html" (page/categories data)
+     "/blog/tags/index.html" (page/tags data)
+     "/blog/authors/index.html" (page/authors data)}))
 
 (defn reader-routes
-  [uri-base data]
+  [uri-base data routes]
   (let [route "/blog/atom.xml"]
-    {route (reader/atom-feed
-             uri-base route (take (config/feed-count) data))}))
+    (merge
+      routes
+      {route (reader/atom-feed
+               uri-base route (take (config/feed-count) data))})))
+
+(defn sitemaps-routes
+  [uri-base routes]
+  (let [route "/blog/sitemap.xml"]
+    (merge
+      routes
+      {route (sitemapper/gen
+               uri-base routes)})))
 
 (defn routes
   [uri-base]
   (let [data (blog/process uri-base)]
     (log/trace "Got data:" (pprint (blog/data-minus-body data)))
-    (merge
-      (static-routes)
-      (design-routes)
-      (post-routes uri-base data)
-      (index-routes data)
-      (reader-routes uri-base data))))
+    (->> (static-routes)
+         (design-routes)
+         (post-routes uri-base data)
+         (index-routes data)
+         (reader-routes uri-base data)
+         (sitemaps-routes uri-base))))
 
 ;;; Generator routes
 
@@ -95,13 +116,19 @@
     reader-routes
     "Generating XML for feeds ..."))
 
+(def gen-sitemaps-routes
+  (partial
+    gen-route
+    sitemaps-routes
+    "Generating XML for sitemap ..."))
+
 (defn gen-routes
   [uri-base]
   (let [data (blog/process uri-base)]
     (log/trace "Got data:" (pprint (blog/data-minus-body data)))
-    (merge
-      (gen-static-routes)
-      (gen-design-routes)
-      (gen-post-routes uri-base data)
-      (gen-index-routes data)
-      (gen-reader-routes uri-base data))))
+    (->> (gen-static-routes)
+         (gen-design-routes)
+         (gen-post-routes uri-base data)
+         (gen-index-routes data)
+         (gen-reader-routes uri-base data)
+         (gen-sitemaps-routes uri-base))))
