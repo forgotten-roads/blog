@@ -1,0 +1,26 @@
+{% extends "templates/base.html" %}
+
+{% block main-content %}
+    <div class="container">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-10 col-md-10 col-sm-10 {{ page-data.active }}">
+            {% block content-title %}
+            {% if content.title %}
+            <h2>{{ content.title }}</h2>
+            {% endif %}
+            {% endblock %}
+
+            {% block content-subtitle %}
+            {% if content.subtitle %}
+            <h3>{{ content.subtitle }}</h3>
+            {% endif %}
+            {% endblock %}
+
+            {% block content-body %}
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
