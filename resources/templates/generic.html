@@ -1,5 +1,5 @@
-{% extends "templates/base.html" %}
+{% extends "templates/base-1-col.html" %}
 
-{% block wrapped-main-content %}
-{{ page-data.content|safe }}
+{% block content-body %}
+{{ content.body|safe }}
 {% endblock %}
