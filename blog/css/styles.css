@@ -12,6 +12,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #404b55;
   background-color: #feffff;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 a {
@@ -153,12 +160,13 @@ hr {
 }
 .widewrapper.copyright {
   background-color: #2A2219;
-  color: #C8C2B6;
+  color: #a59b87;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-size: 80%;
 }
 .widewrapper.copyright a {
-  color: #e9e6e2;
+  color: #c68533;
 }
 /* Styles for the navigation, both mobile and desktop */
 /* Desktop version of the navigation */
