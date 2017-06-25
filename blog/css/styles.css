@@ -1165,3 +1165,24 @@ fieldset[disabled] .btn-tales-two.active {
   line-height: normal;
   border-radius: 5px;
 }
+
+.headliner h2,
+.subheadliner h2 {
+  font-family: "Josefin Slab", serif;
+  font-weight: bold;
+}
+.headliner h2 {
+  font-size: 175%;
+}
+.subheadliner h2 {
+  font-size: 150%;
+}
+.well.subheadliner {
+  margin: 14px;
+}
+.headliner {
+  font-size: 120%;
+}
+.subheadliner {
+  font-size: 110%;
+}

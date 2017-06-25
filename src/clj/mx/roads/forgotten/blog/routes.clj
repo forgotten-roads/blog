@@ -31,6 +31,7 @@
     routes
     {"/blog/design/index.html" (page/design)
      "/blog/design/bootstrap-theme.html" (page/bootstrap-theme)
+     "/blog/design/example-front-page.html" (page/front-page-example)
      "/blog/design/example-blog.html" (page/blog-example)}))
 
 (defn post-routes

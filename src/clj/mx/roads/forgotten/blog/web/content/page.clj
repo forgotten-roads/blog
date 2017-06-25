@@ -80,8 +80,20 @@
     "templates/bootstrap-theme.html"
     (data/design)))
 
+(defn front-page-example
+  []
+  (content/render
+    "templates/front-page-example.html"
+    (data/design)))
+
 (defn blog-example
   []
   (content/render
     "templates/blog-example.html"
     (data/design)))
+
+; (defn post-example
+;   []
+;   (content/render
+;     "templates/post-example.html"
+;     (data/design)))
