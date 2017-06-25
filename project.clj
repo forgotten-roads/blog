@@ -42,7 +42,7 @@
   :source-paths ["src/clj"]
   :dragon {
     :domain "forgotten.roads.mx/blog"
-    :name "Blog for Forgotten Roads MX"
+    :name "Forgotten Roads MX"
     :description "Articles, Reviews, & Explorations for the Motorcycle Excursionist"
     :dev-port 5096
     :output-dir "."
