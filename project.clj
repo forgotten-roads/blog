@@ -11,7 +11,7 @@
        ns
        "\u001B[35m]\u001B[33m λ\u001B[m=> "))
 
-(defproject mx.roads.forgotten/blog "0.2.0-SNAPSHOT"
+(defproject mx.roads.forgotten/blog "0.3.0-SNAPSHOT"
   :description "Blog for Forgotten Roads MX"
   :url "https://forgotten.roads.mx/blog/"
   :scm {
