@@ -6,8 +6,7 @@
    * The routes are only used durng development, when serving content
      dynamically.
    * Since the posts have already been generated and saved to disc, their
-     routes should be generated dynamically as URI path / slurp call pairs.
-  "
+     routes should be generated dynamically as URI path / slurp call pairs."
   (:require [clojusc.twig :refer [pprint]]
             [dragon.blog :as blog]
             [dragon.config :as config]
@@ -17,49 +16,49 @@
             [taoensso.timbre :as log]))
 
 (defn static-routes
-  ([]
-    (static-routes {}))
-  ([routes]
+  ([posts]
+    (static-routes posts {}))
+  ([posts routes]
     (merge
       routes
-      {"/blog/about.html" (page/about)
-       "/blog/powered-by.html" (page/powered-by)})))
+      {"/blog/about.html" (page/about posts)
+       "/blog/powered-by.html" (page/powered-by posts)})))
 
 (defn design-routes
-  [routes]
+  [posts routes]
   (merge
     routes
-    {"/blog/design/index.html" (page/design)
-     "/blog/design/bootstrap-theme.html" (page/bootstrap-theme)
-     "/blog/design/example-front-page.html" (page/front-page-example)
-     "/blog/design/example-blog.html" (page/blog-example)}))
+    {"/blog/design/index.html" (page/design posts)
+     "/blog/design/bootstrap-theme.html" (page/bootstrap-theme posts)
+     "/blog/design/example-front-page.html" (page/front-page-example posts)
+     "/blog/design/example-blog.html" (page/blog-example posts)}))
 
 (defn post-routes
-  [uri-base data routes]
+  [uri-base posts routes]
   (merge
     routes
     (blog/get-indexed-archive-routes
-      (map vector (iterate inc 0) data)
-      :gen-func page/post
+      (map vector (iterate inc 0) posts)
+      :gen-func (partial page/post posts)
       :uri-base uri-base)))
 
 (defn index-routes
-  [data routes]
+  [posts routes]
   (merge
     routes
-    {"/blog/index.html" (page/front-page data)
-     "/blog/archives/index.html" (page/archives data)
-     "/blog/categories/index.html" (page/categories data)
-     "/blog/tags/index.html" (page/tags data)
-     "/blog/authors/index.html" (page/authors data)}))
+    {"/blog/index.html" (page/front-page posts)
+     "/blog/archives/index.html" (page/archives posts)
+     "/blog/categories/index.html" (page/categories posts)
+     "/blog/tags/index.html" (page/tags posts)
+     "/blog/authors/index.html" (page/authors posts)}))
 
 (defn reader-routes
-  [uri-base data routes]
+  [uri-base posts routes]
   (let [route "/blog/atom.xml"]
     (merge
       routes
       {route (reader/atom-feed
-               uri-base route (take (config/feed-count) data))})))
+               uri-base route (take (config/feed-count) posts))})))
 
 (defn sitemaps-routes
   [uri-base routes]
@@ -71,13 +70,13 @@
 
 (defn routes
   [uri-base]
-  (let [data (blog/process uri-base)]
-    (log/trace "Got data:" (pprint (blog/data-minus-body data)))
-    (->> (static-routes)
-         (design-routes)
-         (post-routes uri-base data)
-         (index-routes data)
-         (reader-routes uri-base data)
+  (let [posts (blog/process uri-base)]
+    (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
+    (->> (static-routes posts)
+         (design-routes posts)
+         (post-routes uri-base posts)
+         (index-routes posts)
+         (reader-routes uri-base posts)
          (sitemaps-routes uri-base))))
 
 ;;; Generator routes
@@ -125,11 +124,11 @@
 
 (defn gen-routes
   [uri-base]
-  (let [data (blog/process uri-base)]
-    (log/trace "Got data:" (pprint (blog/data-minus-body data)))
-    (->> (gen-static-routes)
-         (gen-design-routes)
-         (gen-post-routes uri-base data)
-         (gen-index-routes data)
-         (gen-reader-routes uri-base data)
+  (let [posts (blog/process uri-base)]
+    (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
+    (->> (gen-static-routes posts)
+         (gen-design-routes posts)
+         (gen-post-routes uri-base posts)
+         (gen-index-routes posts)
+         (gen-reader-routes uri-base posts)
          (gen-sitemaps-routes uri-base))))

@@ -22,6 +22,9 @@
             <div class="collapse navbar-collapse">
               <ul class="nav nav-pills navbar-nav navbar-right">
 
+                <li class="{% ifequal page-data.active page-data.index %}active{% endifequal %}">
+                  <a href="{{ page-data.base-path }}/">Home</a>
+                </li>
                 <li class="{% ifequal page-data.active page-data.archives %}active{% endifequal %}">
                   <a href="{{ page-data.base-path }}/archives/">Archives</a>
                 </li>
@@ -79,22 +82,28 @@
             <div class="col-md-4 footer-widget">
               <h3> <i class="fa fa-wpforms"></i>Statistics</h3>
 
-              <span>Even we sometimes loose track of how many articles we actually have here.  This one helps:</span>
+              <span>For the geeks that track this sort of thing
+              (ust for the posts themselves, not the other content):</span>
 
               <div class="stats">
                 <div class="line">
-                  <span class="counter">27</span>
+                  <span class="counter">{{ posts-stats.posts }}</span>
                   <span class="caption">Articles</span>
                 </div>
                 <div class="line">
-                  <span class="counter">208</span>
-                  <span class="caption">Comments</span>
-                </div>
-                <div class="line">
-                  <span class="counter">2</span>
+                  <span class="counter">{{ posts-stats.authors }}</span>
                   <span class="caption">Authors</span>
                 </div>
+                <div class="line">
+                  <span class="counter">{{ posts-stats.words }}</span>
+                  <span class="caption">Words</span>
+                </div>
+                <div class="line">
+                  <span class="counter">{{ posts-stats.chars }}</span>
+                  <span class="caption">Characters</span>
+                </div>
               </div>
+
             </div>
 
             <div class="col-md-4 footer-widget">

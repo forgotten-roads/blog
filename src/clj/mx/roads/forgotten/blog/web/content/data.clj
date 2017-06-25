@@ -4,23 +4,37 @@
             [dragon.config :as config]
             [markdown.core :as markdown]))
 
+(defn posts-stats
+  [posts]
+  {:posts (count posts)
+   :authors (->> posts
+                 (map :author)
+                 set
+                 count)
+   :words (->> posts
+               (map :word-count)
+               (reduce + 0))
+   :chars (->> posts
+               (map :char-count)
+               (reduce + 0))})
+
 (defn base
   ([]
     (base {}))
-  ([data]
-    (merge
-      {:base-path "/blog"
-       :site-title (config/name)
-       :site-description (config/description)
-       :index "index"
-       :about "about"
-       :community "community"
-       :archives "archives"
-       :categories "categories"
-       :tags "tags"
-       :authors "authors"
-       :active nil}
-      data)))
+  ([posts]
+    {:page-data {:base-path "/blog"
+                 :site-title (config/name)
+                 :site-description (config/description)
+                 :index "index"
+                 :about "about"
+                 :community "community"
+                 :archives "archives"
+                 :categories "categories"
+                 :tags "tags"
+                 :authors "authors"
+                 :active nil}
+      :posts-data posts
+      :posts-stats (posts-stats posts)}))
 
 (def generic-page
   {:title nil
@@ -37,64 +51,87 @@
                 (markdown/md-to-html-string))}))
 
 (defn about
-  []
-  {:page-data (base {:active "about"})
-   :content (-> "about.md"
-                (markdown-page)
-                (assoc :title "About"))})
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "about")
+      (assoc :content (-> "about.md"
+                          (markdown-page)
+                          (assoc :title "About")))))
 
 (defn powered-by
-  []
-  {:page-data (base {:active "about"})
-   :content (-> "powered-by.md"
-                (markdown-page)
-                (assoc :title "Powered By"))})
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "about")
+      (assoc :content (-> "powered-by.md"
+                          (markdown-page)
+                          (assoc :title "Powered By")))))
 
 (defn archives
-  [data]
-  {:page-data (base {:active "archives"})
-   :posts-data data
-   :content (assoc generic-page :title "Archives")})
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "archives")
+      (assoc :content (assoc generic-page :title "Archives")
+             :posts-data (blog/data-for-archives posts))))
 
 (defn categories
-  [data]
-  {:page-data (base {:active "categories"})
-   :posts-data data
-   :content (assoc generic-page :title "Categories")})
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "categories")
+      (assoc :content (assoc generic-page :title "Categories")
+             :posts-data (blog/data-for-categories posts))))
 
 (defn tags
-  [data]
-  {:page-data (base {:active "tags"})
-   :posts-data data
-   :content (assoc generic-page :title "Tags")})
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "tags")
+      (assoc :content (assoc generic-page :title "Tags")
+             :posts-data (blog/data-for-tags posts))))
+
 
 (defn authors
-  [data]
-  {:page-data (base {:active "authors"})
-   :posts-data data
-   :content (assoc generic-page :title "Authors")})
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "authors")
+      (assoc :content (assoc generic-page :title "Authors")
+             :posts-data (blog/data-for-authors posts))))
 
 (defn community
-  []
-  {:page-data (base {:active "community"})
-   :content (assoc generic-page :title "Community")})
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "community")
+      (assoc :content (assoc generic-page :title "Community"))))
 
 (defn design
-  []
-  {:page-data (base {:active "design"})
-   :content (assoc generic-page :title "Design")})
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "design")
+      (assoc :content (assoc generic-page :title "Design"))))
 
 (defn front-page
-  [data & {post-count :post-count column-count :column-count}]
-  (let [headliner (first data)
-        posts (partition column-count (take (dec post-count) (rest data)))]
-  {:page-data (base {:active "index"})
-   :tags (blog/tags data)
-   :headliner headliner
-   :posts-data posts}))
+  [posts & {:keys [post-count column-count]}]
+  (let [headliner (first posts)
+        grouped-posts (partition column-count
+                                 (take (dec post-count)
+                                       (rest posts)))]
+    (-> posts
+        (base)
+        (assoc-in [:page-data :active] "index")
+        (assoc :tags (blog/tags posts)
+               :headliner headliner
+               :posts-data grouped-posts))))
 
 (defn post
-  [data]
-  {:page-data (base {:active "archives"})
-   :post-data data
-   :tags (blog/tags [data])})
+  [posts post-data]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "archives")
+      (assoc :post-data post-data
+             :tags (blog/tags [post-data]))))

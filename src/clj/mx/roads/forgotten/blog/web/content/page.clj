@@ -1,99 +1,90 @@
 (ns mx.roads.forgotten.blog.web.content.page
   (:require [mx.roads.forgotten.blog.web.content.data :as data]
-            [dragon.blog :as blog]
             [dragon.web.content :as content]))
 
 (defn about
-  []
+  [posts]
   (content/render
     "templates/generic.html"
-    (data/about)))
+    (data/about posts)))
 
 (defn powered-by
-  []
+  [posts]
   (content/render
     "templates/generic.html"
-    (data/powered-by)))
+    (data/powered-by posts)))
 
 (defn community
-  []
+  [posts]
   (content/render
     "templates/community.html"
-    (data/community)))
+    (data/community posts)))
 
 (defn post
-  [data]
+  [posts post-data]
   (content/render
     "templates/post.html"
-    (data/post data)))
+    (data/post posts post-data)))
 
 (defn front-page
-  [data]
+  [posts]
   (content/render
     "templates/front-page.html"
     (data/front-page
-      data
+      posts
       :post-count 5
       :column-count 2)))
 
 (defn archives
-  [data]
+  [posts]
   (content/render
     "templates/archives.html"
-    (-> data
-        (blog/data-for-archives)
-        (data/archives))))
+    (data/archives posts)))
 
 (defn categories
-  [data]
+  [posts]
   (content/render
     "templates/categories.html"
-    (-> data
-        (blog/data-for-categories)
-        (data/categories))))
+    (data/categories posts)))
 
 (defn tags
-  [data]
+  [posts]
   (content/render
     "templates/tags.html"
-    (-> data
-        (blog/data-for-tags)
-        (data/tags))))
+    (data/tags posts)))
 
 (defn authors
-  [data]
+  [posts]
   (content/render
     "templates/authors.html"
-    (-> data
-        (blog/data-for-authors)
-        (data/authors))))
+    (data/authors posts)))
 
 (defn design
-  []
+  [posts]
   (content/render
     "templates/design.html"
-    (data/design)))
+    (data/design posts)))
 
 (defn bootstrap-theme
-  []
+  [posts]
   (content/render
     "templates/bootstrap-theme.html"
-    (data/design)))
+    (data/design posts)))
 
 (defn front-page-example
-  []
+  [posts]
   (content/render
     "templates/front-page-example.html"
-    (data/design)))
+    (data/design posts)))
 
 (defn blog-example
-  []
+  [posts]
   (content/render
     "templates/blog-example.html"
-    (data/design)))
+    (data/design posts)))
 
 ; (defn post-example
-;   []
+;   [posts]
 ;   (content/render
 ;     "templates/post-example.html"
-;     (data/design)))
+;     (data/design posts)))

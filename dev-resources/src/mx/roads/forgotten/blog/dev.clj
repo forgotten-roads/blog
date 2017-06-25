@@ -18,6 +18,7 @@
     [dragon.util :as util]
     [dragon.web :as web]
     [mx.roads.forgotten.blog.cli :as cli]
+    [mx.roads.forgotten.blog.core :as core]
     [mx.roads.forgotten.blog.main :as main]
     [mx.roads.forgotten.blog.reader :as reader]
     [mx.roads.forgotten.blog.routes :as routes]
