@@ -1,4 +1,4 @@
-# blog.forgotten.roads.mx
+# forgotten.roads.mx Blog
 
 *The Forgotten Roads Blog for Motorcycle Excursionists*
 
