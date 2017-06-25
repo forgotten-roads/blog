@@ -1164,6 +1164,13 @@ fieldset[disabled] .btn-tales-two.active {
   border-radius: 5px;
 }
 
+.row-full-height {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
 .headliner h2,
 .subheadliner h2 {
   font-family: 'PT Serif', serif;
