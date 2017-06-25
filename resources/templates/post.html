@@ -70,63 +70,71 @@
             <header>
               <h3>Category</h3>
             </header>
-            <p>
-              <a href="{{ page-data.base-path }}/categories/#{{post-data.category}}">{{ post-data.category }}</a>
-            </p>
+            <div class="body">
+              <p>
+                <a href="{{ page-data.base-path }}/categories/#{{post-data.category}}">{{ post-data.category }}</a>
+              </p>
+            </div>
           </div>
 
           <div class="aside-widget tags-widget">
             <header>
               <h3>Tags</h3>
             </header>
-            <ul>
-              {% for tag in tags %}
-              <li>
-                <a href="{{ page-data.base-path }}/tags/#{{tag}}">{{ tag }}</a>
-              </li>
-              {% endfor %}
-            </ul>
+            <div class="body">
+              <ul>
+                {% for tag in tags %}
+                <li>
+                  <a href="{{ page-data.base-path }}/tags/#{{tag}}">{{ tag }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
           </div>
 
           <div class="aside-widget">
             <header>
               <h3>Post Data</h3>
             </header>
-            <p>Words: {{ post-data.word-count }}</p>
-            <p>Characters: {{ post-data.char-count }}</p>
-            </p>
+            <div class="body">
+              <p>Words: {{ post-data.word-count }}</p>
+              <p>Characters: {{ post-data.char-count }}</p>
+              </p>
+            </div>
           </div>
 
           <div class="aside-widget">
             <header>
               <h3>Neighboring Posts</h3>
             </header>
-            <div class="row">
-              <div class="col-xs-6">Previous</div>
-              <div class="col-xs-6">Next</div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6">
-                {% if post-data.prev-post %}
-                <a href="{{ post-data.prev-post }}">
-                  <i class="fa fa-arrow-circle-o-left fa-2x"
-                     aria-hidden="true"></i>
-                </a>
-                {% else %}
-                  <i class="fa fa-arrow-circle-o-left fa-2x nav-arrow-disabled"
-                     aria-hidden="true"></i>
-                {% endif %}
+            <div class="body">
+              <div class="row">
+                <div class="col-xs-6">Previous</div>
+                <div class="col-xs-6">Next</div>
               </div>
-              <div class="col-xs-6">
-                {% if post-data.next-post %}
-                <a href="{{ post-data.next-post }}">
-                  <i class="fa fa-arrow-circle-o-right fa-2x"
-                     aria-hidden="true"></i>
-                </a>
-                {% else %}
-                  <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
-                     aria-hidden="true"></i>
-                {% endif %}
+              <div class="row">
+                <div class="col-xs-6">
+                  {% if post-data.prev-post %}
+                  <a href="{{ post-data.prev-post }}">
+                    <i class="fa fa-arrow-circle-o-left fa-2x"
+                       aria-hidden="true"></i>
+                  </a>
+                  {% else %}
+                    <i class="fa fa-arrow-circle-o-left fa-2x nav-arrow-disabled"
+                       aria-hidden="true"></i>
+                  {% endif %}
+                </div>
+                <div class="col-xs-6">
+                  {% if post-data.next-post %}
+                  <a href="{{ post-data.next-post }}">
+                    <i class="fa fa-arrow-circle-o-right fa-2x"
+                       aria-hidden="true"></i>
+                  </a>
+                  {% else %}
+                    <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
+                       aria-hidden="true"></i>
+                  {% endif %}
+                </div>
               </div>
             </div>
           </div>
