@@ -5,27 +5,29 @@
 <meta name="author" content="{{ post-data.author }}">
 
 <!-- Dublic Core Metadata (per-page) -->
-<meta name="DC.title" lang="en" content="">
+<meta name="DC.title" lang="en" content="{{ post-data.title }}">
 <meta name="DC.creator" content="{{ post-data.author }}">
-<meta name="DC.subject" content="">
-<meta name="DC.identifier" scheme="DCTERMS.URI" content="">
-<meta name="DCTERMS.abstract" content="">
+<meta name="DC.subject" content="{{ post-data.category }}">
+<meta name="DC.date" content="{{ post-data.datestamp }}">
+<meta name="DC.identifier" scheme="DCTERMS.URI" content="http://forgotten.roads.mx{{ post-data.url }}">
+<meta name="DCTERMS.abstract" content="{% if post-data.subtitle %}{{ post-data.subtitle|safe }}{% endif %}">
 
 <!-- Facebook's OpenGraph Metadata -->
-<meta property="og:title" content="">
-<meta property="og:url" content="">
+<meta property="og:site_name" content="{{ page-data.site-title }}">
+<meta property="og:title" content="{{ post-data.title }}">
+<meta property="og:url" content="http://forgotten.roads.mx{{ post-data.url }}">
 <meta property="og:type" content="blog">
-<meta property="og:description" content="">
-<meta property="og:image" content="">
+<meta property="og:description" content="{% if post-data.subtitle %}{{ post-data.subtitle|safe }}{% endif %}">
+<meta property="og:image" content="http://forgotten.roads.mx{{ page-data.base-path }}/{{ post-data.header-image }}">
 
 <!-- Twitter Card Metadata -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@ForgottenRdsMX">
-<meta name="twitter:creator" content="">
-<meta name="twitter:title" content="">
-<meta name="twitter:url" content="">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="">
+<meta name="twitter:creator" content="@{{ post-data.twitter }}">
+<meta name="twitter:title" content="{{ post-data.title }}">
+<meta name="twitter:url" content="http://forgotten.roads.mx{{ post-data.url }}">
+<meta name="twitter:description" content="{% if post-data.subtitle %}{{ post-data.subtitle|safe }}{% endif %}">
+<meta name="twitter:image" content="http://forgotten.roads.mx{{ page-data.base-path }}/{{ post-data.header-image }}">
 {% endblock %}
 
 {% block main-content %}
