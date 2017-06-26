@@ -1,5 +1,34 @@
 {% extends "templates/base.html" %}
 
+{% block page-metadata %}
+<!-- General Metadata (per-page) -->
+<meta name="author" content="Forgotten Roads MX">
+
+<!-- Dublic Core Metadata (per-page) -->
+<meta name="DC.keywords" content="">
+<meta name="DC.title" lang="en" content="{{ page-data.site-title }}">
+<meta name="DC.creator" content="Forgotten Roads MX">
+<meta name="DC.subject" content="Site Landing Page">
+<meta name="DC.identifier" scheme="DCTERMS.URI" content="">
+<meta name="DCTERMS.abstract" content="{{ page-data.site-description }}">
+
+<!-- Facebook's OpenGraph Metadata -->
+<meta property="og:title" content="{ page-data.site-title }}">
+<meta property="og:url" content="http://forgotten.roads.mx/blog/">
+<meta property="og:type" content="blog">
+<meta property="og:description" content="{{ page-data.site-description }}">
+<meta property="og:image" content="http://forgotten.roads.mx/blog/img/roadtrip5-with-text.jpg">
+
+<!-- Twitter Card Metadata -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ForgottenRdsMX">
+<meta name="twitter:creator" content="@ForgottenRdsMX">
+<meta name="twitter:title" content="{ page-data.site-title }}">
+<meta name="twitter:url" content="http://forgotten.roads.mx/blog/">
+<meta name="twitter:description" content="{{ page-data.site-description }}">
+<meta name="twitter:image" content="http://forgotten.roads.mx/blog/img/roadtrip5-with-text.jpg">
+{% endblock %}
+
 {% block contained-main-content %}
 <div class="row">
   <div class="col-sm-8 blog-main">

@@ -1,5 +1,34 @@
 {% extends "templates/base.html" %}
 
+{% block page-metadata %}
+<!-- General Metadata (per-page) -->
+<meta name="author" content="{{ post-data.author }}">
+
+<!-- Dublic Core Metadata (per-page) -->
+<meta name="DC.keywords" content="">
+<meta name="DC.title" lang="en" content="">
+<meta name="DC.creator" content="{{ post-data.author }}">
+<meta name="DC.subject" content="">
+<meta name="DC.identifier" scheme="DCTERMS.URI" content="">
+<meta name="DCTERMS.abstract" content="">
+
+<!-- Facebook's OpenGraph Metadata -->
+<meta property="og:title" content="">
+<meta property="og:url" content="">
+<meta property="og:type" content="blog">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+
+<!-- Twitter Card Metadata -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ForgottenRdsMX">
+<meta name="twitter:creator" content="">
+<meta name="twitter:title" content="">
+<meta name="twitter:url" content="">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="">
+{% endblock %}
+
 {% block main-content %}
     <div class="container">
       <div class="page-header" id="banner">
