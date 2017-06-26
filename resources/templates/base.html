@@ -37,7 +37,7 @@
                 <li class="{% ifequal page-data.active page-data.authors %}active{% endifequal %}">
                   <a href="{{ page-data.base-path }}/authors/">Authors</a>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown {% ifequal page-data.active page-data.about %}active{% endifequal %}">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="{{ page-data.base-path }}/about.html">About FRMX</a></li>
