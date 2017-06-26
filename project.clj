@@ -43,7 +43,8 @@
   :dragon {
     :domain "forgotten.roads.mx/blog"
     :name "Forgotten Roads MX"
-    :description "Articles, Reviews, & Explorations for the Motorcycle Excursionist"
+    :description ~(str "Articles, Reviews, & Explorations for the Motorcycle "
+                       "Excursionist and Non-traditional Adventurer")
     :dev-port 5096
     :output-dir "."
     :posts-path "/blog/archives"
