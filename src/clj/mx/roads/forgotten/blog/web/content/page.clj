@@ -8,6 +8,30 @@
     "templates/generic.html"
     (data/about posts)))
 
+(defn contact
+  [posts]
+  (content/render
+    "templates/generic.html"
+    (data/contact posts)))
+
+(defn license
+  [posts]
+  (content/render
+    "templates/generic.html"
+    (data/license posts)))
+
+(defn privacy
+  [posts]
+  (content/render
+    "templates/generic.html"
+    (data/privacy posts)))
+
+(defn disclosure
+  [posts]
+  (content/render
+    "templates/generic.html"
+    (data/disclosure posts)))
+
 (defn powered-by
   [posts]
   (content/render

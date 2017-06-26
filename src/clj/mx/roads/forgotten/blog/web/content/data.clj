@@ -59,6 +59,42 @@
                           (markdown-page)
                           (assoc :title "About")))))
 
+(defn contact
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "about")
+      (assoc :content (-> "contact.md"
+                          (markdown-page)
+                          (assoc :title "Contact Us")))))
+
+(defn license
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "about")
+      (assoc :content (-> "license.md"
+                          (markdown-page)
+                          (assoc :title "Content License")))))
+
+(defn privacy
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "about")
+      (assoc :content (-> "privacy.md"
+                          (markdown-page)
+                          (assoc :title "Privacy Policy")))))
+
+(defn disclosure
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "about")
+      (assoc :content (-> "disclosure.md"
+                          (markdown-page)
+                          (assoc :title "Disclosure Policy")))))
+
 (defn powered-by
   [posts]
   (-> posts

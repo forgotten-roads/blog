@@ -22,7 +22,11 @@
     (merge
       routes
       {"/blog/about.html" (page/about posts)
-       "/blog/powered-by.html" (page/powered-by posts)})))
+       "/blog/contact.html" (page/contact posts)
+       "/blog/powered-by.html" (page/powered-by posts)
+       "/blog/license.html" (page/license posts)
+       "/blog/privacy.html" (page/privacy posts)
+       "/blog/disclosure.html" (page/disclosure posts)})))
 
 (defn design-routes
   [posts routes]

@@ -37,8 +37,18 @@
                 <li class="{% ifequal page-data.active page-data.authors %}active{% endifequal %}">
                   <a href="{{ page-data.base-path }}/authors/">Authors</a>
                 </li>
-                <li class="{% ifequal page-data.active page-data.about %}active{% endifequal %}">
-                  <a href="{{ page-data.base-path }}/about.html">About</a>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="{{ page-data.base-path }}/about.html">About FRMX</a></li>
+                    <li><a href="{{ page-data.base-path }}/contact.html">Contact Us</a></li>
+                    <li><a href="{{ page-data.base-path }}/powered-by.html">Powered By</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ page-data.base-path }}/license.html">Content License</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ page-data.base-path }}/privacy.html">Privacy Policy</a></li>
+                    <li><a href="{{ page-data.base-path }}/disclosure.html">Disclosure Policy</a></li>
+                  </ul>
                 </li>
 
               </ul>
@@ -138,7 +148,19 @@
     &copy; 2016-2017, C&amp;B|Books &middot;
     designed by <a href="http://hackerthemes.com" rel="nofollow">HackerThemes</a> and
     <a href="http://forgotten.roads.mx">Forgotten Roads MX</a>
+    <span style="float: right">
+      <a href="{{ page-data.base-path }}/about.html">About</a>
+      &middot;
+      <a href="{{ page-data.base-path }}/contact.html">Contact Us</a>
+      |
+      <a href="{{ page-data.base-path }}/license.html">License</a>
+      |
+      <a href="{{ page-data.base-path }}/privacy.html">Privacy</a>
+      &middot;
+      <a href="{{ page-data.base-path }}/disclosure.html">Disclosure</a>
+    </span>
   </div>
+
 </div>
 {% endblock %}
 
