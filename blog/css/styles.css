@@ -1171,6 +1171,23 @@ fieldset[disabled] .btn-tales-two.active {
   display: -webkit-flex;
 }
 
+.lead {
+  font-size: 170%;
+  letter-spacing: 1px;
+}
+
+.headlines-heading {
+  font-family: 'PT Serif', serif;
+  font-size: 275%;
+  padding-top: 1em;
+  letter-spacing: 2px;
+}
+
+.headlines-desc {
+  font-style: italic;
+  color: #949fa9;
+}
+
 .headliner h2,
 .subheadliner h2 {
   font-family: 'PT Serif', serif;
@@ -1191,3 +1208,4 @@ fieldset[disabled] .btn-tales-two.active {
 .subheadliner {
   font-size: 110%;
 }
+

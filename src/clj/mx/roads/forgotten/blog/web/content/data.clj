@@ -5,7 +5,7 @@
             [markdown.core :as markdown]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;   Helper Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Helper Functions & Data Helpers   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn posts-stats
@@ -21,20 +21,6 @@
    :chars (->> posts
                (map :char-count)
                (reduce + 0))})
-
-(defn markdown-page
-  [md-file]
-  (merge
-    generic-page
-    {:body (->> md-file
-                (str "markdown/")
-                (io/resource)
-                (slurp)
-                (markdown/md-to-html-string))}))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;   Data Helpers   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn base
   ([]
@@ -57,6 +43,16 @@
 (def generic-page
   {:title nil
    :subtitle nil})
+
+(defn markdown-page
+  [md-file]
+  (merge
+    generic-page
+    {:body (->> md-file
+                (str "markdown/")
+                (io/resource)
+                (slurp)
+                (markdown/md-to-html-string))}))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Static Pages Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -144,7 +140,13 @@
     (-> posts
         (base)
         (assoc-in [:page-data :active] "index")
-        (assoc :tags (blog/tags posts)
+        (assoc :headlines-heading "Headlines"
+               :headlines-desc (str "We like to keep things simple at FRMX. "
+                                    "Only the most recent headlines are kept "
+                                    "on the front page -- if you want to read "
+                                    "an older post, <a href=\"/blog/archives\""
+                                    ">check out the archives</a>.")
+               :tags (blog/tags posts)
                :headliner headliner
                :posts-data grouped-posts))))
 

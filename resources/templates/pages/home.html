@@ -33,8 +33,10 @@
 <div class="row">
   <div class="col-sm-8 blog-main">
 
-    <h1>{{ page-data.site-title }}</h1>
+    <!-- <h1>{{ page-data.site-title }}</h1> -->
     <p class="lead">{{ page-data.site-description }}</p>
+    <h2 class="headlines-heading">{{ headlines-heading }}</h2>
+    <p class="headlines-desc">{{ headlines-desc|safe }}</p>
 
     <div class="row">
       <div class="col-sm-12">
@@ -91,7 +93,7 @@
     {% endfor %}
 
     <div class="clearfix">
-      <a href="/blog/archives/" class="btn btn-tales-one">Read more</a>
+      <a href="/blog/archives/" class="btn btn-tales-one">List All Posts</a>
     </div>
 
   </div>

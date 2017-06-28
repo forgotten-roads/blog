@@ -52,6 +52,28 @@ $ make blog-dev-gen
 TBD
 
 
+## Developing Content
+
+Start up the REPL:
+
+```
+$ lein repl
+```
+
+Regenerate the content and start the local dev server:
+
+```clj
+(core/generate+web)
+```
+
+Edit files, reload the Clojure namespaces, and regenerate the content:
+
+```clj
+(reload)
+(core/generate)
+```
+
+
 ## Publishing Content
 
 To (re-)publish all content to AWS:
