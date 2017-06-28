@@ -4,6 +4,10 @@
             [dragon.config :as config]
             [markdown.core :as markdown]))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Helper Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defn posts-stats
   [posts]
   {:posts (count posts)
@@ -17,6 +21,20 @@
    :chars (->> posts
                (map :char-count)
                (reduce + 0))})
+
+(defn markdown-page
+  [md-file]
+  (merge
+    generic-page
+    {:body (->> md-file
+                (str "markdown/")
+                (io/resource)
+                (slurp)
+                (markdown/md-to-html-string))}))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Data Helpers   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn base
   ([]
@@ -40,15 +58,9 @@
   {:title nil
    :subtitle nil})
 
-(defn markdown-page
-  [md-file]
-  (merge
-    generic-page
-    {:body (->> md-file
-                (str "markdown/")
-                (io/resource)
-                (slurp)
-                (markdown/md-to-html-string))}))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Static Pages Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn about
   [posts]
@@ -59,6 +71,13 @@
                           (markdown-page)
                           (assoc :title "About")))))
 
+(defn community
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "community")
+      (assoc :content (assoc generic-page :title "Community"))))
+
 (defn contact
   [posts]
   (-> posts
@@ -67,6 +86,15 @@
       (assoc :content (-> "contact.md"
                           (markdown-page)
                           (assoc :title "Contact Us")))))
+
+(defn powered-by
+  [posts]
+  (-> posts
+      (base)
+      (assoc-in [:page-data :active] "about")
+      (assoc :content (-> "powered-by.md"
+                          (markdown-page)
+                          (assoc :title "Powered By")))))
 
 (defn license
   [posts]
@@ -95,14 +123,34 @@
                           (markdown-page)
                           (assoc :title "Disclosure Policy")))))
 
-(defn powered-by
-  [posts]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Dynamic Pages Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn post
+  [posts post-data]
   (-> posts
       (base)
-      (assoc-in [:page-data :active] "about")
-      (assoc :content (-> "powered-by.md"
-                          (markdown-page)
-                          (assoc :title "Powered By")))))
+      (assoc-in [:page-data :active] "archives")
+      (assoc :post-data post-data
+             :tags (blog/tags [post-data]))))
+
+(defn front-page
+  [posts & {:keys [post-count column-count]}]
+  (let [headliner (first posts)
+        grouped-posts (partition column-count
+                                 (take (dec post-count)
+                                       (rest posts)))]
+    (-> posts
+        (base)
+        (assoc-in [:page-data :active] "index")
+        (assoc :tags (blog/tags posts)
+               :headliner headliner
+               :posts-data grouped-posts))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Listings Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn archives
   [posts]
@@ -128,7 +176,6 @@
       (assoc :content (assoc generic-page :title "Tags")
              :posts-data (blog/data-for-tags posts))))
 
-
 (defn authors
   [posts]
   (-> posts
@@ -137,12 +184,9 @@
       (assoc :content (assoc generic-page :title "Authors")
              :posts-data (blog/data-for-authors posts))))
 
-(defn community
-  [posts]
-  (-> posts
-      (base)
-      (assoc-in [:page-data :active] "community")
-      (assoc :content (assoc generic-page :title "Community"))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Design Pages Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn design
   [posts]
@@ -151,23 +195,5 @@
       (assoc-in [:page-data :active] "design")
       (assoc :content (assoc generic-page :title "Design"))))
 
-(defn front-page
-  [posts & {:keys [post-count column-count]}]
-  (let [headliner (first posts)
-        grouped-posts (partition column-count
-                                 (take (dec post-count)
-                                       (rest posts)))]
-    (-> posts
-        (base)
-        (assoc-in [:page-data :active] "index")
-        (assoc :tags (blog/tags posts)
-               :headliner headliner
-               :posts-data grouped-posts))))
 
-(defn post
-  [posts post-data]
-  (-> posts
-      (base)
-      (assoc-in [:page-data :active] "archives")
-      (assoc :post-data post-data
-             :tags (blog/tags [post-data]))))
+

@@ -2,113 +2,129 @@
   (:require [mx.roads.forgotten.blog.web.content.data :as data]
             [dragon.web.content :as content]))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Static Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defn about
   [posts]
   (content/render
-    "templates/generic.html"
+    "templates/pages/generic.html"
     (data/about posts)))
+
+(defn community
+  [posts]
+  (content/render
+    "templates/pages/generic.html"
+    (data/community posts)))
 
 (defn contact
   [posts]
   (content/render
-    "templates/generic.html"
+    "templates/pages/generic.html"
     (data/contact posts)))
+
+(defn powered-by
+  [posts]
+  (content/render
+    "templates/pages/generic.html"
+    (data/powered-by posts)))
 
 (defn license
   [posts]
   (content/render
-    "templates/generic.html"
+    "templates/pages/generic.html"
     (data/license posts)))
 
 (defn privacy
   [posts]
   (content/render
-    "templates/generic.html"
+    "templates/pages/generic.html"
     (data/privacy posts)))
 
 (defn disclosure
   [posts]
   (content/render
-    "templates/generic.html"
+    "templates/pages/generic.html"
     (data/disclosure posts)))
 
-(defn powered-by
-  [posts]
-  (content/render
-    "templates/generic.html"
-    (data/powered-by posts)))
-
-(defn community
-  [posts]
-  (content/render
-    "templates/community.html"
-    (data/community posts)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Dynamic Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn post
   [posts post-data]
   (content/render
-    "templates/post.html"
+    "templates/pages/post.html"
     (data/post posts post-data)))
 
 (defn front-page
   [posts]
   (content/render
-    "templates/front-page.html"
+    "templates/pages/home.html"
     (data/front-page
       posts
       :post-count 5
       :column-count 2)))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Listings Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defn archives
   [posts]
   (content/render
-    "templates/archives.html"
+    "templates/listings/archives.html"
     (data/archives posts)))
 
 (defn categories
   [posts]
   (content/render
-    "templates/categories.html"
+    "templates/listings/categories.html"
     (data/categories posts)))
 
 (defn tags
   [posts]
   (content/render
-    "templates/tags.html"
+    "templates/listings/tags.html"
     (data/tags posts)))
 
 (defn authors
   [posts]
   (content/render
-    "templates/authors.html"
+    "templates/listings/authors.html"
     (data/authors posts)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Design Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn design
   [posts]
   (content/render
-    "templates/design.html"
+    "templates/design/main.html"
     (data/design posts)))
 
 (defn bootstrap-theme
   [posts]
   (content/render
-    "templates/bootstrap-theme.html"
+    "templates/design/bootstrap-theme.html"
     (data/design posts)))
 
 (defn front-page-example
   [posts]
   (content/render
-    "templates/front-page-example.html"
+    "templates/design/front-page-example.html"
     (data/design posts)))
 
 (defn blog-example
   [posts]
   (content/render
-    "templates/blog-example.html"
+    "templates/design/blog-example.html"
     (data/design posts)))
 
 ; (defn post-example
 ;   [posts]
 ;   (content/render
-;     "templates/post-example.html"
+;     "templates/design/post-example.html"
 ;     (data/design posts)))
