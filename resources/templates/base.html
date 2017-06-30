@@ -1,93 +1,93 @@
 {% extends "templates/structure.html" %}
 
 {% block header-content %}
-      <div class="widewrapper masthead">
-        <div class="container">
-          <a href="{{ page-data.base-path }}/" id="logo">
-          {% block content-title %}
-            <img src="{{ page-data.base-path }}/img/logo-4-long-small.png" alt="Forgotten Roads Blog">
-            {% block content-subtitle %}
-            {{subtitle}}
-            {% endblock %}
-          {% endblock %}
-          </a>
+<div class="widewrapper masthead">
+  <div class="container">
+    <a href="{{ page-data.base-path }}/" id="logo">
+    {% block content-title %}
+      <img src="{{ page-data.base-path }}/img/logo-4-long-small.png" alt="Forgotten Roads Blog">
+      {% block content-subtitle %}
+      {{subtitle}}
+      {% endblock %}
+    {% endblock %}
+    </a>
 
-          <div id="mobile-nav-toggle" class="pull-right">
-            <a href="#" data-toggle="collapse" data-target=".tales-nav .navbar-collapse">
-              <i class="fa fa-bars"></i>
-            </a>
-          </div>
+    <div id="mobile-nav-toggle" class="pull-right">
+      <a href="#" data-toggle="collapse" data-target=".tales-nav .navbar-collapse">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
-          <nav class="pull-right tales-nav">
-            <div class="collapse navbar-collapse">
-              <ul class="nav nav-pills navbar-nav navbar-right">
+    <nav class="pull-right tales-nav">
+      <div class="collapse navbar-collapse">
+        <ul class="nav nav-pills navbar-nav navbar-right">
 
-                <li class="{% ifequal page-data.active page-data.index %}active{% endifequal %}">
-                  <a href="{{ page-data.base-path }}/">Home</a>
-                </li>
-                <li class="{% ifequal page-data.active page-data.archives %}active{% endifequal %}">
-                  <a href="{{ page-data.base-path }}/archives/">Archives</a>
-                </li>
-                <li class="{% ifequal page-data.active page-data.categories %}active{% endifequal %}">
-                  <a href="{{ page-data.base-path }}/categories/">Categories</a>
-                </li>
-                <li class="{% ifequal page-data.active page-data.tags %}active{% endifequal %}">
-                  <a href="{{ page-data.base-path }}/tags/">Tags</a>
-                </li>
-                <li class="{% ifequal page-data.active page-data.authors %}active{% endifequal %}">
-                  <a href="{{ page-data.base-path }}/authors/">Authors</a>
-                </li>
-                <li class="dropdown {% ifequal page-data.active page-data.about %}active{% endifequal %}">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="{{ page-data.base-path }}/about.html">About FRMX</a></li>
-                    <li><a href="{{ page-data.base-path }}/contact.html">Contact Us</a></li>
-                    <li><a href="{{ page-data.base-path }}/powered-by.html">Powered By</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="{{ page-data.base-path }}/license.html">Content License</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="{{ page-data.base-path }}/privacy.html">Privacy Policy</a></li>
-                    <li><a href="{{ page-data.base-path }}/disclosure.html">Disclosure Policy</a></li>
-                  </ul>
-                </li>
-
-              </ul>
-            </div>
-          </nav>
-
-        </div>
-      </div>
-
-      <div class="widewrapper subheader">
-        <div class="container">
-          {% block breadcrumb-content %}
-          <div class="sidebar-module sidebar-module-inset">
-            <ul class="social">
-              <li>
-                <a href="{{ page-data.base-path }}/atom.xml">
-                  <i class="fa fa-feed first"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/forgottenrdsmx">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/forgottenroadsmx/">
-                  <i class="fa fa-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="http://github.com/forgotten-roads">
-                  <i class="fa fa-github"></i>
-                </a>
-              </li>
+          <li class="{% ifequal page-data.active page-data.index %}active{% endifequal %}">
+            <a href="{{ page-data.base-path }}/">Home</a>
+          </li>
+          <li class="{% ifequal page-data.active page-data.archives %}active{% endifequal %}">
+            <a href="{{ page-data.base-path }}/archives/">Archives</a>
+          </li>
+          <li class="{% ifequal page-data.active page-data.categories %}active{% endifequal %}">
+            <a href="{{ page-data.base-path }}/categories/">Categories</a>
+          </li>
+          <li class="{% ifequal page-data.active page-data.tags %}active{% endifequal %}">
+            <a href="{{ page-data.base-path }}/tags/">Tags</a>
+          </li>
+          <li class="{% ifequal page-data.active page-data.authors %}active{% endifequal %}">
+            <a href="{{ page-data.base-path }}/authors/">Authors</a>
+          </li>
+          <li class="dropdown {% ifequal page-data.active page-data.about %}active{% endifequal %}">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ page-data.base-path }}/about.html">About FRMX</a></li>
+              <li><a href="{{ page-data.base-path }}/contact.html">Contact Us</a></li>
+              <li><a href="{{ page-data.base-path }}/powered-by.html">Powered By</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="{{ page-data.base-path }}/license.html">Content License</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="{{ page-data.base-path }}/privacy.html">Privacy Policy</a></li>
+              <li><a href="{{ page-data.base-path }}/disclosure.html">Disclosure Policy</a></li>
             </ul>
-          </div>
-          {% endblock %}
-        </div>
+          </li>
+
+        </ul>
       </div>
+    </nav>
+
+  </div>
+</div>
+
+<div class="widewrapper subheader">
+  <div class="container">
+    {% block breadcrumb-content %}
+    <div class="sidebar-module sidebar-module-inset">
+      <ul class="social">
+        <li>
+          <a href="{{ page-data.base-path }}/atom.xml">
+            <i class="fa fa-feed first"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/forgottenrdsmx">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/forgottenroadsmx/">
+            <i class="fa fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="http://github.com/forgotten-roads">
+            <i class="fa fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    {% endblock %}
+  </div>
+</div>
 {% endblock %}
 
 {% block footer-content %}

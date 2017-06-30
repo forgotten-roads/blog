@@ -67,17 +67,13 @@ hr {
   color: #feffff;
 }
 
-/* Layout styles that deal with the overall page structure */
-
-.container {
-
-}
-
 /* Masthead is the upper part of the header, containing logo and navigation*/
+
 .masthead {
   padding-top: 5px;
   padding-bottom: 10px;
 }
+
 .masthead #logo {
   float: left;
   display: block;
@@ -87,6 +83,7 @@ hr {
   text-transform: uppercase;
   margin-top: 10px;
 }
+
 .masthead #logo img {
   margin-top: -10px;
 }
@@ -98,22 +95,59 @@ hr {
 .page-header img {
   max-width: 100%;
 }
+
 /* Widewrappers that span the whole width of the page */
+
 .widewrapper {
   background-color: #feffff;
 }
+
 .widewrapper.main {
   -webkit-box-shadow: inset 1px 10px 8px -8px #ababab;
   -moz-box-shadow: inset 1px 10px 8px -8px #ababab;
   box-shadow: inset 1px 10px 8px -8px #ababab;
 }
-.widewrapper.masthead {
-  background: url(../img/hills.jpg) left top repeat-x;
-  background-color: #5B7BA7;
+
+header > .widewrapper.masthead {
+  background: url(../img/roadtrip5-medium.jpg) left top repeat-x;
+  background-color: #5c340f;
   background-size: cover;
   color: #f8f8f9;
   margin-bottom: -2px;
+  height: 500px;
+  transition: height 1000ms, background 1000ms, padding-top 1000ms;;
 }
+
+header > .widewrapper.masthead > .container {
+  padding-top: 388px;
+  transition: height 1000ms, background 1000ms, padding-top 1000ms;;
+}
+
+header.tiny > .widewrapper.masthead,
+header.home-tiny > .widewrapper.masthead {
+  background: url(../img/hills.jpg) left top repeat-x;
+  background-color: #5c340f;
+  background-size: cover;
+  height: 115px;
+  padding-top: 6px;
+  transition: height 1000ms, background 1000ms, padding-top 1000ms;
+}
+
+header.tiny > .widewrapper.masthead > .container {
+  padding-top: 0px;
+  transition: height 1000ms, background 1000ms, padding-top 1000ms;
+}
+
+header.home-tiny > .widewrapper.masthead {
+  height: 167px;
+  padding-top: 57px;
+}
+
+header.home-tiny > .widewrapper.masthead > .container {
+  padding-top: 4px;
+  transition: height 1000ms, background 1000ms, padding-top 1000ms;
+}
+
 .widewrapper.subheader {
   background-color: #3A332B;
   background: url(../img/tire-tread.png) left top repeat-x;
@@ -148,9 +182,11 @@ hr {
   color: #b3b5b7;
   font-size: 14px;
 }
+
 .widewrapper.footer a {
   color: #7b8690;
 }
+
 .widewrapper.footer h1,
 .widewrapper.footer h2,
 .widewrapper.footer h3,
@@ -1170,6 +1206,8 @@ fieldset[disabled] .btn-tales-two.active {
   display: -ms-flexbox;
   display: -webkit-flex;
 }
+
+
 
 .home-lead {
   font-size: 170%;

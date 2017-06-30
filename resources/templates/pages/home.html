@@ -29,6 +29,20 @@
 <meta name="twitter:image" content="http://forgotten.roads.mx/blog/img/roadtrip5-narrow-with-text.jpg">
 {% endblock %}
 
+{% block header-class %}{% endblock %}
+
+{% block head-postpends %}
+  <script type="text/javascript">
+    $(document).on('scroll', function() {
+      if ($(document).scrollTop() > 0) {
+        $('header').addClass('home-tiny');
+      } else {
+        $('header').removeClass('home-tiny');
+      }
+    });
+  </script>
+{% endblock %}
+
 {% block contained-main-content %}
 <div class="row">
   <div class="col-sm-8 blog-main">
