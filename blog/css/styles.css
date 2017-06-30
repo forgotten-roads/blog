@@ -148,6 +148,10 @@ header.home-tiny > .widewrapper.masthead > .container {
   transition: height 1000ms, background 1000ms, padding-top 1000ms;
 }
 
+.navbar-nav li > a {
+  text-shadow: 2px 2px 4px #333;
+}
+
 .widewrapper.subheader {
   background-color: #3A332B;
   background: url(../img/tire-tread.png) left top repeat-x;
@@ -1206,8 +1210,6 @@ fieldset[disabled] .btn-tales-two.active {
   display: -ms-flexbox;
   display: -webkit-flex;
 }
-
-
 
 .home-lead {
   font-size: 170%;
