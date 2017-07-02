@@ -45,9 +45,9 @@ publish-verifications-aws:
 		cp resources/site-verification/blog.f.r.mx/* \
 		s3://$(AWS_BLOG_BUCKET)/
 
-publish-redirect-aws:
-	@aws --profile=frmx s3 \
-		cp resources/site-redirects/f.r.mx/index.html \
+publish-redirects-aws:
+	aws --profile=frmx s3 \
+		sync resources/site-redirects/f.r.mx/ \
 		s3://$(AWS_BUCKET)/
 
 publish-robots-aws:
