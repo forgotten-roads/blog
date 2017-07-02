@@ -1,0 +1,171 @@
+Subject: Working with KML and GeoJSON Files
+Subtitle: Converting File Formats for Online GPS Services
+From: bobbermac
+Twitter: bobbermacean
+Category: Software
+Keywords: formats,data,gis,json,kml,services,howto
+Comments:
+Content-Type: md
+Header-Image:
+
+As anyone familiar (not me) with geographic information systems (or "GIS") data
+can tell you, working with the multitude of data formats, versions of those
+formats, data entry errors, and inconsistencies, makes GIS data processing
+a pretty time-consuming task. We've just tried to do very simple things, and
+it has taken us a few days to get things sorted.
+
+Right now at Forgotten Roads, we're evaluating software and data services
+for use in motorcycle adventure trips. We think we've got a good selection, at
+least for a first run or two. But before we go into any details on that, we
+wanted to provide a prelude blog post that can be a head-start for the eager
+reader and something that we can reference in later posts.
+
+Below we'll give a super-quick overview of the main geospatial file formats
+used by mapping and routes services, and then show you how to work with these
+files (something that will be very useful when you want to start doing
+interesting things with your ride routes).
+
+
+### File Formats
+
+#### KML
+
+Thanks to Google's ubiquity in so much of the tech world, `.kml` files (KML
+stands for "Keyhole Markup Language") are quite popular.
+[KML](https://en.wikipedia.org/wiki/Keyhole_Markup_Language) is a type
+of [XML](https://en.wikipedia.org/wiki/XML) developed by the company Keyhole,
+Inc., which specialized in geospatial visualization software. Google bought
+them in 2004 and turned their product "Earth Viewer" into "Google Earth".
+
+There are several versions of this markup language:
+
+* Version 2.1 - The last one produced by Google -- this version is still widely used
+* Version 2.2 - The first KML version that was submitted to the
+   [Open Geospatial Consortium](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium) (OGC) in 2007
+* 2.3 - Published by the OGC in 2015
+
+Most of what we see is still version 2.1.
+
+Really, the thing you need to know about KML is that, among the many, many
+things that it does, it can specify "traces" or "tracks" (very simple
+geospatial data, sometimes as little as just latitude and longitude values).
+The visual routes you see on mapping services like "Google Maps" can be
+represented in KML files that have this simple data.
+
+
+#### GeoJSON
+
+With the increasing popularity of KML in the mid-2000s, the nearly
+industry-wide distaste for XML, and rapidly growing adoption of JSON as a
+preferred human-readable data representation format, a working group for a
+[JSON](https://en.wikipedia.org/wiki/JSON)-based geospatial data format was
+begun in 2007. This gave the world GeJSON. Then, in 2015, a working group was founded at the
+[IETF](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force) for GeoJSON, which led to an
+[RFC](https://tools.ietf.org/html/rfc7946).
+
+We've been using this format a fair amount, too -- not directly, but because
+other tools or services we are using work with it.
+
+
+#### GPX
+
+The last format we'll mention is [GPX](https://en.wikipedia.org/wiki/GPS_Exchange_Format). We're not making use of any data in this format, but
+would remiss if we didn't mention it.
+
+Based upon XML, it was created around the same times as KML and stands for
+"GPS Exchange Format". In continues to enjoy a great deal of popularity.
+
+
+### Converting
+
+Okay, now that we have that boring stuff out of the way, we can talk about
+MORE BORING STUFF! How to I move from one to the other?
+
+#### Validating KML
+
+The first thing to keep in mind is that you may download a KML file
+from a service that has not provided the data fully to spec. Or they may be
+using an ever older version (and calling it a newer version). This is something
+that you can check, if you find that services are not letting you upload these
+KML files.
+
+For instance, if you download a KML file, open it up and check the version
+number. You should see a line near the top something like the following:
+
+```
+<kml xmlns="http://earth.google.com/kml/2.1">
+```
+
+The version number is there at the end. KML is an XML format, and XML file
+formats are defined with schemas. A quick internet search or two turns up the location
+for the KML version 2.1 schema here:
+
+* [https://developers.google.com/kml/schema/kml21.xsd](https://developers.google.com/kml/schema/kml21.xsd).
+
+ (Here are versions
+[2.2](http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd) and
+[2.3](http://schemas.opengis.net/kml/2.3/ogckml23.xsd)).
+
+We'll use a command-line tool running in a terminal window for this next bit.
+The command we'll run is `xmllint`. If you have a recent version of Mac OS X
+with developer tools installed, `xmllint` will already be on  your machine. If
+you are running something like Ubuntu, you may already have `libxml2-utils`
+installed (which includes `xmllint`). Here's how you check that the formatting
+of the KML file is correct:
+
+```
+$ xmllint --schema ~/Downloads/kml21.xsd ~/Downloads/track.kml
+```
+
+We downloaded a KML file from [SpotWalla](https://spotwalla.com/) and found
+that this command failed on that file. We had to open it up and change a line
+from this:
+
+```
+<altitudeMode>relative</altitudeMode>
+```
+
+to this:
+
+```
+<altitudeMode>relativeToGround</altitudeMode>
+```
+
+#### KML -> GeoJSON
+
+Probably the easiest way to convert a KML file you have downloaded to GeoJSON
+is to upload it to the "MyGeodata Converter" service:
+
+* [https://mygeodata.cloud/converter/kml-to-geojson](https://mygeodata.cloud/converter/kml-to-geojson)
+
+Simply browse for your file when you hit the button, then hit "Continue". Once
+your file uploads, you'll be asked to set any options (the defaults are fine
+for most cases; we haven't needed to adjust them yet). Then hit the "Convert
+now!" button, and a `.zip` file will download, which you can open up and
+extract your new `.geojson` file.
+
+The same site offers [a GPX converter](https://mygeodata.cloud/converter/geojson-to-gpx), should you need that.
+
+
+### Other Tools
+
+We've tried each of the following other tools but they either didn't work for
+our files or the functionality provided was not quite what we needed. However,
+they do seem to have a good user following and may be useful for you, so we'll
+share some links:
+
+* [Merkaartor](http://merkaartor.be/) - a mapping program that can be used with
+  [OpenStreetMap](https://en.wikipedia.org/wiki/OpenStreetMap); it offers some
+  import capabilities
+* [Google Earth Pro](https://www.google.com/earth/download/gep/agree.html) -
+  Google now provides the "pro" version of their Google Earth software for
+  free. This is now considered an outdated version; the supported one is the
+  new Chrome-only Google Earth 9 (released in 2017).
+* KMLCSV - maybe we were doing it wrong, but I wouldn't even bother with this
+  one ...
+
+
+### Next Up
+
+Before too long, you should be seeing another FRMX post about how we use
+the services that use KML and GeoJSON ... !
