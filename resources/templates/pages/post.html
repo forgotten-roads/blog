@@ -124,17 +124,6 @@
 
           <div class="aside-widget">
             <header>
-              <h3>Post Data</h3>
-            </header>
-            <div class="body">
-              <p>Words: {{ post-data.word-count }}</p>
-              <p>Characters: {{ post-data.char-count }}</p>
-              </p>
-            </div>
-          </div>
-
-          <div class="aside-widget">
-            <header>
               <h3>Neighboring Posts</h3>
             </header>
             <div class="body">
@@ -168,6 +157,19 @@
               </div>
             </div>
           </div>
+
+          <div class="aside-widget">
+            <header>
+              <h3>Post Data</h3>
+            </header>
+            <div class="body">
+              <p>Lines: {{ post-data.line-count }}</p>
+              <p>Words: {{ post-data.word-count }}</p>
+              <p>Characters: {{ post-data.char-count }}</p>
+              </p>
+            </div>
+          </div>
+
         </aside>
 
       </div>
