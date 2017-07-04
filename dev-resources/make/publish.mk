@@ -13,8 +13,13 @@ blog: blog-clean blog-local
 blog-clean:
 	@echo "\nCleaning old blog build ..."
 
+blog-data:
+	@rm -rf blog/data
+	@cp -r resources/data blog/
+
 blog-pre:
 	@echo "\nBuilding blog ...\n"
+	@$(MAKE) blog-data
 
 blog-css:
 	@lessc $(LESS_DIR)/styles-$(COLOUR_THEME).less $(CSS_DIR)/styles.css
