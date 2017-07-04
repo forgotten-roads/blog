@@ -10,6 +10,7 @@
   (:require [clojusc.twig :refer [pprint]]
             [dragon.blog :as blog]
             [dragon.config :as config]
+            [mx.roads.forgotten.blog.maps :as maps]
             [mx.roads.forgotten.blog.reader :as reader]
             [mx.roads.forgotten.blog.sitemapper :as sitemapper]
             [mx.roads.forgotten.blog.web.content.page :as page]
@@ -44,6 +45,17 @@
     (blog/get-indexed-archive-routes
       (map vector (iterate inc 0) posts)
       :gen-func (partial page/post posts)
+      :uri-base uri-base)))
+
+(defn map-routes
+  [uri-base routes]
+  (merge
+    routes
+    (maps/get-map-routes
+      :gen-funcs [
+        #'page/map-fullscreen
+        #'page/map-wide-page
+        #'page/map-content-page]
       :uri-base uri-base)))
 
 (defn index-routes

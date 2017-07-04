@@ -67,6 +67,26 @@
       :post-count 5
       :column-count 2)))
 
+(defn map-fullscreen
+  [map-data]
+  (content/render
+    "templates/pages/map-fullscreen.html"
+    (data/map-minimal
+      map-data)))
+
+(defn map-wide-page
+  [map-data]
+  (content/render
+    "templates/pages/map-wide-page.html"
+    (data/map-common
+      map-data)))
+
+(defn map-content-page
+  [map-data]
+  (content/render
+    "templates/pages/map-content-page.html"
+    (data/map-common
+      map-data)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Listings Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
