@@ -13,6 +13,7 @@
     [clojure.walk :refer [macroexpand-all]]
     [clojusc.twig :as logger]
     [dragon.blog :as blog]
+    [dragon.blog.post :as post]
     [dragon.config :as config]
     [dragon.generator :as gen]
     [dragon.util :as util]
@@ -28,9 +29,18 @@
     [taoensso.timbre :as log]
     [trifl.java :refer [show-methods]]))
 
-(logger/set-level! ['mx.roads.forgotten.blog] :debug)
+(logger/set-level! ['mx.roads.forgotten.blog 'dragon] :info)
 
 ;;; Aliases
 
 (def reload #'repl/refresh)
 (def reset #'repl/refresh)
+
+(defn show-lines-with-error
+  "Process posts and show the lines of text that threw exceptions."
+  []
+  (->> (blog/get-posts)
+       (map #(->> %
+                 (post/add-post-data)
+                 :text))
+       (pprint)))
