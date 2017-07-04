@@ -15,30 +15,37 @@
                  (map :author)
                  set
                  count)
+   :lines (->> posts
+               (map :line-count)
+               (reduce +))
    :words (->> posts
                (map :word-count)
-               (reduce + 0))
+               (reduce +))
    :chars (->> posts
                (map :char-count)
-               (reduce + 0))})
+               (reduce +))})
 
 (defn base
+  []
+  {:page-data {:base-path "/blog"
+               :site-title (config/name)
+               :site-description (config/description)
+               :index "index"
+               :about "about"
+               :community "community"
+               :archives "archives"
+               :categories "categories"
+               :tags "tags"
+               :authors "authors"
+               :active nil}})
+
+(defn common
   ([]
-    (base {}))
+    (common {}))
   ([posts]
-    {:page-data {:base-path "/blog"
-                 :site-title (config/name)
-                 :site-description (config/description)
-                 :index "index"
-                 :about "about"
-                 :community "community"
-                 :archives "archives"
-                 :categories "categories"
-                 :tags "tags"
-                 :authors "authors"
-                 :active nil}
-      :posts-data posts
-      :posts-stats (posts-stats posts)}))
+    (assoc (base)
+           :posts-data posts
+           :posts-stats (posts-stats posts))))
 
 (def generic-page
   {:title nil
@@ -61,7 +68,7 @@
 (defn about
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "about.md"
                           (markdown-page)
@@ -70,14 +77,14 @@
 (defn community
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "community")
       (assoc :content (assoc generic-page :title "Community"))))
 
 (defn contact
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "contact.md"
                           (markdown-page)
@@ -86,7 +93,7 @@
 (defn powered-by
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "powered-by.md"
                           (markdown-page)
@@ -95,7 +102,7 @@
 (defn license
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "license.md"
                           (markdown-page)
@@ -104,7 +111,7 @@
 (defn privacy
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "privacy.md"
                           (markdown-page)
@@ -113,7 +120,7 @@
 (defn disclosure
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "disclosure.md"
                           (markdown-page)
@@ -126,7 +133,7 @@
 (defn post
   [posts post-data]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "archives")
       (assoc :post-data post-data
              :tags (blog/tags [post-data]))))
@@ -138,7 +145,7 @@
                                  (take (dec post-count)
                                        (rest posts)))]
     (-> posts
-        (base)
+        (common)
         (assoc-in [:page-data :active] "index")
         (assoc :headlines-heading "Headlines"
                :headlines-desc (str "We like to keep things simple at FRMX. "
@@ -150,6 +157,19 @@
                :headliner headliner
                :posts-data grouped-posts))))
 
+(defn map-minimal
+  [map-data]
+  (-> (base)
+      (assoc-in [:page-data :active] "maps")
+      (assoc :map-data map-data)))
+
+(defn map-common
+  [posts map-data]
+  (-> posts
+      (common)
+      (assoc-in [:page-data :active] "maps")
+      (assoc :map-data map-data)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Listings Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -157,7 +177,7 @@
 (defn archives
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "archives")
       (assoc :content (assoc generic-page :title "Archives")
              :posts-data (blog/data-for-archives posts))))
@@ -165,7 +185,7 @@
 (defn categories
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "categories")
       (assoc :content (assoc generic-page :title "Categories")
              :posts-data (blog/data-for-categories posts))))
@@ -173,7 +193,7 @@
 (defn tags
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "tags")
       (assoc :content (assoc generic-page :title "Tags")
              :posts-data (blog/data-for-tags posts))))
@@ -181,7 +201,7 @@
 (defn authors
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "authors")
       (assoc :content (assoc generic-page :title "Authors")
              :posts-data (blog/data-for-authors posts))))
@@ -193,7 +213,7 @@
 (defn design
   [posts]
   (-> posts
-      (base)
+      (common)
       (assoc-in [:page-data :active] "design")
       (assoc :content (assoc generic-page :title "Design"))))
 
