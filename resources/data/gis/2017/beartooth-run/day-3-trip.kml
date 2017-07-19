@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml creator="http://spotwalla.com" xmlns="http://www.opengis.net/kml/2.2"><Document><name>MT 2017 - Day 3</name><Folder><name>Locations</name><Placemark>
+  <name>1</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.47397,44.96897,3,378</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 11:09:47 America/Chicago 3,378]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>2</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.45899,44.97509,3,254</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 11:14:48 America/Chicago 3,254]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>3</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.42753,44.9764,3,309</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 11:19:48 America/Chicago 3,309]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>4</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.42998,44.97746,3,301</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 11:24:49 America/Chicago 3,301]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>5</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.42882,44.97784,3,293</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 11:39:23 America/Chicago 3,293]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>6</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.40056,45.01539,3,066</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 11:44:24 America/Chicago 3,066]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>7</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.40923,45.03695,2,903</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 11:49:25 America/Chicago 2,903]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>8</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.41562,45.03016,2,718</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 11:54:25 America/Chicago 2,718]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>9</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.41559,45.04301,2,497</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 11:59:26 America/Chicago 2,497]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>10</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.41004,45.05423,2,261</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 12:04:27 America/Chicago 2,261]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>11</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.34203,45.08691,1,994</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 12:09:28 America/Chicago 1,994]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>12</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.28043,45.14139,1,824</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 12:14:29 America/Chicago 1,824]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>13</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.24694,45.18486,1,704</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 12:19:29 America/Chicago 1,704]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>14</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.24633,45.19432,1,685</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 12:24:29 America/Chicago 1,685]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>15</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.24771,45.18921,1,693</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 12:29:29 America/Chicago 1,693]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>16</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.24835,45.19082,1,690</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 12:34:29 America/Chicago 1,690]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>17</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.24762,45.19007,1,696</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 12:49:14 America/Chicago 1,696]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>18</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.24832,45.19083,1,694</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 13:27:12 America/Chicago 1,694]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>19</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.24708,45.18386,1,701</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 13:32:12 America/Chicago 1,701]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>20</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.25891,45.16898,1,741</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 13:37:12 America/Chicago 1,741]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>21</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.30328,45.15758,1,888</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 13:42:13 America/Chicago 1,888]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>22</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.3433,45.15199,1,997</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 13:47:13 America/Chicago 1,997]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>23</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.40062,45.16427,2,127</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 13:52:14 America/Chicago 2,127]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>24</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-109.41138,45.16907,2,173</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-08 13:57:14 America/Chicago 2,173]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark><name>Track</name><LineString><coordinates>-109.47397,44.96897,0
+-109.45899,44.97509,0
+-109.42753,44.9764,0
+-109.42998,44.97746,0
+-109.42882,44.97784,0
+-109.40056,45.01539,0
+-109.40923,45.03695,0
+-109.41562,45.03016,0
+-109.41559,45.04301,0
+-109.41004,45.05423,0
+-109.34203,45.08691,0
+-109.28043,45.14139,0
+-109.24694,45.18486,0
+-109.24633,45.19432,0
+-109.24771,45.18921,0
+-109.24835,45.19082,0
+-109.24762,45.19007,0
+-109.24832,45.19083,0
+-109.24708,45.18386,0
+-109.25891,45.16898,0
+-109.30328,45.15758,0
+-109.3433,45.15199,0
+-109.40062,45.16427,0
+-109.41138,45.16907,0
+</coordinates></LineString></Placemark><visibility>1</visibility></Folder><Style id="swPoint"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href></Icon><color>FFFFFFFF</color><colorMode>normal</colorMode><hotSpot x="0.5" xunits="fraction" y="0.5" yunits="fraction" /></IconStyle><LabelStyle><color>FFFFFFFF</color></LabelStyle></Style><open>0</open><visibility>1</visibility></Document></kml>

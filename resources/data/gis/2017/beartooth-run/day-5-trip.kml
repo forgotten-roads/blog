@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml creator="http://spotwalla.com" xmlns="http://www.opengis.net/kml/2.2"><Document><name>MT 2017 - Day 5</name><Folder><name>Locations</name><Placemark>
+  <name>1</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-106.22266,42.84092,1,609</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 07:07:14 America/Chicago 1,609]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>2</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-106.22389,42.84084,1,593</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 07:35:53 America/Chicago 1,593]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>3</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-106.17219,42.85097,1,559</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 07:40:53 America/Chicago 1,559]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>4</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-106.05869,42.85864,1,567</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 07:45:54 America/Chicago 1,567]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>5</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.9517,42.85523,1,548</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 07:50:55 America/Chicago 1,548]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>6</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.86774,42.8614,1,533</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 07:55:55 America/Chicago 1,533]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>7</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.79754,42.82442,1,549</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 08:00:56 America/Chicago 1,549]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>8</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.68528,42.81032,1,549</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 08:05:57 America/Chicago 1,549]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>9</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.56378,42.79297,1,577</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 08:10:57 America/Chicago 1,577]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>10</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.44207,42.77861,1,492</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 08:15:58 America/Chicago 1,492]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>11</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.407,42.76065,1,490</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 08:20:58 America/Chicago 1,490]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>12</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.40115,42.76335,1,486</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 08:25:58 America/Chicago 1,486]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>13</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.40241,42.76311,1,486</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 08:43:37 America/Chicago 1,486]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>14</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.355,42.79542,1,524</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 08:48:37 America/Chicago 1,524]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>15</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.28345,42.84961,1,617</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 08:53:38 America/Chicago 1,617]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>16</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.27628,42.92587,1,580</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 08:58:39 America/Chicago 1,580]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>17</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.26063,43.00386,1,518</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:03:40 America/Chicago 1,518]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>18</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.26295,43.08866,1,465</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:08:41 America/Chicago 1,465]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>19</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.25968,43.17182,1,460</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:13:41 America/Chicago 1,460]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>20</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.27171,43.24761,1,456</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:18:42 America/Chicago 1,456]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>21</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.34794,43.30964,1,418</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:23:43 America/Chicago 1,418]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>22</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.38825,43.38109,1,512</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:28:43 America/Chicago 1,512]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>23</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.43132,43.45644,1,438</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:33:43 America/Chicago 1,438]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>24</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.45373,43.53654,1,483</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:38:43 America/Chicago 1,483]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>25</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.4756,43.61664,1,540</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:43:44 America/Chicago 1,540]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>26</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.4727,43.69811,1,508</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:48:45 America/Chicago 1,508]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>27</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.40074,43.72337,1,472</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:53:46 America/Chicago 1,472]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>28</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.29336,43.70558,1,446</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 09:58:47 America/Chicago 1,446]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>29</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.21014,43.68151,1,422</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 10:03:47 America/Chicago 1,422]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>30</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.20886,43.68126,1,418</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 10:17:40 America/Chicago 1,418]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>31</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-105.10205,43.66789,1,372</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 10:22:41 America/Chicago 1,372]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>32</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.99095,43.65742,1,342</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 10:27:42 America/Chicago 1,342]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>33</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.88929,43.67914,1,313</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 10:32:42 America/Chicago 1,313]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>34</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.78278,43.69394,1,333</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 10:37:43 America/Chicago 1,333]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>35</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.67393,43.70805,1,280</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 10:42:44 America/Chicago 1,280]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>36</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.58677,43.75095,1,311</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 10:47:44 America/Chicago 1,311]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>37</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.48242,43.77932,1,293</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 10:52:45 America/Chicago 1,293]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>38</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.37552,43.80153,1,203</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 10:57:45 America/Chicago 1,203]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>39</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.28094,43.83835,1,241</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 11:02:45 America/Chicago 1,241]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>40</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.22687,43.85106,1,291</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 11:07:45 America/Chicago 1,291]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>41</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.21036,43.85206,1,311</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 11:12:46 America/Chicago 1,311]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>42</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.20941,43.85265,1,314</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 11:23:18 America/Chicago 1,314]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>43</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.17327,43.8455,1,341</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 11:28:18 America/Chicago 1,341]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>44</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.08682,43.80006,1,374</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 11:33:18 America/Chicago 1,374]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>45</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-104.02241,43.73669,1,425</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 11:38:19 America/Chicago 1,425]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>46</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.92286,43.72407,1,582</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 11:43:19 America/Chicago 1,582]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>47</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.84511,43.73261,1,643</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 11:48:20 America/Chicago 1,643]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>48</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.77644,43.73889,1,762</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 11:53:20 America/Chicago 1,762]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>49</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.67847,43.73221,1,645</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 11:58:21 America/Chicago 1,645]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>50</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.61305,43.76281,1,629</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:03:21 America/Chicago 1,629]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>51</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.61567,43.77892,1,699</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:08:22 America/Chicago 1,699]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>52</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.64045,43.83208,1,755</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:13:22 America/Chicago 1,755]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>53</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.59382,43.88472,1,602</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:18:23 America/Chicago 1,602]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>54</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.57436,43.93007,1,527</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:23:23 America/Chicago 1,527]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>55</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.52215,43.94815,1,475</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:28:24 America/Chicago 1,475]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>56</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.46636,43.92324,1,506</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:33:24 America/Chicago 1,506]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>57</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.38379,43.93947,1,402</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:38:24 America/Chicago 1,402]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>58</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.30093,43.97481,1,268</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:43:24 America/Chicago 1,268]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>59</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.24987,44.01817,1,155</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:48:25 America/Chicago 1,155]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>60</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.2323,44.06,1,041</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:53:25 America/Chicago 1,041]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>61</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.23438,44.08217,1,000</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 12:58:26 America/Chicago 1,000]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>62</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.27858,44.08575,1,042</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 13:03:27 America/Chicago 1,042]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>63</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.30422,44.14313,1,078</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 13:08:27 America/Chicago 1,078]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>64</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.2905,44.15473,1,050</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 13:13:28 America/Chicago 1,050]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>65</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.27137,44.11605,1,067</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 13:18:29 America/Chicago 1,067]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>66</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.26724,44.11381,1,043</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 13:23:29 America/Chicago 1,043]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>67</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.2672,44.11478,1,051</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 13:53:19 America/Chicago 1,051]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>68</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.25714,44.08498,1,006</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 13:58:19 America/Chicago 1,006]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>69</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.25823,44.08236,1,002</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 14:03:20 America/Chicago 1,002]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>70</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.25701,44.08188,998</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 14:52:52 America/Chicago 998]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>71</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.26962,44.08546,1,029</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 14:57:53 America/Chicago 1,029]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>72</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.26725,44.1162,1,055</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 15:02:53 America/Chicago 1,055]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>73</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.26749,44.11375,1,044</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 15:07:54 America/Chicago 1,044]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>74</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.26721,44.11464,1,052</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 15:29:39 America/Chicago 1,052]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>75</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.28106,44.1548,1,041</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 15:34:40 America/Chicago 1,041]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>76</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.31706,44.18127,1,101</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 15:39:40 America/Chicago 1,101]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>77</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.35967,44.20934,1,075</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 15:44:40 America/Chicago 1,075]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>78</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.3333,44.23121,1,009</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 15:49:41 America/Chicago 1,009]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>79</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.24503,44.2277,953</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 15:54:41 America/Chicago 953]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>80</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.23174,44.19524,974</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 15:59:41 America/Chicago 974]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>81</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.22176,44.12526,1,010</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 16:04:42 America/Chicago 1,010]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>82</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.22236,44.11803,1,018</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 16:09:42 America/Chicago 1,018]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>83</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.22178,44.11719,1,028</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 16:16:28 America/Chicago 1,028]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>84</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.2018,44.09671,1,004</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 16:21:29 America/Chicago 1,004]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>85</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.17835,44.07439,974</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 16:26:29 America/Chicago 974]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>86</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.10665,44.03673,932</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 16:31:30 America/Chicago 932]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>87</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-103.00756,44.00254,897</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 16:36:31 America/Chicago 897]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>88</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-102.90609,43.9765,888</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 16:41:31 America/Chicago 888]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>89</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-102.81157,43.94141,839</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 16:46:32 America/Chicago 839]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>90</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-102.71911,43.91515,781</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 16:51:32 America/Chicago 781]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>91</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-102.63299,43.88151,821</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 16:56:32 America/Chicago 821]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>92</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-102.57265,43.81842,892</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 17:01:33 America/Chicago 892]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>93</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-102.51264,43.76194,871</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 17:06:33 America/Chicago 871]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>94</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-102.42198,43.72906,814</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 17:11:34 America/Chicago 814]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>95</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-102.32469,43.71596,793</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 17:16:34 America/Chicago 793]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>96</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-102.21904,43.71931,754</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 17:21:35 America/Chicago 754]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>97</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-102.11454,43.71607,741</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 17:26:36 America/Chicago 741]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>98</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-102.01865,43.71928,719</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 17:31:36 America/Chicago 719]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>99</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-101.98008,43.72706,731</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 17:36:36 America/Chicago 731]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>100</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-101.979,43.72754,728</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 17:53:44 America/Chicago 728]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>101</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-101.96191,43.73852,729</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 17:58:44 America/Chicago 729]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>102</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-101.96203,43.73943,729</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 19:54:04 America/Chicago 729]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>103</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-101.94574,43.74801,743</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 19:59:05 America/Chicago 743]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>104</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-101.94698,43.74769,735</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 20:15:50 America/Chicago 735]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark>
+  <name>105</name>
+  <Point>
+    <altitudeMode>clampToGround</altitudeMode>
+    <coordinates>-101.96166,43.73835,721</coordinates>
+  </Point>
+  <description><![CDATA[2017-07-15 20:20:51 America/Chicago 721]]></description>
+  <styleUrl>#swPoint</styleUrl>
+</Placemark>
+<Placemark><name>Track</name><LineString><coordinates>-106.22266,42.84092,0
+-106.22389,42.84084,0
+-106.17219,42.85097,0
+-106.05869,42.85864,0
+-105.9517,42.85523,0
+-105.86774,42.8614,0
+-105.79754,42.82442,0
+-105.68528,42.81032,0
+-105.56378,42.79297,0
+-105.44207,42.77861,0
+-105.407,42.76065,0
+-105.40115,42.76335,0
+-105.40241,42.76311,0
+-105.355,42.79542,0
+-105.28345,42.84961,0
+-105.27628,42.92587,0
+-105.26063,43.00386,0
+-105.26295,43.08866,0
+-105.25968,43.17182,0
+-105.27171,43.24761,0
+-105.34794,43.30964,0
+-105.38825,43.38109,0
+-105.43132,43.45644,0
+-105.45373,43.53654,0
+-105.4756,43.61664,0
+-105.4727,43.69811,0
+-105.40074,43.72337,0
+-105.29336,43.70558,0
+-105.21014,43.68151,0
+-105.20886,43.68126,0
+-105.10205,43.66789,0
+-104.99095,43.65742,0
+-104.88929,43.67914,0
+-104.78278,43.69394,0
+-104.67393,43.70805,0
+-104.58677,43.75095,0
+-104.48242,43.77932,0
+-104.37552,43.80153,0
+-104.28094,43.83835,0
+-104.22687,43.85106,0
+-104.21036,43.85206,0
+-104.20941,43.85265,0
+-104.17327,43.8455,0
+-104.08682,43.80006,0
+-104.02241,43.73669,0
+-103.92286,43.72407,0
+-103.84511,43.73261,0
+-103.77644,43.73889,0
+-103.67847,43.73221,0
+-103.61305,43.76281,0
+-103.61567,43.77892,0
+-103.64045,43.83208,0
+-103.59382,43.88472,0
+-103.57436,43.93007,0
+-103.52215,43.94815,0
+-103.46636,43.92324,0
+-103.38379,43.93947,0
+-103.30093,43.97481,0
+-103.24987,44.01817,0
+-103.2323,44.06,0
+-103.23438,44.08217,0
+-103.27858,44.08575,0
+-103.30422,44.14313,0
+-103.2905,44.15473,0
+-103.27137,44.11605,0
+-103.26724,44.11381,0
+-103.2672,44.11478,0
+-103.25714,44.08498,0
+-103.25823,44.08236,0
+-103.25701,44.08188,0
+-103.26962,44.08546,0
+-103.26725,44.1162,0
+-103.26749,44.11375,0
+-103.26721,44.11464,0
+-103.28106,44.1548,0
+-103.31706,44.18127,0
+-103.35967,44.20934,0
+-103.3333,44.23121,0
+-103.24503,44.2277,0
+-103.23174,44.19524,0
+-103.22176,44.12526,0
+-103.22236,44.11803,0
+-103.22178,44.11719,0
+-103.2018,44.09671,0
+-103.17835,44.07439,0
+-103.10665,44.03673,0
+-103.00756,44.00254,0
+-102.90609,43.9765,0
+-102.81157,43.94141,0
+-102.71911,43.91515,0
+-102.63299,43.88151,0
+-102.57265,43.81842,0
+-102.51264,43.76194,0
+-102.42198,43.72906,0
+-102.32469,43.71596,0
+-102.21904,43.71931,0
+-102.11454,43.71607,0
+-102.01865,43.71928,0
+-101.98008,43.72706,0
+-101.979,43.72754,0
+-101.96191,43.73852,0
+-101.96203,43.73943,0
+-101.94574,43.74801,0
+-101.94698,43.74769,0
+-101.96166,43.73835,0
+</coordinates></LineString></Placemark><visibility>1</visibility></Folder><Style id="swPoint"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href></Icon><color>FFFFFFFF</color><colorMode>normal</colorMode><hotSpot x="0.5" xunits="fraction" y="0.5" yunits="fraction" /></IconStyle><LabelStyle><color>FFFFFFFF</color></LabelStyle></Style><open>0</open><visibility>1</visibility></Document></kml>
