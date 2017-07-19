@@ -144,6 +144,18 @@
     "templates/design/blog-example.html"
     (data/design posts)))
 
+(defn map-simple-example
+  [posts]
+  (content/render
+    "templates/design/map-simple.html"
+    (data/design posts)))
+
+(defn map-kml-example
+  [posts]
+  (content/render
+    "templates/design/map-kml-layer.html"
+    (data/design posts)))
+
 ; (defn post-example
 ;   [posts]
 ;   (content/render
