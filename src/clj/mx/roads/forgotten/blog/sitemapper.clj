@@ -18,7 +18,7 @@
    (map (partial url datestamp) (keys routes))])
 
 (defn gen
-  [uri-base routes]
+  [routes]
   (let [datestamp (util/format-datestamp (util/now :datetime-map))]
     (xml/emit-str
      (xml/sexp-as-element

@@ -20,19 +20,21 @@
 
 (defn generate
   []
-  (gen/run (gen-routes (config/posts-path)) (config/output-dir)))
+  (let [generated-routes (gen-routes (config/base-path)
+                                     (config/posts-path))]
+    (gen/run generated-routes
+             (config/output-dir))))
 
 (defn web
-  []
+  [generated-routes]
   (web/run
-    (routes (config/posts-path))
-            (config/port)
-            (config/output-dir)))
+    generated-routes
+    (config/port)
+    (config/output-dir)))
 
 (defn generate+web
   []
-  (generate)
-  (web))
+  (web (generate)))
 
 (defn log+generate+web
   []

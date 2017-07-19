@@ -41,13 +41,13 @@
      "/blog/design/map-kml-layer.html" (page/map-kml-example posts)}))
 
 (defn post-routes
-  [uri-base posts routes]
+  [uri-posts posts routes]
   (merge
     routes
     (blog/get-indexed-archive-routes
       (map vector (iterate inc 0) posts)
       :gen-func (partial page/post posts)
-      :uri-base uri-base)))
+      :uri-base uri-posts)))
 
 (defn map-routes
   [uri-base posts routes]
@@ -71,31 +71,31 @@
      "/blog/authors/index.html" (page/authors posts)}))
 
 (defn reader-routes
-  [uri-base posts routes]
+  [uri-posts posts routes]
   (let [route "/blog/atom.xml"]
     (merge
       routes
       {route (reader/atom-feed
-               uri-base route (take (config/feed-count) posts))})))
+               uri-posts route (take (config/feed-count) posts))})))
 
 (defn sitemaps-routes
-  [uri-base routes]
+  [routes]
   (let [route "/blog/sitemap.xml"]
     (merge
       routes
-      {route (sitemapper/gen
-               uri-base routes)})))
+      {route (sitemapper/gen routes)})))
 
 (defn routes
-  [uri-base]
-  (let [posts (blog/process uri-base)]
+  [uri-base uri-posts]
+  (let [posts (blog/process uri-posts)]
     (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
     (->> (static-routes posts)
          (design-routes posts)
-         (post-routes uri-base posts)
+         (post-routes uri-posts posts)
+         (map-routes uri-base posts)
          (index-routes posts)
-         (reader-routes uri-base posts)
-         (sitemaps-routes uri-base))))
+         (reader-routes uri-posts posts)
+         (sitemaps-routes))))
 
 ;;; Generator routes
 
@@ -122,6 +122,12 @@
     post-routes
     "Generating pages for blog posts ..."))
 
+(def gen-map-routes
+  (partial
+    gen-route
+    map-routes
+    "Generating pages for maps ..."))
+
 (def gen-index-routes
   (partial
     gen-route
@@ -141,12 +147,13 @@
     "Generating XML for sitemap ..."))
 
 (defn gen-routes
-  [uri-base]
-  (let [posts (blog/process uri-base)]
+  [uri-base uri-posts]
+  (let [posts (blog/process uri-posts)]
     (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
     (->> (gen-static-routes posts)
          (gen-design-routes posts)
-         (gen-post-routes uri-base posts)
+         (gen-post-routes uri-posts posts)
+         (gen-map-routes uri-base posts)
          (gen-index-routes posts)
-         (gen-reader-routes uri-base posts)
-         (gen-sitemaps-routes uri-base))))
+         (gen-reader-routes uri-posts posts)
+         (gen-sitemaps-routes))))

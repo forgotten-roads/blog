@@ -44,7 +44,7 @@
     :new (new/run args)
     :show (show/run args)
     :gen (core/generate)
-    :run (core/web)
+    :run (core/generate+web)
     :help (help-cmd args)
     :version (print (core/version))
     ;; Aliases

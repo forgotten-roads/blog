@@ -48,6 +48,7 @@
                        "Excursionist & Non-traditional Adventurer")
     :dev-port 5096
     :output-dir "."
+    :base-path "/blog"
     :posts-path "/blog/archives"
     :feed-count 20
     :cli {

@@ -5,8 +5,8 @@
             [taoensso.timbre :as log]))
 
 (defn atom-entry
-  [uri-base post]
-  (let [uri (str uri-base (:uri-path post))]
+  [uri-posts post]
+  (let [uri (str uri-posts (:uri-path post))]
     [:entry
      [:title (:title post)]
      [:updated (:timestamp post)]
@@ -16,7 +16,7 @@
      [:content {:type "html"} (:body post)]]))
 
 (defn atom-feed
-  [uri-base route posts]
+  [uri-posts route posts]
   (xml/emit-str
    (xml/sexp-as-element
     [:feed {:xmlns "http://www.w3.org/2005/Atom"}
@@ -24,4 +24,4 @@
      [:updated (-> posts first :timestamp)]
      [:title {:type "text"} (config/name)]
      [:link {:rel "self" :href (format "http://%s%s" (config/domain) route)}]
-     (map (partial atom-entry uri-base) posts)])))
+     (map (partial atom-entry uri-posts) posts)])))
