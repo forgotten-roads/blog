@@ -2,7 +2,8 @@
   (:require
     [clojure.math.combinatorics :refer [cartesian-product]]
     [clojure.java.io :as io]
-    [clojure.string :as string]))
+    [clojure.string :as string]
+    [mx.roads.forgotten.blog.util :as util]))
 
 (def default-data-path "data/gis/")
 (def kml-extension ".kml")
@@ -30,11 +31,6 @@
   (map #(string/replace % (re-pattern kml-extension) html-extension)
        kml-files))
 
-(defn zip
-  [& colls]
-  (partition (count colls)
-             (apply interleave colls)))
-
 (defn get-map-route
   [[gem-func map-type] [kml map-path] uri-base]
   [(format "%s/maps/%s/%s.html" uri-base map-path map-type)
@@ -46,7 +42,7 @@
   [& {:keys [gen-data uri-base]}]
   (let [kmls (get-kml-files)
         paths (get-map-paths kmls)
-        map-data (zip kmls paths)]
+        map-data (util/zip kmls paths)]
     (->> (cartesian-product gen-data map-data [uri-base])
          (map #(apply get-map-route %))
          (into {}))))
