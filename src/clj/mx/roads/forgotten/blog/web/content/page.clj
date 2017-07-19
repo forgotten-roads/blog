@@ -75,18 +75,18 @@
       map-data)))
 
 (defn map-wide-page
-  [map-data]
+  [posts map-data]
   (content/render
     "templates/pages/map-wide-page.html"
     (data/map-common
-      map-data)))
+      posts map-data)))
 
 (defn map-content-page
-  [map-data]
+  [posts map-data]
   (content/render
     "templates/pages/map-content-page.html"
     (data/map-common
-      map-data)))
+      posts map-data)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Listings Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

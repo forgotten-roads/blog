@@ -33,6 +33,7 @@
     [me.raynes/cegdown "0.1.1"]
     [org.clojure/clojure "1.8.0"]
     [org.clojure/data.xml "0.0.8"]
+    [org.clojure/math.combinatorics "0.1.4"]
     [ring/ring-core "1.6.1"]
     [selmer "1.10.7"]
     [stasis "2.3.0"]

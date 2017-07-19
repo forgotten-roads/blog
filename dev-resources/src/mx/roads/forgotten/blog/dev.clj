@@ -4,6 +4,7 @@
   This namespace is particularly useful when doing active development on the
   FRMX Blog application."
   (:require
+    [clojure.math.combinatorics :refer [cartesian-product]]
     [clojure.edn :as edn]
     [clojure.java.io :as io]
     [clojure.pprint :refer [pprint print-table]]
@@ -21,6 +22,7 @@
     [mx.roads.forgotten.blog.cli :as cli]
     [mx.roads.forgotten.blog.core :as core]
     [mx.roads.forgotten.blog.main :as main]
+    [mx.roads.forgotten.blog.maps :as maps]
     [mx.roads.forgotten.blog.reader :as reader]
     [mx.roads.forgotten.blog.routes :as routes]
     [mx.roads.forgotten.blog.web.content.data :as data]

@@ -50,14 +50,14 @@
       :uri-base uri-base)))
 
 (defn map-routes
-  [uri-base routes]
+  [uri-base posts routes]
   (merge
     routes
     (maps/get-map-routes
-      :gen-funcs [
-        #'page/map-fullscreen
-        #'page/map-wide-page
-        #'page/map-content-page]
+      :gen-data [
+        [#'page/map-fullscreen "fullscreen"]
+        [(partial page/map-wide-page posts) "wide-page"]
+        [(partial page/map-content-page posts) "content-page"]]
       :uri-base uri-base)))
 
 (defn index-routes
