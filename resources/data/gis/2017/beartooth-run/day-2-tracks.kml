@@ -5,8 +5,8 @@
     <description>Created by SWConnect</description>
     <Style id="lineColor">
       <LineStyle>
-        <color>ffff0000</color>
-        <width>4</width>
+        <color>461400AA</color>
+        <width>8</width>
       </LineStyle>
     </Style>
     <Placemark>
@@ -2118,7 +2118,7 @@
                     -109.246979, 45.184979
 
                     -109.247024, 45.185494
-                    
+
 </coordinates>
       </LineString>
     </Placemark>
