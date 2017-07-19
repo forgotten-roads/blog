@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kml creator="http://spotwalla.com" xmlns="http://www.opengis.net/kml/2.2"><Document><name>MT 2017 - Day 3</name><Folder><name>Locations</name><Placemark>
+<kml creator="http://spotwalla.com" xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>MT 2017 - Day 3</name>
+    <Style id="lineColor">
+      <LineStyle>
+        <color>551400AA</color>
+        <width>8</width>
+      </LineStyle>
+    </Style>
+    <Folder>
+      <name>Locations</name>
+  <Placemark>
   <name>1</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.47397,44.96897,3,378</coordinates>
@@ -10,6 +22,7 @@
 </Placemark>
 <Placemark>
   <name>2</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.45899,44.97509,3,254</coordinates>
@@ -19,6 +32,7 @@
 </Placemark>
 <Placemark>
   <name>3</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.42753,44.9764,3,309</coordinates>
@@ -28,6 +42,7 @@
 </Placemark>
 <Placemark>
   <name>4</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.42998,44.97746,3,301</coordinates>
@@ -37,6 +52,7 @@
 </Placemark>
 <Placemark>
   <name>5</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.42882,44.97784,3,293</coordinates>
@@ -46,6 +62,7 @@
 </Placemark>
 <Placemark>
   <name>6</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.40056,45.01539,3,066</coordinates>
@@ -55,6 +72,7 @@
 </Placemark>
 <Placemark>
   <name>7</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.40923,45.03695,2,903</coordinates>
@@ -64,6 +82,7 @@
 </Placemark>
 <Placemark>
   <name>8</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.41562,45.03016,2,718</coordinates>
@@ -73,6 +92,7 @@
 </Placemark>
 <Placemark>
   <name>9</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.41559,45.04301,2,497</coordinates>
@@ -82,6 +102,7 @@
 </Placemark>
 <Placemark>
   <name>10</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.41004,45.05423,2,261</coordinates>
@@ -91,6 +112,7 @@
 </Placemark>
 <Placemark>
   <name>11</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.34203,45.08691,1,994</coordinates>
@@ -100,6 +122,7 @@
 </Placemark>
 <Placemark>
   <name>12</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.28043,45.14139,1,824</coordinates>
@@ -109,6 +132,7 @@
 </Placemark>
 <Placemark>
   <name>13</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.24694,45.18486,1,704</coordinates>
@@ -118,6 +142,7 @@
 </Placemark>
 <Placemark>
   <name>14</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.24633,45.19432,1,685</coordinates>
@@ -127,6 +152,7 @@
 </Placemark>
 <Placemark>
   <name>15</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.24771,45.18921,1,693</coordinates>
@@ -136,6 +162,7 @@
 </Placemark>
 <Placemark>
   <name>16</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.24835,45.19082,1,690</coordinates>
@@ -145,6 +172,7 @@
 </Placemark>
 <Placemark>
   <name>17</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.24762,45.19007,1,696</coordinates>
@@ -154,6 +182,7 @@
 </Placemark>
 <Placemark>
   <name>18</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.24832,45.19083,1,694</coordinates>
@@ -163,6 +192,7 @@
 </Placemark>
 <Placemark>
   <name>19</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.24708,45.18386,1,701</coordinates>
@@ -172,6 +202,7 @@
 </Placemark>
 <Placemark>
   <name>20</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.25891,45.16898,1,741</coordinates>
@@ -181,6 +212,7 @@
 </Placemark>
 <Placemark>
   <name>21</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.30328,45.15758,1,888</coordinates>
@@ -190,6 +222,7 @@
 </Placemark>
 <Placemark>
   <name>22</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.3433,45.15199,1,997</coordinates>
@@ -199,6 +232,7 @@
 </Placemark>
 <Placemark>
   <name>23</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.40062,45.16427,2,127</coordinates>
@@ -208,6 +242,7 @@
 </Placemark>
 <Placemark>
   <name>24</name>
+  <styleUrl>#lineColor</styleUrl>
   <Point>
     <altitudeMode>clampToGround</altitudeMode>
     <coordinates>-109.41138,45.16907,2,173</coordinates>

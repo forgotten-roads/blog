@@ -61,26 +61,26 @@
         <styleUrl>#line-0288D1-4000-highlight</styleUrl>
       </Pair>
     </StyleMap>
-    <Style id="line-7CB342-4000-normal">
+    <Style id="line-097138-4000-normal">
       <LineStyle>
-        <color>ff42b37c</color>
+        <color>ff387109</color>
         <width>4</width>
       </LineStyle>
     </Style>
-    <Style id="line-7CB342-4000-highlight">
+    <Style id="line-097138-4000-highlight">
       <LineStyle>
-        <color>ff42b37c</color>
+        <color>ff387109</color>
         <width>6</width>
       </LineStyle>
     </Style>
-    <StyleMap id="line-7CB342-4000">
+    <StyleMap id="line-097138-4000">
       <Pair>
         <key>normal</key>
-        <styleUrl>#line-7CB342-4000-normal</styleUrl>
+        <styleUrl>#line-097138-4000-normal</styleUrl>
       </Pair>
       <Pair>
         <key>highlight</key>
-        <styleUrl>#line-7CB342-4000-highlight</styleUrl>
+        <styleUrl>#line-097138-4000-highlight</styleUrl>
       </Pair>
     </StyleMap>
     <Style id="line-9C27B0-4000-normal">
@@ -5274,7 +5274,7 @@
       <Placemark>
         <name>Jul 15, 2017 6:07:14 AM</name>
         <description>Created by SWConnect</description>
-        <styleUrl>#line-7CB342-4000</styleUrl>
+        <styleUrl>#line-097138-4000</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
           <coordinates>
