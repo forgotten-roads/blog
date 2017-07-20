@@ -1,0 +1,36 @@
+{% extends "templates/base-1-col.html" %}
+
+{% block post-css %}
+<style>
+  .page-header {
+    padding-bottom: 0;
+  }
+</style>
+{% endblock %}
+
+{% block content-body %}
+    <div id="map" style="height: 100%; min-height:500px;"></div>
+{% endblock %}
+
+{% block post-scripts %}
+<script>
+  function initMap() {
+    var mapElement = document.getElementById('map');
+    var mapOptions = {
+      center: {lat: {{ map-data.starting-lat }}, lng: {{ map-data.starting-long }} },
+      zoom: {{ map-data.starting-zoom }},
+      disableDefaultUI: {{ map-data.disable-map-gui }},
+      styles: {{ map-data.style-json|safe }}
+    };
+    var map = new google.maps.Map(mapElement, mapOptions);
+    var kmlOptions = {
+      preserveViewport: false,
+      map: map
+    };
+    var kmlSrc = 'http://forgotten.roads.mx{{ map-data.gis-base }}{{ map-data.kml-file }}?rev={{ map-data.revision }}';
+    var kmlLayer = new google.maps.KmlLayer(kmlSrc, kmlOptions);
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnCHagOgpmmE11nTCf9k99gZq6a3aLgnw&callback=initMap"
+async defer></script>
+{% endblock %}
