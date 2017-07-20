@@ -51,14 +51,19 @@
 
 (defn map-routes
   [uri-base posts routes]
-  (merge
-    routes
-    (maps/get-map-routes
-      :gen-data [
-        [#'page/map-fullscreen "fullscreen"]
-        [(partial page/map-wide-page posts) "wide-page"]
-        [(partial page/map-content-page posts) "content-page"]]
-      :uri-base uri-base)))
+  (let [gen-data [[#'page/map-fullscreen "fullscreen"]
+                  [(partial page/map-wide-page posts) "wide-page"]
+                  [(partial page/map-content-page posts) "content-page"]]]
+    (merge
+      routes
+      {"/blog/maps/index.html" (page/maps-index
+                                 posts
+                                 (maps/get-maps-data
+                                   :gen-data gen-data
+                                   :uri-base uri-base))}
+      (maps/get-map-routes
+        :gen-data gen-data
+        :uri-base uri-base))))
 
 (defn index-routes
   [posts routes]

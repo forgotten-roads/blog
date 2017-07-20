@@ -1,0 +1,25 @@
+{% extends "templates/base-1-col.html" %}
+
+{% block content-body %}
+  <h2>Forgotten Roads' Maps</h2>
+  <p>Maps generated from <code>.kml</code> files uploaded to the blog.</p>
+
+ <h3>Available Map Sets</h3>
+ {% for group in maps-data %}
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="maps-menu"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{ group.key }}
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="maps-menu">
+      {% for map-data in group.data %}
+      <li><a href="{{ map-data.maps-base }}/{{ map-data.html-file }}">{{ map-data.map-path }} ({{ map-data.view-type }})</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+  <br/>
+  <br/>
+  <br/>
+{% endblock %}

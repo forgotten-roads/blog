@@ -67,6 +67,13 @@
       :post-count 5
       :column-count 2)))
 
+(defn maps-index
+  [posts maps-data]
+  (content/render
+    "templates/pages/maps-index.html"
+    (data/maps-index
+      posts maps-data)))
+
 (defn map-fullscreen
   [map-data]
   (content/render

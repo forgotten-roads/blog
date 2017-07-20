@@ -170,6 +170,13 @@
       (assoc-in [:page-data :active] "maps")
       (assoc :map-data map-data)))
 
+(defn maps-index
+  [posts maps-data]
+  (-> posts
+      (common)
+      (assoc-in [:page-data :active] "maps")
+      (assoc :maps-data maps-data)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Listings Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
