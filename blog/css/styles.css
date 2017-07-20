@@ -584,17 +584,55 @@ header.home-tiny > .widewrapper.masthead > .container {
 }
 .tags-widget li {
   display: inline;
+  vertical-align: middle;
 }
 .tags-widget li a {
-  color: #fff;
-  padding: 4px 10px;
-  margin-top: 10px;
   display: inline-block;
   background-color: #D2984F;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+
+.tags-widget li a.tag-5star-5 {
+  color: #fff;
+  background-color: #D2984F;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.tags-widget li a.tag-5star-4 {
+  color: #fff;
+  background-color: #d2a265;
+  font-size: 90%;
+  padding: 4px 8px;
+  margin-top: 8px;
+}
+
+.tags-widget li a.tag-5star-3 {
+  color: #fff;
+  background-color: #d2ab7a;
+  font-size: 85%;
+  padding: 3px 6px;
+  margin-top: 6px;
+}
+
+.tags-widget li a.tag-5star-2 {
+  color: #fff;
+  background-color: #d2b48f;
+  font-size: 80%;
+  padding: 2px 4px;
+  margin-top: 4px;
+}
+
+.tags-widget li a.tag-5star-1 {
+  color: #fff;
+  background-color: #d2bea4;
+  font-size: 75%;
+  padding: 1px 2px;
+  margin-top: 2px;
+}
+
 .tags-widget li a:focus,
 .tags-widget li a:hover {
   background-color: #BC8642;

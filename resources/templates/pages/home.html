@@ -134,7 +134,7 @@
         <ul>
           {% for tag in tags %}
           <li>
-            <a href="{{ page-data.base-path }}/tags/#{{tag}}">{{ tag }}</a>
+            <a href="{{ page-data.base-path }}/tags/#{{tag.name}}" class="tag-5star-{{ tag.five-star }}">{{ tag.name }}</a>
           </li>
           {% endfor %}
         </ul>

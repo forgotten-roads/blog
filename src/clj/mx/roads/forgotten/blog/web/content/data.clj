@@ -136,7 +136,7 @@
       (common)
       (assoc-in [:page-data :active] "archives")
       (assoc :post-data post-data
-             :tags (blog/tags [post-data]))))
+             :tags (blog/tags-unique [post-data]))))
 
 (defn front-page
   [posts & {:keys [post-count column-count]}]
@@ -153,7 +153,7 @@
                                     "on the front page -- if you want to read "
                                     "an older post, <a href=\"/blog/archives\""
                                     ">check out the archives</a>.")
-               :tags (blog/tags posts)
+               :tags (blog/tag-stats posts)
                :headliner headliner
                :posts-data grouped-posts))))
 
