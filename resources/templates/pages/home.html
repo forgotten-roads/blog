@@ -61,22 +61,25 @@
             <a href="{{ headliner.url }}">{{ headliner.title }}</a>
           </h2>
           {% if headliner.subtitle %}
-            <h4>{{ headliner.subtitle }}</h4>
-          {% endif %}
-          {% if headliner.excerpt %}
-            <h3>{{ headliner.excerpt|safe }}</h3>
+            <h3>{{ headliner.subtitle }}</h3>
           {% endif %}
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 metadata">
               <p>Date: {{ headliner.datestamp }}</p>
             </div>
-            <div class="col-sm-4">
-              <p>Author: {{ headliner.author }}</p>
+            <div class="col-sm-4 metadata">
+              <p>Author: <a href="/blog/authors/#{{ headliner.author }}">{{ headliner.author }}</a></p>
             </div>
-            <div class="col-sm-4">
-              <p>Category: {{ headliner.category }}</p>
+            <div class="col-sm-4 metadata">
+              <p>Category: <a href="/blog/categories/#{{ headliner.category }}">{{ headliner.category }}</a></p>
             </div>
           </div>
+          {% if headliner.excerpt-100 %}
+            <p class="excerpt">{{ headliner.excerpt-100|safe }}</p>
+            <div class="clearfix">
+              <a href="{{ headliner.url }}" class="btn btn-tales-one">Read More</a>
+            </div>
+          {% endif %}
 
         </div>
 
@@ -92,14 +95,19 @@
             <a href="{{ column.url }}">{{ column.title }}</a>
           </h2>
           {% if column.subtitle %}
-            <h4>{{ column.subtitle }}</h4>
+            <h3>{{ column.subtitle }}</h3>
           {% endif %}
-          {% if column.excerpt %}
-            <h3>{{ column.excerpt|safe }}</h3>
+          <div class="metadata">
+            <p>Date: {{ column.datestamp }}</p>
+            <p>Author: <a href="/blog/authors/#{{ column.author }}">{{ column.author }}</a></p>
+            <p>Category: <a href="/blog/categories/#{{ column.category }}">{{ column.category }}</a></p>
+          </div>
+          {% if column.excerpt-50 %}
+            <p class="excerpt">{{ column.excerpt-50|safe }}</p>
+            <div class="clearfix">
+              <a href="{{ column.url }}" class="btn btn-tales-one">Read More</a>
+            </div>
           {% endif %}
-          <p>Date: {{ column.datestamp }}</p>
-          <p>Author: {{ column.author }}</p>
-          <p>Category: {{ column.category }}</p>
 
       </div>
       {% endfor %}

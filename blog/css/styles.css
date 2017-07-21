@@ -1282,9 +1282,29 @@ fieldset[disabled] .btn-tales-two.active {
 .headliner h2 {
   font-size: 175%;
 }
-.subheadliner h2 {
-  font-size: 150%;
+.headliner h3 {
+  font-style: italic;
+  font-size: 125%;
+  margin-top: 0;
+  padding-top: 0;
 }
+
+.headliner .metadata,
+.subheadliner .metadata {
+  font-size: 90%;
+}
+
+.subheadliner h2 {
+  font-size: 140%;
+}
+
+.subheadliner h3 {
+  font-style: italic;
+  font-size: 115%;
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .well.subheadliner {
   margin: 14px;
 }
