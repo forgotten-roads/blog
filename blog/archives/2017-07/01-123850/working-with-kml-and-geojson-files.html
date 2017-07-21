@@ -57,7 +57,7 @@
 <meta property="og:url" content="http://forgotten.roads.mx/blog/archives/2017-07/01-123850/working-with-kml-and-geojson-files.html">
 <meta property="og:type" content="blog">
 <meta property="og:description" content="Converting File Formats for Online GPS Services">
-<meta property="og:image" content="http://forgotten.roads.mx/blog/">
+<meta property="og:image" content="http://forgotten.roads.mx/blog/img/gis-beartooth-topo.jpg">
 
 <!-- Twitter Card Metadata -->
 <meta name="twitter:card" content="summary_large_image">
@@ -66,7 +66,7 @@
 <meta name="twitter:title" content="Working with KML and GeoJSON Files">
 <meta name="twitter:url" content="http://forgotten.roads.mx/blog/archives/2017-07/01-123850/working-with-kml-and-geojson-files.html">
 <meta name="twitter:description" content="Converting File Formats for Online GPS Services">
-<meta name="twitter:image" content="http://forgotten.roads.mx/blog/">
+<meta name="twitter:image" content="http://forgotten.roads.mx/blog/img/gis-beartooth-topo.jpg">
 
     
     
@@ -230,6 +230,8 @@
           <div class="blog-post">
             <div class="page-header">
               
+                <img src="/blog/img/gis-beartooth-topo.jpg" />
+              
               <h2 class="blog-post-title">Working with KML and GeoJSON Files</h2>
               
               <p class="blog-post-subtitle">Converting File Formats for Online GPS Services</p>
@@ -242,7 +244,7 @@
                 
               </div>
             </div>
-            <p>As anyone familiar (not me) with geographic information systems (or "GIS") data can tell you, working with the multitude of data formats, versions of those formats, data entry errors, and inconsistencies, makes GIS data processing a pretty time-consuming task. We've just tried to do very simple things, and it has taken us a few days to get things sorted.</p><p>Right now at Forgotten Roads, we're evaluating software and data services for use in motorcycle adventure trips. We think we've got a good selection, at least for a first run or two. But before we go into any details on that, we wanted to provide a prelude blog post that can be a head-start for the eager reader and something that we can reference in later posts.</p><p>Below we'll give a super-quick overview of the main geospatial file formats used by mapping and routes services, and then show you how to work with these files (something that will be very useful when you want to start doing interesting things with your ride routes).</p><h3>File Formats</h3><h4>KML</h4><p>Thanks to Google's ubiquity in so much of the tech world, <code>.kml</code> files (KML stands for "Keyhole Markup Language") are quite popular. <a href='https://en.wikipedia.org/wiki/Keyhole_Markup_Language'>KML</a> is a type of <a href='https://en.wikipedia.org/wiki/XML'>XML</a> developed by the company Keyhole, Inc., which specialized in geospatial visualization software. Google bought them in 2004 and turned their product "Earth Viewer" into "Google Earth".</p><p>There are several versions of this markup language:</p><ul><li>Version 2.1 - The last one produced by Google &ndash; this version is still widely used</li><li>Version 2.2 - The first KML version that was submitted to the   <a href='https://en.wikipedia.org/wiki/Open_Geospatial_Consortium'>Open Geospatial Consortium</a> (OGC) in 2007</li><li>2.3 - Published by the OGC in 2015</li></ul><p>Most of what we see is still version 2.1.</p><p>Really, the thing you need to know about KML is that, among the many, many things that it does, it can specify "traces" or "tracks" (very simple geospatial data, sometimes as little as just latitude and longitude values). The visual routes you see on mapping services like "Google Maps" can be represented in KML files that have this simple data.</p><h4>GeoJSON</h4><p>With the increasing popularity of KML in the mid-2000s, the nearly industry-wide distaste for XML, and rapidly growing adoption of JSON as a preferred human-readable data representation format, a working group for a <a href='https://en.wikipedia.org/wiki/JSON'>JSON</a>-based geospatial data format was begun in 2007. This gave the world GeJSON. Then, in 2015, a working group was founded at the <a href='https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force'>IETF</a> for GeoJSON, which led to an <a href='https://tools.ietf.org/html/rfc7946'>RFC</a>.</p><p>We've been using this format a fair amount, too &ndash; not directly, but because other tools or services we are using work with it.</p><h4>GPX</h4><p>The last format we'll mention is <a href='https://en.wikipedia.org/wiki/GPS_Exchange_Format'>GPX</a>. We're not making use of any data in this format, but would remiss if we didn't mention it.</p><p>Based upon XML, it was created around the same times as KML and stands for "GPS Exchange Format". In continues to enjoy a great deal of popularity.</p><h3>Converting</h3><p>Okay, now that we have that boring stuff out of the way, we can talk about MORE BORING STUFF! How do I move from one to the other?</p><h4>Validating KML</h4><p>The first thing to keep in mind is that you may download a KML file from a service that has not provided the data fully to spec. Or they may be using an ever older version (and calling it a newer version). This is something that you can check, if you find that services are not letting you upload these KML files.</p><p>For instance, if you download a KML file, open it up and check the version number. You should see a line near the top something like the following:</p><pre><code>&lt;kml xmlns=&quot;http://earth.google.com/kml/2.1&quot;&gt;
+            <p>As anyone familiar (not me) with geographic information systems (or "GIS") data can tell you, working with the multitude of data formats, versions of those formats, data entry errors, and inconsistencies, makes GIS data processing a pretty time-consuming task. We've just tried to do very simple things, and it has taken us a few days to get things sorted.</p><p>Right now at Forgotten Roads, we're evaluating software and data services for use in motorcycle adventure trips. We think we've got a good selection, at least for a first run or two. But before we go into any details on that, we wanted to provide a prelude blog post that can be a head-start for the eager reader and something that we can reference in later posts.</p><p>Below we'll give a super-quick overview of the main geospatial file formats used by mapping and routes services, and then show you how to work with these files (something that will be very useful when you want to start doing interesting things with your ride routes).</p><h3>File Formats</h3><h4>KML</h4><p>Thanks to Google's ubiquity in so much of the tech world, <code>.kml</code> files (KML stands for "Keyhole Markup Language") are quite popular. <a href='https://en.wikipedia.org/wiki/Keyhole_Markup_Language'>KML</a> is a type of <a href='https://en.wikipedia.org/wiki/XML'>XML</a> developed by the company Keyhole, Inc., which specialized in geospatial visualization software. Google bought them in 2004 and turned their product "Earth Viewer" into "Google Earth".</p><p>There are several versions of this markup language:</p><ul><li>Version 2.1 - The last one produced by Google &ndash; this version is still widely used</li><li>Version 2.2 - The first KML version that was submitted to the   <a href='https://en.wikipedia.org/wiki/Open_Geospatial_Consortium'>Open Geospatial Consortium</a> (OGC) in 2007</li><li>2.3 - Published by the OGC in 2015</li></ul><p>Most of what we see is still version 2.1.</p><p>Really, the thing you need to know about KML is that, among the many, many things that it does, it can specify "traces" or "tracks" (very simple geospatial data, sometimes as little as just latitude and longitude values). The visual routes you see on mapping services like "Google Maps" can be represented in KML files that have this simple data.</p><h4>GeoJSON</h4><p>With the increasing popularity of KML in the mid-2000s, the nearly industry-wide distaste for XML, and rapidly growing adoption of JSON as a preferred human-readable data representation format, a working group for a <a href='https://en.wikipedia.org/wiki/JSON'>JSON</a>-based geospatial data format was begun in 2007. This gave the world GeoJSON. Then, in 2015, a working group was founded at the <a href='https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force'>IETF</a> for GeoJSON, which led to an <a href='https://tools.ietf.org/html/rfc7946'>RFC</a>.</p><p>We've been using this format a fair amount, too &ndash; not directly, but because other tools or services we are using work with it.</p><h4>GPX</h4><p>The last format we'll mention is <a href='https://en.wikipedia.org/wiki/GPS_Exchange_Format'>GPX</a>. We're not making use of any data in this format, but would remiss if we didn't mention it.</p><p>Based upon XML, it was created around the same times as KML and stands for "GPS Exchange Format". In continues to enjoy a great deal of popularity.</p><h3>Converting</h3><p>Okay, now that we have that boring stuff out of the way, we can talk about MORE BORING STUFF! How do I move from one to the other?</p><h4>Validating KML</h4><p>The first thing to keep in mind is that you may download a KML file from a service that has not provided the data fully to spec. Or they may be using an ever older version (and calling it a newer version). This is something that you can check, if you find that services are not letting you upload these KML files.</p><p>For instance, if you download a KML file, open it up and check the version number. You should see a line near the top something like the following:</p><pre><code>&lt;kml xmlns=&quot;http://earth.google.com/kml/2.1&quot;&gt;
 </code></pre><p>The version number is there at the end. KML is an XML format, and XML file formats are defined with schemas. A quick internet search or two turns up the location for the KML version 2.1 schema here:</p><ul><li><a href='https://developers.google.com/kml/schema/kml21.xsd'>https://developers.google.com/kml/schema/kml21.xsd</a>.</li></ul><p> (Here are versions <a href='http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd'>2.2</a> and <a href='http://schemas.opengis.net/kml/2.3/ogckml23.xsd'>2.3</a>).</p><p>We'll use a command-line tool running in a terminal window for this next bit. The command we'll run is <code>xmllint</code>. If you have a recent version of Mac OS X with developer tools installed, <code>xmllint</code> will already be on  your machine. If you are running something like Ubuntu, you may already have <code>libxml2-utils</code> installed (which includes <code>xmllint</code>). Here's how you check that the formatting of the KML file is correct:</p><pre><code>$ xmllint --schema &#126;/Downloads/kml21.xsd &#126;/Downloads/track.kml
 </code></pre><p>We downloaded a KML file from <a href='https://spotwalla.com/'>SpotWalla</a> and found that this command failed on that file. We had to open it up and change a line from this:</p><pre><code>&lt;altitudeMode&gt;relative&lt;/altitudeMode&gt;
 </code></pre><p>to this:</p><pre><code>&lt;altitudeMode&gt;relativeToGround&lt;/altitudeMode&gt;
@@ -322,6 +324,10 @@
                   <a href="/blog/tags/#services">services</a>
                 </li>
                 
+                <li>
+                  <a href="/blog/tags/#technical">technical</a>
+                </li>
+                
               </ul>
             </div>
           </div>
@@ -359,9 +365,9 @@
               <h3>Post Data</h3>
             </header>
             <div class="body">
-              <p>Lines: 117</p>
+              <p>Lines: 121</p>
               <p>Words: 1046</p>
-              <p>Characters: 6741</p>
+              <p>Characters: 6738</p>
               </p>
             </div>
           </div>
@@ -397,7 +403,7 @@
             <span class="caption">Articles</span>
           </div>
           <div class="line">
-            <span class="counter">573</span>
+            <span class="counter">577</span>
             <span class="caption">Lines</span>
           </div>
           <div class="line">
@@ -405,7 +411,7 @@
             <span class="caption">Words</span>
           </div>
           <div class="line">
-            <span class="counter">35911</span>
+            <span class="counter">35908</span>
             <span class="caption">Characters</span>
           </div>
         </div>
