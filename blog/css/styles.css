@@ -1275,6 +1275,11 @@ fieldset[disabled] .btn-tales-two.active {
   color: #949fa9;
 }
 
+.headliner img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
 .headliner h2,
 .subheadliner h2 {
   font-weight: bold;
@@ -1292,6 +1297,11 @@ fieldset[disabled] .btn-tales-two.active {
 .headliner .metadata,
 .subheadliner .metadata {
   font-size: 90%;
+}
+
+.subheadliner img {
+  max-width: 100%;
+  border-radius: 10px;
 }
 
 .subheadliner h2 {

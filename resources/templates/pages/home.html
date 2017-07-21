@@ -57,6 +57,9 @@
 
         <div class="headliner well">
 
+          {% if headliner.header-image %}
+            <img src="{{ page-data.base-path }}/{{ headliner.header-image }}" />
+          {% endif %}
           <h2>
             <a href="{{ headliner.url }}">{{ headliner.title }}</a>
           </h2>
@@ -91,6 +94,9 @@
       {% for column in row %}
       <div class="col-sm-6 well subheadliner">
 
+          {% if column.header-image %}
+            <img src="{{ page-data.base-path }}/{{ column.header-image }}" />
+          {% endif %}
           <h2>
             <a href="{{ column.url }}">{{ column.title }}</a>
           </h2>
