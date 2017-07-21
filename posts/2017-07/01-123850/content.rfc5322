@@ -3,10 +3,10 @@ Subtitle: Converting File Formats for Online GPS Services
 From: bobbermac
 Twitter: bobbermacean
 Category: Software
-Keywords: formats,data,gis,json,kml,services,howto
+Keywords: formats,data,gis,json,kml,services,howto,technical
 Comments:
 Content-Type: md
-Header-Image:
+Header-Image: img/gis-beartooth-topo.jpg
 
 As anyone familiar (not me) with geographic information systems (or "GIS") data
 can tell you, working with the multitude of data formats, versions of those
@@ -59,8 +59,10 @@ With the increasing popularity of KML in the mid-2000s, the nearly
 industry-wide distaste for XML, and rapidly growing adoption of JSON as a
 preferred human-readable data representation format, a working group for a
 [JSON](https://en.wikipedia.org/wiki/JSON)-based geospatial data format was
-begun in 2007. This gave the world GeJSON. Then, in 2015, a working group was founded at the
-[IETF](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force) for GeoJSON, which led to an
+begun in 2007. This gave the world GeoJSON. Then, in 2015, a working group
+was founded at the
+[IETF](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force)
+for GeoJSON, which led to an
 [RFC](https://tools.ietf.org/html/rfc7946).
 
 We've been using this format a fair amount, too -- not directly, but because
@@ -69,7 +71,9 @@ other tools or services we are using work with it.
 
 #### GPX
 
-The last format we'll mention is [GPX](https://en.wikipedia.org/wiki/GPS_Exchange_Format). We're not making use of any data in this format, but
+The last format we'll mention is
+[GPX](https://en.wikipedia.org/wiki/GPS_Exchange_Format).
+We're not making use of any data in this format, but
 would remiss if we didn't mention it.
 
 Based upon XML, it was created around the same times as KML and stands for
