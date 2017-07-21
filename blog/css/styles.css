@@ -9,7 +9,7 @@
 body {
   font-size: 16px;
   line-height: 27px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Maitree', serif;
   color: #404b55;
   background-color: #feffff;
   display: flex;
@@ -36,18 +36,15 @@ h1 {
   font-size: 45px;
   line-height: 60px;
   font-weight: normal;
-  font-family: 'PT Serif', serif;
 }
 h2 {
   font-size: 30px;
   line-height: 40px;
-  font-family: 'Open Sans', sans-serif;
 }
 h3 {
   font-size: 21px;
   line-height: 30px;
   font-weight: normal;
-  font-family: 'Open Sans', sans-serif;
 }
 hr {
   border-top-color: #ced5db;
@@ -78,7 +75,6 @@ hr {
   float: left;
   display: block;
   color: #f8f8f9;
-  font-family: 'PT Serif', serif;
   font-size: 39px;
   text-transform: uppercase;
   margin-top: 10px;
@@ -150,6 +146,7 @@ header.home-tiny > .widewrapper.masthead > .container {
 
 .navbar-nav li > a {
   text-shadow: 2px 2px 4px #333;
+  font-family: 'Yantramanav', sans-serif;
 }
 
 .widewrapper.subheader {
@@ -443,6 +440,11 @@ header.home-tiny > .widewrapper.masthead > .container {
   top: 15px;
   position: relative;
 }
+
+footer {
+  font-family: 'Yantramanav', sans-serif;
+}
+
 .footer .tales-list {
   margin-top: -6px;
   padding-left: 23px;
@@ -540,8 +542,14 @@ header.home-tiny > .widewrapper.masthead > .container {
     display: none;
   }
 }
+
+.btn {
+  font-family: 'Yantramanav', sans-serif;
+}
+
 /* Blog aside widgets */
 .aside-widget {
+  font-family: 'Yantramanav', sans-serif;
   margin-bottom: 100px;
 }
 .aside-widget header {
@@ -587,6 +595,10 @@ header.home-tiny > .widewrapper.masthead > .container {
   vertical-align: middle;
 }
 .tags-widget li a {
+  color: #fff;
+  background-color: #D2984F;
+  padding: 5px 10px;
+  margin-top: 10px;
   display: inline-block;
   background-color: #D2984F;
   -webkit-border-radius: 5px;
@@ -725,7 +737,6 @@ header.home-tiny > .widewrapper.masthead > .container {
   margin-bottom: 90px;
 }
 .blog-post header h1 {
-  font-family: 'PT Serif', serif;
   margin-bottom: 22px;
 }
 .blog-post header .lead-image {
@@ -1033,7 +1044,6 @@ aside.comments .comment .body {
 .about-large,
 .about-medium,
 .about-small {
-  font-family: 'PT Serif', serif;
   line-height: 60px;
 }
 @media (max-width: 767px) {
@@ -1255,7 +1265,6 @@ fieldset[disabled] .btn-tales-two.active {
 }
 
 .headlines-heading {
-  font-family: 'PT Serif', serif;
   font-size: 275%;
   padding-top: 1em;
   letter-spacing: 2px;
@@ -1268,7 +1277,6 @@ fieldset[disabled] .btn-tales-two.active {
 
 .headliner h2,
 .subheadliner h2 {
-  font-family: 'PT Serif', serif;
   font-weight: bold;
 }
 .headliner h2 {
