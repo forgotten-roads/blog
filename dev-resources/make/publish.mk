@@ -60,6 +60,11 @@ publish-robots-aws:
 		cp resources/robots.txt \
 		s3://$(AWS_BUCKET)/
 
+publish-data-aws:
+	aws --profile=frmx s3 \
+		sync resources/data/ \
+		s3://$(AWS_BLOG_BUCKET)/data/
+
 publish-aws:
 	@aws --profile=frmx s3 cp blog/ s3://$(AWS_BLOG_BUCKET)/ --recursive
 
