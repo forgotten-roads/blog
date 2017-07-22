@@ -1262,6 +1262,8 @@ fieldset[disabled] .btn-tales-two.active {
 .home-lead {
   font-size: 170%;
   letter-spacing: 1px;
+  padding-top: 1em;
+  padding-bottom: 2em;
 }
 
 .headlines-heading {
