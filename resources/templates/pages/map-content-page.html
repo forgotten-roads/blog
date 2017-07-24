@@ -19,18 +19,20 @@
     var mapOptions = {
       center: {lat: {{ map-data.starting-lat }}, lng: {{ map-data.starting-long }} },
       zoom: {{ map-data.starting-zoom }},
-      disableDefaultUI: {{ map-data.disable-map-gui }},
+      {% if map-data.disable-map-gui %}disableDefaultUI: {{ map-data.disable-map-gui }},{% endif %}
       styles: {{ map-data.style-json|safe }}
     };
     var map = new google.maps.Map(mapElement, mapOptions);
+    {% block kml %}
     var kmlOptions = {
       preserveViewport: false,
       map: map
     };
     var kmlSrc = 'http://forgotten.roads.mx{{ map-data.gis-base }}{{ map-data.kml-file }}?rev={{ map-data.revision }}';
     var kmlLayer = new google.maps.KmlLayer(kmlSrc, kmlOptions);
+    {% endblock %}
   }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnCHagOgpmmE11nTCf9k99gZq6a3aLgnw&callback=initMap"
-async defer></script>
+<script src="{{ map-data.google-endpoint }}?key={{ map-data.google-api-key }}&rev={{ map-data.revision }}&callback=initMap"
+         async defer></script>
 {% endblock %}

@@ -1,0 +1,11 @@
+{% extends "templates/pages/map-fullscreen.html" %}
+
+{% block kml %}
+        var kmlOptions = {
+          preserveViewport: false,
+          map: map
+        };
+        var kmlSrc = 'http://forgotten.roads.mx{{ map-data.gis-base }}{{ map-data.kml-file }}?rev={{ map-data.revision }}';
+        var kmlLayer = new google.maps.KmlLayer(kmlSrc, kmlOptions);
+{% endblock %}
+

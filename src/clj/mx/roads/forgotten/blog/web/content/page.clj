@@ -77,14 +77,14 @@
 (defn map-view
   [map-data]
   (content/render
-    "templates/pages/map-view-fullscreen.html"
+    "templates/pages/map-fullscreen.html"
     (data/map-minimal
       map-data)))
 
 (defn map-fullscreen
   [map-data]
   (content/render
-    "templates/pages/map-fullscreen.html"
+    "templates/pages/map-kml-fullscreen.html"
     (data/map-minimal
       map-data)))
 
