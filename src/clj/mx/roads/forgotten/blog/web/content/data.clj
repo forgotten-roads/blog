@@ -139,11 +139,12 @@
              :tags (blog/tags-unique [post-data]))))
 
 (defn front-page
-  [posts & {:keys [post-count column-count]}]
-  (let [headliner (first posts)
+  [posts & {:keys [above-fold-count below-fold-count column-count]}]
+  (let [above-posts (take above-fold-count posts)
+        headliner (first above-posts)
         grouped-posts (partition column-count
-                                 (take (dec post-count)
-                                       (rest posts)))]
+                                 (nthrest above-posts 1))
+        below-posts (nthrest posts above-fold-count)]
     (-> posts
         (common)
         (assoc-in [:page-data :active] "index")
@@ -155,7 +156,11 @@
                                     ">check out the archives</a>.")
                :tags (blog/tag-stats posts)
                :headliner headliner
-               :posts-data grouped-posts))))
+               :posts-data grouped-posts
+               :posts-count (count posts)
+               :above-count (count above-posts)
+               :below-count (count below-posts)
+               :below-fold-data below-posts))))
 
 (def map-base
   {:google-endpoint "https://maps.googleapis.com/maps/api/js"

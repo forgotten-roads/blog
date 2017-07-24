@@ -60,12 +60,16 @@
 
 (defn front-page
   [posts]
-  (content/render
-    "templates/pages/home.html"
-    (data/front-page
-      posts
-      :post-count 5
-      :column-count 2)))
+  (let [above-fold 5
+        below-fold 5
+        headline-posts (take (+ above-fold below-fold) posts)]
+    (content/render
+      "templates/pages/home.html"
+      (data/front-page
+        headline-posts
+        :above-fold-count above-fold
+        :below-fold-count below-fold
+        :column-count 2))))
 
 (defn maps-index
   [posts maps-data]

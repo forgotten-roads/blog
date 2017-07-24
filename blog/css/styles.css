@@ -1327,3 +1327,12 @@ fieldset[disabled] .btn-tales-two.active {
   font-size: 110%;
 }
 
+.below-fold {
+  margin-bottom: 2em;
+}
+
+.below-fold h2 {
+  font-size: 150%;
+  font-weight: bold;
+}
+
