@@ -74,6 +74,13 @@
     (data/maps-index
       posts maps-data)))
 
+(defn map-view
+  [map-data]
+  (content/render
+    "templates/pages/map-view-fullscreen.html"
+    (data/map-minimal
+      map-data)))
+
 (defn map-fullscreen
   [map-data]
   (content/render

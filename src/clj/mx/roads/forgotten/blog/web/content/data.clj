@@ -157,25 +157,33 @@
                :headliner headliner
                :posts-data grouped-posts))))
 
+(def map-base
+  {:google-endpoint "https://maps.googleapis.com/maps/api/js"
+   :google-api-key "AIzaSyCnCHagOgpmmE11nTCf9k99gZq6a3aLgnw"
+   :starting-lat 43.536389
+   :starting-long -96.731667
+   :starting-zoom 12
+   :disable-map-gui true})
+
 (defn map-minimal
   [map-data]
   (-> (base)
       (assoc-in [:page-data :active] "maps")
-      (assoc :map-data map-data)))
+      (assoc :map-data (merge map-base map-data))))
 
 (defn map-common
   [posts map-data]
   (-> posts
       (common)
       (assoc-in [:page-data :active] "maps")
-      (assoc :map-data map-data)))
+      (assoc :map-data (merge map-base map-data))))
 
 (defn maps-index
   [posts maps-data]
   (-> posts
       (common)
       (assoc-in [:page-data :active] "maps")
-      (assoc :maps-data maps-data)))
+      (assoc :maps-data (map #(merge map-base %) maps-data))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Listings Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forgotten Roads MX - Google Maps - KML</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map" style="height: 100%"></div>
+    <script>
+      function initMap() {
+        var mapElement = document.getElementById('map');
+        var mapOptions = {
+          center: {lat: {{ map-data.starting-lat }}, lng: {{ map-data.starting-long }} },
+          zoom: {{ map-data.starting-zoom }},
+          {% if map-data.disable-map-gui %}
+          disableDefaultUI: {{ map-data.disable-map-gui }},
+          {% endif %}
+          styles: {{ map-data.style-json|safe }}
+        };
+        var map = new google.maps.Map(mapElement, mapOptions);
+      }
+    </script>
+    <script src="{{ map-data.google-endpoint }}?key={{ map-data.google-api-key }}&rev={{ map-data.revision }}&callback=initMap"
+            async defer></script>
+  </body>
+</html>

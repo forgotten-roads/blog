@@ -51,12 +51,16 @@
 
 (defn map-routes
   [uri-base posts routes]
-  (let [gen-data [[#'page/map-fullscreen "fullscreen"]
+  (let [view-data (maps/get-view-data uri-base)
+        view-data-ui (maps/get-view-data-keep-ui uri-base)
+        gen-data [[#'page/map-fullscreen "fullscreen"]
                   [(partial page/map-wide-page posts) "wide-page"]
                   [(partial page/map-content-page posts) "content-page"]]]
     (merge
       routes
-      {"/blog/maps/index.html" (page/maps-index
+      {"/blog/map/ui/fullscreen.html" (page/map-view view-data-ui)
+       "/blog/map/no-ui/fullscreen.html" (page/map-view view-data)
+       "/blog/maps/index.html" (page/maps-index
                                  posts
                                  (maps/get-maps-data
                                    :gen-data gen-data

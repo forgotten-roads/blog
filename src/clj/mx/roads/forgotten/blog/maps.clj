@@ -34,22 +34,23 @@
         paths (get-map-paths kmls)]
     (util/zip kmls paths)))
 
+(defn base-map-data
+  [uri-base]
+  (let [maps-base (format "%s/maps" uri-base)]
+    {:uri-base uri-base
+     :maps-base maps-base
+     :revision revision
+     :style-json (slurp (io/resource map-style-file))}))
+
 (defn get-map-data
   [[_ map-type] [kml map-path] uri-base]
-  (let [maps-base (format "%s/maps" uri-base)]
-    {:revision revision
-     :view-type map-type
+  (merge
+    (base-map-data uri-base)
+    {:view-type map-type
      :kml-file kml
      :map-path map-path
      :html-file (format "%s/%s.html" map-path map-type)
-     :uri-base uri-base
-     :maps-base maps-base
-     :gis-base (format "%s/%s" uri-base default-data-path)
-     :style-json (slurp (io/resource map-style-file))
-     :starting-lat 43.536389
-     :starting-long -96.731667
-     :starting-zoom 12
-     :disable-map-gui true}))
+     :gis-base (format "%s/%s" uri-base default-data-path)}))
 
 (defn get-maps-data
   [& {:keys [gen-data uri-base]}]
@@ -63,6 +64,31 @@
        (vec)
        (map #(zipmap [:key :data] %))
        (sort-by :key)))
+
+(defn get-view-data
+  [uri-base]
+  (merge
+    (base-map-data uri-base)
+    ;; Note that currently `view-types` and `template-types` aren't used.
+    {:view-types [
+      {:name "No Map UI (clean view)"
+       :path-segment "no-ui"}
+      {:name "With Map UI"
+       :path-segment "ui"}]
+     :template-types [
+      {:name "Content page"
+       :path-segment "content-page"}
+      {:name "Fullscreen"
+       :path-segment "fullscreen"}
+      {:name "Wide page"
+       :path-segment "wide-page"}]
+     :starting-zoom 6}))
+
+(defn get-view-data-keep-ui
+  [uri-base]
+  (merge
+    (get-view-data uri-base)
+    {:disable-map-gui false}))
 
 (defn get-map-route
   [[gem-func map-type] [kml map-path] uri-base]
