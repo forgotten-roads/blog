@@ -51,7 +51,10 @@
     <link rel="stylesheet" href="/blog/assets/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/blog/assets/font-awesome/css/font-awesome.min.css">
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CPT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Maitree&amp;subset=latin-ext"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav&amp;subset=latin-ext"
+          rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="/blog/css/styles.css" id="theme-styles">
     
@@ -319,16 +322,18 @@
 
     };
     var map = new google.maps.Map(mapElement, mapOptions);
+    
     var kmlOptions = {
       preserveViewport: false,
       map: map
     };
     var kmlSrc = 'http://forgotten.roads.mx/blog/data/gis/2017/beartooth-run/day-3-trip.kml?rev=5';
     var kmlLayer = new google.maps.KmlLayer(kmlSrc, kmlOptions);
+    
   }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnCHagOgpmmE11nTCf9k99gZq6a3aLgnw&callback=initMap"
-async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnCHagOgpmmE11nTCf9k99gZq6a3aLgnw&rev=5&callback=initMap"
+         async defer></script>
 
   
   </body>

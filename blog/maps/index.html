@@ -51,7 +51,10 @@
     <link rel="stylesheet" href="/blog/assets/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/blog/assets/font-awesome/css/font-awesome.min.css">
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CPT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Maitree&amp;subset=latin-ext"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav&amp;subset=latin-ext"
+          rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="/blog/css/styles.css" id="theme-styles">
     
@@ -208,9 +211,23 @@
 
             
   <h2>Forgotten Roads' Maps</h2>
-  <p>Maps generated from <code>.kml</code> files uploaded to the blog.</p>
 
- <h3>Available Map Sets</h3>
+ <h3>Map Views</h3>
+ <p>Custom-styled Google Maps:</p>
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="maps-menu"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="maps-menu">
+      <li><a href="/blog/map/no-ui/fullscreen.html">No Map UI (clean view)</a></li>
+      <li><a href="/blog/map/ui/fullscreen.html">With Map UI</a></li>
+    </ul>
+  </div>
+
+ <h3>Route Sets</h3>
+ <p>Maps generated from <code>.kml</code> files uploaded to the blog:</p>
  
   <div class="dropdown">
     <button class="btn btn-default dropdown-toggle" type="button" id="maps-menu"
@@ -463,23 +480,6 @@
       <li><a href="/blog/maps/sample/map-route/fullscreen.html">sample/map-route (fullscreen)</a></li>
       
       <li><a href="/blog/maps/sample/map-route/wide-page.html">sample/map-route (wide-page)</a></li>
-      
-    </ul>
-  </div>
-  
-  <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="maps-menu"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      sample/sd-mt
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="maps-menu">
-      
-      <li><a href="/blog/maps/sample/sd-mt/content-page.html">sample/sd-mt (content-page)</a></li>
-      
-      <li><a href="/blog/maps/sample/sd-mt/fullscreen.html">sample/sd-mt (fullscreen)</a></li>
-      
-      <li><a href="/blog/maps/sample/sd-mt/wide-page.html">sample/sd-mt (wide-page)</a></li>
       
     </ul>
   </div>
