@@ -22,11 +22,11 @@
 
 <!-- Twitter Card Metadata -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@ForgottenRdsMX">
-<meta name="twitter:creator" content="@{{ post-data.twitter }}">
+<meta name="twitter:site:id" content="@ForgottenRdsMX">
+<meta name="twitter:creator:id" content="@{{ post-data.twitter }}">
 <meta name="twitter:title" content="{{ post-data.title }}">
 <meta name="twitter:url" content="http://forgotten.roads.mx{{ post-data.url }}">
-<meta name="twitter:description" content="{% if post-data.subtitle %}{{ post-data.subtitle|safe }}{% endif %}">
+<meta name="twitter:description" content="{{ post-data.excerpt-25|safe }}">
 <meta name="twitter:image" content="http://forgotten.roads.mx{{ page-data.base-path }}/{{ post-data.header-image }}">
 {% endblock %}
 
