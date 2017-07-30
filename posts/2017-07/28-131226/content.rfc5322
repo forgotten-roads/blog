@@ -1,0 +1,132 @@
+Subject: Styling Your Own Google Map
+Subtitle: The First Step in a DIY Adventure Map
+From: bobbermac
+Twitter: bobbermacean
+Category: Tools
+Keywords: maps,styles,design,technical,services
+Comments:
+Content-Type: md
+Header-Image: img/style-maps-hdr.jpg
+
+### Map Themes
+
+As [oubiwann](blog/authors/#oubiwann) has
+[recently posted](/blog/archives/2017-07/21-193252/frmx-google-maps-custom-theme.html),
+Forgotten Roads has a new Google Maps theme. But why would we do something
+like that? Well, it's not unlike the need to create a website with a unique
+look that distinguishes you from everyone else. For most people, this won't be
+necessary (or even of interest!), but for those who create unique content
+that revolves around map data, specific locations, or routes between points
+on a map, having a way to display this that is uniquely "you" is a great way
+to present a unified experience of your data.
+
+#### Google Maps Defaults
+
+Okay, but doesn't Google have defaults that are good enough? Sure, Google
+Maps provides several map views:
+
+* Street Map view (this is what most of us probably use)
+* Satellite view (really nice for sanity checks on locations, etc.)
+* Terrain view (shaded views of land features, etc.)
+
+While each of those is very useful in different ways, they don't really let us
+look at map data differently than what Google has decided for us. But hey,
+it's probably meets the needs of the vast majority.
+
+#### Google "My Maps"
+
+For those that aren't satisfied with these, you can actually do something more
+while still using Google's suite of tools. To see an example of this, do the following:
+
+1. Go to [http://maps.google.com/](http://maps.google.com).
+2. Log in with Google credentials (upper right).
+3. Then click the "hamburger" menu in the upper left (the icon of three horizontal lines).
+4. In the menu that appears, click "Your Places" then "Maps" -- if you've
+created any maps, they'll be here: go ahead and click on one. If you don't have any, you can click "Create Map" at the bottom.
+5. In the new window / tab that opens up, you'll see "layers" section to the
+right -- click the arrow next to "Base map".
+
+At that point, you'll see the following:
+
+<img href="/blog/img/google-base-map-popup.jpg">
+
+And these, dear rider, are the map themes that Google has provided to its
+"My Maps" users. The first three are the ones we're familiar with, listed
+above. The remaining six, however, may be quite new to you.
+
+For the small percentage of the Google Maps using population who aren't
+satisfied with the defaults, this will likely satisfy. But then there's the
+tiny remainder like us that, well, need something more. Or less, as the case
+may be.
+
+#### OpenRouteService
+
+Before exploring our final solution, it's worth mentioning one of the earliest
+alternative we explored -- not Google at all. We've used
+[OpenStreetMap](https://www.openstreetmap.org) before, and unlike Google Maps,
+it's run by a volunteer effort and has a permissive open license
+(something that a lot of people care about). They've got a really nice theme
+that's easy on the eyes:
+
+%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36104290042/in/datetaken/" title="Screen Shot 2017-07-30 at 3.06.49pm"><img src="https://farm5.staticflickr.com/4311/36104290042_dfeecf8de5_b.jpg" width="1024" height="636" alt="Screen Shot 2017-07-30 at 3.06.49pm"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+
+What we *didn't* know about, however, was
+[OpenRouteService](https://www.openrouteservice.org/)
+which makes use of OpenStreetMap but offers a new set of themes to choose from
+when creating a new route.
+
+We had originally settled on this approach instead of putting time into styling
+our own maps, but sadly, we found a bug in its routing algorithm when we
+uploaded our own `.kml` files. Given that our riding routes are the core of
+this whole effort, we had to bail.
+
+For those who don't need perfect duplication of routes from `.kml` files, we
+highly recommend this service. It's not as fast as Google, but you are offered
+the ability to create a greater number of way points than with Google Maps
+(something which has bothered us in Google Maps for a long time). Furthermore,
+their map themes are beautiful. Here's four of them looking at the Rapid City
+metro area:
+
+%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35438453884/in/datetaken/" title="montage-openmapservice"><img src="https://farm5.staticflickr.com/4314/35438453884_3d4df49e51_b.jpg" width="1024" height="633" alt="montage-openmapservice"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+
+That hardly does them justice, though -- you should visit their site.
+
+Here are the two we like best for looking at streets:
+
+%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35438451804/in/datetaken/" title="Screen Shot 2017-07-30 at 3.13.17pm"><img src="https://farm5.staticflickr.com/4302/35438451804_9c485a927c_b.jpg" width="1024" height="634" alt="Screen Shot 2017-07-30 at 3.13.17pm"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+
+%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36229769776/in/datetaken/" title="Screen Shot 2017-07-30 at 3.13.31pm"><img src="https://farm5.staticflickr.com/4312/36229769776_10e7011092_b.jpg" width="1024" height="633" alt="Screen Shot 2017-07-30 at 3.13.31pm"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+
+### Styling Tools for Google Maps
+
+So, given that all of our attempts to *not* do this ourselves failed, we fell
+back on a path of more work and greater time investment: creating a custom
+style for Google Maps. This required the following:
+
+1. Creating the style and saving the style JSON data
+1. Uploading the JSON data to a data repository
+1. Integrating the style with plain Google Maps ([getting started](https://developers.google.com/maps/documentation/javascript/tutorial))
+1. Integrating the style with track/trip data in Google Maps ([tutorial](https://developers.google.com/maps/documentation/javascript/kml), [guide](https://developers.google.com/maps/documentation/javascript/kmllayer))
+1. Uploading track/trip data to a data repository
+1. Creating new pages that reference that data and pull in the Google Maps JavaScript APIs
+
+But! We're not going to cover all that here -- other places do that quite well.
+I just want to mention the tools for creating your own styles.
+[oubiwann](/blog/authors/#oubiwann)
+mentioned them in his recent post about the FRMX styles:
+
+* [SnazzyMaps](https://snazzymaps.com/)
+* [MapStylr](http://www.mapstylr.com/)
+
+Both of these sites let you create either new styles from scratch or a style
+based on another one in their archives. We found a style we really liked
+[here](https://snazzymaps.com/style/79825/retro-eco),
+and then began modifying it. We used both SnazzyMaps and MapStylr -- their
+user interface tools a quite good for this, but couldn't find ways in which
+one definitely our-performed the other ... so we'll likely continue to use
+them both.
+
+One thing to keep in mind as you play with both style editors: it's going to be
+very confusing at first, and you'll find yourself editing different parts of
+the highly nested data wondering what really controls what. It's not you. The
+data is complex and anti-intuitive. Just keep plugging away at it.
