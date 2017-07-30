@@ -74,35 +74,40 @@
 (defn maps-index
   [posts maps-data]
   (content/render
-    "templates/pages/maps-index.html"
+    "templates/pages/maps.html"
     (data/maps-index
       posts maps-data)))
 
-(defn map-view
-  [map-data]
-  (content/render
-    "templates/pages/map-fullscreen.html"
-    (data/map-minimal
-      map-data)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Map Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn map-fullscreen
   [map-data]
   (content/render
-    "templates/pages/map-kml-fullscreen.html"
+    "templates/maps/fullscreen.html"
     (data/map-minimal
       map-data)))
 
-(defn map-wide-page
+(defn map-kml-fullscreen
+  [map-data]
+  (content/render
+    "templates/maps/kml-fullscreen.html"
+    (data/map-minimal
+      map-data)))
+
+(defn map-kml-wide-page
   [posts map-data]
   (content/render
-    "templates/pages/map-wide-page.html"
+    "templates/maps/kml-wide-page.html"
     (data/map-common
       posts map-data)))
 
-(defn map-content-page
+(defn map-kml-content-page
   [posts map-data]
   (content/render
-    "templates/pages/map-content-page.html"
+    "templates/maps/kml-content-page.html"
     (data/map-common
       posts map-data)))
 

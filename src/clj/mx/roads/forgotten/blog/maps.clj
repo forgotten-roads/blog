@@ -47,6 +47,9 @@
   (merge
     (base-map-data uri-base)
     {:view-type map-type
+     :view-type-display (-> map-type
+                            (string/capitalize)
+                            (string/replace "-" " "))
      :kml-file kml
      :map-path map-path
      :html-file (format "%s/%s.html" map-path map-type)

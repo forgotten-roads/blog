@@ -54,12 +54,12 @@
   (let [view-data (maps/get-view-data uri-base)
         view-data-ui (maps/get-view-data-keep-ui uri-base)
         gen-data [[#'page/map-fullscreen "fullscreen"]
-                  [(partial page/map-wide-page posts) "wide-page"]
-                  [(partial page/map-content-page posts) "content-page"]]]
+                  [(partial page/map-kml-wide-page posts) "wide-page"]
+                  [(partial page/map-kml-content-page posts) "content-page"]]]
     (merge
       routes
-      {"/blog/map/ui/fullscreen.html" (page/map-view view-data-ui)
-       "/blog/map/no-ui/fullscreen.html" (page/map-view view-data)
+      {"/blog/map/ui/fullscreen.html" (page/map-fullscreen view-data-ui)
+       "/blog/map/no-ui/fullscreen.html" (page/map-fullscreen view-data)
        "/blog/maps/index.html" (page/maps-index
                                  posts
                                  (maps/get-maps-data
