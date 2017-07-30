@@ -1,0 +1,49 @@
+Subject: FRMX Google Maps Custom Theme
+Subtitle: A New Look for Forgotten Roads' Ride Maps
+From: bobbermac
+Twitter: bobbermacean
+Category: Tools
+Keywords: maps,styles,design,south dakota,rapid city,black hills
+Comments:
+Content-Type: md
+Header-Image: img/google-maps-theme-hdr.jpg
+
+This is a quick blog post to share two new Google Maps themes we produced here
+at Forgotten Roads, in the event that our readers might want to use these as
+well. They've got a "retro" feel to them, designed to be extremely simple
+(for easy viewing in blog posts) and pleasing to the eye. These two map styles
+have been published in two locations (on the
+[Snazzy Maps](https://snazzymaps.com/explore?text=oubiwann&sort=&tag=&color=)
+&
+[MapStylr](http://www.mapstylr.com/author/oubiwann/) sites), and
+are of two types:
+
+* Retro Muted [ [Snazzy Maps](https://snazzymaps.com/style/110996/retro-muted) | [MapStylr](http://www.mapstylr.com/style/retro-muted/) ]
+* Simple Retro Muted with Terrain [ [Snazzy Maps](https://snazzymaps.com/style/111010/simple-retro-muted-with-terrain) | [MapStylr](http://www.mapstylr.com/style/simple-retro-muted-with-terrain/) ]
+
+The second one is even more pared down than the first and is what we've settled
+on for displaying ride data in our blog posts. Below I've included some example views of the style at different zoom levels.
+
+### State Level Zoom
+
+Here's a view of the lower half of South Dakota:
+
+%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35436334184/in/datetaken/" title="Screen Shot 2017-07-30 at 1.24.54pm"><img src="https://farm5.staticflickr.com/4294/35436334184_a5f000756c_b.jpg" width="1024" height="528" alt="Screen Shot 2017-07-30 at 1.24.54pm"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+
+In both this view and the next you can see how we've diminished the visibility
+of US interstates to a mere hint, really focusing instead on the state routes
+-- one of the most important sources of good riding!
+
+### Metro Area Level Zoom
+
+This shows the Rapid City metro area, outlying ranch land, and some of the Black Hills:
+
+%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36135619041/in/datetaken/" title="Screen Shot 2017-07-30 at 1.38.45pm"><img src="https://farm5.staticflickr.com/4299/36135619041_5a2de443dc_b.jpg" width="1024" height="527" alt="Screen Shot 2017-07-30 at 1.38.45pm"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+
+### City Level Zoom
+
+The next two show city views and two different zoom levels, emphasizing the labeling simplicity:
+
+%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36102331332/in/datetaken/" title="Screen Shot 2017-07-30 at 1.39.27pm"><img src="https://farm5.staticflickr.com/4330/36102331332_d388af0e8f_b.jpg" width="1024" height="523" alt="Screen Shot 2017-07-30 at 1.39.27pm"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+
+%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36268951045/in/datetaken/" title="Screen Shot 2017-07-30 at 1.39.52pm"><img src="https://farm5.staticflickr.com/4306/36268951045_cb15081896_b.jpg" width="1024" height="527" alt="Screen Shot 2017-07-30 at 1.39.52pm"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
