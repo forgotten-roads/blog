@@ -1,0 +1,135 @@
+Subject: Online Mapping Tools for Your Ride
+Subtitle: An Overview of What Forgotten Roads Uses
+From: bobbermac
+Twitter: bobbermacean
+Category: Tools
+Keywords: data,gis,kml,services,maps
+Comments:
+Content-Type: md
+Header-Image: img/spotwalla-hdr.jpg
+
+Previous posts have touched on some of the map- and route-related tooling
+and services available for free online, that can help map out your ride. We'll
+mention them again here, but also -- and more importantly -- introduce you to
+to a free service we haven't covered yet, one that we now depend upon heavily
+for recording our tracks across the country.
+
+### OpenStreetMap
+
+From the site's [About](https://www.openstreetmap.org/about) page:
+
+<blockquote>
+  OpenStreetMap is built by a community of mappers that contribute and
+  maintain data about roads, trails, cafés, railway stations, and much more,
+  all over the world.
+</blockquote>
+
+OpenStreetMap allows you to upload limited forms of `.kml` files; depending
+upon your needs, it could be all you're looking for.
+
+### OpenSourceService
+
+Like Google Maps' route functionality,
+[OpenRouteService](https://www.openrouteservice.org) utilizes the data from
+OpenStreetMap to help users define and generate multi-destination map routes
+taking into consideration numerous modes of transportation. It also provides
+for a greater number of road types your route should ignore (e.g., unpaved, fords, tracks).
+
+Like OpenStreetMap, OpenRouteService lets you upload files. It is not as
+strict in how it parses `.kml` as OpenStreetMap but we have found issues (bugs)
+in rendering routes that cause a displayed map to not always match the exact
+data in the uploaded file. This was a show-stopper for us, but maybe not for
+others.
+
+Depending upon what you wish to accomplish, you also may need to convert your
+track or trip files from one format to another. We've run into a few minor rough edges there, but serious.
+
+### SpotWalla
+
+Spotwalla is our golden child at FRMX: we use an iOS app called
+[SWConnect](http://rvtechtools.com/swconnect.html) that was originally
+designed for use with RVs. The Android app for SpotWalla is called
+[Bubbler GPS](http://bubblergps.com/) and seems quite nice (putting the iOS
+app to shame, some say). We first found out about SpotWalla when oubiwann
+met 2ringbike in a Fargo campground as 2ringbike was preparing to set out
+on his lower-48 ride.
+
+While the SpotWalla service was nice and usable, we almost gave up when we
+couldn't get SWConnect to make any more frequent updates than every 5 minutes.
+However, after some digging online we found instructions from the author of
+SWConnect. His recommendation was to use overlays.
+
+To do this, you set up a trip as usual on the SpotWalla site (for a certain
+day or range of days). These will be the updates that are, by default, will be
+sent every 5 minutes. Then, when you're ready to start your trip, open up
+SWConnect on the iPhone:
+
+* Touch "Application Setup"
+  * Log in to SpotWalla
+  * Select the device
+  * **Enable track overlay**
+  * Optionally, enable auto track mode
+* Touch "Return to Main Screen"
+* Touch "Enable Tracking"
+
+That should do it.
+
+What this does is:
+
+1. Start sending the large "spot" messages to SpotWalls, every 5 minutes
+associated with whatever **trip** you created for the current date and time
+(range),
+1. Creates a new **track** for the current date/time
+1. Batches GPS lat/long data in small messages to SpotWalla
+
+Both can later be downloaded as `.kml` files and viewed together in as two
+layers in a single map for any mapping software or service that supports this
+(many do).
+
+### Google "My Maps"
+
+The Google "My Maps" [about page](https://www.google.com/maps/about/mymaps/)
+doesn't really say much about the product, but basically it allows you to
+create and share customized maps. Really, the only driver for Forgotten Roads
+was "can we completely stylize these maps?". The answer was "yes", so we used
+it.
+
+The additional benefits really make our lives easy, though:
+
+* Quickly upload SpotWalla `.kml` files, and thus
+* Assemble multiple trips and tracks into a single map
+* Easily customize the colors of tracks
+
+We've got a whole slew of blog posts in the pipeline that make extensive use
+of SpotWalla data and "My Maps" to provide trip maps detailing our routes. We
+couldn't be writing about what we do and how we do it as effectively without
+these two tools.
+
+### Online Topographic Maps
+
+Some of us at FRMX are land-nav nuts, and there's no substitute for a good
+topo map. In 2009 USGS started a new project to generate topographical maps
+from 100% digital sources. In all honesty, these don't even compare to the
+originals (well, the ones published by USGS from 1947 through 1992).
+
+After downloading a whole slew of the new ones in `.pdf` format and
+experiencing acute disappointment, we were on the hunt for good online topo
+maps. The search didn't take long, though: we quickly found (and then even
+more quickly fell in love with)
+[gmap4](https://mappingsupport.com/p/gmap4-free-online-topo-maps.html)
+(see the
+[fullscreen version](https://mappingsupport.com/p/gmap4.php)). There's so
+much to say about this tool, and too little room (this post is already
+getting a bit long). This is a **phenomenal** project, and we all hope people
+continue to donate to it, so that it can continue to survive.
+
+Here's a screenshot of gmap4 that captures the highest peak in the Black
+Hills and some of the best riding in the region:
+
+%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36237577866/in/datetaken/" title="FireShot Capture 009 - Map produced by Gmap4 from mappings_ - https___mappingsupport.com_p_gmap4.php"><img src="https://farm5.staticflickr.com/4310/36237577866_3563dcbc3b_o.jpg" width="2556" height="1320" alt="FireShot Capture 009 - Map produced by Gmap4 from mappings_ - https___mappingsupport.com_p_gmap4.php"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+
+### Summary
+
+This should give you everything you need to get started creating your own
+ride maps, complete with the GPS info that your device recording along the way.
+Have a great adventure!
