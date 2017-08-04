@@ -170,6 +170,11 @@
    :starting-zoom 12
    :disable-map-gui true})
 
+(def topo-base
+  (-> map-base
+      (assoc :starting-zoom 13)
+      (dissoc :disable-map-gui)))
+
 (defn map-minimal
   [map-data]
   (-> (base)
@@ -188,6 +193,7 @@
   (-> posts
       (common)
       (assoc-in [:page-data :active] "maps")
+      (assoc :topo-data topo-base)
       (assoc :maps-data (map #(merge map-base %) maps-data))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

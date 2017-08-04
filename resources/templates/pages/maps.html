@@ -14,15 +14,9 @@
     <ul class="dropdown-menu" aria-labelledby="maps-menu">
       <li><a href="/blog/map/no-ui/fullscreen.html">No Map UI (clean view)</a></li>
       <li><a href="/blog/map/ui/fullscreen.html">With Map UI</a></li>
-      <li><a href="https://mappingsupport.com/p/gmap4.php?ll={{ maps-data.0.0.starting-lat }},{{ maps-data.0.0.starting-long }}&z={{ maps-data.0.0.starting-zoom }}&t=t4">Topo map (external link)</a></li>
+      <li><a href="https://mappingsupport.com/p/gmap4.php?ll={{ topo-data.starting-lat }},{{ topo-data.starting-long }}&z={{ topo-data.starting-zoom }}&t=t4">Topo map (external link)</a></li>
     </ul>
   </div>
-
- <pre>
- {{ maps-data }}
- {{ maps-data.0 }}
- {{ maps-data.0.0 }}
- </pre>
 
  <h3>Route Sets</h3>
  <p>Maps generated from <code>.kml</code> files uploaded to the blog:</p>
@@ -37,7 +31,7 @@
       {% for map-data in group.data %}
       <li><a href="{{ map-data.maps-base }}/{{ map-data.html-file }}">{{ map-data.view-type-display }}</a></li>
       {% endfor %}
-      <li><a href="https://mappingsupport.com/p/gmap4.php?q=http://forgotten.roads.mx{{ group.data.0.gis-base }}{{ group.data.0.kml-file }}?rev={{ group.data.0.revision }}">Topo map (external link)</a></li>
+      <li><a href="https://mappingsupport.com/p/gmap4.php?q=http://forgotten.roads.mx{{ group.data.0.gis-base }}{{ group.data.0.kml-file }}?rev={{ group.data.0.revision }}&t=t4">Topo map (external link)</a></li>
     </ul>
   </div>
   {% endfor %}
