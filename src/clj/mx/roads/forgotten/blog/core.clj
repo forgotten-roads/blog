@@ -36,6 +36,11 @@
   []
   (web (generate)))
 
+(defn log+generate
+  []
+  (set-log-level)
+  (generate))
+
 (defn log+generate+web
   []
   (set-log-level)
