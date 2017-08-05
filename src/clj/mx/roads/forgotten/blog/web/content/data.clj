@@ -198,13 +198,13 @@
              :tags (blog/tags-unique [post-data]))))
 
 (defn front-page
-  [posts & {:keys [above-fold-count below-fold-count column-count]}]
-  (let [above-posts (take above-fold-count posts)
+  [all-posts top-posts & {:keys [above-fold-count below-fold-count column-count]}]
+  (let [above-posts (take above-fold-count top-posts)
         headliner (first above-posts)
         grouped-posts (partition column-count
                                  (nthrest above-posts 1))
-        below-posts (nthrest posts above-fold-count)]
-    (-> posts
+        below-posts (nthrest top-posts above-fold-count)]
+    (-> all-posts
         (common)
         (assoc-in [:page-data :active] "index")
         (assoc :headlines-heading "Headlines"
@@ -213,10 +213,10 @@
                                     "on the front page -- if you want to read "
                                     "an older post, <a href=\"/blog/archives\""
                                     ">check out the archives</a>.")
-               :tags (blog/tag-stats posts)
+               :tags (blog/tag-stats all-posts)
                :headliner headliner
                :posts-data grouped-posts
-               :posts-count (count posts)
+               :posts-count (count top-posts)
                :above-count (count above-posts)
                :below-count (count below-posts)
                :below-fold-data below-posts))))

@@ -66,6 +66,7 @@
     (content/render
       "templates/pages/home.html"
       (data/front-page
+        posts
         headline-posts
         :above-fold-count above-fold
         :below-fold-count below-fold
