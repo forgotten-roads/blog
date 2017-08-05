@@ -73,7 +73,6 @@
 
     <link rel="alternate" type="application/atom+xml" title="Feed" href="/blog/atom.xml" />
     
-    
     <link rel="stylesheet" href="/blog/assets/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/blog/assets/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/blog/assets/font-awesome/css/font-awesome.min.css">
@@ -87,7 +86,6 @@
     
     
     
-    
     <!--[if lt IE 9]>
         <script src="assets/respond/html5-3.6-respond-1.1.0.min.js"></script>
     <![endif]-->
@@ -95,8 +93,6 @@
         src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
-    
-    
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -105,8 +101,6 @@
       ga('create', 'UA-101039165-2', 'auto');
       ga('send', 'pageview');
     </script>
-    
-    
     
     
   </head>
@@ -255,6 +249,8 @@
 </code></pre><p>We downloaded a KML file from <a href='https://spotwalla.com/'>SpotWalla</a> and found that this command failed on that file. We had to open it up and change a line from this:</p><pre><code>&lt;altitudeMode&gt;relative&lt;/altitudeMode&gt;
 </code></pre><p>to this:</p><pre><code>&lt;altitudeMode&gt;relativeToGround&lt;/altitudeMode&gt;
 </code></pre><h4>KML -> GeoJSON</h4><p>Probably the easiest way to convert a KML file you have downloaded to GeoJSON is to upload it to the "MyGeodata Converter" service:</p><ul><li><a href='https://mygeodata.cloud/converter/kml-to-geojson'>https://mygeodata.cloud/converter/kml-to-geojson</a></li></ul><p>Simply browse for your file when you hit the button, then hit "Continue". Once your file uploads, you'll be asked to set any options (the defaults are fine for most cases; we haven't needed to adjust them yet). Then hit the "Convert now!" button, and a <code>.zip</code> file will download, which you can open up and extract your new <code>.geojson</code> file.</p><p>The same site offers <a href='https://mygeodata.cloud/converter/geojson-to-gpx'>a GPX converter</a>, should you need that.</p><h3>Other Tools</h3><p>We've tried each of the following other tools but they either didn't work for our files or the functionality provided was not quite what we needed. However, they do seem to have a good user following and may be useful for you, so we'll share some links:</p><ul><li><a href='http://merkaartor.be/'>Merkaartor</a> - a mapping program that can be used with  <a href='https://en.wikipedia.org/wiki/OpenStreetMap'>OpenStreetMap</a>; it offers some  import capabilities</li><li><a href='https://www.google.com/earth/download/gep/agree.html'>Google Earth Pro</a> -  Google now provides the "pro" version of their Google Earth software for  free. This is now considered an outdated version; the supported one is the  new Chrome-only Google Earth 9 (released in 2017).</li><li><a href='http://www.gpsvisualizer.com/map_input?form=googleearth'>GPS Visualizer</a> -  only used it once, but it seems pretty good.</li><li>KMLCSV - maybe we were doing it wrong, but I wouldn't even bother with this  one ...</li></ul><h3>Next Up</h3><p>Before too long, you should be seeing another FRMX post about how we use the services that use KML and GeoJSON ... ! &#x1F6E3;</p>
+            
+            
           </div>
 
           
@@ -390,15 +386,15 @@
             <span class="caption">Articles</span>
           </div>
           <div class="line">
-            <span class="counter">1011</span>
+            <span class="counter">998</span>
             <span class="caption">Lines</span>
           </div>
           <div class="line">
-            <span class="counter">10578</span>
+            <span class="counter">10546</span>
             <span class="caption">Words</span>
           </div>
           <div class="line">
-            <span class="counter">2377</span>
+            <span class="counter">2350</span>
             <span class="caption">Characters</span>
           </div>
         </div>
@@ -458,6 +454,7 @@
     <script src="/blog/assets/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/blog/assets/modernizr/modernizr-custom.js"></script>
 
+    
   
   </body>
 </html>
