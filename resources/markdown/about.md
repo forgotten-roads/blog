@@ -18,5 +18,8 @@ focused, pertinent product reviews. In particular, we share our discoveries of
 roads as well as friendships and aquantainces we form with random fellow
 excursionists on these forgotten roads.
 
+We wrote a blog post that talks some more about why we started up this blog;
+you can read that [here](/blog/archives/2016-09/19-221343/the-beginning-of-a-new-project.html).
+
 If you are interested in how we build this site, you can read about that
 [here](powered-by.html).
