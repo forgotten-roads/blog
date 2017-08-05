@@ -1,12 +1,70 @@
 (ns mx.roads.forgotten.blog.web.content.data
   (:require [clojure.java.io :as io]
+            [clojure.string :as string]
             [dragon.blog :as blog]
             [dragon.config :as config]
-            [markdown.core :as markdown]))
+            [markdown.core :as markdown]
+            [taoensso.timbre :as log]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Helper Functions & Data Helpers   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(def legal-block-extensions
+  #{".selmer-block"})
+
+(def legal-block-names
+  #{"pre-css"
+    "pre-head-scripts"
+    "post-head-scripts"
+    "head-postpends"
+    "post-body-ads"
+    "post-post-scripts"})
+
+(defn legal-block-file?
+  [^java.io.File file]
+  (->> legal-block-extensions
+       (map #(string/ends-with? (.getCanonicalPath file) %))
+       (remove false?)
+       (not-empty)))
+
+(defn legal-block-name?
+  [block-name]
+  (contains? legal-block-names block-name))
+
+(defn block-matches?
+  [block-file block-name]
+  (and (legal-block-name? block-name)
+       (string/includes? (str block-file) block-name)))
+
+(defn get-block-name
+  "Given a file object, "
+  [^java.io.File block-file]
+  (->> legal-block-names
+       (filter (partial block-matches? block-file))
+       (first)))
+
+(defn get-block-files
+  [parent-dir]
+  (->> parent-dir
+       (io/file)
+       (.listFiles)
+       (filter legal-block-file?)))
+
+(defn get-block
+  [block-file]
+  (let [block-name (get-block-name block-file)]
+    (if (nil? block-name)
+      []
+      [(keyword block-name) (slurp block-file)])))
+
+(defn get-blocks
+  [post-data]
+  (->> post-data
+       :src-dir
+       (get-block-files)
+       (map get-block)
+       (into {})))
 
 (defn posts-stats
   [posts]
@@ -136,6 +194,7 @@
       (common)
       (assoc-in [:page-data :active] "archives")
       (assoc :post-data post-data
+             :blocks (get-blocks post-data)
              :tags (blog/tags-unique [post-data]))))
 
 (defn front-page

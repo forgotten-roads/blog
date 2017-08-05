@@ -30,6 +30,16 @@
 <meta name="twitter:image" content="http://forgotten.roads.mx{{ page-data.base-path }}/{{ post-data.header-image }}">
 {% endblock %}
 
+{% block pre-css %}{{ blocks.pre-css|safe }}{% endblock %}
+
+{% block pre-head-scripts %}{{ blocks.pre-head-scripts|safe }}{% endblock %}
+
+{% block post-head-scripts %}{{ blocks.post-head-scripts|safe }}{% endblock %}
+
+{% block head-postpends %}{{ blocks.head-postpends|safe }}{% endblock %}
+
+{% block post-post-scripts %}{{ blocks.post-post-scripts|safe }}{% endblock %}
+
 {% block main-content %}
     <div class="container">
       <div class="page-header" id="banner">
@@ -59,6 +69,7 @@
               </div>
             </div>
             {{ post-data.body|safe }}
+            {% block post-body-ads %}{{ blocks.post-body-ads|safe }}{% endblock %}
           </div>
 
           {% if post-data.char-count > 2500 %}
