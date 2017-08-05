@@ -8,6 +8,6 @@ amzn_assoc_marketplace = "amazon";
 amzn_assoc_region = "US";
 amzn_assoc_title = " ";
 amzn_assoc_linkid = "b2db0667809849bbde22b7ba9e41f1b7";
-amzn_assoc_asins = "B00ZWOF7HA,B00AOC1NDC,B0051PB40O,B01G07FO8E,B00519NR1O,B0051V2CE0";
+amzn_assoc_asins = "B00ZWOF7HA,B00AOC1NDC,B01G07FO8E,B0051V2CE0";
 </script>
 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
