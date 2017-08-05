@@ -168,6 +168,12 @@
     "templates/design/blog-example.html"
     (data/design posts)))
 
+(defn font-samples
+  [posts]
+  (content/render
+    "templates/design/font-samples.html"
+    (data/design posts)))
+
 ; (defn post-example
 ;   [posts]
 ;   (content/render
