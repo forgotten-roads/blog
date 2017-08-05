@@ -36,9 +36,7 @@
     {"/blog/design/index.html" (page/design posts)
      "/blog/design/bootstrap-theme.html" (page/bootstrap-theme posts)
      "/blog/design/example-front-page.html" (page/front-page-example posts)
-     "/blog/design/example-blog.html" (page/blog-example posts)
-     "/blog/design/map-simple.html" (page/map-simple-example posts)
-     "/blog/design/map-kml-layer.html" (page/map-kml-example posts)}))
+     "/blog/design/example-blog.html" (page/blog-example posts)}))
 
 (defn post-routes
   [uri-posts posts routes]
