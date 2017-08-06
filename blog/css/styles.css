@@ -1336,3 +1336,6 @@ fieldset[disabled] .btn-tales-two.active {
   font-weight: bold;
 }
 
+.route-summary .control-label {
+  padding-top: 0;
+}
