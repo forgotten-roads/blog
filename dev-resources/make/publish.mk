@@ -80,5 +80,9 @@ publish-aws-committed:
 			cp "$$f" s3://$(AWS_BLOG_BUCKET)`echo $$f|sed -e 's/^blog\///'` ; \
 	done
 
-sync-aws:
+sync-aws: commit-content
 	@aws --profile=frmx s3 sync blog/ s3://$(AWS_BLOG_BUCKET)/
+
+commit-content:
+	@git commit blog -m "Regen'ed content."
+	@git push
