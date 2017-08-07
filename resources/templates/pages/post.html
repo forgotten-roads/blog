@@ -36,7 +36,10 @@
 
 {% block post-head-scripts %}{{ blocks.post-head-scripts|safe }}{% endblock %}
 
-{% block head-postpends %}{{ blocks.head-postpends|safe }}{% endblock %}
+{% block head-postpends %}
+ <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+ {{ blocks.head-postpends|safe }}
+{% endblock %}
 
 {% block post-post-scripts %}{{ blocks.post-post-scripts|safe }}{% endblock %}
 
@@ -54,7 +57,7 @@
               {% endif %}
               <h2 class="blog-post-title">{{ post-data.title }}</h2>
               {% if post-data.subtitle %}
-              <p class="blog-post-subtitle">{{ post-data.subtitle }}</p>
+              <h3 class="blog-post-subtitle">{{ post-data.subtitle }}</h3>
               {% endif %}
               <div class="blog-post-meta">
                 <p class="date">{{ post-data.month }}

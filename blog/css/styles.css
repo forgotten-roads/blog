@@ -785,6 +785,11 @@ footer {
   float: left;
   margin-right: 10px;
 }
+
+.blog-post-subtitle {
+  font-style: italic;
+}
+
 .blog-post .body {
   margin-top: 20px;
 }
