@@ -85,4 +85,4 @@ sync-aws: commit-content
 
 commit-content:
 	@git commit blog -m "Regen'ed content."
-	@git push
+	@git push origin master
