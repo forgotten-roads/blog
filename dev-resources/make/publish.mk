@@ -84,5 +84,5 @@ sync-aws: commit-content
 	@aws --profile=frmx s3 sync blog/ s3://$(AWS_BLOG_BUCKET)/
 
 commit-content:
-	@git commit blog -m "Regen'ed content."
-	@git push origin master
+	@git commit blog -m "Regen'ed content." || echo "Nothing to commit."
+	@git push origin master || echo "Nothing to push."
