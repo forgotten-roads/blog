@@ -52,7 +52,7 @@
   [uri-base posts routes]
   (let [view-data (maps/get-view-data uri-base)
         view-data-ui (maps/get-view-data-keep-ui uri-base)
-        gen-data [[#'page/map-fullscreen "fullscreen"]
+        gen-data [[#'page/map-kml-fullscreen "fullscreen"]
                   [(partial page/map-kml-wide-page posts) "wide-page"]
                   [(partial page/map-kml-content-page posts) "content-page"]]]
     (merge
