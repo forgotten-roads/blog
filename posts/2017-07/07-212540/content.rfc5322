@@ -36,32 +36,16 @@ orangey-pink morning beauty as we were getting back onto US-212:
 %%%        <div id="summary-miles" class="col-sm-9">374 mi (602 km)</div>%%%
 %%%      </div>%%%
 %%%      <div class="form-group">%%%
-%%%        <label for="summary-b1" class="col-sm-3 control-label">First Breakfast:</label>%%%
-%%%        <div id="summary-b1" class="col-sm-9">Riverside Campground, SD</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-b2" class="col-sm-3 control-label">Second Breakfast:</label>%%%
-%%%        <div id="summary-b2" class="col-sm-9">%%%
-[Cashway Cafe](https://www.tripadvisor.com/Restaurant_Review-g45098-d4914167-Reviews-Cashway_Cafe-Broadus_Montana.html)
-%%% in Broadus, MT</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-lunch" class="col-sm-3 control-label">Lunch:</label>%%%
-%%%        <div id="summary-lunch" class="col-sm-9">%%%
-[Thai Cuisine](https://www.tripadvisor.com/Restaurant_Review-g45086-d3266456-Reviews-Cham_Thai_Cuisine-Billings_Montana.html)
-%%% in Billings, MT</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-dinner" class="col-sm-3 control-label">Dinner:</label>%%%
-%%%        <div id="summary-dinner" class="col-sm-9">%%%
-[Red Lodge Pizza Co.](http://www.redlodgerestaurants.com/red-lodge-pizza-co/)
-%%% in Red Lodge, MT</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-slept" class="col-sm-3 control-label">Slept:</label>%%%
-%%%        <div id="summary-slept" class="col-sm-9">%%%
-[Rattin Campground](https://www.fs.usda.gov/recarea/custergallatin/recarea/?recid=60831)
-%%% outside of Red Lodge, MT</div>%%%
+%%%        <label for="summary-food" class="col-sm-3 control-label">Food:</label>%%%
+%%%        <div id="summary-food" class="col-sm-9">%%%
+Breakfast @ Riverside Campground in Belle Fourche, SD
+
+Second Breakfast @ [Cashway Cafe](https://www.tripadvisor.com/Restaurant_Review-g45098-d4914167-Reviews-Cashway_Cafe-Broadus_Montana.html) in Broadus, MT
+
+Lunch @ [Thai Cuisine](https://www.tripadvisor.com/Restaurant_Review-g45086-d3266456-Reviews-Cham_Thai_Cuisine-Billings_Montana.html) in Billings, MT
+
+Dinner @ [Red Lodge Pizza Co.](http://www.redlodgerestaurants.com/red-lodge-pizza-co/) in Red Lodge, MT
+%%%       </div>%%%
 %%%      </div>%%%
 %%%      <div class="form-group">%%%
 %%%      <label for="summary-photos" class="col-sm-3 control-label">Photo Album:</label>%%%
