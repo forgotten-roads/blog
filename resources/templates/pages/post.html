@@ -72,8 +72,8 @@
               </div>
             </div>
             {{ post-data.body|safe }}
-            {% block post-body-ads %}{{ blocks.post-body-ads|safe }}{% endblock %}
-            {% if blocks.post-body-ads %}
+            {% block article-body-ads %}{{ blocks.article-body-ads|safe }}{% endblock %}
+            {% if blocks.article-body-ads %}
             <p>(Purchases from the links above help support Forgotten Roads -- if you buy something, thanks :-) Regardless, thanks for reading!)</p>
             {% endif %}
           </div>
@@ -91,6 +91,7 @@
                    aria-hidden="true"></i>
               {% endif %}
             </div>
+
             <div class="col-xs-6 text-right">
               {% if post-data.next-post %}
               <a href="{{ post-data.next-post }}">
@@ -138,6 +139,30 @@
               </ul>
             </div>
           </div>
+
+          {% if blocks.article-sidebar-comments-links %}
+          <div class="aside-widget comments-widget">
+            <header>
+              <h3>Comments</h3>
+            </header>
+            <div class="body">
+              Post comments can be made for this article on:
+              <ul class="tales-list">
+                {% block article-sidebar-comments-links %}
+                  {{ blocks.article-sidebar-comments-links|safe }}
+                {% endblock %}
+              </ul>
+            </div>
+          </div>
+          {% endif %}
+
+            <div class="row">
+              <div class="col-xs-6">
+
+              </div>
+            </div>
+
+
 
           <div class="aside-widget">
             <header>
