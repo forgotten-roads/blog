@@ -18,8 +18,9 @@
     "pre-head-scripts"
     "post-head-scripts"
     "head-postpends"
-    "post-body-ads"
-    "post-post-scripts"})
+    "post-post-scripts"
+    "article-body-ads"
+    "article-sidebar-comments-links"})
 
 (defn legal-block-file?
   [^java.io.File file]
