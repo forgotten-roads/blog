@@ -1263,6 +1263,7 @@ fieldset[disabled] .btn-tales-two.active {
 
 .home-lead {
   font-size: 170%;
+  font-style: italic;
   letter-spacing: 1px;
   padding-top: 1em;
   padding-bottom: 2em;
