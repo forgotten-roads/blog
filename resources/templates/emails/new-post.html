@@ -1,0 +1,27 @@
+<h2>New Post</h2>
+
+There is a new Forgotten Roads MX blog post:
+
+<b>{{ post-data.title }}</b> - <i>{{ post-data.subtitle }}</i>
+
+by {{ post-data.author }}
+
+{% if post-data.header-image %}
+  <img src="http://forgotten.roads.mx{{ page-data.base-path }}/{{ post-data.header-image }}" />
+{% endif %}
+
+{% if post-data.excerpt-50 %}
+<p>
+  {{ post-data.excerpt-50|safe }}
+</p>
+Read the rest of
+{% else %}
+Read
+{% endif %}
+the post <a href="http://forgotten.roads.mx{{ post-data.url }}">here</a>.
+
+<h2>Notifications</h2>
+
+If you did not sign up for this email or would no longer like to receive
+notifications for new blog posts, please see the links at the bottom of this
+email instructions on how to unsubscribe.
