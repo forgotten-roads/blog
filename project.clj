@@ -26,16 +26,17 @@
   :dependencies [
     [clojusc/env-ini "0.3.0"]
     [clojusc/rfc5322 "0.3.0"]
-    [clojusc/trifl "0.1.0"]
+    [clojusc/trifl "0.2.0-SNAPSHOT"]
     [clojusc/twig "0.3.2-SNAPSHOT"]
+    [com.draines/postal "2.0.2"]
     [dragon "0.3.0-SNAPSHOT"]
     [markdown-clj "0.9.99"]
     [me.raynes/cegdown "0.1.1"]
     [org.clojure/clojure "1.8.0"]
     [org.clojure/data.xml "0.0.8"]
     [org.clojure/math.combinatorics "0.1.4"]
-    [ring/ring-core "1.6.1"]
-    [selmer "1.10.7"]
+    [ring/ring-core "1.6.2"]
+    [selmer "1.11.0"]
     [stasis "2.3.0"]
     [tentacles "0.5.1"]
     ;; XXX remove these:
@@ -50,6 +51,7 @@
     :output-dir "."
     :base-path "/blog"
     :posts-path "/blog/archives"
+    :posts-path-src "./posts"
     :feed-count 20
     :cli {
       :log-level :info
