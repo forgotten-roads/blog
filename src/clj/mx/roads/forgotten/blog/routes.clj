@@ -94,8 +94,9 @@
       {route (sitemapper/gen routes)})))
 
 (defn routes
-  [uri-base uri-posts]
-  (let [posts (blog/process uri-posts)]
+  ([uri-base uri-posts]
+    (routes uri-base uri-posts (blog/process uri-posts)))
+  ([uri-base uri-posts posts]
     (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
     (->> (static-routes posts)
          (design-routes posts)
@@ -155,8 +156,9 @@
     "Generating XML for sitemap ..."))
 
 (defn gen-routes
-  [uri-base uri-posts]
-  (let [posts (blog/process uri-posts)]
+  ([uri-base uri-posts]
+    (gen-routes uri-base uri-posts (blog/process uri-posts)))
+  ([uri-base uri-posts posts]
     (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
     (->> (gen-static-routes posts)
          (gen-design-routes posts)

@@ -1,6 +1,6 @@
 (ns mx.roads.forgotten.blog.web.content.page
-  (:require [mx.roads.forgotten.blog.web.content.data :as data]
-            [dragon.web.content :as content]))
+  (:require [dragon.web.content :as content]
+            [mx.roads.forgotten.blog.web.content.data :as data]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Static Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
