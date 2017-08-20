@@ -11,7 +11,10 @@
 
 (defn get-post-data
   [post-file]
+  (log/debugf "Getting content for %s ..." post-file)
   (-> post-file
+      (io/resource)
+      (.getFile)
       (io/file)
       (content/parse)))
 
@@ -20,6 +23,8 @@
   (let [parent-dir (fs/parent (io/file post-file))]
     (->> email-content/new-post-file
          (format "%s/%s" parent-dir)
+         (io/resource)
+         (.getFile)
          (io/file))))
 
 (defn make-message

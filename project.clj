@@ -81,7 +81,9 @@
         [jonase/eastwood "0.2.3" :exclusions [org.clojure/clojure]]
         [lein-bikeshed "0.4.1" :exclusions [org.clojure/tools.namespace]]
         [lein-kibit "0.1.2" :exclusions [org.clojure/clojure]]
-        [venantius/yagni "0.1.4"]]}}
+        [venantius/yagni "0.1.4"]]}
+    :cli {
+      :resource-paths ["posts"]}}
   :aliases {
     "repl"
       ^{:doc (str "A custom FRMX REPL that overrides the default one")}
@@ -94,7 +96,8 @@
       ["with-profile" "+test" "kibit"]
     "frmx"
       ^{:doc (str "The FRMX Blog CLI; type `lein frmx help` for commands")}
-      ["run" "-m" "mx.roads.forgotten.blog.main" "cli"]
+      ["with-profile" "+cli"
+       "run" "-m" "mx.roads.forgotten.blog.main" "cli"]
     "gen"
       ^{:doc (str "Generate static content for the blog")}
       ["run" "-m" "mx.roads.forgotten.blog.core/generate"]
