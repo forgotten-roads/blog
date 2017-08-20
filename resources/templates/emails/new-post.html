@@ -1,19 +1,21 @@
-<h2>New Post</h2>
+<h2>Update</h2>
 
-There is a new Forgotten Roads MX blog post:
-
-<b>{{ post-data.title }}</b> - <i>{{ post-data.subtitle }}</i>
-
-by {{ post-data.author }}
+There is a new Forgotten Roads MX blog post ...<br /><br />
 
 {% if post-data.header-image %}
-  <img src="http://forgotten.roads.mx{{ page-data.base-path }}/{{ post-data.header-image }}" />
+<div style="width: 100%">
+  <img style="max-width: 600px; height: auto"
+       src="http://forgotten.roads.mx{{ page-data.base-path }}/{{ post-data.header-image }}" />
+</div><br/><br/>
 {% endif %}
+<b>{{ post-data.title }}</b> - <i>{{ post-data.subtitle }}</i><br />
+by {{ post-data.author }}<br />
 
 {% if post-data.excerpt-50 %}
-<p>
+<p>Excerpt:</p>
+<blockquote>
   {{ post-data.excerpt-50|safe }}
-</p>
+</blockquote>
 Read the rest of
 {% else %}
 Read
