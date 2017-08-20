@@ -42,5 +42,4 @@
   :ok)
 
 (comment
-  (require '[[mx.roads.forgotten.blog.email.content :as email-content] :as email-content])
   (email-content/gen (config/base-path) (blog/process (config/posts-path))))
