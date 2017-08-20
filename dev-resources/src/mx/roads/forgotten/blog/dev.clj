@@ -22,6 +22,7 @@
     [mx.roads.forgotten.blog.cli :as cli]
     [mx.roads.forgotten.blog.core :as core]
     [mx.roads.forgotten.blog.email.content :as email-content]
+    [mx.roads.forgotten.blog.email.delivery :as email-delivery]
     [mx.roads.forgotten.blog.main :as main]
     [mx.roads.forgotten.blog.maps :as maps]
     [mx.roads.forgotten.blog.reader :as reader]
