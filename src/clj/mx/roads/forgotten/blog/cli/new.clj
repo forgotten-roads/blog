@@ -6,10 +6,6 @@
             [taoensso.timbre :as log]
             [trifl.docs :as docs]))
 
-(defn help-cmd
-  [& args]
-  (docs/print-docstring 'mx.roads.forgotten.blog.cli.new 'run))
-
 (defn run
   "
   Usage:
@@ -30,7 +26,7 @@
   (log/debug "Got args:" args)
   (case cmd
     :post (post/run args)
-    :help (help-cmd)
+    :help (docs/print-docstring #'run)
     (post/run [:md])))
 
 

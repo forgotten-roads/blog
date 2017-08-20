@@ -2,6 +2,7 @@
   (:require [dragon.config :as config]
             [mx.roads.forgotten.blog.cli.new :as new]
             [mx.roads.forgotten.blog.cli.show :as show]
+            [mx.roads.forgotten.blog.cli.share :as share]
             [mx.roads.forgotten.blog.core :as core]
             [taoensso.timbre :as log]
             [trifl.docs :as docs]))
@@ -44,6 +45,7 @@
     :new (new/run args)
     :show (show/run args)
     :gen (core/generate)
+    :share (share/run args)
     :run (core/generate+web)
     :help (help-cmd args)
     :version (print (core/version))

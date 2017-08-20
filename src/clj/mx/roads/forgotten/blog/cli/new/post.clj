@@ -5,10 +5,6 @@
             [taoensso.timbre :as log]
             [trifl.docs :as docs]))
 
-(defn help-cmd
-  [& args]
-  (docs/print-docstring 'mx.roads.forgotten.blog.cli.new.post 'run))
-
 (defn run
   "
   Usage:
@@ -40,4 +36,4 @@
       :edn (stub/make-edn-post date)
       :html (stub/make-html-post date)
       :rfc5322 (stub/make-rfc5322-post date)
-      (help-cmd))))
+      (docs/print-docstring #'run))))

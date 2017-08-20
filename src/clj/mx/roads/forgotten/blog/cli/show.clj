@@ -8,10 +8,6 @@
             [trifl.docs :as docs])
   (:refer-clojure :exclude [meta]))
 
-(defn help-cmd
-  [& args]
-  (docs/print-docstring 'mx.roads.forgotten.blog.cli.show 'run))
-
 (defn run
   "
   Usage:
@@ -37,5 +33,5 @@
     :metadata (if-let [post (first args)]
                 (pprint (meta/get post))
                 (pprint (meta/get-all)))
-    :help (help-cmd args)
+    :help (docs/print-docstring #'run)
     (pprint (config/dragon))))
