@@ -27,3 +27,11 @@
          (io/resource)
          (.getFile)
          (io/file))))
+
+(defn read-home-file
+  [^String file-name]
+  (-> file-name
+      fs/expand-home
+      io/file
+      slurp
+      string/trim-newline))

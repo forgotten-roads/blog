@@ -2,7 +2,8 @@
   (:require [clojure.java.io :as io]
             [clojusc.twig :refer [pprint]]
             [dragon.blog :as blog]
-            [dragon.web.content :as content]
+            [dragon.content.core :as content]
+            [dragon.web.content :as template]
             [mx.roads.forgotten.blog.web.content.data :as data]
             [taoensso.timbre :as log]
             [trifl.fs :as fs]))
@@ -19,7 +20,7 @@
 
 (defn get-new-post-social-content
   [post-data]
-  (content/render
+  (template/render
     (str "templates/social/" new-post-file)
     (data/post [] post-data)))
 

@@ -28,6 +28,7 @@
     [mx.roads.forgotten.blog.reader :as reader]
     [mx.roads.forgotten.blog.routes :as routes]
     [mx.roads.forgotten.blog.social.content :as social-content]
+    [mx.roads.forgotten.blog.social.twitter :as twitter]
     [mx.roads.forgotten.blog.web.content.data :as data]
     [mx.roads.forgotten.blog.web.content.page :as page]
     [selmer.parser :as selmer]

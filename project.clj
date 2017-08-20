@@ -28,7 +28,6 @@
     [clojusc/rfc5322 "0.3.0"]
     [clojusc/trifl "0.2.0-SNAPSHOT"]
     [clojusc/twig "0.3.2-SNAPSHOT"]
-    [com.draines/postal "2.0.2"]
     [dragon "0.3.0-SNAPSHOT"]
     [markdown-clj "0.9.99"]
     [me.raynes/cegdown "0.1.1"]
@@ -83,11 +82,18 @@
         [lein-kibit "0.1.2" :exclusions [org.clojure/clojure]]
         [venantius/yagni "0.1.4"]]}
     :cli {
-      :resource-paths ["posts"]}}
+      :resource-paths ["posts"]
+      :exclusions [clj-http common-codec commons-logging]
+      :dependencies [
+        [clj-http "2.0.1"]
+        [com.draines/postal "2.0.2"]
+        [commons-codec "1.10"]
+        [commons-logging "1.2"]
+        [twitter-api "1.8.0"]]}}
   :aliases {
     "repl"
       ^{:doc (str "A custom FRMX REPL that overrides the default one")}
-      ["with-profile" "+custom-repl" "repl"]
+      ["with-profile" "+custom-repl,+cli" "repl"]
     "check-deps"
       ^{:doc (str "Check if any deps have out-of-date versions")}
       ["with-profile" "+test" "ancient" "check" "all"]
