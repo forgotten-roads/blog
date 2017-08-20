@@ -7,10 +7,6 @@
             [taoensso.timbre :as log]
             [trifl.docs :as docs]))
 
-(defn help-cmd
-  [& args]
-  (docs/print-docstring 'mx.roads.forgotten.blog.cli 'run))
-
 (defn run
   "
   Usage:
@@ -24,6 +20,7 @@
     new      Create stubbed files for a new blog post
     show     Display various frmx data in the terminal
     gen      Generate updated static content for blog
+    share    Post blog updates (saved in files) to various services
     run      Run the FRMX Blog locally as a Ring app
     help     Display this usage message
     version  Display the current NOWA version
@@ -47,11 +44,11 @@
     :gen (core/generate)
     :share (share/run args)
     :run (core/generate+web)
-    :help (help-cmd args)
+    :help (docs/print-docstring #'run)
     :version (print (core/version))
     ;; Aliases
-    :--help (help-cmd args)
+    :--help (docs/print-docstring #'run)
     :--version (print (core/version))
-    :-h (help-cmd args)
+    :-h (docs/print-docstring #'run)
     :-v (print (core/version)))
   (shutdown-agents))

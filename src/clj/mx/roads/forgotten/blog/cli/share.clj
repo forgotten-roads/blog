@@ -5,6 +5,7 @@
             [dragon.meta :as meta]
             [dragon.util :as util]
             [mx.roads.forgotten.blog.email.delivery :as email-delivery]
+            [mx.roads.forgotten.blog.social.twitter :as twitter]
             [taoensso.timbre :as log]
             [trifl.docs :as docs]))
 
@@ -39,6 +40,6 @@
     (log/debug "Got args:" args)
     (case cmd
       :subscribers (email-delivery/send-new-post-message post-file)
-      ; :twitter ()
+      :twitter (twitter/send-new-post-message post-file)
       ; :google+ ()
       (docs/print-docstring #'run))))
