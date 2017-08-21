@@ -3,7 +3,8 @@
             [clojure.string :as string]
             [dragon.content.core :as content]
             [taoensso.timbre :as log]
-            [trifl.fs :as fs]))
+            [trifl.fs :as fs])
+  (:import (java.io ByteArrayInputStream)))
 
 (defn zip
   [& colls]
@@ -32,6 +33,42 @@
   [^String file-name]
   (-> file-name
       fs/expand-home
-      io/file
+      io/file))
+
+(defn home-file->str
+  [^String file-name]
+  (-> file-name
+      read-home-file
       slurp
       string/trim-newline))
+
+(defn home-file->stream
+  [^String file-name]
+  (-> file-name
+      read-home-file
+      io/input-stream))
+
+(defn str->stream
+  [data]
+  (->> data
+       (map int)
+       (byte-array)
+       (io/input-stream)))
+
+(defn str->reader
+  [data]
+  (->> data
+       (str->stream)
+       (io/reader)))
+
+(defn write-pem-file
+  [data]
+  (fs/write-tmp-file! "key.pem" data))
+
+(defn delete-pem-file
+  [file-obj]
+  (io/delete-file file-obj)
+  (-> file-obj
+      (fs/parent)
+      (io/file)
+      (io/delete-file)))

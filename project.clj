@@ -83,12 +83,26 @@
         [venantius/yagni "0.1.4"]]}
     :cli {
       :resource-paths ["posts"]
-      :exclusions [clj-http common-codec commons-logging]
+      :exclusions [
+        clj-http
+        clojusc/cljs-tools
+        common-codec
+        commons-logging
+        joda-time
+        org.apache.maven.wagon/wagon-http
+        org.clojure/clojurescript
+        org.clojure/clojure]
       :dependencies [
         [clj-http "2.0.1"]
+        [clojusc/cljs-tools "0.2.0-SNAPSHOT"]
         [com.draines/postal "2.0.2"]
+        [com.google.api-client/google-api-client "1.22.0"]
+        [com.google.apis/google-api-services-plusDomains "v1-rev433-1.22.0"]
         [commons-codec "1.10"]
         [commons-logging "1.2"]
+        [joda-time "2.9.9"]
+        [org.apache.maven.wagon/wagon-http "2.10"]
+        [org.clojure/data.json "0.2.6"]
         [twitter-api "1.8.0"]]}}
   :aliases {
     "repl"
