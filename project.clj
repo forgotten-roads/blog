@@ -24,22 +24,18 @@
     [org.clojure/clojure]
     [org.clojure/clojurescript]]
   :dependencies [
-    [clojusc/env-ini "0.3.0"]
     [clojusc/rfc5322 "0.3.0"]
     [clojusc/trifl "0.2.0-SNAPSHOT"]
     [clojusc/twig "0.3.2-SNAPSHOT"]
     [dragon "0.3.0-SNAPSHOT"]
     [markdown-clj "0.9.99"]
-    [me.raynes/cegdown "0.1.1"]
     [org.clojure/clojure "1.8.0"]
+    [org.clojure/data.generators "0.1.2"]
     [org.clojure/data.xml "0.0.8"]
     [org.clojure/math.combinatorics "0.1.4"]
     [ring/ring-core "1.6.2"]
     [selmer "1.11.0"]
-    [stasis "2.3.0"]
-    [tentacles "0.5.1"]
-    ;; XXX remove these:
-    [org.clojure/java.classpath "0.2.3"]]
+    [stasis "2.3.0"]]
   :source-paths ["src/clj"]
   :dragon {
     :domain "forgotten.roads.mx/blog"
