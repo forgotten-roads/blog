@@ -12,19 +12,19 @@
 
 (defn get-app-consumer-key
   []
-  (util/read-home-file "~/.twitter/frmx/app-consumer-key"))
+  (util/home-file->str "~/.twitter/frmx/app-consumer-key"))
 
 (defn get-app-consumer-secret
   []
-  (util/read-home-file "~/.twitter/frmx/app-consumer-secret"))
+  (util/home-file->str "~/.twitter/frmx/app-consumer-secret"))
 
 (defn get-user-access-token
   []
-  (util/read-home-file "~/.twitter/frmx/user-access-token"))
+  (util/home-file->str "~/.twitter/frmx/user-access-token"))
 
 (defn get-user-access-token-secret
   []
-  (util/read-home-file "~/.twitter/frmx/user-access-token-secret"))
+  (util/home-file->str "~/.twitter/frmx/user-access-token-secret"))
 
 (defn get-creds
   []
