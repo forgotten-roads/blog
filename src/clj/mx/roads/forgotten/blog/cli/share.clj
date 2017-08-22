@@ -20,9 +20,9 @@
 
   Subcommands:
   ```
-    subscribers    Notify email subscribers of the given post
-    twitter        Tweet the given post on the FRMX Twitter account
-    google+        Create a new FRMX G+ post on the given blog post
+    subscribers   Notify email subscribers of the given post
+    twitter       Tweet the given post on the FRMX Twitter account
+    all           Publish to all supported services
   ```
 
   More information:
@@ -42,4 +42,6 @@
       :subscribers (email-delivery/send-new-post-message post-file)
       :twitter (twitter/send-new-post-message post-file)
       ; :google+ ()
+      :all (do (email-delivery/send-new-post-message post-file)
+               (twitter/send-new-post-message post-file))
       (docs/print-docstring #'run))))

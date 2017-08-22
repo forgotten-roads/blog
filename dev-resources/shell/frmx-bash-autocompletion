@@ -7,7 +7,7 @@ TOP_HELP='new show share'
 NEW_LEVEL='post help'
 POST_LEVEL='md clj edn html rfc5322 help'
 SHOW_LEVEL='config post metadata help'
-SHARE_LEVEL='subscribers twitter google+'
+SHARE_LEVEL='subscribers twitter all'
 
 _frmx () {
     local cur prev
@@ -42,7 +42,7 @@ _frmx () {
                 post)
                     COMPREPLY=($(compgen -W "${POST_LEVEL}" ${cur}))
                     ;;
-                subscribers|twitter|google+)
+                subscribers|twitter|all)
                     COMPREPLY=($(compgen -f ${cur}))
                     ;;
             esac
