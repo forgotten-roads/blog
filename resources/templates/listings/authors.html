@@ -8,7 +8,9 @@
     {% for post-data in author-data.posts %}
     <li>{{ post-data.month }}
         {{ post-data.date.day }},
-        {{ post-data.date.year }} - {{ post-data.link|safe }}</li>
+        {{ post-data.date.year }} -
+        {{ post-data.link|safe }}{% if post-data.subtitle %}:
+        {{ post-data.subtitle|safe }}{% endif %}</li>
     {% endfor %}
   </ul>
   {% endfor %}
