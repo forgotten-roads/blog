@@ -34,14 +34,18 @@
     $ frmx share email help
   ```"
   [[cmd & [post-file-kw & args]]]
-  (let [post-file (name post-file-kw)]
-    (log/debug "Got cmd:" cmd)
-    (log/debug "Got post-file:" post-file)
-    (log/debug "Got args:" args)
-    (case cmd
-      :subscribers (email-delivery/send-new-post-message post-file)
-      :twitter (twitter/send-new-post-message post-file)
-      ; :google+ ()
-      :all (do (email-delivery/send-new-post-message post-file)
-               (twitter/send-new-post-message post-file))
-      (docs/print-docstring #'run))))
+  (if (and (not= cmd :help) (nil? post-file-kw))
+    (do
+      (log/error "You need to provide a filename.")
+      (run [:help]))
+    (let [post-file (name (or post-file-kw :help))]
+      (log/debug "Got cmd:" cmd)
+      (log/debug "Got post-file:" post-file)
+      (log/debug "Got args:" args)
+      (case cmd
+        :subscribers (email-delivery/send-new-post-message post-file)
+        :twitter (twitter/send-new-post-message post-file)
+        ; :google+ ()
+        :all (do (email-delivery/send-new-post-message post-file)
+                 (twitter/send-new-post-message post-file))
+        (docs/print-docstring #'run)))))
