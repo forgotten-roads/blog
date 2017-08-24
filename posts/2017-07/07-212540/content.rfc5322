@@ -48,6 +48,12 @@ Dinner @ [Red Lodge Pizza Co.](http://www.redlodgerestaurants.com/red-lodge-pizz
 %%%       </div>%%%
 %%%      </div>%%%
 %%%      <div class="form-group">%%%
+%%%        <label for="summary-slept" class="col-sm-3 control-label">Slept:</label>%%%
+%%%        <div id="summary-slept" class="col-sm-9">%%%
+[Rattin Campground](https://www.fs.usda.gov/recarea/custergallatin/recarea/?recid=60831)
+%%% (hammocks)</div>%%%
+%%%      </div>%%%
+%%%      <div class="form-group">%%%
 %%%      <label for="summary-photos" class="col-sm-3 control-label">Photo Album:</label>%%%
 %%%        <div id="summary-photos" class="col-sm-9">%%%
 [Beartooth Run 2017 - Day 2](https://www.flickr.com/photos/forgottenroadsmx/albums/72157683434776573) (Flickr)
@@ -65,7 +71,7 @@ Dinner @ [Red Lodge Pizza Co.](http://www.redlodgerestaurants.com/red-lodge-pizz
 %%%      <li><a href="/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html">Prologue</a></li>%%%
 %%%      <li><a href="/blog/archives/2017-07/06-193659/beartooth-run-2017.html">Day 1</a></li>%%%
 %%%      <li><a href="/blog/archives/2017-07/07-212540/beartooth-run-2017.html">Day 2</a></li>%%%
-%%%      <li>Day 3</li>%%%
+%%%      <li><a href="/blog/archives/2017-07/08-220414/beartooth-run-2017.html">Day 3</a></li>%%%
 %%%      <li>Day 4</li>%%%
 %%%      <li>Day 5</li>%%%
 %%%      <li>Day 6</li>%%%
