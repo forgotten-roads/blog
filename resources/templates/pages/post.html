@@ -19,6 +19,10 @@
 <meta property="og:type" content="blog">
 <meta property="og:description" content="{% if post-data.subtitle %}{{ post-data.subtitle|safe }}{% endif %}">
 <meta property="og:image" content="http://forgotten.roads.mx{{ page-data.base-path }}/{{ post-data.header-image }}">
+<meta property="article:author" content="{{ post-data.author }}">
+<meta property="article:published_time" content="{{ post-data.timestamp }}"
+<meta property="article:section" content="{{ post-data.category }}">
+{% for tag in tags %}<meta property="article:tag" content="{{ tag }}">{% endfor %}
 
 <!-- Twitter Card Metadata -->
 <meta name="twitter:card" content="summary_large_image">
