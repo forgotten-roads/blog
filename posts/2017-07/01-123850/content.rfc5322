@@ -7,6 +7,7 @@ Keywords: formats,data,gis,json,kml,services,howtos,technical
 Comments:
 Content-Type: md
 Header-Image: img/gis-beartooth-topo.jpg
+Headlines?: false
 
 As anyone familiar (not me) with geographic information systems (or "GIS") data
 can tell you, working with the multitude of data formats, versions of those
