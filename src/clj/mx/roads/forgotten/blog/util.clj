@@ -72,3 +72,11 @@
       (fs/parent)
       (io/file)
       (io/delete-file)))
+
+(defn headline?
+  "A filter that returns `true` if the post should be published on the front
+  page."
+  [post]
+  (if (= (string/lower-case (or (:headlines? post) "")) "false")
+    false
+    true))

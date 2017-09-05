@@ -1,6 +1,7 @@
 (ns mx.roads.forgotten.blog.web.content.page
   (:require [dragon.web.content :as content]
-            [mx.roads.forgotten.blog.web.content.data :as data]))
+            [mx.roads.forgotten.blog.web.content.data :as data]
+            [mx.roads.forgotten.blog.util :as util]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Static Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -62,7 +63,9 @@
   [posts]
   (let [above-fold 5
         below-fold 5
-        headline-posts (take (+ above-fold below-fold) posts)]
+        headline-posts (->> posts
+                            (filter util/headline?)
+                            (take (+ above-fold below-fold)))]
     (content/render
       "templates/pages/home.html"
       (data/front-page
