@@ -37,6 +37,16 @@
 <meta name="twitter:image" content="http://forgotten.roads.mx{{ page-data.base-path }}/{{ post-data.header-image }}">
 {% endblock %}
 
+{% block google-ad-setup %}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2346536698286309",
+        enable_page_level_ads: true
+      });
+    </script>
+{% endblock %}
+
 {% block pre-css %}{{ blocks.pre-css|safe }}{% endblock %}
 
 {% block pre-head-scripts %}{{ blocks.pre-head-scripts|safe }}{% endblock %}
