@@ -27,14 +27,14 @@
     [clojusc/rfc5322 "0.3.0"]
     [clojusc/trifl "0.2.0-SNAPSHOT"]
     [clojusc/twig "0.3.2-SNAPSHOT"]
-    [dragon "0.3.0-SNAPSHOT"]
-    [markdown-clj "0.9.99"]
+    [dragon "0.4.0-SNAPSHOT"]
+    [markdown-clj "1.0.1"]
     [org.clojure/clojure "1.8.0"]
     [org.clojure/data.generators "0.1.2"]
     [org.clojure/data.xml "0.0.8"]
     [org.clojure/math.combinatorics "0.1.4"]
     [ring/ring-core "1.6.2"]
-    [selmer "1.11.0"]
+    [selmer "1.11.1"]
     [stasis "2.3.0"]]
   :source-paths ["src/clj"]
   :dragon {
@@ -72,10 +72,10 @@
       }
     :test {
       :plugins [
-        [lein-ancient "0.6.10"]
-        [jonase/eastwood "0.2.3" :exclusions [org.clojure/clojure]]
+        [lein-ancient "0.6.12"]
+        [jonase/eastwood "0.2.4" :exclusions [org.clojure/clojure]]
         [lein-bikeshed "0.4.1" :exclusions [org.clojure/tools.namespace]]
-        [lein-kibit "0.1.2" :exclusions [org.clojure/clojure]]
+        [lein-kibit "0.1.5" :exclusions [org.clojure/clojure]]
         [venantius/yagni "0.1.4"]]}
     :cli {
       :resource-paths ["posts"]
@@ -93,7 +93,7 @@
         [clojusc/cljs-tools "0.2.0-SNAPSHOT"]
         [com.draines/postal "2.0.2"]
         [com.google.api-client/google-api-client "1.22.0"]
-        [com.google.apis/google-api-services-plusDomains "v1-rev433-1.22.0"]
+        [com.google.apis/google-api-services-plusDomains "v1-rev434-1.22.0"]
         [commons-codec "1.10"]
         [commons-logging "1.2"]
         [joda-time "2.9.9"]
@@ -106,7 +106,7 @@
       ["with-profile" "+custom-repl,+cli" "repl"]
     "check-deps"
       ^{:doc (str "Check if any deps have out-of-date versions")}
-      ["with-profile" "+test" "ancient" "check" "all"]
+      ["with-profile" "+test" "ancient" "check" ":all"]
     "lint"
       ^{:doc (str "Perform lint checking")}
       ["with-profile" "+test" "kibit"]
