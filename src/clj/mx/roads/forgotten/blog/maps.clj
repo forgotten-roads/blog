@@ -1,9 +1,8 @@
 (ns mx.roads.forgotten.blog.maps
-  (:require
-    [clojure.math.combinatorics :refer [cartesian-product]]
-    [clojure.java.io :as io]
-    [clojure.string :as string]
-    [mx.roads.forgotten.blog.util :as util]))
+  (:require [clojure.math.combinatorics :refer [cartesian-product]]
+            [clojure.java.io :as io]
+            [clojure.string :as string]
+            [mx.roads.forgotten.blog.util :as util]))
 
 (def default-data-path "data/gis/")
 (def map-style-file (str default-data-path "google-map-styles.json"))

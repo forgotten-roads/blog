@@ -1,6 +1,6 @@
 (ns mx.roads.forgotten.blog.cli.new.post
   (:require [clojure.pprint :refer [pprint]]
-            [dragon.stub :as stub]
+            [dragon.cli.new.stub :as stub]
             [dragon.util :as util]
             [taoensso.timbre :as log]
             [trifl.docs :as docs]))
@@ -25,7 +25,7 @@
                  are used instead) and the XXX field is used to indicate the
                  content type of the body of the message (blog)
   ```"
-  [[cmd & args]]
+  [system [cmd & args]]
   (log/debug "Got cmd:" cmd)
   (log/debug "Got args:" args)
   (let [passed-date (first args)

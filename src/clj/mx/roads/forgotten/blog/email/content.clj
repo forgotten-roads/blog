@@ -1,7 +1,8 @@
 (ns mx.roads.forgotten.blog.email.content
   (:require [clojure.java.io :as io]
             [clojusc.twig :refer [pprint]]
-            [dragon.blog :as blog]
+            [dragon.blog.core :as blog]
+            [dragon.config :as config]
             [dragon.web.content :as content]
             [mx.roads.forgotten.blog.web.content.data :as data]
             [taoensso.timbre :as log]
@@ -34,7 +35,7 @@
         (get-new-post-email-content post-data)))))
 
 (defn gen
-  [base-path posts]
+  [system posts]
   (log/debug "Generating emails ...")
   (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
   (doseq [post-data posts]

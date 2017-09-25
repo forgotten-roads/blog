@@ -1,6 +1,6 @@
 (ns mx.roads.forgotten.blog.social.twitter
   (:require [clojure.java.io :as io]
-            [dragon.content.core :as content]
+            [dragon.blog.content.core :as content]
             [mx.roads.forgotten.blog.social.content :as social-content]
             [mx.roads.forgotten.blog.util :as util]
             [taoensso.timbre :as log]

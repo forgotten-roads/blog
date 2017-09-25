@@ -1,8 +1,10 @@
 (ns mx.roads.forgotten.blog.main
-  (:require [dragon.config :as config]
-            [mx.roads.forgotten.blog.cli :as cli]
+  (:require [dragon.components.system :as components]
+            [dragon.config :as config]
+            [mx.roads.forgotten.blog.cli.core :as cli]
             [mx.roads.forgotten.blog.core :as core]
-            [taoensso.timbre :as log])
+            [taoensso.timbre :as log]
+            [trifl.java :as trifl])
   (:gen-class))
 
 (defn -main
@@ -15,11 +17,11 @@
   ([]
     (-main :web))
   ([mode & args]
-    ;; Set the initial log-level before the components set the log-levels for
-    ;; the configured namespaces
-    (core/set-log-level)
-    (log/infof "Running FRMX Blog application in %s mode ..." mode)
-    (log/debug "Passing the following args to the application:" args)
-    (case (keyword mode)
-      :web (core/generate+web)
-      :cli (cli/run (map keyword args)))))
+   (let [system (components/start)]
+     (log/infof "Running FRMX Blog application in %s mode ..." mode)
+     (log/debug "Passing the following args to the application:" args)
+     (case (keyword mode)
+       :web (core/generate+web system)
+       :cli (cli/run system (map keyword args)))
+     ;; Do a full shut-down upon ^c
+     (trifl/add-shutdown-handler #(components/stop system)))))

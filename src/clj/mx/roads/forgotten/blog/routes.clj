@@ -8,7 +8,7 @@
    * Since the posts have already been generated and saved to disc, their
      routes should be generated dynamically as URI path / slurp call pairs."
   (:require [clojusc.twig :refer [pprint]]
-            [dragon.blog :as blog]
+            [dragon.blog.core :as blog]
             [dragon.config :as config]
             [mx.roads.forgotten.blog.maps :as maps]
             [mx.roads.forgotten.blog.reader :as reader]
@@ -94,10 +94,10 @@
       {route (sitemapper/gen routes)})))
 
 (defn routes
-  ([uri-base uri-posts]
-    (routes uri-base uri-posts (blog/process uri-posts)))
-  ([uri-base uri-posts posts]
-    (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
+  ([system uri-base uri-posts]
+    (routes uri-base uri-posts (blog/process system uri-posts)))
+  ([system uri-base uri-posts posts]
+    (log/trace "Got data:" (pprint (blog/data-minus-body system posts)))
     (->> (static-routes posts)
          (design-routes posts)
          (post-routes uri-posts posts)
@@ -156,10 +156,10 @@
     "Generating XML for sitemap ..."))
 
 (defn gen-routes
-  ([uri-base uri-posts]
-    (gen-routes uri-base uri-posts (blog/process uri-posts)))
-  ([uri-base uri-posts posts]
-    (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
+  ([system uri-base uri-posts]
+    (gen-routes uri-base uri-posts (blog/process system uri-posts)))
+  ([system uri-base uri-posts posts]
+    (log/trace "Got data:" (pprint (blog/data-minus-body system posts)))
     (->> (gen-static-routes posts)
          (gen-design-routes posts)
          (gen-post-routes uri-posts posts)

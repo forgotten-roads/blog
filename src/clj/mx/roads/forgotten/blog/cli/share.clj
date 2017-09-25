@@ -2,7 +2,6 @@
   (:require [clojure.pprint :refer [pprint]]
             [clojusc.twig :as logger]
             [dragon.config :as config]
-            [dragon.meta :as meta]
             [dragon.util :as util]
             [mx.roads.forgotten.blog.email.delivery :as email-delivery]
             [mx.roads.forgotten.blog.social.twitter :as twitter]
@@ -33,7 +32,7 @@
   ```
     $ frmx share email help
   ```"
-  [[cmd & [post-file-kw & args]]]
+  [system [cmd & [post-file-kw & args]]]
   (if (and (not= cmd :help) (nil? post-file-kw))
     (do
       (log/error "You need to provide a filename.")

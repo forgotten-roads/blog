@@ -24,9 +24,10 @@
     [org.clojure/clojure]
     [org.clojure/clojurescript]]
   :dependencies [
-    [clojusc/rfc5322 "0.3.0"]
+    [clojusc/rfc5322 "0.4.0-SNAPSHOT"]
     [clojusc/trifl "0.2.0-SNAPSHOT"]
     [clojusc/twig "0.3.2-SNAPSHOT"]
+    [com.stuartsierra/component "0.3.2"]
     [dragon "0.4.0-SNAPSHOT"]
     [markdown-clj "1.0.1"]
     [org.clojure/clojure "1.8.0"]
@@ -103,7 +104,7 @@
   :aliases {
     "repl"
       ^{:doc (str "A custom FRMX REPL that overrides the default one")}
-      ["with-profile" "+custom-repl,+cli" "repl"]
+      ["with-profile" "+test,+custom-repl,+cli" "repl"]
     "check-deps"
       ^{:doc (str "Check if any deps have out-of-date versions")}
       ["with-profile" "+test" "ancient" "check" ":all"]
@@ -126,9 +127,9 @@
     "build"
       ^{:doc (str "Perform build tasks for CI/CD & releases\n\n"
                  "Additional aliases:")}
-      ["with-profile" "+test" "do"
-        ["check-deps"]
-        ["lint"]
+      ["with-profile" "+test,+cli" "do"
+        ;["check-deps"]
+        ;["lint"]
         ["test"]
         ["compile"]
         ["uberjar"]]})

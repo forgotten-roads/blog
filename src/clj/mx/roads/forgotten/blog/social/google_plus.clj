@@ -2,7 +2,7 @@
   (:require [clojure.data.json :as json]
             [clojure.java.io :as io]
             [clojure.string :as string]
-            [dragon.content.core :as content]
+            [dragon.blog.content.core :as content]
             [mx.roads.forgotten.blog.social.content :as social-content]
             [mx.roads.forgotten.blog.util :as util]
             [taoensso.timbre :as log]

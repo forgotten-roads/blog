@@ -21,7 +21,7 @@
     post    Create a new post stub; takes a subcommand for the type of
               content to create; see 'frmx new post help' for usage
   ```"
-  [[cmd & args]]
+  [system [cmd & args]]
   (log/debug "Got cmd:" cmd)
   (log/debug "Got args:" args)
   (case cmd

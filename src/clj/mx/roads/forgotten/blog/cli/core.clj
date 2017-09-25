@@ -1,5 +1,7 @@
-(ns mx.roads.forgotten.blog.cli
+(ns mx.roads.forgotten.blog.cli.core
   (:require [dragon.config :as config]
+            [dragon.event.system.core :as event]
+            [dragon.event.tag :as tag]
             [mx.roads.forgotten.blog.cli.new :as new]
             [mx.roads.forgotten.blog.cli.show :as show]
             [mx.roads.forgotten.blog.cli.share :as share]
@@ -34,10 +36,10 @@
   ```
     $ frmx new help
   ```"
-  [[cmd & args]]
-  (core/set-log-level)
+  [system [cmd & args]]
   (log/debug "CLI got cmd:" cmd)
   (log/debug "CLI got args:" args)
+  (event/publish system tag/run-cli {:cmd cmd :args args})
   (case cmd
     :new (new/run args)
     :show (show/run args)
@@ -51,4 +53,4 @@
     :--version (print (core/version))
     :-h (docs/print-docstring #'run)
     :-v (print (core/version)))
-  (shutdown-agents))
+  (event/publish system tag/shutdown-cli))

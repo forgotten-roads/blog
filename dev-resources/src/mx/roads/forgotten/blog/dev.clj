@@ -13,13 +13,14 @@
     [clojure.tools.namespace.repl :as repl]
     [clojure.walk :refer [macroexpand-all]]
     [clojusc.twig :as logger]
-    [dragon.blog :as blog]
+    [dragon.blog.core :as blog]
+    [dragon.blog.generator :as gen]
     [dragon.blog.post :as post]
     [dragon.config :as config]
-    [dragon.generator :as gen]
     [dragon.util :as util]
-    [dragon.web :as web]
-    [mx.roads.forgotten.blog.cli :as cli]
+    [dragon.web.core :as web]
+    [mx.roads.forgotten.blog.cli.core :as cli]
+    [mx.roads.forgotten.blog.components.system :as system]
     [mx.roads.forgotten.blog.core :as core]
     [mx.roads.forgotten.blog.email.content :as email-content]
     [mx.roads.forgotten.blog.email.delivery :as email-delivery]
@@ -39,6 +40,10 @@
     [trifl.java :refer [show-methods]]))
 
 (logger/set-level! ['mx.roads.forgotten.blog 'dragon] :info)
+
+(defn start-system
+  []
+  (system/start (system/initialize)))
 
 ;;; Aliases
 

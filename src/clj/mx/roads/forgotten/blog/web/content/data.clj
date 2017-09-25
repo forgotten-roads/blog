@@ -1,7 +1,7 @@
 (ns mx.roads.forgotten.blog.web.content.data
   (:require [clojure.java.io :as io]
             [clojure.string :as string]
-            [dragon.blog :as blog]
+            [dragon.blog.core :as blog]
             [dragon.config :as config]
             [markdown.core :as markdown]
             [taoensso.timbre :as log]))

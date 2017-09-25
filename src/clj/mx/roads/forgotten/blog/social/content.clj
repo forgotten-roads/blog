@@ -2,8 +2,9 @@
   (:require [clojure.java.io :as io]
             [clojure.data.generators :as generators]
             [clojusc.twig :refer [pprint]]
-            [dragon.blog :as blog]
-            [dragon.content.core :as content]
+            [dragon.blog.content.core :as content]
+            [dragon.blog.core :as blog]
+            [dragon.config :as config]
             [dragon.web.content :as template]
             [mx.roads.forgotten.blog.web.content.data :as data]
             [taoensso.timbre :as log]
@@ -58,7 +59,7 @@
         (get-new-post-social-content post-data)))))
 
 (defn gen
-  [base-path posts]
+  [system posts]
   (log/debug "Generating social content ...")
   (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
   (doseq [post-data posts]
