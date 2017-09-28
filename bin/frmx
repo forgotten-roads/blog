@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-if [ $1 = "run" ]; then
+if [ "$1" = "run" ]; then
     lein trampoline $@
+elif [ -z "$1" ]; then
+    lein frmx help
 else
     lein frmx $@
 fi
