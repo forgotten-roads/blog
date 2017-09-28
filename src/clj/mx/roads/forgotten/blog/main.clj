@@ -1,5 +1,6 @@
 (ns mx.roads.forgotten.blog.main
-  (:require [dragon.components.system :as components]
+  (:require [clojusc.twig :as logger]
+            [dragon.components.system :as components]
             [dragon.config :as config]
             [mx.roads.forgotten.blog.cli.core :as cli]
             [mx.roads.forgotten.blog.core :as core]
@@ -17,6 +18,8 @@
   ([]
     (-main :web))
   ([mode & args]
+   ;; Run logging quietly until the logging component starts up
+   (logger/set-level! '[mx.roads dragon] :warn)
    (let [system (components/start)]
      (log/infof "Running FRMX Blog application in %s mode ..." mode)
      (log/debug "Passing the following args to the application:" args)
