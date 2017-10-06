@@ -43,15 +43,15 @@
     :name "Forgotten Roads MX"
     :description ~(str "Articles, Reviews, & Explorations for the Motorcycle "
                        "Excursionist & Non-traditional Adventurer")
-    :dev-port 5096
+    :port 5096
     :output-dir "."
     :base-path "/blog"
     :posts-path "/blog/archives"
     :posts-path-src "./posts"
     :feed-count 20
     :cli {
-      :log-level :info
-      :log-ns [mx.roads dragon]}}
+      :log-level :debug
+      :log-nss [mx.roads]}}
   :profiles {
     :uberjar {:aot :all}
     :custom-repl {
@@ -112,7 +112,8 @@
       ^{:doc (str "Perform lint checking")}
       ["with-profile" "+test" "kibit"]
     "frmx"
-      ^{:doc (str "The FRMX Blog CLI; type `lein frmx help` for commands")}
+      ^{:doc (str "The FRMX Blog CLI; type `lein frmx help` or `frmx help` "
+                  "for commands")}
       ["with-profile" "+cli"
        "run" "-m" "mx.roads.forgotten.blog.main" "cli"]
     "gen"

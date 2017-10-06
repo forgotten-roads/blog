@@ -4,7 +4,6 @@
             [dragon.blog.generator :as gen]
             [dragon.config :as config]
             [dragon.util :as util]
-            [dragon.web.core :as web]
             [mx.roads.forgotten.blog.email.content :as email-content]
             [mx.roads.forgotten.blog.routes :refer [gen-routes routes]]
             [mx.roads.forgotten.blog.social.content :as social-content]
@@ -24,14 +23,3 @@
     (gen/run system generated-routes)
     (email-content/gen system posts)
     (social-content/gen system posts)))
-
-(defn web
-  [system generated-routes]
-  (web/run
-    system
-    generated-routes))
-
-(defn generate+web
-  [system]
-  (web system (generate system)))
-

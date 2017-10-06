@@ -25,8 +25,8 @@
   (log/debug "Got cmd:" cmd)
   (log/debug "Got args:" args)
   (case cmd
-    :post (post/run args)
+    :post (post/run system args)
     :help (docs/print-docstring #'run)
-    (post/run [:md])))
+    (post/run system [:md])))
 
 

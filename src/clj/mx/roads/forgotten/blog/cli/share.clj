@@ -36,7 +36,7 @@
   (if (and (not= cmd :help) (nil? post-file-kw))
     (do
       (log/error "You need to provide a filename.")
-      (run [:help]))
+      (run system [:help]))
     (let [post-file (name (or post-file-kw :help))]
       (log/debug "Got cmd:" cmd)
       (log/debug "Got post-file:" post-file)

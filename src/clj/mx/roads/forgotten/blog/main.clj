@@ -2,6 +2,7 @@
   (:require [clojusc.twig :as logger]
             [dragon.components.system :as components]
             [dragon.config :as config]
+            [dragon.main :as dragon]
             [mx.roads.forgotten.blog.cli.core :as cli]
             [mx.roads.forgotten.blog.core :as core]
             [taoensso.timbre :as log]
@@ -15,16 +16,14 @@
   as use of the application name spaces for running tasks on the comand line.
 
   The entry point is executed from the command line when calling `lein run`."
-  ([]
-    (-main :web))
-  ([mode & args]
-   ;; Run logging quietly until the logging component starts up
-   (logger/set-level! '[mx.roads dragon] :warn)
-   (let [system (components/start)]
-     (log/infof "Running FRMX Blog application in %s mode ..." mode)
-     (log/debug "Passing the following args to the application:" args)
-     (case (keyword mode)
-       :web (core/generate+web system)
-       :cli (cli/run system (map keyword args)))
-     ;; Do a full shut-down upon ^c
-     (trifl/add-shutdown-handler #(components/stop system)))))
+  [mode & raw-args]
+  ;; let's use twig right away, so any logging is colored/matching once logging
+  ;; system is set up. We'll set to the least verbose mode at first, though:
+  (logger/set-level! '[mx.roads dragon] :fatal)
+  (let [args (dragon/get-default-args raw-args)
+        system (dragon/get-context-sensitive-system mode args)]
+   (log/infof "Running FRMX Blog application in %s mode ..." mode)
+   (log/debug "Inialized with system:" system)
+   (cli/run system args)
+   ;; Do a full shut-down upon ^c
+   (trifl/add-shutdown-handler #(components/stop system))))

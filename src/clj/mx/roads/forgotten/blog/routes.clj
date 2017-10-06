@@ -10,6 +10,8 @@
   (:require [clojusc.twig :refer [pprint]]
             [dragon.blog.core :as blog]
             [dragon.config :as config]
+            [dragon.event.system.core :as event]
+            [dragon.event.tag :as tag]
             [mx.roads.forgotten.blog.maps :as maps]
             [mx.roads.forgotten.blog.reader :as reader]
             [mx.roads.forgotten.blog.sitemapper :as sitemapper]
@@ -94,17 +96,18 @@
       {route (sitemapper/gen routes)})))
 
 (defn routes
-  ([system uri-base uri-posts]
-    (routes uri-base uri-posts (blog/process system uri-posts)))
-  ([system uri-base uri-posts posts]
-    (log/trace "Got data:" (pprint (blog/data-minus-body system posts)))
-    (->> (static-routes posts)
-         (design-routes posts)
-         (post-routes uri-posts posts)
-         (map-routes uri-base posts)
-         (index-routes posts)
-         (reader-routes uri-posts posts)
-         (sitemaps-routes))))
+  [system uri-base uri-posts posts]
+  (log/trace "Got data:" (pprint (blog/data-minus-body system posts)))
+  (event/publish system tag/generate-routes-pre)
+  (->> (static-routes posts)
+       (design-routes posts)
+       (post-routes uri-posts posts)
+       (map-routes uri-base posts)
+       (index-routes posts)
+       (reader-routes uri-posts posts)
+       (sitemaps-routes)
+       vec
+       (event/publish->> system tag/generate-routes-post)))
 
 ;;; Generator routes
 
@@ -117,53 +120,55 @@
   (partial
     gen-route
     static-routes
-    "Generating pages for static pages ..."))
+    "\tGenerating pages for static pages ..."))
 
 (def gen-design-routes
   (partial
     gen-route
     design-routes
-    "Generating pages for design pages ..."))
+    "\tGenerating pages for design pages ..."))
 
 (def gen-post-routes
   (partial
     gen-route
     post-routes
-    "Generating pages for blog posts ..."))
+    "\tGenerating pages for blog posts ..."))
 
 (def gen-map-routes
   (partial
     gen-route
     map-routes
-    "Generating pages for maps ..."))
+    "\tGenerating pages for maps ..."))
 
 (def gen-index-routes
   (partial
     gen-route
     index-routes
-    "Generating pages for front page, archives, categories, etc. ..."))
+    "\tGenerating pages for front page, archives, categories, etc. ..."))
 
 (def gen-reader-routes
   (partial
     gen-route
     reader-routes
-    "Generating XML for feeds ..."))
+    "\tGenerating XML for feeds ..."))
 
 (def gen-sitemaps-routes
   (partial
     gen-route
     sitemaps-routes
-    "Generating XML for sitemap ..."))
+    "\tGenerating XML for sitemap ..."))
 
 (defn gen-routes
-  ([system uri-base uri-posts]
-    (gen-routes uri-base uri-posts (blog/process system uri-posts)))
-  ([system uri-base uri-posts posts]
-    (log/trace "Got data:" (pprint (blog/data-minus-body system posts)))
-    (->> (gen-static-routes posts)
-         (gen-design-routes posts)
-         (gen-post-routes uri-posts posts)
-         (gen-map-routes uri-base posts)
-         (gen-index-routes posts)
-         (gen-reader-routes uri-posts posts)
-         (gen-sitemaps-routes))))
+  [system uri-base uri-posts posts]
+  (log/info "Generating routes ...")
+  (log/trace "Got data:" (pprint (blog/data-minus-body system posts)))
+  (event/publish system tag/generate-routes-pre)
+  (->> (gen-static-routes posts)
+       (gen-design-routes posts)
+       (gen-post-routes uri-posts posts)
+       (gen-map-routes uri-base posts)
+       (gen-index-routes posts)
+       (gen-reader-routes uri-posts posts)
+       (gen-sitemaps-routes)
+       vec
+       (event/publish->> system tag/generate-routes-post)))

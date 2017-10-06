@@ -2,11 +2,13 @@
   (:require [com.stuartsierra.component :as component]
             [dragon.components.config :as config]
             [dragon.components.event :as event]
-            [dragon.components.logging :as logging]))
+            [dragon.components.httpd :as httpd]
+            [dragon.components.logging :as logging]
+            [dragon.components.system :as system]))
 
-(defn initialize []
+(defn initialize [config-builder]
   (component/system-map
-   :config (config/create-config-component)
+   :config (config/create-config-component config-builder)
    :logging (component/using
              (logging/create-logging-component)
              [:config])

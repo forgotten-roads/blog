@@ -41,11 +41,11 @@
   (log/debug "CLI got args:" args)
   (event/publish system tag/run-cli {:cmd cmd :args args})
   (case cmd
-    :new (new/run args)
-    :show (show/run args)
-    :gen (core/generate)
-    :share (share/run args)
-    :run (core/generate+web)
+    :new (new/run system args)
+    :show (show/run system args)
+    :gen (core/generate system)
+    :share (share/run system args)
+    :run (core/generate system)
     :help (docs/print-docstring #'run)
     :version (print (core/version))
     ;; Aliases
