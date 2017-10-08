@@ -8,6 +8,7 @@ Comments:
 Content-Type: md
 Header-Image: img/style-maps-hdr.jpg
 Headlines?: false
+Public?: true
 
 ### Map Themes
 

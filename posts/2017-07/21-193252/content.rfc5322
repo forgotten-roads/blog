@@ -8,6 +8,7 @@ Comments:
 Content-Type: md
 Header-Image: img/google-maps-theme-hdr.jpg
 Headlines?: false
+Public?: true
 
 This is a quick blog post to share two new Google Maps themes we produced here
 at Forgotten Roads, in the event that our readers might want to use these as

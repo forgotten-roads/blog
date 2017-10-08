@@ -8,6 +8,7 @@ Comments:
 Content-Type: md
 Header-Image: img/gis-beartooth-topo.jpg
 Headlines?: false
+Public?: true
 
 As anyone familiar (not me) with geographic information systems (or "GIS") data
 can tell you, working with the multitude of data formats, versions of those

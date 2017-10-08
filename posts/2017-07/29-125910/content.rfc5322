@@ -8,6 +8,7 @@ Comments:
 Content-Type: md
 Header-Image: img/spotwalla-hdr.jpg
 Headlines?: false
+Public?: true
 
 Previous posts have touched on some of the map- and route-related tooling
 and services available for free online, that can help map out your ride. We'll
