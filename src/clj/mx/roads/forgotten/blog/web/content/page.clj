@@ -1,66 +1,66 @@
 (ns mx.roads.forgotten.blog.web.content.page
   (:require [dragon.web.content :as content]
-            [mx.roads.forgotten.blog.web.content.data :as data]
-            [mx.roads.forgotten.blog.util :as util]))
+            [dragon.util :as util]
+            [mx.roads.forgotten.blog.web.content.data :as data]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Static Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn about
-  [posts]
+  [system posts]
   (content/render
     "templates/pages/generic.html"
-    (data/about posts)))
+    (data/about system posts)))
 
 (defn community
-  [posts]
+  [system posts]
   (content/render
     "templates/pages/generic.html"
-    (data/community posts)))
+    (data/community system posts)))
 
 (defn contact
-  [posts]
+  [system posts]
   (content/render
     "templates/pages/generic.html"
-    (data/contact posts)))
+    (data/contact system posts)))
 
 (defn powered-by
-  [posts]
+  [system posts]
   (content/render
     "templates/pages/generic.html"
-    (data/powered-by posts)))
+    (data/powered-by system posts)))
 
 (defn license
-  [posts]
+  [system posts]
   (content/render
     "templates/pages/generic.html"
-    (data/license posts)))
+    (data/license system posts)))
 
 (defn privacy
-  [posts]
+  [system posts]
   (content/render
     "templates/pages/generic.html"
-    (data/privacy posts)))
+    (data/privacy system posts)))
 
 (defn disclosure
-  [posts]
+  [system posts]
   (content/render
     "templates/pages/generic.html"
-    (data/disclosure posts)))
+    (data/disclosure system posts)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Dynamic Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn post
-  [posts post-data]
+  [system posts post-data]
   (content/render
     "templates/pages/post.html"
-    (data/post posts post-data)))
+    (data/post system posts post-data)))
 
 (defn front-page
-  [posts]
+  [system posts]
   (let [above-fold 5
         below-fold 5
         headline-posts (->> posts
@@ -69,6 +69,7 @@
     (content/render
       "templates/pages/home.html"
       (data/front-page
+        system
         posts
         headline-posts
         :above-fold-count above-fold
@@ -76,108 +77,102 @@
         :column-count 2))))
 
 (defn maps-index
-  [posts maps-data]
+  [system posts maps-data]
   (content/render
     "templates/pages/maps.html"
     (data/maps-index
-      posts maps-data)))
+      system posts maps-data)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Map Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn map-fullscreen
-  [map-data]
+  [system map-data]
   (content/render
     "templates/maps/fullscreen.html"
     (data/map-minimal
-      map-data)))
+      system map-data)))
 
 (defn map-kml-fullscreen
-  [map-data]
+  [system map-data]
   (content/render
     "templates/maps/kml-fullscreen.html"
     (data/map-minimal
-      map-data)))
+      system map-data)))
 
 (defn map-kml-wide-page
-  [posts map-data]
+  [system posts map-data]
   (content/render
     "templates/maps/kml-wide-page.html"
     (data/map-common
-      posts map-data)))
+      system posts map-data)))
 
 (defn map-kml-content-page
-  [posts map-data]
+  [system posts map-data]
   (content/render
     "templates/maps/kml-content-page.html"
     (data/map-common
-      posts map-data)))
+      system posts map-data)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Listings Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn archives
-  [posts]
+  [system posts]
   (content/render
     "templates/listings/archives.html"
-    (data/archives posts)))
+    (data/archives system posts)))
 
 (defn categories
-  [posts]
+  [system posts]
   (content/render
     "templates/listings/categories.html"
-    (data/categories posts)))
+    (data/categories system posts)))
 
 (defn tags
-  [posts]
+  [system posts]
   (content/render
     "templates/listings/tags.html"
-    (data/tags posts)))
+    (data/tags system posts)))
 
 (defn authors
-  [posts]
+  [system posts]
   (content/render
     "templates/listings/authors.html"
-    (data/authors posts)))
+    (data/authors system posts)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Design Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn design
-  [posts]
+  [system posts]
   (content/render
     "templates/design/main.html"
-    (data/design posts)))
+    (data/design system posts)))
 
 (defn bootstrap-theme
-  [posts]
+  [system posts]
   (content/render
     "templates/design/bootstrap-theme.html"
-    (data/design posts)))
+    (data/design system posts)))
 
 (defn front-page-example
-  [posts]
+  [system posts]
   (content/render
     "templates/design/front-page-example.html"
-    (data/design posts)))
+    (data/design system posts)))
 
 (defn blog-example
-  [posts]
+  [system posts]
   (content/render
     "templates/design/blog-example.html"
-    (data/design posts)))
+    (data/design system posts)))
 
 (defn font-samples
-  [posts]
+  [system posts]
   (content/render
     "templates/design/font-samples.html"
-    (data/design posts)))
-
-; (defn post-example
-;   [posts]
-;   (content/render
-;     "templates/design/post-example.html"
-;     (data/design posts)))
+    (data/design system posts)))

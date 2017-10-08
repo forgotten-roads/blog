@@ -86,24 +86,25 @@
                (reduce +))})
 
 (defn base
-  []
-  {:page-data {:base-path "/blog"
-               :site-title (config/name)
-               :site-description (config/description)
-               :index "index"
-               :about "about"
-               :community "community"
-               :archives "archives"
-               :categories "categories"
-               :tags "tags"
-               :authors "authors"
-               :active nil}})
+  [system]
+  {:page-data {
+     :base-path "/blog"
+     :site-title (config/name system)
+     :site-description (config/description system)
+     :index "index"
+     :about "about"
+     :community "community"
+     :archives "archives"
+     :categories "categories"
+     :tags "tags"
+     :authors "authors"
+     :active nil}})
 
 (defn common
-  ([]
+  ([system]
     (common {}))
-  ([posts]
-    (assoc (base)
+  ([system posts]
+    (assoc (base system)
            :posts-data posts
            :posts-stats (posts-stats posts))))
 
@@ -126,61 +127,61 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn about
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "about.md"
                           (markdown-page)
                           (assoc :title "About")))))
 
 (defn community
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "community")
       (assoc :content (assoc generic-page :title "Community"))))
 
 (defn contact
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "contact.md"
                           (markdown-page)
                           (assoc :title "Contact Us")))))
 
 (defn powered-by
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "powered-by.md"
                           (markdown-page)
                           (assoc :title "Powered By")))))
 
 (defn license
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "license.md"
                           (markdown-page)
                           (assoc :title "Content License")))))
 
 (defn privacy
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "privacy.md"
                           (markdown-page)
                           (assoc :title "Privacy Policy")))))
 
 (defn disclosure
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "about")
       (assoc :content (-> "disclosure.md"
                           (markdown-page)
@@ -191,23 +192,23 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn post
-  [posts post-data]
-  (-> posts
-      (common)
+  [system posts post-data]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "archives")
       (assoc :post-data post-data
              :blocks (get-blocks post-data)
              :tags (blog-tags/unique [post-data]))))
 
 (defn front-page
-  [all-posts top-posts & {:keys [above-fold-count below-fold-count column-count]}]
+  [system all-posts top-posts & {:keys [above-fold-count below-fold-count column-count]}]
   (let [above-posts (take above-fold-count top-posts)
         headliner (first above-posts)
         grouped-posts (partition column-count
                                  (nthrest above-posts 1))
         below-posts (nthrest top-posts above-fold-count)]
-    (-> all-posts
-        (common)
+    (-> system
+        (common all-posts)
         (assoc-in [:page-data :active] "index")
         (assoc :headlines-heading "Headlines"
                :headlines-desc (str "We like to keep things simple at FRMX. "
@@ -237,22 +238,22 @@
       (dissoc :disable-map-gui)))
 
 (defn map-minimal
-  [map-data]
-  (-> (base)
+  [system map-data]
+  (-> (base system)
       (assoc-in [:page-data :active] "maps")
       (assoc :map-data (merge map-base map-data))))
 
 (defn map-common
-  [posts map-data]
-  (-> posts
-      (common)
+  [system posts map-data]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "maps")
       (assoc :map-data (merge map-base map-data))))
 
 (defn maps-index
-  [posts maps-data]
-  (-> posts
-      (common)
+  [system posts maps-data]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "maps")
       (assoc :topo-data topo-base)
       (assoc :maps-data (map #(merge map-base %) maps-data))))
@@ -262,33 +263,33 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn archives
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "archives")
       (assoc :content (assoc generic-page :title "Archives")
              :posts-data (blog/group-data :archives posts))))
 
 (defn categories
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "categories")
       (assoc :content (assoc generic-page :title "Categories")
              :posts-data (blog/group-data :categories posts))))
 
 (defn tags
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "tags")
       (assoc :content (assoc generic-page :title "Tags")
              :posts-data (blog/group-data :tags posts))))
 
 (defn authors
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "authors")
       (assoc :content (assoc generic-page :title "Authors")
              :posts-data (blog/group-data :authors posts))))
@@ -298,11 +299,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn design
-  [posts]
-  (-> posts
-      (common)
+  [system posts]
+  (-> system
+      (common posts)
       (assoc-in [:page-data :active] "design")
       (assoc :content (assoc generic-page :title "Design"))))
-
-
-
