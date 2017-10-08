@@ -19,49 +19,56 @@
             [taoensso.timbre :as log]))
 
 (defn static-routes
-  ([posts]
-    (static-routes posts {}))
-  ([posts routes]
+  ([system posts]
+    (static-routes system posts {}))
+  ([system posts routes]
     (merge
       routes
-      {"/blog/about.html" (page/about posts)
-       "/blog/contact.html" (page/contact posts)
-       "/blog/powered-by.html" (page/powered-by posts)
-       "/blog/license.html" (page/license posts)
-       "/blog/privacy.html" (page/privacy posts)
-       "/blog/disclosure.html" (page/disclosure posts)})))
+      {"/blog/about.html" (page/about system posts)
+       "/blog/contact.html" (page/contact system posts)
+       "/blog/powered-by.html" (page/powered-by system posts)
+       "/blog/license.html" (page/license system posts)
+       "/blog/privacy.html" (page/privacy system posts)
+       "/blog/disclosure.html" (page/disclosure system posts)})))
 
 (defn design-routes
-  [posts routes]
+  [system posts routes]
   (merge
     routes
-    {"/blog/design/index.html" (page/design posts)
-     "/blog/design/bootstrap-theme.html" (page/bootstrap-theme posts)
-     "/blog/design/example-front-page.html" (page/front-page-example posts)
-     "/blog/design/example-blog.html" (page/blog-example posts)
-     "/blog/design/font-samples.html" (page/font-samples posts)}))
+    {"/blog/design/index.html" (page/design system posts)
+     "/blog/design/bootstrap-theme.html" (page/bootstrap-theme system posts)
+     "/blog/design/example-front-page.html" (page/front-page-example system posts)
+     "/blog/design/example-blog.html" (page/blog-example system posts)
+     "/blog/design/font-samples.html" (page/font-samples system posts)}))
 
 (defn post-routes
-  [uri-posts posts routes]
+  [system posts routes]
   (merge
     routes
     (blog/get-indexed-archive-routes
       (map vector (iterate inc 0) posts)
-      :gen-func (partial page/post posts)
-      :uri-base uri-posts)))
+      :gen-func (partial page/post system posts)
+      :uri-base (config/posts-path system))))
 
 (defn map-routes
-  [uri-base posts routes]
-  (let [view-data (maps/get-view-data uri-base)
+  [system posts routes]
+  (let [uri-base (config/base-path system)
+        view-data (maps/get-view-data uri-base)
         view-data-ui (maps/get-view-data-keep-ui uri-base)
-        gen-data [[#'page/map-kml-fullscreen "fullscreen"]
-                  [(partial page/map-kml-wide-page posts) "wide-page"]
-                  [(partial page/map-kml-content-page posts) "content-page"]]]
+        gen-data [[(partial page/map-kml-fullscreen system)
+                   "fullscreen"]
+                  [(partial page/map-kml-wide-page system posts)
+                   "wide-page"]
+                  [(partial page/map-kml-content-page system posts)
+                   "content-page"]]]
     (merge
       routes
-      {"/blog/map/ui/fullscreen.html" (page/map-fullscreen view-data-ui)
-       "/blog/map/no-ui/fullscreen.html" (page/map-fullscreen view-data)
+      {"/blog/map/ui/fullscreen.html" (page/map-fullscreen
+                                       system view-data-ui)
+       "/blog/map/no-ui/fullscreen.html" (page/map-fullscreen
+                                          system view-data)
        "/blog/maps/index.html" (page/maps-index
+                                 system
                                  posts
                                  (maps/get-maps-data
                                    :gen-data gen-data
@@ -71,43 +78,45 @@
         :uri-base uri-base))))
 
 (defn index-routes
-  [posts routes]
+  [system posts routes]
   (merge
     routes
-    {"/blog/index.html" (page/front-page posts)
-     "/blog/archives/index.html" (page/archives posts)
-     "/blog/categories/index.html" (page/categories posts)
-     "/blog/tags/index.html" (page/tags posts)
-     "/blog/authors/index.html" (page/authors posts)}))
+    {"/blog/index.html" (page/front-page system posts)
+     "/blog/archives/index.html" (page/archives system posts)
+     "/blog/categories/index.html" (page/categories system posts)
+     "/blog/tags/index.html" (page/tags system posts)
+     "/blog/authors/index.html" (page/authors system posts)}))
 
 (defn reader-routes
-  [uri-posts posts routes]
+  [system posts routes]
   (let [route "/blog/atom.xml"]
     (merge
       routes
       {route (reader/atom-feed
-               uri-posts route (take (config/feed-count) posts))})))
+               system
+               route
+               (take (config/feed-count system) posts))})))
 
 (defn sitemaps-routes
-  [routes]
+  [system routes]
   (let [route "/blog/sitemap.xml"]
     (merge
       routes
       {route (sitemapper/gen routes)})))
 
 (defn routes
-  [system uri-base uri-posts posts]
+  [system posts]
   (log/trace "Got data:" (pprint (blog/data-minus-body system posts)))
   (event/publish system tag/generate-routes-pre)
-  (->> (static-routes posts)
-       (design-routes posts)
-       (post-routes uri-posts posts)
-       (map-routes uri-base posts)
-       (index-routes posts)
-       (reader-routes uri-posts posts)
-       (sitemaps-routes)
-       vec
-       (event/publish->> system tag/generate-routes-post)))
+  (->> (static-routes system posts)
+       (design-routes system posts)
+       (post-routes system posts)
+       (map-routes system posts)
+       (index-routes system posts)
+       (reader-routes system posts)
+       (sitemaps-routes system)
+       (event/publish->> system tag/generate-routes-post)
+       vec))
 
 ;;; Generator routes
 
@@ -159,16 +168,16 @@
     "\tGenerating XML for sitemap ..."))
 
 (defn gen-routes
-  [system uri-base uri-posts posts]
+  [system posts]
   (log/info "Generating routes ...")
   (log/trace "Got data:" (pprint (blog/data-minus-body system posts)))
   (event/publish system tag/generate-routes-pre)
-  (->> (gen-static-routes posts)
-       (gen-design-routes posts)
-       (gen-post-routes uri-posts posts)
-       (gen-map-routes uri-base posts)
-       (gen-index-routes posts)
-       (gen-reader-routes uri-posts posts)
-       (gen-sitemaps-routes)
-       vec
-       (event/publish->> system tag/generate-routes-post)))
+  (->> (gen-static-routes system posts)
+       (gen-design-routes system posts)
+       (gen-post-routes system posts)
+       (gen-map-routes system posts)
+       (gen-index-routes system posts)
+       (gen-reader-routes system posts)
+       (gen-sitemaps-routes system)
+       (event/publish->> system tag/generate-routes-post)
+       vec))

@@ -4,7 +4,6 @@
             [clojusc.twig :refer [pprint]]
             [dragon.blog.content.core :as content]
             [dragon.blog.core :as blog]
-            [dragon.config :as config]
             [dragon.web.content :as template]
             [mx.roads.forgotten.blog.web.content.data :as data]
             [taoensso.timbre :as log]
@@ -38,34 +37,30 @@
   (get-content-filename post-data new-post-file))
 
 (defn render-template
-  [post-data]
+  [system post-data]
   (template/render
     (str "templates/social/" new-post-file)
-    (data/post [] post-data)))
+    (data/post system [] post-data)))
 
 (defn get-new-post-social-content
-  [post-data]
+  [system post-data]
   (str (get-phrase (:author post-data) (:category post-data))
-       (render-template post-data)))
+       (render-template system post-data)))
 
 (defn gen-new-post-social
-  [post-data]
-  (let [file-data (get-new-post-social-content post-data)
+  [system post-data]
+  (let [file-data (get-new-post-social-content system post-data)
         outfile (get-new-post-filename post-data)]
     (when-not (fs/file-exists? (io/file outfile))
       (log/debug "Generating 'new post' social content for" post-data)
       (spit
         outfile
-        (get-new-post-social-content post-data)))))
+        (get-new-post-social-content system post-data)))))
 
 (defn gen
   [system posts]
   (log/debug "Generating social content ...")
   (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
   (doseq [post-data posts]
-    (gen-new-post-social post-data))
+    (gen-new-post-social system post-data))
   :ok)
-
-(comment
-  (require '[mx.roads.forgotten.blog.social.content :as social-content])
-  (social-content/gen (config/base-path) (blog/process (config/posts-path))))

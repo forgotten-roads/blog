@@ -5,23 +5,24 @@
             [taoensso.timbre :as log]))
 
 (defn atom-entry
-  [uri-posts post]
-  (let [uri (str uri-posts (:uri-path post))]
+  [system post]
+  (let [uri-posts (config/posts-path system)
+        uri (str uri-posts (:uri-path post))]
     [:entry
      [:title (:title post)]
      [:updated (:timestamp post)]
      [:author [:name (:author post)]]
-     [:link {:href (format "http://%s/%s" (config/domain) uri)}]
-     [:id (format "%s:feed:post:%s" (config/domain-urn) (:title post))]
+     [:link {:href (format "http://%s/%s" (config/domain system) uri)}]
+     [:id (format "%s:feed:post:%s" (config/domain-urn system) (:title post))]
      [:content {:type "html"} (:body post)]]))
 
 (defn atom-feed
-  [uri-posts route posts]
+  [system route posts]
   (xml/emit-str
    (xml/sexp-as-element
     [:feed {:xmlns "http://www.w3.org/2005/Atom"}
-     [:id (format "%s:feed" (config/domain-urn))]
+     [:id (format "%s:feed" (config/domain-urn system))]
      [:updated (-> posts first :timestamp)]
-     [:title {:type "text"} (config/name)]
-     [:link {:rel "self" :href (format "http://%s%s" (config/domain) route)}]
-     (map (partial atom-entry uri-posts) posts)])))
+     [:title {:type "text"} (config/name system)]
+     [:link {:rel "self" :href (format "http://%s%s" (config/domain system) route)}]
+     (map (partial atom-entry system) posts)])))

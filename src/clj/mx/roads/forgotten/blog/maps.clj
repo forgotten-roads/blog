@@ -93,9 +93,9 @@
     {:disable-map-gui false}))
 
 (defn get-map-route
-  [[gem-func map-type] [kml map-path] uri-base]
+  [[gen-func map-type] [kml map-path] uri-base]
   [(format "%s/maps/%s/%s.html" uri-base map-path map-type)
-   (gem-func (get-map-data [nil map-type] [kml map-path] uri-base))])
+   (gen-func (get-map-data [nil map-type] [kml map-path] uri-base))])
 
 (defn get-map-routes
   [& {:keys [gen-data uri-base]}]
