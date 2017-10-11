@@ -27,6 +27,10 @@
     [clojusc/rfc5322 "0.4.0-SNAPSHOT"]
     [clojusc/trifl "0.2.0-SNAPSHOT"]
     [clojusc/twig "0.3.2-SNAPSHOT"]
+    ;; XXX Remove the following once the next dragon snapshot is pushed to Clojars
+    [com.datomic/clj-client "0.8.606"]
+    [com.taoensso/carmine "2.16.0"]
+    ;; XXX END
     [com.stuartsierra/component "0.3.2"]
     [dragon "0.4.0-SNAPSHOT"]
     [markdown-clj "1.0.1"]
@@ -50,7 +54,7 @@
     :posts-path-src "./posts"
     :feed-count 20
     :cli {
-      :log-level :debug
+      :log-level :info
       :log-nss [mx.roads]}}
   :profiles {
     :uberjar {:aot :all}
