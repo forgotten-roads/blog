@@ -24,11 +24,18 @@
     [org.clojure/clojure]
     [org.clojure/clojurescript]]
   :dependencies [
-    [clojusc/rfc5322 "0.4.0-SNAPSHOT"]
-    [clojusc/trifl "0.2.0-SNAPSHOT"]
-    [clojusc/twig "0.3.2-SNAPSHOT"]
+    [clojusc/rfc5322 "0.4.0"]
+    [clojusc/trifl "0.2.0"]
+    [clojusc/twig "0.3.2"]
     [com.stuartsierra/component "0.3.2"]
     [dragon "0.4.0-SNAPSHOT"]
+    ;; dragon deps
+    [com.datomic/clj-client "0.8.606"]
+    [com.taoensso/carmine "2.16.0" :exclusions [
+      com.taoensso/encore
+      com.taoensso/truss]]
+    [pandect "0.6.1"]
+    ;; dragon deps end
     [markdown-clj "1.0.1"]
     [org.clojure/clojure "1.8.0"]
     [org.clojure/data.generators "0.1.2"]
@@ -50,7 +57,7 @@
     :posts-path-src "./posts"
     :feed-count 20
     :cli {
-      :log-level :debug
+      :log-level :trace
       :log-nss [mx.roads]}}
   :profiles {
     :uberjar {:aot :all}
@@ -74,9 +81,9 @@
     :test {
       :plugins [
         [lein-ancient "0.6.12"]
-        [jonase/eastwood "0.2.4" :exclusions [org.clojure/clojure]]
+        [jonase/eastwood "0.2.4"]
         [lein-bikeshed "0.4.1" :exclusions [org.clojure/tools.namespace]]
-        [lein-kibit "0.1.5" :exclusions [org.clojure/clojure]]
+        [lein-kibit "0.1.5"]
         [venantius/yagni "0.1.4"]]}
     :cli {
       :resource-paths ["posts"]
