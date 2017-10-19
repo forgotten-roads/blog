@@ -106,7 +106,7 @@
 
 (defn routes
   [system posts]
-  (log/trace "Got data:" (pprint (blog/data-for-logs system posts)))
+  (log/trace "Got data:" (pprint (blog/data-for-logs posts)))
   (event/publish system tag/generate-routes-pre)
   (->> (static-routes system posts)
        (design-routes system posts)
@@ -170,7 +170,7 @@
 (defn gen-routes
   [system posts]
   (log/info "Generating routes ...")
-  (log/trace "Got data:" (pprint (blog/data-for-logs system posts)))
+  (log/trace "Got data:" (pprint (blog/data-for-logs posts)))
   (event/publish system tag/generate-routes-pre)
   (->> (gen-static-routes system posts)
        (gen-design-routes system posts)
