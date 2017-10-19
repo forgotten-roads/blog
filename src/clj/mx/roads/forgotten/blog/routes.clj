@@ -97,7 +97,7 @@
 
 (defn routes
   [system uri-base uri-posts posts]
-  (log/trace "Got data:" (pprint (blog/data-minus-body system posts)))
+  (log/trace "Got data:" (pprint (blog/data-for-logs system posts)))
   (event/publish system tag/generate-routes-pre)
   (->> (static-routes posts)
        (design-routes posts)
@@ -159,9 +159,9 @@
     "\tGenerating XML for sitemap ..."))
 
 (defn gen-routes
-  [system uri-base uri-posts posts]
+  [system posts]
   (log/info "Generating routes ...")
-  (log/trace "Got data:" (pprint (blog/data-minus-body system posts)))
+  (log/trace "Got data:" (pprint (blog/data-for-logs system posts)))
   (event/publish system tag/generate-routes-pre)
   (->> (gen-static-routes posts)
        (gen-design-routes posts)

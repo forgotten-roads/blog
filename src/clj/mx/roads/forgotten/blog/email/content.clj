@@ -37,10 +37,7 @@
 (defn gen
   [system posts]
   (log/debug "Generating emails ...")
-  (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
+  (log/trace "Got data:" (pprint (blog/data-for-logs posts)))
   (doseq [post-data posts]
     (gen-new-post-email post-data))
   :ok)
-
-(comment
-  (email-content/gen (config/base-path) (blog/process (config/posts-path))))

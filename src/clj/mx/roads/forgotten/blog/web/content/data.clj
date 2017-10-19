@@ -2,6 +2,7 @@
   (:require [clojure.java.io :as io]
             [clojure.string :as string]
             [dragon.blog.core :as blog]
+            [dragon.blog.tags :as blog-tags]
             [dragon.config :as config]
             [markdown.core :as markdown]
             [taoensso.timbre :as log]))
@@ -196,7 +197,7 @@
       (assoc-in [:page-data :active] "archives")
       (assoc :post-data post-data
              :blocks (get-blocks post-data)
-             :tags (blog/tags-unique [post-data]))))
+             :tags (blog-tags/unique [post-data]))))
 
 (defn front-page
   [all-posts top-posts & {:keys [above-fold-count below-fold-count column-count]}]
@@ -214,7 +215,7 @@
                                     "on the front page -- if you want to read "
                                     "an older post, <a href=\"/blog/archives\""
                                     ">check out the archives</a>.")
-               :tags (blog/tag-stats all-posts)
+               :tags (blog-tags/get-stats all-posts)
                :headliner headliner
                :posts-data grouped-posts
                :posts-count (count top-posts)
@@ -266,7 +267,7 @@
       (common)
       (assoc-in [:page-data :active] "archives")
       (assoc :content (assoc generic-page :title "Archives")
-             :posts-data (blog/data-for-archives posts))))
+             :posts-data (blog/group-data :archives posts))))
 
 (defn categories
   [posts]
@@ -274,7 +275,7 @@
       (common)
       (assoc-in [:page-data :active] "categories")
       (assoc :content (assoc generic-page :title "Categories")
-             :posts-data (blog/data-for-categories posts))))
+             :posts-data (blog/group-data :categories posts))))
 
 (defn tags
   [posts]
@@ -282,7 +283,7 @@
       (common)
       (assoc-in [:page-data :active] "tags")
       (assoc :content (assoc generic-page :title "Tags")
-             :posts-data (blog/data-for-tags posts))))
+             :posts-data (blog/group-data :tags posts))))
 
 (defn authors
   [posts]
@@ -290,7 +291,7 @@
       (common)
       (assoc-in [:page-data :active] "authors")
       (assoc :content (assoc generic-page :title "Authors")
-             :posts-data (blog/data-for-authors posts))))
+             :posts-data (blog/group-data :authors posts))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Design Pages Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

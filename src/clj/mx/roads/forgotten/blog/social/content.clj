@@ -61,7 +61,7 @@
 (defn gen
   [system posts]
   (log/debug "Generating social content ...")
-  (log/trace "Got data:" (pprint (blog/data-minus-body posts)))
+  (log/trace "Got data:" (pprint (blog/data-for-logs posts)))
   (doseq [post-data posts]
     (gen-new-post-social post-data))
   :ok)
