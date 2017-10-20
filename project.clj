@@ -61,10 +61,12 @@
     :posts-path-src "./posts"
     :feed-count 20
     :cli {
-      :log-level :trace
-      :log-nss [mx.roads]}}
+      :log-level :info
+      :log-nss [mx.roads]}
+    :workflow {
+     :storage :memory}}
   :profiles {
-    :uberjar {:aot :all}
+    :ubercompile {:aot :all}
     :custom-repl {
       :repl-options {
         :init-ns mx.roads.forgotten.blog.dev
