@@ -14,11 +14,11 @@
 (defn get-post-data
   [post-file]
   (log/debugf "Getting content for %s ..." post-file)
-  (-> post-file
-      (io/resource)
-      (.getFile)
-      (io/file)
-      (content/parse)))
+  (->> post-file
+       (io/resource)
+       (.getFile)
+       (io/file)
+       (content/parse nil)))
 
 (defn get-message-content-file
   [post-file msg-filename]
