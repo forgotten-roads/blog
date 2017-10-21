@@ -29,17 +29,13 @@
     [clojusc/twig "0.3.2"]
     ;; XXX Remove the following once the next dragon snapshot is pushed to Clojars
     [com.datomic/clj-client "0.8.606"]
-    [com.taoensso/carmine "2.16.0"]
-    ;; XXX END
-    [com.stuartsierra/component "0.3.2"]
-    [dragon "0.4.0-SNAPSHOT"]
-    ;; dragon deps
-    [com.datomic/clj-client "0.8.606"]
     [com.taoensso/carmine "2.16.0" :exclusions [
       com.taoensso/encore
       com.taoensso/truss]]
     [pandect "0.6.1"]
-    ;; dragon deps end
+    ;; XXX END
+    [com.stuartsierra/component "0.3.2"]
+    [dragon "0.4.0-SNAPSHOT"]
     [markdown-clj "1.0.1"]
     [org.clojure/clojure "1.8.0"]
     [org.clojure/data.generators "0.1.2"]
