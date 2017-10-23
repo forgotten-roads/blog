@@ -81,11 +81,14 @@
       ;:pedantic? :warn
       }
     :test {
+      :dependencies [
+        [clojusc/ltest "0.3.0-SNAPSHOT"]]
       :plugins [
-        [lein-ancient "0.6.12"]
         [jonase/eastwood "0.2.4"]
+        [lein-ancient "0.6.12"]
         [lein-bikeshed "0.4.1" :exclusions [org.clojure/tools.namespace]]
         [lein-kibit "0.1.5"]
+        [lein-ltest "0.3.0-SNAPSHOT"]
         [venantius/yagni "0.1.4"]]}
     :cli {
       :resource-paths ["posts"]
@@ -120,6 +123,8 @@
     "lint"
       ^{:doc (str "Perform lint checking")}
       ["with-profile" "+test" "kibit"]
+    "ltest"
+      ["with-profile" "+test" "ltest"]
     "frmx"
       ^{:doc (str "The FRMX Blog CLI; type `lein frmx help` or `frmx help` "
                   "for commands")}
