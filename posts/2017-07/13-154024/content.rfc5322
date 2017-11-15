@@ -1,12 +1,12 @@
 Subject: Beartooth Run, 2017
 Subtitle: Red Lodge, MT
+Header-Image: img/red-lodge-hdr.jpg
 From: oubiwann
 Twitter: oubiwann
 Category: Trips
 Keywords: montana,camping,mountains,red lodge,mountains,rivers,hammocks,tents,rainbows,dirt roads,coffee,supplies
 Comments:
-Content-Type: md
-Header-Image: img/red-lodge-hdr.jpg
+Content-Type: selmer,md
 Public?: true
 
 As mentioned in the previous post, of the Fargo crew I was the only one to
@@ -22,7 +22,10 @@ One of the first things you notice about Red Lodge when you come into town is
 the strong feel of a western mountain town. Riding up and down Broadway (the
 main street in town) is a total pleasure:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35993216400/in/album-72157688587312485/" title="G0033663"><img src="https://farm5.staticflickr.com/4343/35993216400_e4ea99f444_k.jpg" width="2048" height="1536" alt="G0033663"></a>%%%
+{% flickr-img :photo-id 35993216400
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 2048 %}
 
 Red Lodge really reminded us of Boulder, CO when it was smaller and quieter
 (i.e., in the 1970s). There's also a bit of the feel that Leadville, CO has.
@@ -86,35 +89,62 @@ West Fork Rock Creek runs through.
 After a few miles of paved roads, we passed Basin Campground and promptly hit
 dirt and gravel. Some of the worst washboards I've ever experienced:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35929265046/in/album-72157684554501191/" title="G0013405"><img src="https://farm5.staticflickr.com/4321/35929265046_b8d2dfa697_n.jpg" width="370" alt="G0013405"></a>%%%
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35581616410/in/album-72157684554501191/" title="G0013409"><img src="https://farm5.staticflickr.com/4302/35581616410_1f9120f72f_n.jpg" width="370" alt="G0013409"></a>%%%
+{% flickr-img :photo-id 35929265046
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 370 %}
+{% flickr-img :photo-id 35581616410
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 370 %}
 
 After three miles of that, we found Cascade Campground:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36256581601/in/album-72157684554501191/" title="Untitled"><img src="https://farm5.staticflickr.com/4348/36256581601_20eee128bd_k.jpg" width="2048" height="1530" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36256581601
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 2048 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36348540716/in/album-72157684554501191/" title="Untitled"><img src="https://farm5.staticflickr.com/4336/36348540716_ce65df5d2b_k.jpg" width="2048" height="1530" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36348540716
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 2048 %}
 
 We ended up with a site reserved for walk-ins -- amazingly, they selected the
 best site in the campground for this. This was made an even more welcome gift,
 since it was to be our home for the next week.
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36256595131/in/album-72157684554501191/" title="Untitled"><img src="https://farm5.staticflickr.com/4401/36256595131_b62ac83ac5_k.jpg" width="2048" height="1530" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36256595131
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 2048 %}
 
 We enjoyed the hammocks during the day, but the nights were too chilly in the
 mountains for anything other than our tent.
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36348544476/in/album-72157684554501191/" title="Untitled"><img src="https://farm5.staticflickr.com/4336/36348544476_0ba64ad769_k.jpg" width="2048" height="1530" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36348544476
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 2048 %}
 
 We were surrounded by incredible beauty, even in the face of huge tracts of
 forest land slowly recovering from the devastation of a massive fire 8 years
 ago.
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35039002154/in/album-72157684554501191/" title="iPhone Pics from Beartooth Run 2017"><img src="https://farm5.staticflickr.com/4255/35039002154_85a357af79_k.jpg" width="2048" height="2048" alt="iPhone Pics from Beartooth Run 2017"></a>%%%
+{% flickr-img :photo-id 35039002154
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 2048 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36256572571/in/album-72157684554501191/" title="Untitled"><img src="https://farm5.staticflickr.com/4386/36256572571_5ec040fd24_k.jpg" width="2048" height="1530" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36256572571
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 2048 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35039008844/in/album-72157684554501191/" title="iPhone Pics from Beartooth Run 2017"><img src="https://farm5.staticflickr.com/4281/35039008844_0e63855c13_k.jpg" width="2048" height="1079" alt="iPhone Pics from Beartooth Run 2017"></a>%%%
+{% flickr-img :photo-id 35039008844
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 2048 %}
 
 We had our breakfast and evening meals here, relaxed in the sun by the river
 after work, and absorbed the goodness of the land. What's more, the campground
@@ -126,7 +156,10 @@ friends.
 
 Every morning I'd take the support vehicle into town and get to work:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36193778404/in/album-72157688587312485/" title="G0023467"><img src="https://farm5.staticflickr.com/4417/36193778404_663a88fa7a_k.jpg" width="2048" height="1536" alt="G0023467"></a>%%%
+{% flickr-img :photo-id 36193778404
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 2048 %}
 
 Without deviation, I'd make bee-line for
 [Coffee Factory Roasters](https://goo.gl/C5bC4P) where I'd have one of several
@@ -161,6 +194,9 @@ I can't recommend Red Lodge enough, should you have the chance to visit -- and
 hopefully for more than a day! On your way out of town, be sure to keep you
 eyes open for this friendly guy:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35746812171/in/album-72157688587312485/" title="iPhone Pics from Beartooth Run 2017"><img src="https://farm5.staticflickr.com/4256/35746812171_a8dbe652f4_k.jpg" width="1536" height="2048" alt="iPhone Pics from Beartooth Run 2017"></a>%%%
+{% flickr-img :photo-id 35746812171
+              :album-id 72157684554501191
+              :user forgottenroadsmx
+              :width 1536 %}
 
 &#x1F6E3;

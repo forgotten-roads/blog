@@ -7,7 +7,7 @@ Twitter: oubiwann
 Category: Customisations
 Keywords: leather,hardware,folk art,brass,rivets,buckles,headlamps,forks,forkboots,straps
 Comments:
-Content-Type: md
+Content-Type: selmer,md
 Public?: true
 
 One of the things about the bike that's bothered me slightly has been the tin
@@ -16,7 +16,10 @@ motorcycle can have is the exposed springs of the classic forks of the same
 name. Part of the reason for this is the clean, open lines. The tin box you
 get with stock Softail Slims is essentially the aesthetic opposite:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36892598711/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4400/36892598711_87c5a949c5_b.jpg" width="623" height="832" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36892598711
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 623 %}
 
 The solution to this problem is clear.
 
@@ -32,11 +35,17 @@ Instead, it seems the year and a half of having to look at the tin box took
 it's toll, and out came the bolt cutters and large needle-nose pliers. Witness
 the carnage:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36858698622/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4382/36858698622_3939051345_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36858698622
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 2048 %}
 
 I was instantly delighted with the results, too:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36858698672/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4398/36858698672_a6420f69dd_k.jpg" width="1536" height="2048" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36858698672
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 1536 %}
 
 Who knows why they choose to cover that up. Perhaps protection from the
 elements? Maybe the hydraulics need more of that than the springs of old?
@@ -55,16 +64,25 @@ ECM cover I made, this was a no-brainer.
 After some pondering and lots of staring at the forks and headlamp, I did I
 quick sketch of what had come to mind:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36992455021/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4405/36992455021_2f4178dedf_k.jpg" width="2048" height="1534" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36992455021
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 2048 %}
 
 This seemed like a pretty trivial project, and for the most part, it was. A
 few cuts, and a visit to the local
 [Tandy leather store](https://goo.gl/4zWxms) for some brass buckles, and I was
 off and running:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/37124926835/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4390/37124926835_a29dbb6413_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 37124926835
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 2048 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/37124926695/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4375/37124926695_6796933498_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 37124926695
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 2048 %}
 
 There are just four straps picture above, but each side would need a total of five:
 
@@ -91,23 +109,38 @@ With the first boot properly resized, it was time to start hammering and
 snipping the brass rivets. Since I wasn't sure how the leather would wrap, I
 held off on the last few and fit it to the forks before proceeding:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36845247396/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4421/36845247396_ed184ed07e_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36845247396
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 2048 %}
 
 I also realised I was going to need some leather re-enforcing for the middle
 buckle, as the oilskin cowhide was too thin for that. Fortunately, I had some
 thicker buffalo hide scraps from another project I'm working on:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/37127650485/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4387/37127650485_4a03a56f0a_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 37127650485
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 2048 %}
 
 Here's how I decided to do the buckle attachments:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36292717354/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4391/36292717354_377d7c10cf_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36292717354
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 2048 %}
 
 And here are some shots of the completed right forkboot, outside and inside:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/37112801485/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4418/37112801485_9129c4361b_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 37112801485
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 2048 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36924360856/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4348/36924360856_d118a180e6_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36924360856
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 2048 %}
 
 There were two difficulties I encountered during assembly:
 
@@ -130,14 +163,26 @@ There were two difficulties I encountered during assembly:
 
 With the boots completed, it was time to start attaching them:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36300217113/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4416/36300217113_2f494f139d_n.jpg" height="370" alt="Untitled"></a>%%%
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/37112800975/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4397/37112800975_91f49cd5e6_n.jpg" height="370" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36300217113
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 370 %}
+{% flickr-img :photo-id 37112800975
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 370 %}
 
 All together now:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/37129345985/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4343/37129345985_b388918fee_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 37129345985
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 2048 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36940300106/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4332/36940300106_e51d5298a1_k.jpg" width="1536" height="2048" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36940300106
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 1536 %}
 
 The complete set of pictures for this project are available in an album here,
 on Flickr:
@@ -151,6 +196,9 @@ It was necessary, of course, to then take the bike out for a ride. Preferably
 some nice dirt roads with lots of expansive views of open farmland and
 prairie.
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36987591081/in/album-72157685870306370/" title="Untitled"><img src="https://farm5.staticflickr.com/4423/36987591081_fec49f44a2_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36987591081
+              :album-id 72157685870306370
+              :user forgottenroadsmx
+              :width 2048 %}
 
 So that's what we did :-) &#x1F6E3;

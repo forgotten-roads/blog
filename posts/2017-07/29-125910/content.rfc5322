@@ -1,12 +1,12 @@
 Subject: Online Mapping Tools for Your Ride
 Subtitle: An Overview of What Forgotten Roads Uses
+Header-Image: img/spotwalla-hdr.jpg
 From: bobbermac
 Twitter: bobbermacean
 Category: Tools
 Keywords: data,gis,kml,services,maps
 Comments:
-Content-Type: md
-Header-Image: img/spotwalla-hdr.jpg
+Content-Type: selmer,md
 Headlines?: false
 Public?: true
 
@@ -129,7 +129,11 @@ continue to donate to it, so that it can continue to survive.
 Here's a screenshot of gmap4 that captures the highest peak in the Black
 Hills as well as some of the best riding in the region:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36237577866/in/datetaken/" title="FireShot Capture 009 - Map produced by Gmap4 from mappings_ - https___mappingsupport.com_p_gmap4.php"><img src="https://farm5.staticflickr.com/4310/36237577866_3563dcbc3b_o.jpg" width="2556" height="1320" alt="FireShot Capture 009 - Map produced by Gmap4 from mappings_ - https___mappingsupport.com_p_gmap4.php"></a>%%%
+{% flickr-img :photo-id 36237577866
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 2048 %}
+
 
 ### Summary
 

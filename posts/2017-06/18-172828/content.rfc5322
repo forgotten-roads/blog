@@ -7,7 +7,7 @@ Twitter: oubiwann
 Category: Packing
 Keywords: howtos,packs,bags,attachments,learning,panniers,saddlebags,camping
 Comments:
-Content-Type: md
+Content-Type: selmer,md
 Public?: true
 
 Last year was my first year of riding, and at the end of the season I took a
@@ -24,7 +24,10 @@ still a good test.
 
 Before the solution, though, let's look at the problem :-)
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35597001871/in/album-72157686061205075/" title="2016-09-11 14.55.19"><img src="https://farm5.staticflickr.com/4098/35597001871_6bd7e684e6_b.jpg" width="1024" height="768" alt="2016-09-11 14.55.19"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+{% flickr-img :photo-id 35597001871
+              :album-id 72157686061205075
+              :user forgottenroadsmx
+              :width 1024 %}
 
 That's a shot from when I'd made it over the Rockies and was preparing to
 head down into Durango, CO and on into Arizona and Utah. As you can see, I
@@ -37,7 +40,10 @@ The headlight melted the back of the one pack, but it's still quite usable
 stacked it up on the rear fender with everything else, but then got another
 smaller bag to put on the front fender for miscellaneous easy-access items:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/34918690363/in/album-72157686061205075/" title="2016-09-17 09.48.25"><img src="https://farm5.staticflickr.com/4092/34918690363_416587c5af_b.jpg" width="1024" height="768" alt="2016-09-17 09.48.25"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+{% flickr-img :photo-id 34918690363
+              :album-id 72157686061205075
+              :user forgottenroadsmx
+              :width 1024 %}
 
 It doesn't take too much imagination to put a kitchen sink at the top of
 that pile ... yet the odd bags weren't the biggest problem: the fact that
@@ -52,12 +58,19 @@ unpacked *everything*. Doing so was such a luxury, it almost felt like I'd
 gone to a hotel. However, repacking it all in the morning took me about
 an hour.
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35559295472/in/album-72157686061205075/" title="2016-09-18 19.24.24"><img src="https://farm5.staticflickr.com/4067/35559295472_8880dd41e5_b.jpg" width="1024" height="768" alt="2016-09-18 19.24.24"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+{% flickr-img :photo-id 35559295472
+              :album-id 72157686061205075
+              :user forgottenroadsmx
+              :width 1024 %}
 
 The parking spot doesn't look like much, but here's a view in the other
 direction:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35688496706/in/album-72157686061205075/" title="2016-09-18 19.24.48"><img src="https://farm5.staticflickr.com/4069/35688496706_9a5578447e.jpg" width="500" height="375" alt="2016-09-18 19.24.48"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+{% flickr-img :photo-id 35688496706
+              :album-id 72157686061205075
+              :user forgottenroadsmx
+              :width 500 %}
+
 
 ## Winter Ponderings
 
@@ -102,12 +115,18 @@ washers (metal and rubber). The end result was ready in time for a 3-day, 2-nigh
 [Minnesota, North Dakota, and South Dakota](/blog/archives/2017-06/15-223122/dam-ride-2017.html):
 the 2017 Dam Ride. The time and thinking paid off:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/34884832524/in/album-72157682878950252/" title="2017-06-15 08.08.30"><img src="https://farm5.staticflickr.com/4289/34884832524_cbb5ddf526_b.jpg" width="1024" height="768" alt="2017-06-15 08.08.30"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+{% flickr-img :photo-id 34884832524
+              :album-id 72157682878950252
+              :user forgottenroadsmx
+              :width 1024 %}
 
 That looks a little bit messy only because it's all tied down, cinched-up,
 and wrapped around itself, ready for the ride. Here's another shot:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/34916598993/in/album-72157682878950252/" title="2017-06-15 08.10.01"><img src="https://farm5.staticflickr.com/4072/34916598993_f33fa96b78_c.jpg" width="600" height="800" alt="2017-06-15 08.10.01"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+{% flickr-img :photo-id 34916598993
+              :album-id 72157682878950252
+              :user forgottenroadsmx
+              :width 600 %}
 
 Even though the bags acting as panniers are different sizes, the one on the
 left held lighter supplies, so all three bags remained balanced on the fender (which also being strapped down, of course).
@@ -154,7 +173,10 @@ I've since purchased some steel I'm going to drill some holes in, do some primit
 Here's an inside-look at some of the bags (the deployment bag on the other
 side was full of googles, gloves, bungee cords/nets, etc.):
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35594814341/in/album-72157682878950252/" title="2017-06-16 05.31.33"><img src="https://farm5.staticflickr.com/4043/35594814341_eef3dbeff7_b.jpg" width="1024" height="768" alt="2017-06-16 05.31.33"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+{% flickr-img :photo-id 35594814341
+              :album-id 72157682878950252
+              :user forgottenroadsmx
+              :width 1024 %}
 
 The tool wrap is there at the bottom (separate 5-star blog post coming for
 that guy!), and most of everything else is a collection of weather-proof bags
@@ -180,7 +202,10 @@ ride. This is how I want to do it from now on.
 
 Last but not least, here's a look inside the first-aide kit:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/34916594153/in/album-72157682878950252/" title="2017-06-15 08.06.54"><img src="https://farm5.staticflickr.com/4010/34916594153_575f0a5cfd_b.jpg" width="768" height="1024" alt="2017-06-15 08.06.54"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+{% flickr-img :photo-id 34916594153
+              :album-id 72157682878950252
+              :user forgottenroadsmx
+              :width 768 %}
 
 Fortunately nothing there was needed, but the design is so fantastic for
 quick access to medical supplies that I never unpack it, using it like you
@@ -191,7 +216,10 @@ perfect for cruising around the campground. Pulling over into a campsite,
 setting up the hammock, unpacking for the night, accessing toiletries, etc.,
 with this bag arrangement was a dream:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35557196302/in/album-72157682878950252/" title="2017-06-15 17.44.16"><img src="https://farm5.staticflickr.com/4062/35557196302_675cb91eb1_b.jpg" width="1024" height="768" alt="2017-06-15 17.44.16"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+{% flickr-img :photo-id 35557196302
+              :album-id 72157682878950252
+              :user forgottenroadsmx
+              :width 1024 %}
 
 Such a different experience from last year's big ride!
 

@@ -1,12 +1,12 @@
 Subject: Beartooth Run, 2017
 Subtitle: Day 1
+Header-Image: img/beartooth-2017-day-1-hdr.jpg
 From: oubiwann
 Twitter: oubiwann
 Category: Trips
 Keywords: south dakota,camping,missouri river,dairy freezes,hammocks,tractors,murals
 Comments:
-Content-Type: md
-Header-Image: img/beartooth-2017-day-1-hdr.jpg
+Content-Type: selmer,md
 Public?: true
 
 We set off bright and early this morning on the first day of a two-day trip to get to
@@ -102,20 +102,35 @@ small town speckled around. Folks were especially friendly in
 [Woonsocket](https://en.wikipedia.org/wiki/Woonsocket,_South_Dakota) --
 definitely a great place to stop and get gas or grab a meal.
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36225695792/in/album-72157683927036270/" title="Untitled"><img src="https://farm5.staticflickr.com/4372/36225695792_5772cc0759_c.jpg" width="800" height="600" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36225695792
+              :album-id 72157683927036270
+              :user forgottenroadsmx
+              :width 800 %}
 
 Next up was [Faulkton](https://en.wikipedia.org/wiki/Faulkton,_South_Dakota):
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36348772356/in/album-72157683927036270/" title="Untitled"><img src="https://farm5.staticflickr.com/4342/36348772356_6557a33219_k.jpg" width="2048" height="1536" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>%%%
+{% flickr-img :photo-id 36348772356
+              :album-id 72157683927036270
+              :user forgottenroadsmx
+              :width 2048 %}
 
 We got there around lunchtime and had some great burgers (and a strawberry
 shake!). Big thumbs up on the food, and fun decor to boot:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35558121434/in/album-72157683927036270/" title="Untitled"><img src="https://farm5.staticflickr.com/4423/35558121434_794711fee1_c.jpg" width="600" height="800" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 35558121434
+              :album-id 72157683927036270
+              :user forgottenroadsmx
+              :width 600 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36393575835/in/album-72157683927036270/" title="Untitled"><img src="https://farm5.staticflickr.com/4377/36393575835_f6b27e5c5d_c.jpg" width="600" height="800" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36393575835
+              :album-id 72157683927036270
+              :user forgottenroadsmx
+              :width 600 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35746908801/in/album-72157683927036270/" title="iPhone Pics from Beartooth Run 2017"><img src="https://farm5.staticflickr.com/4208/35746908801_6bde22bfe4_c.jpg" width="600" height="800" alt="iPhone Pics from Beartooth Run 2017"></a>%%%
+{% flickr-img :photo-id 35746908801
+              :album-id 72157683927036270
+              :user forgottenroadsmx
+              :width 600 %}
 
 Just after Forest City, we crossed the
 [Missouri](https://en.wikipedia.org/wiki/Missouri_River).
@@ -146,7 +161,10 @@ on the distant horizon.
 By the time late afternoon arrived, we were ready to quit for the day, so we
 were quite relieved to pull into the Riverside Campground when we did.
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35709087512/in/album-72157683927036270/" title="iPhone Pics from Beartooth Run 2017"><img src="https://farm5.staticflickr.com/4257/35709087512_d4829cdd94_k.jpg" width="2048" height="1536" alt="iPhone Pics from Beartooth Run 2017"></a>%%%
+{% flickr-img :photo-id 35709087512
+              :album-id 72157683927036270
+              :user forgottenroadsmx
+              :width 2048 %}
 
 Still quite hot out, I ran out for ice, a cooler, and some beers and we had a
 delicious dinner of
@@ -155,6 +173,9 @@ It was too hot for the tent, so we
 strung up our hammocks and had a late siesta, hung out until dark, and then
 hauled our tired bones back in the sacks :-)
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35558111694/in/datetaken/" title="Untitled"><img src="https://farm5.staticflickr.com/4371/35558111694_8327b2ae4f_k.jpg" width="1536" height="2048" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 35558111694
+              :album-id 72157683927036270
+              :user forgottenroadsmx
+              :width 1536 %}
 
 &#x1F6E3;

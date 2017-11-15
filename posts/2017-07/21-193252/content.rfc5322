@@ -1,12 +1,12 @@
 Subject: FRMX Google Maps Custom Theme
 Subtitle: A New Look for Forgotten Roads' Ride Maps
+Header-Image: img/google-maps-theme-hdr.jpg
 From: oubiwann
 Twitter: oubiwann
 Category: Tools
 Keywords: maps,styles,south dakota,rapid city,black hills
 Comments:
-Content-Type: md
-Header-Image: img/google-maps-theme-hdr.jpg
+Content-Type: selmer,md
 Headlines?: false
 Public?: true
 
@@ -30,7 +30,10 @@ on for displaying ride data in our blog posts. Below I've included some example 
 
 Here's a view of the lower half of South Dakota:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35436334184/in/datetaken/" title="Screen Shot 2017-07-30 at 1.24.54pm"><img src="https://farm5.staticflickr.com/4294/35436334184_a5f000756c_b.jpg" width="1024" height="528" alt="Screen Shot 2017-07-30 at 1.24.54pm"></a>%%%
+{% flickr-img :photo-id 35436334184
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 1024 %}
 
 In both this view and the next you can see how we've diminished the visibility
 of US interstates to a mere hint, really focusing instead on the state routes
@@ -40,14 +43,23 @@ of US interstates to a mere hint, really focusing instead on the state routes
 
 This shows the Rapid City metro area, outlying ranch land, and some of the Black Hills:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36135619041/in/datetaken/" title="Screen Shot 2017-07-30 at 1.38.45pm"><img src="https://farm5.staticflickr.com/4299/36135619041_5a2de443dc_b.jpg" width="1024" height="527" alt="Screen Shot 2017-07-30 at 1.38.45pm"></a>%%%
+{% flickr-img :photo-id 36135619041
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 1024 %}
 
 ### City Level Zoom
 
 The next two show city views and two different zoom levels, emphasizing the labeling simplicity:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36102331332/in/datetaken/" title="Screen Shot 2017-07-30 at 1.39.27pm"><img src="https://farm5.staticflickr.com/4330/36102331332_d388af0e8f_b.jpg" width="1024" height="523" alt="Screen Shot 2017-07-30 at 1.39.27pm"></a>%%%
+{% flickr-img :photo-id 36102331332
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 1024 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36268951045/in/datetaken/" title="Screen Shot 2017-07-30 at 1.39.52pm"><img src="https://farm5.staticflickr.com/4306/36268951045_cb15081896_b.jpg" width="1024" height="527" alt="Screen Shot 2017-07-30 at 1.39.52pm"></a>%%%
+{% flickr-img :photo-id 36268951045
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 1024 %}
 
 &#x1F6E3;

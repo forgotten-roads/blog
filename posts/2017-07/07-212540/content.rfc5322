@@ -1,12 +1,12 @@
 Subject: Beartooth Run, 2017
 Subtitle: Day 2
+Header-Image: img/beartooth-2017-day-2-hdr.jpg
 From: oubiwann
 Twitter: oubiwann
 Category: Trips
 Keywords: south dakota,wyoming,montana,camping,mountains,hog,1967
 Comments:
-Content-Type: md
-Header-Image: img/beartooth-2017-day-2-hdr.jpg
+Content-Type: selmer,md
 Public?: true
 
 Today we were up around 4 am, took our time breakfasting, having tea and
@@ -14,7 +14,10 @@ campsite espresso, performing the morning rituals, and packing. Not too long
 after 6 am we were on our way, just beating the sun, getting a view of that
 orangey-pink morning beauty as we were getting back onto US-212:
 
-%%%<a data-flickr-embed="true" href="https://www.flickr.com/photos/forgottenroadsmx/35863074105/in/album-72157683434776573/" title="G0012997"><img src="https://farm5.staticflickr.com/4213/35863074105_bbb6c4631b.jpg" width="320" height="240" alt="G0012997"></a>%%%
+{% flickr-img :photo-id 35863074105
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 320 %}
 
 %%%<div class="panel panel-default route-summary">%%%
 %%%  <div class="panel-heading"><h3 class="panel-title">Day Summary</h3></div>%%%
@@ -85,7 +88,10 @@ Dinner @ [Red Lodge Pizza Co.](http://www.redlodgerestaurants.com/red-lodge-pizz
 
 In the day 2 album on Flickr, there's a picture the GoPro captured of me pointing at a sign:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35731320501/in/album-72157683434776573/" title="G0012999"><img src="https://farm5.staticflickr.com/4277/35731320501_a42679e036.jpg" width="500" height="375" alt="G0012999"></a>%%%
+{% flickr-img :photo-id 35731320501
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 500 %}
 
 I was delighted to see that this segment of 212 was called the "Warrior Trail"
 (even  though I was in the 101st during Desert Storm, one granddad in WWI, and
@@ -102,7 +108,10 @@ made by the South Dakota Transportation Commission unanimously in 2009,
 who resisted the U.S. policy of forced reservation life, wiping out Custer and
 decimating his unit.
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36220813982/in/album-72157683434776573/" title="G0013032"><img src="https://farm5.staticflickr.com/4331/36220813982_5440f2da8b_k.jpg" width="2048" height="1536" alt="G0013032"></a>%%%
+{% flickr-img :photo-id 36220813982
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 2048 %}
 
 As the sun continued to rise, its rays warmed the sage and the smell across
 the road was just amazing. One of the great pleasures of riding is smelling
@@ -113,7 +122,11 @@ this in the sun ... what an incredible morning!
 An hour or so later, the land started to change with less of the prairie and
 more hills and trees:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36344133976/in/album-72157683434776573/" title="G0013123"><img src="https://farm5.staticflickr.com/4433/36344133976_12a797083d_k.jpg" width="2048" height="1536" alt="G0013123"></a>%%%
+{% flickr-img :photo-id 36344133976
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 2048 %}
+
 
 ## Montana
 
@@ -124,15 +137,32 @@ of this iron horse ...
 
 In what felt like no time at all we started getting more altitude:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36344129866/in/album-72157683434776573/" title="G0023220"><img src="https://farm5.staticflickr.com/4364/36344129866_c2f14aba2c_k.jpg" width="2048" height="1536" alt="G0023220"></a>%%%
+{% flickr-img :photo-id 36344129866
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 2048 %}
 
 Soon after, though, things slowed to a crawl as I rode through gravel, sand,
 mud, and partly chewed up asphalt in a line behind others trying to make their
 way through this road construction. I'd seen a sign warning motorcyclists to
 find another route ... they didn't mean me, did they? :-)
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36220806662/in/album-72157683434776573/" title="G0023245"><img src="https://farm5.staticflickr.com/4430/36220806662_6a76fca1a0_q.jpg" width="150" height="150" alt="G0023245"></a> <a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36344127846/in/album-72157683434776573/" title="G0023251"><img src="https://farm5.staticflickr.com/4347/36344127846_3e8d151378_q.jpg" width="150" height="150" alt="G0023251"></a>%%%
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36344123656/in/album-72157683434776573/" title="G0023257"><img src="https://farm5.staticflickr.com/4352/36344123656_0f3343fdb3_q.jpg" width="150" height="150" alt="G0023257"></a> <a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36344122326/in/album-72157683434776573/" title="G0023258"><img src="https://farm5.staticflickr.com/4403/36344122326_8b71b25a2d_q.jpg" width="150" height="150" alt="G0023258"></a>%%%
+{% flickr-img :photo-id 36220806662
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 180 %}
+{% flickr-img :photo-id 36344127846
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 180 %}
+{% flickr-img :photo-id 36344123656
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 180 %}
+{% flickr-img :photo-id 36344122326
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 180 %}
 
 To be honest, I really enjoyed this. I'm constantly finding myself on unpaved,
 "exciting" roads with the Harley. In this particular case, I was met with a
@@ -173,18 +203,36 @@ wait. It's a great little town that feels like some of the smaller gems of the
 Rocky Mountains in Colorado. In fact, Rory said it reminder here of Boulder,
 CO in the 70s ...
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36220786442/in/album-72157683434776573/" title="G0053643"><img src="https://farm5.staticflickr.com/4415/36220786442_ec54a0b79c_k.jpg" width="2048" height="1536" alt="G0053643"></a>%%%
+{% flickr-img :photo-id 36220786442
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 2048 %}
 
 Then we had to find our campsite ...
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35992185180/in/album-72157683434776573/" title="G0053664"><img src="https://farm5.staticflickr.com/4402/35992185180_1c68d0e927_k.jpg" width="2048" height="1536" alt="G0053664"></a>%%%
+{% flickr-img :photo-id 35992185180
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 2048 %}
 
 which took us longer than I care to admit:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36220781752/in/album-72157683434776573/" title="G0053679"><img src="https://farm5.staticflickr.com/4406/36220781752_6e43731c56_q.jpg" width="150" height="150" alt="G0053679"></a>%%%
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35992183380/in/album-72157683434776573/" title="G0053683"><img src="https://farm5.staticflickr.com/4434/35992183380_6fdc20e9ab_q.jpg" width="150" height="150" alt="G0053683"></a>%%%
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36220779282/in/album-72157683434776573/" title="G0053687"><img src="https://farm5.staticflickr.com/4391/36220779282_395c5d9fc5_q.jpg" width="150" height="150" alt="G0053687"></a>%%%
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36220778242/in/album-72157683434776573/" title="G0053693"><img src="https://farm5.staticflickr.com/4388/36220778242_bd2792a94e_q.jpg" width="150" height="150" alt="G0053693"></a>%%%
+{% flickr-img :photo-id 36220781752
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 180 %}
+{% flickr-img :photo-id 35992183380
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 180 %}
+{% flickr-img :photo-id 36220779282
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 180 %}
+{% flickr-img :photo-id 36220778242
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 180 %}
 
 However, I had great fun bouncing around on the dirt roads -- something I got to do a
 bunch today, given that I made so many trips into town and back!
@@ -211,11 +259,20 @@ more great stories of this particular event were shared, causing much laughter
 around the room. I managed to snap a couple of pics of the photos that were
 passed around:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36021577290/in/album-72157683434776573/" title="iPhone Pics from Beartooth Run 2017"><img src="https://farm5.staticflickr.com/4424/36021577290_5947849cdb_k.jpg" width="2048" height="1389" alt="iPhone Pics from Beartooth Run 2017"></a>%%%
+{% flickr-img :photo-id 36021577290
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 2048 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35490469260/in/album-72157683434776573/" title="iPhone Pics from Beartooth Run 2017"><img src="https://farm5.staticflickr.com/4297/35490469260_a096cce29f_k.jpg" width="2048" height="2033" alt="iPhone Pics from Beartooth Run 2017"></a>%%%
+{% flickr-img :photo-id 35490469260
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 2048 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36417440705/in/album-72157683434776573/" title="iPhone Pics from Beartooth Run 2017"><img src="https://farm5.staticflickr.com/4342/36417440705_6b4b6b2a76_b.jpg" width="1022" height="1011" alt="iPhone Pics from Beartooth Run 2017"></a>%%%
+{% flickr-img :photo-id 36417440705
+              :album-id 72157683434776573
+              :user forgottenroadsmx
+              :width 2048 %}
 
 With that, I'll wrap up today's post. Everyone's feeling pretty excited about
 the run up to the pass tomorrow morning. Should be a lot of fun! &#x1F6E3;

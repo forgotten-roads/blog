@@ -1,12 +1,12 @@
 Subject: Styling Your Own Google Map
 Subtitle: The First Step in a DIY Adventure Map
+Header-Image: img/style-maps-hdr.jpg
 From: bobbermac
 Twitter: bobbermacean
 Category: Tools
 Keywords: maps,styles,technical,services
 Comments:
-Content-Type: md
-Header-Image: img/style-maps-hdr.jpg
+Content-Type: selmer,md
 Headlines?: false
 Public?: true
 
@@ -70,7 +70,10 @@ it's run by a volunteer effort and has a permissive open license
 (something that a lot of people care about). They've got a really nice theme
 that's easy on the eyes:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36104290042/in/datetaken/" title="Screen Shot 2017-07-30 at 3.06.49pm"><img src="https://farm5.staticflickr.com/4311/36104290042_dfeecf8de5_b.jpg" width="1024" height="636" alt="Screen Shot 2017-07-30 at 3.06.49pm"></a>%%%
+{% flickr-img :photo-id 36104290042
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 1024 %}
 
 What we *didn't* know about, however, was
 [OpenRouteService](https://www.openrouteservice.org/)
@@ -89,15 +92,25 @@ the ability to create a greater number of way points than with Google Maps
 their map themes are beautiful. Here's four of them looking at the Rapid City
 metro area:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35438453884/in/datetaken/" title="montage-openmapservice"><img src="https://farm5.staticflickr.com/4314/35438453884_3d4df49e51_b.jpg" width="1024" height="633" alt="montage-openmapservice"></a>%%%
+{% flickr-img :photo-id 35438453884
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 1024 %}
 
 That hardly does them justice, though -- you should visit their site.
 
 Here are the two we like best for looking at streets:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35438451804/in/datetaken/" title="Screen Shot 2017-07-30 at 3.13.17pm"><img src="https://farm5.staticflickr.com/4302/35438451804_9c485a927c_b.jpg" width="1024" height="634" alt="Screen Shot 2017-07-30 at 3.13.17pm"></a>%%%
+{% flickr-img :photo-id 35438451804
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 1024 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36229769776/in/datetaken/" title="Screen Shot 2017-07-30 at 3.13.31pm"><img src="https://farm5.staticflickr.com/4312/36229769776_10e7011092_b.jpg" width="1024" height="633" alt="Screen Shot 2017-07-30 at 3.13.31pm"></a>%%%
+{% flickr-img :photo-id 36229769776
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 1024 %}
+
 
 ### Styling Tools for Google Maps
 

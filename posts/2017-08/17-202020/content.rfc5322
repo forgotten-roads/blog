@@ -1,12 +1,12 @@
 Subject: Avon Tyres: Safety Mileage MKII
 Subtitle: A Classic Tyre for a Vintage Look
+Header-Image: img/avon-tyres-hdr.jpg
 From: oubiwann
 Twitter: oubiwann
 Category: Parts
 Keywords: hardware,tires,tyres,reviews,bison,buffalo,dirt roads
 Comments:
-Content-Type: md
-Header-Image: img/avon-tyres-hdr.jpg
+Content-Type: selmer,md
 Public?: true
 
 The very first ride I took on the Softail Slim S, I ended up on a dirt road.
@@ -37,6 +37,7 @@ through thick, viscous (and beautifully red) sand, I got the message: this is
 a pattern that isn't going away, and I'm going to have to do something about
 what I'm riding on.
 
+
 ## The Search
 
 When I returned to Sioux Falls after that trip, I started doing research into
@@ -64,6 +65,7 @@ After getting acclimated, I was up to my old tricks: dirt roads galore. And,
 man -- what a difference with the Avon on the rear! It really opened up the
 possibilities for where I could go, what I could explore.
 
+
 ## Front and Rear
 
 As I [recently tweeted](https://twitter.com/oubiwann/status/893342143728816128),
@@ -73,6 +75,7 @@ MkII on the front as well.
 
 %%%<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Oh, but first: new tyres! (taking it back to the 30s w/Avon Firestone clones)<br><br>Now I&#39;m ready for another 15,000 miles of gravel and dirt :-&gt; <a href="https://t.co/BnTYb1mM6V">pic.twitter.com/BnTYb1mM6V</a></p>&mdash; Duncan McGreggor (@oubiwann) <a href="https://twitter.com/oubiwann/status/893342143728816128">August 4, 2017</a></blockquote>%%%
 
+
 ## The Return of the Buffalo
 
 I had intended to immediately go for a ride on the same dirt roads I did
@@ -80,11 +83,17 @@ during my first ride (and try to find the buffalo again). Work got in the way,
 though, and it wasn't until today that I got a chance to test out to Avon
 MkIIs on the dirt:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35826789673/in/album-72157685188479714/" title="Untitled"><img src="https://farm5.staticflickr.com/4385/35826789673_4a94602de9_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 35826789673
+              :album-id 72157685188479714
+              :user forgottenroadsmx
+              :width 2048 %}
 
 Here's a shot of the front tread:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36497888961/in/album-72157685188479714/" title="Untitled"><img src="https://farm5.staticflickr.com/4335/36497888961_3c94d0188b_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36497888961
+              :album-id 72157685188479714
+              :user forgottenroadsmx
+              :width 2048 %}
 
 (A funny bit of luck: today they were grading two of the dirt roads I was
 riding on ... pretty much the best unpaved riding you could ever hope for,
@@ -94,7 +103,10 @@ soil. That added a little spice to the ride.)
 
 Same tyre on the rear, but the look is quite different:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36239323060/in/album-72157685188479714/" title="Untitled"><img src="https://farm5.staticflickr.com/4402/36239323060_1dcc1dc86a_k.jpg" width="2048" height="1536" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 36239323060
+              :album-id 72157685188479714
+              :user forgottenroadsmx
+              :width 2048 %}
 
 The high-contrast light makes it tough to see the tread in that shot. Even
 harder to see are buffalo in this picture :-) I was quite chuffed to see them
@@ -106,7 +118,11 @@ to the right, near the horizon.
 Here's the same picture again, with the shadow contrast reduced so you can see
 the tread:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36638282735/in/album-72157687669968956/" title="36239323060_b756a51a9d_o-old-background"><img src="https://farm5.staticflickr.com/4343/36638282735_9b288d60ec_k.jpg" width="2048" height="1280" alt="36239323060_b756a51a9d_o-old-background"></a>%%%
+{% flickr-img :photo-id 36638282735
+              :album-id 72157687669968956
+              :user forgottenroadsmx
+              :width 2048 %}
+
 
 ## Five Stars
 
@@ -126,10 +142,5 @@ It goes without saying you can get them on Amazon, too (see the banner link belo
 
 If you get these for your bike, let me know how you like them! &#x1F6E3;
 
+
 ## The Avon on Amazon
-
-
-
-
-
-

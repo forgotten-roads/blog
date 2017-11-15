@@ -1,5 +1,6 @@
 Subject: FRMX Background Images
 Subtitle: Some Imagery for Your Desktop / Gmail Theme
+Header-Image: img/roadtrip5-medium.jpg
 Header-Image:
 Excerpt:
 From: dechen
@@ -7,8 +8,7 @@ Twitter: ryugichen
 Category: Design
 Keywords: imagery,backgrounds,branding,gimp,photography,fonts,dirt roads
 Comments:
-Content-Type: md
-Header-Image: img/roadtrip5-medium.jpg
+Content-Type: selmer,md
 Public?: true
 
 In working with oubiwann on the
@@ -22,7 +22,10 @@ One of the tools caused some coloration change with the lessening of the image
 contrast, and while this was unexpected, the results were quite appealing! You
 can see this in the last image of that post:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36638282735/in/album-72157687669968956/" title="36239323060_b756a51a9d_o-old-background"><img src="https://farm5.staticflickr.com/4343/36638282735_9b288d60ec_k.jpg" width="2048" height="1280" alt="36239323060_b756a51a9d_o-old-background"></a>%%%
+{% flickr-img :photo-id 36638282735
+              :album-id 72157687669968956
+              :user forgottenroadsmx
+              :width 2048 %}
 
 The discoloration is similar in some ways to what you see in old photos from
 the 1970s. There's actually a hint of Technicolor in there, too (mostly due to
@@ -46,9 +49,15 @@ Without further ado, I present the background images -- one a modification of wh
 you saw above, and the other a "dream-mode" rendering of the image (the same
 effect we use for most of our blog header images).
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36659469545/in/album-72157687669968956/" title="36239323060_b756a51a9d_o-old-background-with-logo"><img src="https://farm5.staticflickr.com/4368/36659469545_7060ea6507_k.jpg" width="2048" height="1280" alt="36239323060_b756a51a9d_o-old-background-with-logo"></a>%%%
+{% flickr-img :photo-id 36659469545
+              :album-id 72157687669968956
+              :user forgottenroadsmx
+              :width 2048 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/36521088011/in/album-72157687669968956/" title="36239323060_b756a51a9d_o-dream-background-with-logo"><img src="https://farm5.staticflickr.com/4414/36521088011_c2931234a7_k.jpg" width="2048" height="1280" alt="36239323060_b756a51a9d_o-dream-background-with-logo"></a>%%%
+{% flickr-img :photo-id 36521088011
+              :album-id 72157687669968956
+              :user forgottenroadsmx
+              :width 2048 %}
 
 In both cases, the images are linked to Flickr where you can download
 hi-resolution versions of the background images (where it's easier to play

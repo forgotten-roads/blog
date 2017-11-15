@@ -1,5 +1,6 @@
 Subject: Themes, Categories, and Tags
 Subtitle: A guide for our types of posts
+Header-Image: img/roadtrip5-medium.jpg
 Excerpt:
 From: oubiwann
 Twitter: oubiwann
@@ -7,7 +8,6 @@ Category: Design
 Keywords: updates,site
 Comments:
 Content-Type: md
-Header-Image: img/roadtrip5-medium.jpg
 Headlines?: false
 Public?: true
 

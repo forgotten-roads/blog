@@ -7,7 +7,7 @@ Twitter: oubiwann
 Category: News
 Keywords: moves,minnesota,south dakota,sioux falls,packing,garage,house
 Comments:
-Content-Type: md
+Content-Type: selmer,md
 Public?: true
 
 A few weeks ago, we posted an update on Twitter showing
@@ -23,15 +23,27 @@ don't <i>really</i> know how old Obi-wan is. Probably 10s of 1000s of years
 old. So it's impressive that he could help out with the packing at all. Even
 more, that he continues to do so:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/37788179682/in/datetaken/" title="Untitled"><img src="https://farm5.staticflickr.com/4509/37788179682_cd43defb51_n.jpg" width="370" alt="Untitled"></a>%%%
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/37561807920/in/datetaken/" title="Untitled"><img src="https://farm5.staticflickr.com/4495/37561807920_c941345527_n.jpg" width="370" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 37788179682
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 370 %}
+{% flickr-img :photo-id 37561807920
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 370 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/37771464236/in/datetaken/" title="Untitled"><img src="https://farm5.staticflickr.com/4512/37771464236_3459280a0a_b.jpg" width="1024" height="768" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 37771464236
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 1024 %}
 
 Though, truth be told, he's falling a bit behind. Rory's got him beat pretty
 hard (she's done 99% of the packing). No house shots, but here's one of our
 Pick-Up Points for the movers :-)
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/37151389703/in/datetaken/" title="Untitled"><img src="https://farm5.staticflickr.com/4472/37151389703_dc0664e1c4_b.jpg" width="1024" height="768" alt="Untitled"></a>%%%
+{% flickr-img :photo-id 37151389703
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 1024 %}
 
 &#x1F6E3;

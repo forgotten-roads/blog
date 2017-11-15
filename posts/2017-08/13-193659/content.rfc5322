@@ -1,12 +1,12 @@
 Subject: It's a Saddle, Not a Couch
 Subtitle: Riding with a Bobber Seat
+Header-Image: img/saddle-not-couch-hdr.jpg
 From: oubiwann
 Twitter: oubiwann
 Category: Parts
 Keywords: harleys,seats,bobber,bobjob,hardware,leather,treatment,conditioners,dyes,reviews
 Comments:
-Content-Type: md
-Header-Image: img/saddle-not-couch-hdr.jpg
+Content-Type: selmer,md
 Public?: true
 
 The question I get asked more than any other about my bike doesn't have to do
@@ -14,6 +14,7 @@ with the paint job, the 110 cu (1800+ cc) motor, or the Firestone clone tyres
 (Avon's). Instead, the most common point of interest relates to the seat in
 some way, anything from "is that comfortable?" or "how do you do that?" to
 "fuuuuuck, no ..."
+
 
 ## The Ride
 
@@ -29,6 +30,7 @@ really need a break. I'll take 20-30 minutes when I gas up to stretch out.
 Sometimes, on a bad ride (no scenery change, drowsiness, general low-energy)
 it takes me a few moments to throw a leg over and get out of the saddle.
 
+
 ## The Saddle
 
 Here's the thing, though -- as the title of this post says: this is not
@@ -42,11 +44,21 @@ know exactly what I'm talking about. If you loved that, you'll love this seat
 
 More thoughts below, but here are more pics:
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/34916417473/in/datetaken/" title="2017-06-27 19.08.00"><img src="https://farm5.staticflickr.com/4215/34916417473_0be96d8682_k.jpg" width="2048" height="1536" alt="2017-06-27 19.08.00"></a>%%%
+{% flickr-img :photo-id 34916417473
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 2048 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35338978380/in/datetaken/" title="2017-06-27 19.08.20"><img src="https://farm5.staticflickr.com/4053/35338978380_323fc80d9f_k.jpg" width="2048" height="1536" alt="2017-06-27 19.08.20"></a>%%%
+{% flickr-img :photo-id 35338978380
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 2048 %}
 
-%%%<a data-flickr-embed="true"  href="https://www.flickr.com/photos/forgottenroadsmx/35686161756/in/datetaken/" title="2017-06-27 19.08.48"><img src="https://farm5.staticflickr.com/4008/35686161756_760f5ef822_k.jpg" width="2048" height="1536" alt="2017-06-27 19.08.48"></a>%%%
+{% flickr-img :photo-id 35686161756
+              :album-id 72157687317819061
+              :user forgottenroadsmx
+              :width 2048 %}
+
 
 ## A Philosophy of Experience
 
@@ -65,6 +77,7 @@ types of land and in all sorts of weather (including light snowfall). The
 worst dirt roads I've ridden in any vehicle, I've tackled on the bobber seat,
 not only with no regrets, but with lots of good times and a few good stories
 :-)
+
 
 ## Customizing the Seat
 
@@ -106,5 +119,6 @@ coat metallic aged bronze spray paint: can't get more budget than that.
 Surprisingly, after 4000 miles of riding with that coat, there's only a few
 dings in the paint, and I only noticed that this week after doing a very close
 inspection. &#x1F6E3;
+
 
 ## Preferred Leather Products
