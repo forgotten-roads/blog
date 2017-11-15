@@ -1,7 +1,7 @@
 (ns mx.roads.forgotten.blog.reader
   (:require [clojure.data.xml :as xml]
             [clojusc.twig :refer [pprint]]
-            [dragon.config :as config]
+            [dragon.config.core :as config]
             [taoensso.timbre :as log]))
 
 (defn atom-entry

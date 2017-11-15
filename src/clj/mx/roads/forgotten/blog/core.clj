@@ -2,7 +2,7 @@
   (:require [clojusc.twig :as logger]
             [dragon.blog.core :as blog]
             [dragon.blog.generator :as gen]
-            [dragon.config :as config]
+            [dragon.config.core :as config]
             [dragon.util :as util]
             [mx.roads.forgotten.blog.email.content :as email-content]
             [mx.roads.forgotten.blog.routes :refer [gen-routes routes]]

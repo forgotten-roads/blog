@@ -9,7 +9,7 @@
      routes should be generated dynamically as URI path / slurp call pairs."
   (:require [clojusc.twig :refer [pprint]]
             [dragon.blog.core :as blog]
-            [dragon.config :as config]
+            [dragon.config.core :as config]
             [dragon.event.system.core :as event]
             [dragon.event.tag :as tag]
             [mx.roads.forgotten.blog.maps :as maps]

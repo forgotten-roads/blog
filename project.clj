@@ -60,7 +60,17 @@
       :log-level :info
       :log-nss [mx.roads]}
     :workflow {
-     :storage :memory}}
+     :storage :db}
+    :apis {
+      :flickr {
+        :access "~/.flickr/frmx/access.key"}
+      :twitter {
+        :app-consumer {
+          :key "~/.twitter/frmx/app-consumer.key"
+          :secret "~/.twitter/frmx/app-consumer.secret"}
+        :user-access {
+          :token "~/.twitter/frmx/user-access.token"
+          :secret "~/.twitter/frmx/user-access.secret"}}}}
   :profiles {
     :ubercompile {:aot :all}
     :custom-repl {
@@ -139,6 +149,7 @@
     "dev"
       ^{:doc (str "Generate blog content and run local web service")}
       ["run" "-m" "mx.roads.forgotten.blog.core/log+generate+web"]
+    "ubercompile" ["with-profile" "+ubercompile,+test,+cli" "compile"]
     "build"
       ^{:doc (str "Perform build tasks for CI/CD & releases\n\n"
                  "Additional aliases:")}

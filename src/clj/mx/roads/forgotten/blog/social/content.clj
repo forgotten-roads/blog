@@ -4,7 +4,7 @@
             [clojusc.twig :refer [pprint]]
             [dragon.blog.content.core :as content]
             [dragon.blog.core :as blog]
-            [dragon.web.content :as template]
+            [dragon.selmer.core :refer [render]]
             [mx.roads.forgotten.blog.web.content.data :as data]
             [taoensso.timbre :as log]
             [trifl.fs :as fs]))
@@ -38,7 +38,7 @@
 
 (defn render-template
   [system post-data]
-  (template/render
+  (render
     (str "templates/social/" new-post-file)
     (data/post system [] post-data)))
 

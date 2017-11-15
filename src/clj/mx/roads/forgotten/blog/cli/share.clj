@@ -1,7 +1,7 @@
 (ns mx.roads.forgotten.blog.cli.share
   (:require [clojure.pprint :refer [pprint]]
             [clojusc.twig :as logger]
-            [dragon.config :as config]
+            [dragon.config.core :as config]
             [dragon.util :as util]
             [mx.roads.forgotten.blog.email.delivery :as email-delivery]
             [mx.roads.forgotten.blog.social.twitter :as twitter]
@@ -43,7 +43,7 @@
       (log/debug "Got args:" args)
       (case cmd
         :subscribers (email-delivery/send-new-post-message post-file)
-        :twitter (twitter/send-new-post-message post-file)
+        :twitter (twitter/send-new-post-message system post-file)
         ; :google+ ()
         :all (do (email-delivery/send-new-post-message post-file)
                  (twitter/send-new-post-message post-file))

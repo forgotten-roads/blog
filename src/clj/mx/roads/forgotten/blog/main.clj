@@ -1,7 +1,7 @@
 (ns mx.roads.forgotten.blog.main
   (:require [clojusc.twig :as logger]
             [dragon.components.system :as components]
-            [dragon.config :as config]
+            [dragon.config.core :as config]
             [dragon.main :as dragon]
             [mx.roads.forgotten.blog.cli.core :as cli]
             [mx.roads.forgotten.blog.core :as core]

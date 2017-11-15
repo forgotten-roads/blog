@@ -1,5 +1,5 @@
 (ns mx.roads.forgotten.blog.cli.core
-  (:require [dragon.config :as config]
+  (:require [dragon.config.core :as config]
             [dragon.event.system.core :as event]
             [dragon.event.tag :as tag]
             [mx.roads.forgotten.blog.cli.new :as new]

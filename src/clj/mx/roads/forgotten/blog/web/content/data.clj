@@ -4,7 +4,7 @@
             [dragon.blog.content.block :as block]
             [dragon.blog.core :as blog]
             [dragon.blog.tags :as blog-tags]
-            [dragon.config :as config]
+            [dragon.config.core :as config]
             [markdown.core :as markdown]
             [taoensso.timbre :as log]))
 

@@ -4,6 +4,7 @@
   This namespace is particularly useful when doing active development on the
   FRMX Blog application."
   (:require
+    [cheshire.core :as json]
     [clojure.edn :as edn]
     [clojure.java.io :as io]
     [clojure.java.shell :as shell]
@@ -20,8 +21,7 @@
     [dragon.blog.content.rfc5322 :as rfc5322]
     [dragon.blog.core :as blog]
     [dragon.blog.generator :as gen]
-    [dragon.blog.generator :as generator]
-    [dragon.blog.post :as post]
+    [dragon.blog.post.core :as post]
     [dragon.cli.core :as dragon-cli]
     [dragon.components.core :as component-api]
     [dragon.components.system :as components]
@@ -29,8 +29,8 @@
     [dragon.data.sources.core :as data-source]
     [dragon.data.sources.impl.redis :as redis-db]
     [dragon.main :as dragon-main]
+    [dragon.selmer.tags.flickr :as flickr]
     [dragon.util :as dragon-util]
-    [dragon.web.core :as web]
     [ltest.core :as ltest]
     [markdown.core :as md]
     [mx.roads.forgotten.blog.cli.core :as cli]
@@ -55,16 +55,7 @@
     [trifl.fs :as fs]
     [trifl.java :refer [show-methods]]))
 
-(logger/set-level! ['mx.roads.forgotten.blog 'dragon] :info)
 
-(defn show-lines-with-error
-  "Process posts and show the lines of text that threw exceptions."
-  []
-  (->> (blog/get-posts)
-       (map #(->> %
-                 (post/add-post-data)
-                 :text))
-       (pprint)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   State & Transition Vars   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -83,7 +74,8 @@
 ;;;   Initial Setup & Utility Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(logger/set-level! '[dragon clojang] :debug)
+(selmer/cache-off!)
+(logger/set-level! ['mx.roads.forgotten.blog 'dragon] :info)
 
 (defn redis
   [& args]
@@ -176,6 +168,25 @@
   (stop)
   (deinit)
   (refresh :after 'dragon.dev/run))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Utility Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn show-lines-with-error
+  "Process posts and show the lines of text that threw exceptions."
+  [system]
+  (let [processor (post/new-processor system)]
+    (->> processor
+         (blog/get-posts)
+         (map #(->> %
+                   (post/get-data processor)
+                   :text))
+         (pprint))))
+
+(defn generate
+  []
+  (core/generate system))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Aliases   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
