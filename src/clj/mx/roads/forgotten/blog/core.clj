@@ -23,3 +23,11 @@
     (gen/run system generated-routes)
     (email-content/gen system posts)
     (social-content/gen system posts)))
+
+;; XXX force-regenerate doesn't seem to be working yet ... however, this works:
+;;     `(data-source/set-posts-checksums (get-in system [:db :querier]) "")`
+;;     which is odd, since that's what force-regenerate ends up calling ...
+(defn force-regenerate
+  [system]
+  (blog/reset-content-checksums system)
+  (generate system))
