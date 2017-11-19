@@ -1,0 +1,77 @@
+Subject: Autumn Colours
+Subtitle: A wonderful farewell from the trees of Sioux Falls
+Header-Image: img/fall-2017-hdr.jpg
+Excerpt:
+From: oubiwann
+Twitter: oubiwann
+Category: Seasons
+Keywords: photos,autumn,fall,winter,south dakota,sioux falls,veterans park,terrace park,japanese garden
+Comments:
+Content-Type: selmer,md
+Public?: true
+
+Winter is rapidly approaching, and having had three light snows already, is
+arguably here. We find it a lovely season: days to spend on indoor
+projects, movie-watching, and snuggling under warm blankets. That being said,
+the special time between harvest and when the last bit of colour is falling
+from the trees has got to be my favourite time of year -- not only the beauty
+in nature's sights and smells, but also in the fantastic riding weather :-)
+
+Autumn this year was particularly poignant for us, since we were leaving the
+Western frontier and moving closer to the Mississippi (though still to its
+West!). We had really come to love Sioux Falls much more than we'd ever
+expected, and as a special gift, we got to witness the best Fall colours we've
+seen in many years. In fact, I couldn't choose which image from the set to use
+as the cover photo for this blog post ... so five different ones got combined!
+
+We've uploaded the best ones of the season to
+[this Flickr album](https://www.flickr.com/photos/forgottenroadsmx/albums/72157688134044624/with/37763599451/),
+but will highlight some of more special ones below, since they really do bear
+repeating. All of the pictures in the album were taken near the neighborhood
+where we spent our two years in Sioux Falls: from the Johnson's yard next door,
+to Terrace Park; from the Japanese Garden down the street to the stunning
+Veterans' Park across the lake.
+
+Thank you, Sioux Falls!
+
+{% flickr-img :photo-id 37754537546
+              :album-id 72157688134044624
+              :user forgottenroadsmx
+              :width 1024 %}
+
+{% flickr-img :photo-id 37802746141
+              :album-id 72157688134044624
+              :user forgottenroadsmx
+              :width 1024 %}
+
+{% flickr-img :photo-id 37132389803
+              :album-id 72157688134044624
+              :user forgottenroadsmx
+              :width 1024 %}
+
+{% flickr-img :photo-id 37093356613
+              :album-id 72157688134044624
+              :user forgottenroadsmx
+              :width 1024 %}
+
+{% flickr-img :photo-id 37731572452
+              :album-id 72157688134044624
+              :user forgottenroadsmx
+              :width 1024 %}
+
+{% flickr-img :photo-id 37763599451
+              :album-id 72157688134044624
+              :user forgottenroadsmx
+              :width 1024 %}
+
+{% flickr-img :photo-id 37715216696
+              :album-id 72157688134044624
+              :user forgottenroadsmx
+              :width 1024 %}
+
+{% flickr-img :photo-id 37715227456
+              :album-id 72157688134044624
+              :user forgottenroadsmx
+              :width 1024 %}
+
+&#x1F6E3;
