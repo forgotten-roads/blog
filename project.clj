@@ -34,7 +34,7 @@
     [pandect "0.6.1"]
     ;; XXX END
     [com.stuartsierra/component "0.3.2"]
-    [dragon "0.4.0-SNAPSHOT"]
+    [dragon "0.5.0-SNAPSHOT"]
     [markdown-clj "1.0.1"]
     [org.clojure/clojure "1.8.0"]
     [org.clojure/data.generators "0.1.2"]
