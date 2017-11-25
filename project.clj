@@ -23,26 +23,11 @@
     [org.clojure/clojure]
     [org.clojure/clojurescript]]
   :dependencies [
-    [clojusc/rfc5322 "0.4.0"]
-    [clojusc/trifl "0.2.0"]
-    [clojusc/twig "0.3.2"]
-    ;; XXX Remove the following once the next dragon snapshot is pushed to Clojars
-    [com.datomic/clj-client "0.8.606"]
-    [com.taoensso/carmine "2.16.0" :exclusions [
-      com.taoensso/encore
-      com.taoensso/truss]]
-    [pandect "0.6.1"]
-    ;; XXX END
-    [com.stuartsierra/component "0.3.2"]
     [dragon "0.5.0-SNAPSHOT"]
-    [markdown-clj "1.0.1"]
     [org.clojure/clojure "1.8.0"]
     [org.clojure/data.generators "0.1.2"]
     [org.clojure/data.xml "0.0.8"]
-    [org.clojure/math.combinatorics "0.1.4"]
-    [ring/ring-core "1.6.2"]
-    [selmer "1.11.1"]
-    [stasis "2.3.0"]]
+    [org.clojure/math.combinatorics "0.1.4"]]
   :source-paths ["src/clj"]
   :profiles {
     :dragon {
