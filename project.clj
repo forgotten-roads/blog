@@ -1,9 +1,8 @@
 (defn get-banner
   []
-  ; (str
-  ;   (slurp "resources/text/repl-banner.txt")
-  ;   (slurp "resources/text/repl-loading.txt")))
-  "")
+  (str
+    (slurp "resources/text/repl-banner.txt")
+    (slurp "resources/text/repl-loading.txt")))
 
 (defn get-prompt
   [ns]
@@ -45,33 +44,33 @@
     [selmer "1.11.1"]
     [stasis "2.3.0"]]
   :source-paths ["src/clj"]
-  :dragon {
-    :domain "forgotten.roads.mx/blog"
-    :name "Forgotten Roads MX"
-    :description ~(str "Articles, Reviews, & Explorations for the Motorcycle "
-                       "Excursionist & Non-traditional Adventurer")
-    :port 5096
-    :output-dir "."
-    :base-path "/blog"
-    :posts-path "/blog/archives"
-    :posts-path-src "./posts"
-    :feed-count 20
-    :cli {
-      :log-level :info
-      :log-nss [mx.roads]}
-    :workflow {
-     :storage :db}
-    :apis {
-      :flickr {
-        :access "~/.flickr/frmx/access.key"}
-      :twitter {
-        :app-consumer {
-          :key "~/.twitter/frmx/app-consumer.key"
-          :secret "~/.twitter/frmx/app-consumer.secret"}
-        :user-access {
-          :token "~/.twitter/frmx/user-access.token"
-          :secret "~/.twitter/frmx/user-access.secret"}}}}
   :profiles {
+    :dragon {
+      :domain "forgotten.roads.mx/blog"
+      :name "Forgotten Roads MX"
+      :description ~(str "Articles, Reviews, & Explorations for the Motorcycle "
+                         "Excursionist & Non-traditional Adventurer")
+      :port 5096
+      :output-dir "."
+      :base-path "/blog"
+      :posts-path "/blog/archives"
+      :posts-path-src "./posts"
+      :feed-count 20
+      :cli {
+        :log-level :info
+        :log-nss [mx.roads]}
+      :workflow {
+       :storage :db}
+      :apis {
+        :flickr {
+          :access "~/.flickr/frmx/access.key"}
+        :twitter {
+          :app-consumer {
+            :key "~/.twitter/frmx/app-consumer.key"
+            :secret "~/.twitter/frmx/app-consumer.secret"}
+          :user-access {
+            :token "~/.twitter/frmx/user-access.token"
+            :secret "~/.twitter/frmx/user-access.secret"}}}}
     :ubercompile {:aot :all}
     :custom-repl {
       :repl-options {
