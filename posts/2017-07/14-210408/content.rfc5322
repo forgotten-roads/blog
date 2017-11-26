@@ -1,0 +1,149 @@
+Subject: Beartooth Run, 2017
+Subtitle: Day 4
+Header-Image: img/beartooth-2017-day-4-hdr.jpg
+From: oubiwann
+Twitter: oubiwann
+Category: Trips
+Keywords: wyoming,montana,mountains,reservations
+Comments:
+Content-Type: selmer,md
+Public?: true
+
+Today was an interesting mix of a ride: some really great roads (some of which
+will be getting their own, dedicated posts at a later date!), some
+mind-nunbing & sleep-inducing stretches, 100+ F temperatures, and a shorter
+ride than we have been doing, yet also more tired at the end.
+
+{% panel :class "route-summary" %}
+   {% panel-table :title "Day Summary" %}
+      {% panel-row :title "Start:" %}
+        [Belle Fourche, SD](https://en.wikipedia.org/wiki/Belle_Fourche,_South_Dakota) 6:19 am CDT
+      {% end-panel-row %}
+      {% panel-row :title "End:" %}
+        [Red Lodge, MT](https://en.wikipedia.org/wiki/Red_Lodge,_Montana) 4:39 pm CDT
+      {% end-panel-row %}
+      {% panel-row :title "Distance:" %}
+        336 mi (541 km)
+      {% end-panel-row %}
+      {% panel-row :title "Food:" %}
+        Breakfast @ Basin Campground, Red Lodge, MT
+
+        Lunch @ [Dairyland Ice Cream](https://goo.gl/DjLH28) in Thermopolis, WY
+
+        Dinner @ [Red Lodge Pizza Co.](http://www.redlodgerestaurants.com/red-lodge-pizza-co/) in Red Lodge, MT
+      {% end-panel-row %}
+      {% panel-row :title "Slept:" %}
+        [Holiday Inn Casper, McMurry Park](https://goo.gl/Ec8wnR)
+      {% end-panel-row %}
+      {% panel-row :title "Photo Album:" %}
+        [Beartooth Run 2017 - Day 4](https://www.flickr.com/photos/forgottenroadsmx/albums/72157687218262045/) (Flickr)
+      {% end-panel-row %}
+   {% end-panel-table %}
+   {% panel-img :title "Route Map"
+                :src "https://c1.staticflickr.com/5/4345/35557598304_f8f9e540ff_k.jpg" %}
+   {% panel-body :title "Beartooth Run, 2017 Series Links" %}
+     * [Prologue](/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html)
+     * [Day 1](/blog/archives/2017-07/06-193659/beartooth-run-2017.html)
+     * [Day 2](/blog/archives/2017-07/07-212540/beartooth-run-2017.html)
+     * [Day 3](/blog/archives/2017-07/08-220414/beartooth-run-2017.html)
+     * [Red Lodge, MT](/blog/archives/2017-07/13-154024/beartooth-run-2017.html)
+     * [Day 4](/blog/archives/2017-07/14-210408/beartooth-run-2017.html)
+     * Day 5
+     * Day 6
+   {% end-panel-body %}
+{% end-panel %}
+
+
+## Leaving the Campsite ... and Red Lodge
+
+{% flickr-img :photo-id 35929256066
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 240 %}
+{% flickr-img :photo-id 35581610980
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 240 %}
+{% flickr-img :photo-id 37912582964
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 240 %}
+
+
+{% flickr-img :photo-id 37912582964
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 370 %}
+{% flickr-img :photo-id 36193774324
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 370 %}
+
+
+{% flickr-img :photo-id 36473774594
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 2048 %}
+
+{% flickr-img :photo-id 37311631875
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 2048 %}
+
+After Belfry, MT the road really opened up, and while there weren't as many
+great curves, the morning views of the arroyos, Beartooth foothills and the
+valley in the distance were constantly stunning.
+
+{% flickr-img :photo-id 36913807360
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 180 %}
+{% flickr-img :photo-id 36497893163
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 180 %}
+{% flickr-img :photo-id 37168780401
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 180 %}
+{% flickr-img :photo-id 36914199730
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 180 %}
+
+It was right around this point that we passed a turn-off to Chief Joseph
+Scenic Byway, and it took every ounce of will power I had not to make a right
+hand turn ...
+
+{% flickr-img :photo-id 26854025429
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 240 %}
+{% flickr-img :photo-id 36498265173
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 240 %}
+{% flickr-img :photo-id 36498273103
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 240 %}
+
+As you can see, though, there were modest rewards for continuing on the planned
+route (and getting home sooner!)
+
+
+## XXX
+
+Cody, Greybull "The Museum of Flight And Aerial Firefighters", Thermopolis
+
+
+## Wind River Reservation
+
+Highway 20, Boysen State Park
+
+
+## Casper
+
+TBD
+
+&#x1F6E3;
