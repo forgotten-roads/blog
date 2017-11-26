@@ -19,70 +19,47 @@ orangey-pink morning beauty as we were getting back onto US-212:
               :user forgottenroadsmx
               :width 320 %}
 
-%%%<div class="panel panel-default route-summary">%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Day Summary</h3></div>%%%
-%%%  <div class="panel-body">%%%
-%%%    <form class="form-horizontal">%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-start" class="col-sm-3 control-label">Start:</label>%%%
-%%%        <div id="summary-start" class="col-sm-9">%%%
-[Belle Fourche, SD](https://en.wikipedia.org/wiki/Belle_Fourche,_South_Dakota)
-%%% 6:19 am CDT</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-end" class="col-sm-3 control-label">End:</label>%%%
-%%%        <div id="summary-end" class="col-sm-9">%%%
-[Red Lodge, MT](https://en.wikipedia.org/wiki/Red_Lodge,_Montana)
-%%% 4:39 pm CDT</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-miles" class="col-sm-3 control-label">Distance:</label>%%%
-%%%        <div id="summary-miles" class="col-sm-9">374 mi (602 km)</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-food" class="col-sm-3 control-label">Food:</label>%%%
-%%%        <div id="summary-food" class="col-sm-9">%%%
-Breakfast @ Riverside Campground in Belle Fourche, SD
+{% panel :class "route-summary" %}
+   {% panel-table :title "Day Summary" %}
+      {% panel-row :title "Start:" %}
+        [Belle Fourche, SD](https://en.wikipedia.org/wiki/Belle_Fourche,_South_Dakota) 6:19 am CDT
+      {% end-panel-row %}
+      {% panel-row :title "End:" %}
+        [Red Lodge, MT](https://en.wikipedia.org/wiki/Red_Lodge,_Montana) 4:39 pm CDT
+      {% end-panel-row %}
+      {% panel-row :title "Distance:" %}
+        374 mi (602 km)
+      {% end-panel-row %}
+      {% panel-row :title "Food:" %}
+        Breakfast @ Riverside Campground in Belle Fourche, SD
 
-Second Breakfast @ [Cashway Cafe](https://www.tripadvisor.com/Restaurant_Review-g45098-d4914167-Reviews-Cashway_Cafe-Broadus_Montana.html) in Broadus, MT
+        Second Breakfast @ [Cashway Cafe](https://www.tripadvisor.com/Restaurant_Review-g45098-d4914167-Reviews-Cashway_Cafe-Broadus_Montana.html) in Broadus, MT
 
-Lunch @ [Thai Cuisine](https://www.tripadvisor.com/Restaurant_Review-g45086-d3266456-Reviews-Cham_Thai_Cuisine-Billings_Montana.html) in Billings, MT
+        Lunch @ [Thai Cuisine](https://www.tripadvisor.com/Restaurant_Review-g45086-d3266456-Reviews-Cham_Thai_Cuisine-Billings_Montana.html) in Billings, MT
 
-Dinner @ [Red Lodge Pizza Co.](http://www.redlodgerestaurants.com/red-lodge-pizza-co/) in Red Lodge, MT
-%%%       </div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-slept" class="col-sm-3 control-label">Slept:</label>%%%
-%%%        <div id="summary-slept" class="col-sm-9">%%%
-[Rattin Campground](https://www.fs.usda.gov/recarea/custergallatin/recarea/?recid=60831)
-%%% (hammocks)</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%      <label for="summary-photos" class="col-sm-3 control-label">Photo Album:</label>%%%
-%%%        <div id="summary-photos" class="col-sm-9">%%%
-[Beartooth Run 2017 - Day 2](https://www.flickr.com/photos/forgottenroadsmx/albums/72157683434776573) (Flickr)
-%%%        </div>%%%
-%%%      </div>%%%
-%%%    </form>%%%
-%%%  </div>%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Route Map</h3></div>%%%
-%%%  <div class="panel-body" style="padding:0; margin: 0">%%%
-%%%    <img src="https://farm5.staticflickr.com/4436/36256381541_2b06e22b88_k_d.jpg">%%%
-%%%  </div>%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Beartooth Run, 2017 Series Links</h3></div>%%%
-%%%  <div class="panel-body" style="padding:0; margin: 0">%%%
-%%%    <ul>%%%
-%%%      <li><a href="/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html">Prologue</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/06-193659/beartooth-run-2017.html">Day 1</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/07-212540/beartooth-run-2017.html">Day 2</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/08-220414/beartooth-run-2017.html">Day 3</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/13-154024/beartooth-run-2017.html">Red Lodge, MT</a></li>%%%
-%%%      <li>Day 4</li>%%%
-%%%      <li>Day 5</li>%%%
-%%%      <li>Day 6</li>%%%
-%%%    </ul>%%%
-%%%  </div>%%%
-%%%</div>%%%
+        Dinner @ [Red Lodge Pizza Co.](http://www.redlodgerestaurants.com/red-lodge-pizza-co/) in Red Lodge, MT
+      {% end-panel-row %}
+      {% panel-row :title "Slept:" %}
+        [Rattin Campground](https://www.fs.usda.gov/recarea/custergallatin/recarea/?recid=60831) (tent)
+      {% end-panel-row %}
+      {% panel-row :title "Photo Album:" %}
+        [Beartooth Run 2017 - Day 2](https://www.flickr.com/photos/forgottenroadsmx/albums/72157683434776573) (Flickr)
+      {% end-panel-row %}
+   {% end-panel-table %}
+   {% panel-img :title "Route Map"
+                :src "https://farm5.staticflickr.com/4436/36256381541_2b06e22b88_k_d.jpg" %}
+   {% panel-body :title "Beartooth Run, 2017 Series Links" %}
+     * [Prologue](/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html)
+     * [Day 1](/blog/archives/2017-07/06-193659/beartooth-run-2017.html)
+     * [Day 2](/blog/archives/2017-07/07-212540/beartooth-run-2017.html)
+     * [Day 3](/blog/archives/2017-07/08-220414/beartooth-run-2017.html)
+     * [Red Lodge, MT](/blog/archives/2017-07/13-154024/beartooth-run-2017.html)
+     * Day 4
+     * Day 5
+     * Day 6
+   {% end-panel-body %}
+{% end-panel %}
+
 
 ## South Dakota & Wyoming
 
