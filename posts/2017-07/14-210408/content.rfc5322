@@ -9,18 +9,20 @@ Comments:
 Content-Type: selmer,md
 Public?: true
 
-Today was an interesting mix of a ride: some really great roads (some of which
-will be getting their own, dedicated posts at a later date!), some
+Well, today we headed off on the return trip to Sioux Falls. It was an
+interesting mix of a ride: some really great roads (one of which
+will be getting its own dedicated post at a later date), some
 mind-nunbing & sleep-inducing stretches, 100+ F temperatures, and a shorter
-ride than we have been doing, yet also more tired at the end.
+ride than we have been doing, yet also more grueling in a completely mundane
+sort of way.
 
 {% panel :class "route-summary" %}
    {% panel-table :title "Day Summary" %}
       {% panel-row :title "Start:" %}
-        [Belle Fourche, SD](https://en.wikipedia.org/wiki/Belle_Fourche,_South_Dakota) 6:19 am CDT
+        [Red Lodge, MT](https://en.wikipedia.org/wiki/Red_Lodge,_Montana) 6:51am MDT
       {% end-panel-row %}
       {% panel-row :title "End:" %}
-        [Red Lodge, MT](https://en.wikipedia.org/wiki/Red_Lodge,_Montana) 4:39 pm CDT
+        [Casper, WY](https://en.wikipedia.org/wiki/Casper,_Wyoming) 3:19am MDT
       {% end-panel-row %}
       {% panel-row :title "Distance:" %}
         336 mi (541 km)
@@ -30,7 +32,7 @@ ride than we have been doing, yet also more tired at the end.
 
         Lunch @ [Dairyland Ice Cream](https://goo.gl/DjLH28) in Thermopolis, WY
 
-        Dinner @ [Red Lodge Pizza Co.](http://www.redlodgerestaurants.com/red-lodge-pizza-co/) in Red Lodge, MT
+        Dinner @ [Cole Creek Bar and Grill](https://www.yelp.com/biz/cole-creek-bar-and-grill-casper) in Casper, WY
       {% end-panel-row %}
       {% panel-row :title "Slept:" %}
         [Holiday Inn Casper, McMurry Park](https://goo.gl/Ec8wnR)
@@ -56,29 +58,46 @@ ride than we have been doing, yet also more tired at the end.
 
 ## Leaving the Campsite ... and Red Lodge
 
+After a week in Red Lodge, we were finally on our way. It was nice to be on the
+bike again -- although the stay in the Basic Campground was amazing, I'd really
+been mising the ride. We're definitely going to miss our time there, though --
+and have lots of great memories! (Including the river, rainbows, weather
+patterns, becoming friends with the host couple & sharing a meal with them at
+their site, the night before we left ... good times.)
+
+Due to several heavy rains during our week in the campground, the road wasn't
+quite so bad on the way out -- still plenty of washboards but the worst bits
+seemed to have been filled in.
+
 {% flickr-img :photo-id 35929256066
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 {% flickr-img :photo-id 35581610980
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 {% flickr-img :photo-id 37912582964
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 
+Riding into Red Lodge one last time for a fill up and final pre-flight check
+was bitter sweet -- it was tough to leave this beuaty behind ... What a great
+town!
 
 {% flickr-img :photo-id 37912582964
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 370 %}
+              :width 371 %}
 {% flickr-img :photo-id 36193774324
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 370 %}
+              :width 371 %}
 
+We headed East out of town on 308 towards Bearcreek, MT. Some nice little
+curves lead to a phenomenal view as we peaked the foothills, then lots more
+great riding and views.
 
 {% flickr-img :photo-id 36473774594
               :album-id 72157687218262045
@@ -97,53 +116,140 @@ valley in the distance were constantly stunning.
 {% flickr-img :photo-id 36913807360
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 36497893163
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 37168780401
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 36914199730
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 
 It was right around this point that we passed a turn-off to Chief Joseph
 Scenic Byway, and it took every ounce of will power I had not to make a right
-hand turn ...
+hand turn on 296 ...
 
 {% flickr-img :photo-id 26854025429
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 {% flickr-img :photo-id 36498265173
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 {% flickr-img :photo-id 36498273103
               :album-id 72157687218262045
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 
-As you can see, though, there were modest rewards for continuing on the planned
-route (and getting home sooner!)
+As you can see from the pics above, there were modest rewards for continuing
+on the planned route -- and getting home sooner ;-) The ride between
+Red Lodge through to about 30 minutes outside of Cody, WY was definitely some
+of the best on the trip, after Beartooth Pass, of course.
 
 
-## XXX
+## Cody to Thermopolis
 
-Cody, Greybull "The Museum of Flight And Aerial Firefighters", Thermopolis
+The stretch from Cody to Thermopolis was one of the low points of the day, with
+two notable exceptions: the rest area before Greybull which also happened to host
+"The Museum of Flight And Aerial Firefighters" was a life saver. I was feeling
+pretty drowsy before we got here and needed to shake off the boredom.
+
+{% flickr-img :photo-id 36498567413
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 35930855985
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 35930855835
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 244 %}
+
+The other exception was the ride into Thermpolis: some nice views and interesting
+turns in the road that let you see the area from the perspective of most points
+on the compass.
+
+At this point I was pretty hungry and trying to figure out what to do about lunch
+when I almost missed a local dairy freeze -- a last-minute lane-change saved the
+day ... for a fat double cheeseburger with bacon and a strawberry shake :-)
 
 
 ## Wind River Reservation
 
-Highway 20, Boysen State Park
+Hands-down, the best riding of the day was on Highway 20 after leaving
+Thermopolis. 20 runs down the eastern edge of
+[Wind River Reservation](https://en.wikipedia.org/wiki/Wind_River_Indian_Reservation)
+home to Shoshone and Arapaho tribes. All the way down to Boysen State Park,
+it closely hugs the Bighorn River and passes through multiple tunnels.
+Definitely a local treasure, based on the joyous waves from fellow riders and
+the expressions on their faces! I could ride that road up and down, all day
+long.
+
+Sadly, I was so stuffed from the burger at lunch that I'd forgotten to clean up
+the gear before setting out again ... so the GoPro pics from the section are
+all pretty crappy:
+
+{% flickr-img :photo-id 37312547385
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 371 %}
+{% flickr-img :photo-id 36914534300
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 371 %}
+
+Just before that tunnel, I was stunned to see a large flying shape come
+swooping off the river to my right, pull a loop low over the road where it
+seemed to hover without moving -- at which point I identified it as a very
+large golden eagle -- and then make another rush down to the water. Already
+pretty high on the ride, this sent me right over the top: one of the most
+stunning things I've seen the whole trip so far ... and it's going to be pretty
+hard to beat that. Words just can't describe the intensity of that moment; nor
+its beauty and intimacy.
 
 
 ## Casper
 
-TBD
+After Wind River, we hit the biggest low-point of day: very hot, no scenery,
+& high winds. Even the adrenaline rushes from the difficult riding conditions
+couldn't keep me fully alert, thus making this also the most dangerous leg of
+the day's ride. Between Shoshoni and Powder River was a no-mans-land that
+seemed like Wyoming's own version of hell. Don't ever want to ride 26 again,
+if I can help it.
+
+I was so excited to get out of that area, that when we approached Casper, I
+punched it and sailed right trough. Rory had other ideas, though, and flashed
+me to pull over. Seeing how tired she was and feeling how 26 had really chewed
+me up, we made a sudden change of plan and pulled a U-y -- off to get a hotel
+room just back down the road.
+
+After a shower and change of gear, we were down in the lobby restaurant of the
+hotel -- Cole Creek Bar and Grill -- enjoying steaks and several porters
+from the Odell Brewing Company. What a dinner!
+
+With Rory keeping me steady on my feet, we walked around the hotel and captured
+some of the truly beautiful weather rolling over town:
+
+{% flickr-img :photo-id 35121593273
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 2048 %}
+
+{% flickr-img :photo-id 35155181143
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 442 %}
+{% flickr-img :photo-id 35155169903
+              :album-id 72157687218262045
+              :user forgottenroadsmx
+              :width 301 %}
 
 &#x1F6E3;
