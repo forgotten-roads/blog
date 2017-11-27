@@ -21,66 +21,42 @@ cleaning supplies and snacks from the bags, swapping out goggles, etc., was rath
 cumbersome when doing so when everything was in the support vehicle. Lesson learned for
 next time!)
 
-%%%<div class="panel panel-default route-summary">%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Day Summary</h3></div>%%%
-%%%  <div class="panel-body">%%%
-%%%    <form class="form-horizontal">%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-start" class="col-sm-3 control-label">Start:</label>%%%
-%%%        <div id="summary-start" class="col-sm-9">%%%
-[Sioux Falls, SD](https://en.wikipedia.org/wiki/Sioux_Falls,_South_Dakota)
-%%% 6:23 am CDT</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-end" class="col-sm-3 control-label">End:</label>%%%
-%%%        <div id="summary-end" class="col-sm-9">%%%
-[Belle Fourche, SD](https://en.wikipedia.org/wiki/Belle_Fourche,_South_Dakota)
-%%% 4:39 pm CDT</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-miles" class="col-sm-3 control-label">Distance:</label>%%%
-%%%        <div id="summary-miles" class="col-sm-9">466 mi (750 km)</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-food" class="col-sm-3 control-label">Food:</label>%%%
-%%%        <div id="summary-food" class="col-sm-9">%%%
-Lunch @ [The Burger Shack](http://www.burgershackfaulkton.com/) in Faulkton, SD
+{% panel :class "route-summary" %}
+   {% panel-table :title "Day Summary" %}
+      {% panel-row :title "Start:" %}
+        [Sioux Falls, SD](https://en.wikipedia.org/wiki/Sioux_Falls,_South_Dakota) 6:23 am CDT
+      {% end-panel-row %}
+      {% panel-row :title "End:" %}
+        [Belle Fourche, SD](https://en.wikipedia.org/wiki/Belle_Fourche,_South_Dakota) 4:39 pm CDT
+      {% end-panel-row %}
+      {% panel-row :title "Distance:" %}
+        466 mi (750 km)
+      {% end-panel-row %}
+      {% panel-row :title "Food:" %}
+        Lunch @ [The Burger Shack](http://www.burgershackfaulkton.com/) in Faulkton, SD
 
-Dinner @ Riverside Campground in Belle Fourche, SD
-%%%        </div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-slept" class="col-sm-3 control-label">Slept:</label>%%%
-%%%        <div id="summary-slept" class="col-sm-9">%%%
-[Riverside Campground](http://www.bellefourche.org/index.asp?SEC=793C37DA-55F8-4041-87D2-78A5C98A1F5F&DE=DEF0F545-145E-4899-8A96-A923111669F0&Type=B_BASIC)
-%%% (hammocks)</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%      <label for="summary-photos" class="col-sm-3 control-label">Photo Album:</label>%%%
-%%%        <div id="summary-photos" class="col-sm-9">%%%
-[Beartooth Run 2017 - Day 1](https://www.flickr.com/photos/forgottenroadsmx/albums/72157683927036270) (Flickr)
-%%%        </div>%%%
-%%%      </div>%%%
-%%%    </form>%%%
-%%%  </div>%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Route Map</h3></div>%%%
-%%%  <div class="panel-body" style="padding:0; margin: 0">%%%
-%%%    <img src="https://farm5.staticflickr.com/4416/35585097933_87f753eefd_k_d.jpg">%%%
-%%%  </div>%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Beartooth Run, 2017 Series Links</h3></div>%%%
-%%%  <div class="panel-body" style="padding:0; margin: 0">%%%
-%%%    <ul>%%%
-%%%      <li><a href="/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html">Prologue</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/06-193659/beartooth-run-2017.html">Day 1</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/07-212540/beartooth-run-2017.html">Day 2</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/08-220414/beartooth-run-2017.html">Day 3</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/13-154024/beartooth-run-2017.html">Red Lodge, MT</a></li>%%%
-%%%      <li>Day 4</li>%%%
-%%%      <li>Day 5</li>%%%
-%%%      <li>Day 6</li>%%%
-%%%    </ul>%%%
-%%%  </div>%%%
-%%%</div>%%%
+        Dinner @ Riverside Campground in Belle Fourche, SD
+      {% end-panel-row %}
+      {% panel-row :title "Slept:" %}
+        [Riverside Campground](http://www.bellefourche.org/index.asp?SEC=793C37DA-55F8-4041-87D2-78A5C98A1F5F&DE=DEF0F545-145E-4899-8A96-A923111669F0&Type=B_BASIC) (hammocks)
+      {% end-panel-row %}
+      {% panel-row :title "Photo Album:" %}
+        [Beartooth Run 2017 - Day 1](https://www.flickr.com/photos/forgottenroadsmx/albums/72157683927036270) (Flickr)
+      {% end-panel-row %}
+   {% end-panel-table %}
+   {% panel-img :title "Route Map"
+                :src "https://farm5.staticflickr.com/4416/35585097933_87f753eefd_k_d.jpg" %}
+   {% panel-body :title "Beartooth Run, 2017 Series Links" %}
+     * [Prologue](/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html)
+     * [Day 1](/blog/archives/2017-07/06-193659/beartooth-run-2017.html)
+     * [Day 2](/blog/archives/2017-07/07-212540/beartooth-run-2017.html)
+     * [Day 3](/blog/archives/2017-07/08-220414/beartooth-run-2017.html)
+     * [Red Lodge, MT](/blog/archives/2017-07/13-154024/beartooth-run-2017.html)
+     * [Day 4](/blog/archives/2017-07/14-210408/beartooth-run-2017.html)
+     * Day 5
+     * Day 6
+   {% end-panel-body %}
+{% end-panel %}
 
 The [Fargo H.O.G.](https://www.facebook.com/fargoharleyownersgroup/)
 Beartooth Run is a bit of a unique animal for a ride:
@@ -120,17 +96,15 @@ shake!). Big thumbs up on the food, and fun decor to boot:
 {% flickr-img :photo-id 35558121434
               :album-id 72157683927036270
               :user forgottenroadsmx
-              :width 600 %}
-
+              :width 244 %}
 {% flickr-img :photo-id 36393575835
               :album-id 72157683927036270
               :user forgottenroadsmx
-              :width 600 %}
-
+              :width 244 %}
 {% flickr-img :photo-id 35746908801
               :album-id 72157683927036270
               :user forgottenroadsmx
-              :width 600 %}
+              :width 244 %}
 
 Just after Forest City, we crossed the
 [Missouri](https://en.wikipedia.org/wiki/Missouri_River).

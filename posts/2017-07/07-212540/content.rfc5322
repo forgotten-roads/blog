@@ -17,7 +17,7 @@ orangey-pink morning beauty as we were getting back onto US-212:
 {% flickr-img :photo-id 35863074105
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 320 %}
+              :width 2048 %}
 
 {% panel :class "route-summary" %}
    {% panel-table :title "Day Summary" %}
@@ -54,7 +54,7 @@ orangey-pink morning beauty as we were getting back onto US-212:
      * [Day 2](/blog/archives/2017-07/07-212540/beartooth-run-2017.html)
      * [Day 3](/blog/archives/2017-07/08-220414/beartooth-run-2017.html)
      * [Red Lodge, MT](/blog/archives/2017-07/13-154024/beartooth-run-2017.html)
-     * Day 4
+     * [Day 4](/blog/archives/2017-07/14-210408/beartooth-run-2017.html)
      * Day 5
      * Day 6
    {% end-panel-body %}
@@ -68,7 +68,7 @@ In the day 2 album on Flickr, there's a picture the GoPro captured of me pointin
 {% flickr-img :photo-id 35731320501
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 500 %}
+              :width 2048 %}
 
 I was delighted to see that this segment of 212 was called the "Warrior Trail"
 (even  though I was in the 101st during Desert Storm, one granddad in WWI, and
@@ -127,19 +127,19 @@ find another route ... they didn't mean me, did they? :-)
 {% flickr-img :photo-id 36220806662
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 36344127846
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 36344123656
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 36344122326
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 
 To be honest, I really enjoyed this. I'm constantly finding myself on unpaved,
 "exciting" roads with the Harley. In this particular case, I was met with a
@@ -177,15 +177,15 @@ be patient and settle into a fairly low speed.
 
 At long last, though, we rolled into Red Lodge -- and it was well worth the
 wait. It's a great little town that feels like some of the smaller gems of the
-Rocky Mountains in Colorado. In fact, Rory said it reminder here of Boulder,
-CO in the 70s ...
+Rocky Mountains in Colorado. In fact, Rory said it reminded her of Boulder,
+CO in the 70s.
 
 {% flickr-img :photo-id 36220786442
               :album-id 72157683434776573
               :user forgottenroadsmx
               :width 2048 %}
 
-Then we had to find our campsite ...
+Next up was finding our campsite ...
 
 {% flickr-img :photo-id 35992185180
               :album-id 72157683434776573
@@ -197,19 +197,19 @@ which took us longer than I care to admit:
 {% flickr-img :photo-id 36220781752
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 35992183380
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 36220779282
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 36220778242
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 
 However, I had great fun bouncing around on the dirt roads -- something I got to do a
 bunch today, given that I made so many trips into town and back!
@@ -244,12 +244,11 @@ passed around:
 {% flickr-img :photo-id 35490469260
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 2048 %}
-
+              :width 371 %}
 {% flickr-img :photo-id 36417440705
               :album-id 72157683434776573
               :user forgottenroadsmx
-              :width 2048 %}
+              :width 371 %}
 
 With that, I'll wrap up today's post. Everyone's feeling pretty excited about
 the run up to the pass tomorrow morning. Should be a lot of fun! &#x1F6E3;

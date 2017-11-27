@@ -19,10 +19,10 @@ sort of way.
 {% panel :class "route-summary" %}
    {% panel-table :title "Day Summary" %}
       {% panel-row :title "Start:" %}
-        [Red Lodge, MT](https://en.wikipedia.org/wiki/Red_Lodge,_Montana) 6:51am MDT
+        [Red Lodge, MT](https://en.wikipedia.org/wiki/Red_Lodge,_Montana) 6:51 am MDT
       {% end-panel-row %}
       {% panel-row :title "End:" %}
-        [Casper, WY](https://en.wikipedia.org/wiki/Casper,_Wyoming) 3:19am MDT
+        [Casper, WY](https://en.wikipedia.org/wiki/Casper,_Wyoming) 3:19 am MDT
       {% end-panel-row %}
       {% panel-row :title "Distance:" %}
         336 mi (541 km)

@@ -24,81 +24,61 @@ were off!
               :user forgottenroadsmx
               :width 2048 %}
 
-%%%<div class="panel panel-default route-summary">%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Day Summary</h3></div>%%%
-%%%  <div class="panel-body">%%%
-%%%    <form class="form-horizontal">%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-start" class="col-sm-3 control-label">Start:</label>%%%
-%%%        <div id="summary-start" class="col-sm-9">%%%
-[Red Lodge, MT](https://en.wikipedia.org/wiki/Red_Lodge,_Montana)
-%%% 6:19 am CDT</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-end" class="col-sm-3 control-label">End:</label>%%%
-%%%        <div id="summary-end" class="col-sm-9">%%%
-[Red Lodge, MT](https://en.wikipedia.org/wiki/Red_Lodge,_Montana)
-%%% 4:39 pm CDT</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-miles" class="col-sm-3 control-label">Distance:</label>%%%
-%%%        <div id="summary-miles" class="col-sm-9">32 mi (52 km)</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-food" class="col-sm-3 control-label">Food:</label>%%%
-%%%        <div id="summary-food" class="col-sm-9">%%%
-Breakfast @ Rattin Campground
+{% panel :class "route-summary" %}
+   {% panel-table :title "Day Summary" %}
+      {% panel-row :title "Start:" %}
+        [Red Lodge, MT](https://en.wikipedia.org/wiki/Red_Lodge,_Montana) 6:19 am MDT
+      {% end-panel-row %}
+      {% panel-row :title "End:" %}
+        [Red Lodge, MT](https://en.wikipedia.org/wiki/Red_Lodge,_Montana) 4:39 pm MDT
+      {% end-panel-row %}
+      {% panel-row :title "Distance:" %}
+        32 mi (52 km)
+      {% end-panel-row %}
+      {% panel-row :title "Food:" %}
+        Breakfast @ Rattin Campground
 
-Second Breakfast @ the first turnoff on Beartooth Pass
+        Second Breakfast @ the first turnoff on Beartooth Pass
 
-Lunch @ a little sandwich stand next to Lions Park
+        Lunch @ a little sandwich stand next to Lions Park
 
-Dinner @ Basin Campground
-%%%       </div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-slept" class="col-sm-3 control-label">Slept:</label>%%%
-%%%        <div id="summary-slept" class="col-sm-9">%%%
-[Basin Campground](https://www.fs.usda.gov/recarea/custergallatin/recarea/?recid=60837)
-%%% (tent)</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%      <label for="summary-photos" class="col-sm-3 control-label">Photo Album:</label>%%%
-%%%        <div id="summary-photos" class="col-sm-9">%%%
-[Beartooth Run 2017 - Day 3](https://www.flickr.com/photos/forgottenroadsmx/albums/72157684801453550) (Flickr)
-%%%        </div>%%%
-%%%      </div>%%%
-%%%    </form>%%%
-%%%  </div>%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Beartooth Run, 2017 Series Links</h3></div>%%%
-%%%  <div class="panel-body" style="padding:0; margin: 0">%%%
-%%%    <ul>%%%
-%%%      <li><a href="/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html">Prologue</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/06-193659/beartooth-run-2017.html">Day 1</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/07-212540/beartooth-run-2017.html">Day 2</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/08-220414/beartooth-run-2017.html">Day 3</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/13-154024/beartooth-run-2017.html">Red Lodge, MT</a></li>%%%
-%%%      <li>Day 4</li>%%%
-%%%      <li>Day 5</li>%%%
-%%%      <li>Day 6</li>%%%
-%%%    </ul>%%%
-%%%  </div>%%%
-%%%</div>%%%
+        Dinner @ Basin Campground
+      {% end-panel-row %}
+      {% panel-row :title "Slept:" %}
+        [Basin Campground](https://www.fs.usda.gov/recarea/custergallatin/recarea/?recid=60837) (tent)
+      {% end-panel-row %}
+      {% panel-row :title "Photo Album:" %}
+        [Beartooth Run 2017 - Day 3](https://www.flickr.com/photos/forgottenroadsmx/albums/72157684801453550) (Flickr)
+      {% end-panel-row %}
+   {% end-panel-table %}
+   {% panel-img :title "Route Map"
+                :src "https://c1.staticflickr.com/5/4572/24797025418_f3dabd16de_k.jpg" %}
+   {% panel-body :title "Beartooth Run, 2017 Series Links" %}
+     * [Prologue](/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html)
+     * [Day 1](/blog/archives/2017-07/06-193659/beartooth-run-2017.html)
+     * [Day 2](/blog/archives/2017-07/07-212540/beartooth-run-2017.html)
+     * [Day 3](/blog/archives/2017-07/08-220414/beartooth-run-2017.html)
+     * [Red Lodge, MT](/blog/archives/2017-07/13-154024/beartooth-run-2017.html)
+     * [Day 4](/blog/archives/2017-07/14-210408/beartooth-run-2017.html)
+     * Day 5
+     * Day 6
+   {% end-panel-body %}
+{% end-panel %}
 
 Soon we were out of town and on our way up to the summit:
 
 {% flickr-img :photo-id 37788179682
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 {% flickr-img :photo-id 36221810812
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 {% flickr-img :photo-id 35581714293
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 
 We started to hit some gentle hairpins, but were still catching some
 phenomenal views in the morning sun:
@@ -106,19 +86,19 @@ phenomenal views in the morning sun:
 {% flickr-img :photo-id 36221821582
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 35554342734
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 36221824232
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 {% flickr-img :photo-id 36221825222
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 180 %}
+              :width 182 %}
 
 In no time at all, we were at the half-way point:
 
@@ -149,11 +129,11 @@ got back on 212 and headed for the pass.
 {% flickr-img :photo-id 35554350344
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 370 %}
+              :width 371 %}
 {% flickr-img :photo-id 35581735173
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 370 %}
+              :width 371 %}
 
 I used to live next door to Rocky Mountain National Pass, and went riding in
 the Rockies last fall. I miss the altitude, the views, and the summer snow :-)
@@ -163,26 +143,26 @@ glimpses of snow:
 {% flickr-img :photo-id 35554352474
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 {% flickr-img :photo-id 35554355314
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 {% flickr-img :photo-id 35993175360
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 240 %}
+              :width 244 %}
 
 Turns out there was a race up there today, too -- so the road was quite busy!
 
 {% flickr-img :photo-id 36252967441
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 370 %}
+              :width 371 %}
 {% flickr-img :photo-id 35993177200
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 370 %}
+              :width 371 %}
 
 Turning into the parking lot of the overlook, we were met with a mud and ice
 surprise -- always lots of fun (no, seriously: it's a LOT of fun):
@@ -263,11 +243,11 @@ hammock time ...
 {% flickr-img :photo-id 35837609256
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 370 %}
+              :width 354 %}
 {% flickr-img :photo-id 35935672014
               :album-id 72157684801453550
               :user forgottenroadsmx
-              :width 370 %}
+              :width 387 %}
 
 ... so I could relax and watch the river we'd camped next to:
 

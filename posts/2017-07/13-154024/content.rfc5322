@@ -36,53 +36,37 @@ While in town, we regrouped, looked at some maps, picked a campground that
 looked nice, ate, got supplies, and headed up into the mountain valley that
 West Fork Rock Creek runs through.
 
-%%%<div class="panel panel-default route-summary">%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Summary</h3></div>%%%
-%%%  <div class="panel-body">%%%
-%%%    <form class="form-horizontal">%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-rating" class="col-sm-3 control-label">Overall Experience:</label>%%%
-%%%        <div id="summary-miles" class="col-sm-9">&#x272A;&#x272A;&#x272A;&#x272A;&#x272A;</div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-supplies" class="col-sm-3 control-label">Supplies:</label>%%%
-%%%        <div id="summary-supplies" class="col-sm-9">%%%
-[Sylvan Peak Mountain Shop](https://goo.gl/Tx5MPJ)
+{% panel :class "route-summary" %}
+   {% panel-table :title "Day Summary" %}
+      {% panel-row :title "Overall Experience:" %}
+        &#x272A;&#x272A;&#x272A;&#x272A;&#x272A;
+      {% end-panel-row %}
+      {% panel-row :title "Supplies:" %}
+        [Sylvan Peak Mountain Shop](https://goo.gl/Tx5MPJ)
 
-[Beartooth Market](https://goo.gl/pMFUi5)
-%%%        </div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%        <label for="summary-coffee" class="col-sm-3 control-label">Coffee:</label>%%%
-%%%        <div id="summary-coffee" class="col-sm-9">%%%
-[Coffee Factory Roasters](https://goo.gl/C5bC4P)
-%%%        </div>%%%
-%%%      </div>%%%
-%%%      <div class="form-group">%%%
-%%%      <label for="summary-photos" class="col-sm-3 control-label">Photo Albums:</label>%%%
-%%%        <div id="summary-photos" class="col-sm-9">%%%
-[Red Lodge, MT](https://www.flickr.com/photos/forgottenroadsmx/albums/72157688587312485) (Flickr)
+        [Beartooth Market](https://goo.gl/pMFUi5)
+      {% end-panel-row %}
+      {% panel-row :title "Coffee:" %}
+        [Coffee Factory Roasters](https://goo.gl/C5bC4P)
+      {% end-panel-row %}
+      {% panel-row :title "Photo Albums:" %}
+        [Red Lodge, MT](https://www.flickr.com/photos/forgottenroadsmx/albums/72157688587312485) (Flickr)
 
-[Camping in Red Lodge, MT](https://www.flickr.com/photos/forgottenroadsmx/albums/72157684554501191) (Flickr)
-%%%        </div>%%%
-%%%      </div>%%%
-%%%    </form>%%%
-%%%  </div>%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Beartooth Run, 2017 Series Links</h3></div>%%%
-%%%  <div class="panel-body" style="padding:0; margin: 0">%%%
-%%%    <ul>%%%
-%%%      <li><a href="/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html">Prologue</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/06-193659/beartooth-run-2017.html">Day 1</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/07-212540/beartooth-run-2017.html">Day 2</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/08-220414/beartooth-run-2017.html">Day 3</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/13-154024/beartooth-run-2017.html">Red Lodge, MT</a></li>%%%
-%%%      <li>Day 4</li>%%%
-%%%      <li>Day 5</li>%%%
-%%%      <li>Day 6</li>%%%
-%%%      <li>Epilogue</li>%%%
-%%%    </ul>%%%
-%%%  </div>%%%
-%%%</div>%%%
+        [Camping in Red Lodge, MT](https://www.flickr.com/photos/forgottenroadsmx/albums/72157684554501191) (Flickr)
+      {% end-panel-row %}
+   {% end-panel-table %}
+   {% panel-body :title "Beartooth Run, 2017 Series Links" %}
+     * [Prologue](/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html)
+     * [Day 1](/blog/archives/2017-07/06-193659/beartooth-run-2017.html)
+     * [Day 2](/blog/archives/2017-07/07-212540/beartooth-run-2017.html)
+     * [Day 3](/blog/archives/2017-07/08-220414/beartooth-run-2017.html)
+     * [Red Lodge, MT](/blog/archives/2017-07/13-154024/beartooth-run-2017.html)
+     * [Day 4](/blog/archives/2017-07/14-210408/beartooth-run-2017.html)
+     * Day 5
+     * Day 6
+   {% end-panel-body %}
+{% end-panel %}
+
 
 ## Camping
 
@@ -92,11 +76,11 @@ dirt and gravel. Some of the worst washboards I've ever experienced:
 {% flickr-img :photo-id 35929265046
               :album-id 72157684554501191
               :user forgottenroadsmx
-              :width 370 %}
+              :width 371 %}
 {% flickr-img :photo-id 35581616410
               :album-id 72157684554501191
               :user forgottenroadsmx
-              :width 370 %}
+              :width 371 %}
 
 After three miles of that, we found Cascade Campground:
 
