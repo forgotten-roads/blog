@@ -1,0 +1,132 @@
+Subject: Beartooth Run, 2017
+Subtitle: Day 5
+Header-Image: img/beartooth-2017-day-5-hdr.jpg
+From: oubiwann
+Twitter: oubiwann
+Category: Trips
+Keywords: wyoming,south dakota,mountains,badlands,black hills,rapid city,nepali food
+Comments:
+Content-Type: selmer,md
+Public?: true
+
+XXXXXXXX
+
+{% panel :class "route-summary" %}
+   {% panel-table :title "Day Summary" %}
+      {% panel-row :title "Start:" %}
+        [Casper, WY](https://en.wikipedia.org/wiki/Casper,_Wyoming) 6:34 am MDT
+      {% end-panel-row %}
+      {% panel-row :title "End:" %}
+        [Interior, SD](https://en.wikipedia.org/wiki/Interior,_South_Dakota) 5:54 pm CDT
+      {% end-panel-row %}
+      {% panel-row :title "Distance:" %}
+        393 mi (632 km)
+      {% end-panel-row %}
+      {% panel-row :title "Food:" %}
+        Breakfast @ McDonald's in Douglas, WY
+
+        Lunch @ [Everest Cuisine Restaurant](https://goo.gl/Ad1KUh) in Rapid City, SD
+
+        Dinner @ [Cedar Pass Lodge](https://goo.gl/trBGAZ) in Interior, SD
+      {% end-panel-row %}
+      {% panel-row :title "Slept:" %}
+        [Badlands Inn](https://goo.gl/MTF4uN) Interior, SD
+      {% end-panel-row %}
+      {% panel-row :title "Photo Album:" %}
+        [Beartooth Run 2017 - Day 5](https://www.flickr.com/photos/forgottenroadsmx/albums/72157684801580600/) (Flickr)
+      {% end-panel-row %}
+   {% end-panel-table %}
+   {% panel-img :title "Route Map"
+                :src "https://c1.staticflickr.com/5/4352/35585096853_5304f9bcb7_k.jpg" %}
+   {% panel-body :title "Beartooth Run, 2017 Series Links" %}
+     * [Prologue](/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html)
+     * [Day 1](/blog/archives/2017-07/06-193659/beartooth-run-2017.html)
+     * [Day 2](/blog/archives/2017-07/07-212540/beartooth-run-2017.html)
+     * [Day 3](/blog/archives/2017-07/08-220414/beartooth-run-2017.html)
+     * [Red Lodge, MT](/blog/archives/2017-07/13-154024/beartooth-run-2017.html)
+     * [Day 4](/blog/archives/2017-07/14-210408/beartooth-run-2017.html)
+     * [Day 5](/blog/archives/2017-07/15-221856/beartooth-run-2017.html)
+     * Day 6
+   {% end-panel-body %}
+{% end-panel %}
+
+## Morning in Casper
+
+
+{% flickr-img :photo-id 38574069436
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 2048 %}
+
+
+## Thunder Basin
+
+## Black Hills
+
+
+
+{% flickr-img :photo-id 37742167695
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 2048 %}
+
+{% flickr-img :photo-id 37742169885
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 38597604632
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 38630281551
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 244 %}
+
+
+
+
+
+
+HD Service for light:
+
+{% flickr-img :photo-id 35585379750
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 371 %}
+{% flickr-img :photo-id 26854054649
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 371 %}
+
+
+## Badlands
+
+{% flickr-img :photo-id 38630289571
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 2048 %}
+
+{% flickr-img :photo-id 35576208380
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 2048 %}
+
+{% flickr-img :photo-id 35576213510
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 182 %}
+{% flickr-img :photo-id 35155185623
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 182 %}
+{% flickr-img :photo-id 35923707426
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 182 %}
+{% flickr-img :photo-id 35576208720
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 182 %}
+
+&#x1F6E3;
