@@ -7,7 +7,7 @@ Twitter: oubiwann
 Category: Trips
 Keywords: updates,north dakota,hog
 Comments:
-Content-Type: md
+Content-Type: selmer,md
 Public?: true
 
 Well, it's official -- I've just heard that as a new member of the Fargo
@@ -29,24 +29,20 @@ morning for the annual ride up the pass.
 I'll be riding without bags, since Rory's going to be driving the Forgotten
 Roads support vehicle. Here we come, Montana!
 
-%%%<div class="panel panel-default route-summary">%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Planned Route</h3></div>%%%
-%%%  <div class="panel-body" style="padding:0; margin: 0">%%%
-%%%    <img src="/blog/img/beartooth-ride-planned.jpg">%%%
-%%%  </div>%%%
-%%%  <div class="panel-heading"><h3 class="panel-title">Beartooth Run, 2017 Series Links</h3></div>%%%
-%%%  <div class="panel-body" style="padding:0; margin: 0">%%%
-%%%    <ul>%%%
-%%%      <li><a href="/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html">Prologue</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/06-193659/beartooth-run-2017.html">Day 1</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/07-212540/beartooth-run-2017.html">Day 2</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/08-220414/beartooth-run-2017.html">Day 3</a></li>%%%
-%%%      <li><a href="/blog/archives/2017-07/13-154024/beartooth-run-2017.html">Red Lodge, MT</a></li>%%%
-%%%      <li>Day 4</li>%%%
-%%%      <li>Day 5</li>%%%
-%%%      <li>Day 6</li>%%%
-%%%    </ul>%%%
-%%%  </div>%%%
-%%%</div>%%%
+{% panel :class "route-summary" %}
+   {% panel-body-no-pad :title "Planned Route" %}
+     ![planned route](/blog/img/beartooth-ride-planned.jpg)
+   {% end-panel-body %}
+   {% panel-body :title "Beartooth Run, 2017 Series Links" %}
+     * [Prologue](/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html)
+     * [Day 1](/blog/archives/2017-07/06-193659/beartooth-run-2017.html)
+     * [Day 2](/blog/archives/2017-07/07-212540/beartooth-run-2017.html)
+     * [Day 3](/blog/archives/2017-07/08-220414/beartooth-run-2017.html)
+     * [Red Lodge, MT](/blog/archives/2017-07/13-154024/beartooth-run-2017.html)
+     * [Day 4](/blog/archives/2017-07/14-210408/beartooth-run-2017.html)
+     * [Day 5](/blog/archives/2017-07/15-221856/beartooth-run-2017.html)
+     * Day 6
+   {% end-panel-body %}
+{% end-panel %}
 
 &#x1F6E3;
