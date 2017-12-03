@@ -9,7 +9,11 @@ Comments:
 Content-Type: selmer,md
 Public?: true
 
-XXXXXXXX
+It was amazing sleeping in a bed last night after more than a week in tents
+and hammocks -- the steaks and ales weren't too shabby either :-) However,
+this morning we did get off to a slow start due to failed checks when prep'ing
+for the day's ride: headlamp and one of the rear tail lights were out. It was
+time to unroll the tools and see what was up.
 
 {% panel :class "route-summary" %}
    {% panel-table :title "Day Summary" %}
@@ -50,45 +54,129 @@ XXXXXXXX
    {% end-panel-body %}
 {% end-panel %}
 
+
 ## Morning in Casper
 
+My first thought was there was a blown fuse, but after taking off the leather
+cover under the seat (I ditched the thick plastic ECM cover ages ago) and
+examining the fuses, everything looked okay. Exposed wires seemed good too --
+nothing ripped, exposed, or broken. Jiggling the bulb in the tail light got
+that one working, but the headlamp seemed like it might be burned out.
+
+I'd done everyting I could, so it was time to get on the road:
+
+{% flickr-img :photo-id 24799072838
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 2048 %}
 
 {% flickr-img :photo-id 38574069436
               :album-id 72157684801580600
               :user forgottenroadsmx
-              :width 2048 %}
+              :width 371 %}
+{% flickr-img :photo-id 38671651091
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 371 %}
 
 
 ## Thunder Basin
 
-## Black Hills
+After leaving Casper, we headed East and then North in Douglas (where I
+grabbed a quick breakfast sandwhich). Highway 59 was pretty desolate, but still
+quite beautiful. We were smack in the middle of coal country (I think I saw
+a strip mine or two), and this coal train -- on the left -- was one of three
+that we saw in this part of the state:
 
-
-
-{% flickr-img :photo-id 37742167695
+{% flickr-img :photo-id 24799075128
               :album-id 72157684801580600
               :user forgottenroadsmx
               :width 2048 %}
 
+By the time we'd left 59 and were headed East again, we were deep in
+[Thunder Basin National Grassland](https://en.wikipedia.org/wiki/Thunder_Basin_National_Grassland).
+Continuing on Highway 16 we saw what had to be some of the best views of the
+Basin. The photos don't come close to capturing the empty beauty, but here
+they are anyway:
+
+{% flickr-img :photo-id 38671656251
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 182 %}
+{% flickr-img :photo-id 38671664301
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 182 %}
+{% flickr-img :photo-id 38639425242
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 182 %}
+{% flickr-img :photo-id 38639428622
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 182 %}
+
+{% flickr-img :photo-id 24799091468
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 371 %}
+{% flickr-img :photo-id 24757633188
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 371 %}
+
+After coming out of Thunder Basin, we gassed up in New Castle, WY and were
+then on our way again, eager to get to the Black Hills.
+
+
+## Black Hills
+
+{% flickr-img :photo-id 24799094478
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 2048 %}
+
+After about two days of flat, it was pretty exciting seeing the hills come into
+view -- especially knowing some of the roads we'd be riding through :-)
+
+{% flickr-img :photo-id 37742167695
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 37742169455
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 244 %}
 {% flickr-img :photo-id 37742169885
               :album-id 72157684801580600
               :user forgottenroadsmx
               :width 244 %}
+
+I don't know really want to saw about this part of the ride. Let's just say
+there's a reason that thousands of riders come here every year to cruise the
+curves and take in the amazing scenery.
+
+{% flickr-img :photo-id 37742170465
+              :album-id 72157684801580600
+              :user forgottenroadsmx
+              :width 2048 %}
+
+Not as stunning as Bear Toothpass, for sure -- but the quality of feeling the
+curves (as opposed to wrangling hairpin turns) is incomparable. Definitely
+some of the best riding I've ever done.
+
 {% flickr-img :photo-id 38597604632
               :album-id 72157684801580600
               :user forgottenroadsmx
-              :width 244 %}
+              :width 371 %}
 {% flickr-img :photo-id 38630281551
               :album-id 72157684801580600
               :user forgottenroadsmx
-              :width 244 %}
+              :width 371 %}
 
-
-
-
-
-
-HD Service for light:
+Somewhere after Custer, SD I had decided to find the
+[Black Hills Harley Davidson](http://www.blackhillshd.com/)
+dealership so I could have the headlamp looked at.
 
 {% flickr-img :photo-id 35585379750
               :album-id 72157684801580600
@@ -99,18 +187,43 @@ HD Service for light:
               :user forgottenroadsmx
               :width 371 %}
 
+Got to meet the owner, picked up some t-shirts, then we headed out in search
+of food. We evetually found ourselves at
+[Everest Cuisine Restaurant](https://goo.gl/Ad1KUh) where we had a small
+feast of some of my favourite Nepali dishes. What a treat!
+
+An hour later, we were back at the dealership with a new headlamp ... and
+ready to roll. In an attempt to avoid highways and not sit in parking lots
+reading maps, we ended up taking some turns that lead us in the wrong
+direction. As such, leaving the Rapid City area took much longer than
+expected, and on a very convoluted route.
+
 
 ## Badlands
+
+This was another area I'd been wanting to ride in; every time I'd visited in a
+car, all I could think of was how much fun it would be on the motorcycle. The
+riding can't compare to what's in the Black Hills, but the feeling is just as
+good. The barren, ragged land coupled with the constantly changing formations
+gives the dramatic sense of surviving hardship while experiencing elation at
+the same time. That's a good riding vibe :-)
 
 {% flickr-img :photo-id 38630289571
               :album-id 72157684801580600
               :user forgottenroadsmx
               :width 2048 %}
 
+After our adventures of the day, though, we were beat and didn't feel like
+pushing any closer to Sioux Falls. So we found a place to stay in Interior, SD
+and I captured some more shots of the Badlands.
+
 {% flickr-img :photo-id 35576208380
               :album-id 72157684801580600
               :user forgottenroadsmx
               :width 2048 %}
+
+I particularly enjoyed watching the light change as the sun set on the eerie
+geological formations:
 
 {% flickr-img :photo-id 35576213510
               :album-id 72157684801580600
@@ -128,5 +241,8 @@ HD Service for light:
               :album-id 72157684801580600
               :user forgottenroadsmx
               :width 182 %}
+
+Tomorrow's another full day of riding, and I'm looking forward to seeing the
+Badlands in the early light of dawn ...
 
 &#x1F6E3;
