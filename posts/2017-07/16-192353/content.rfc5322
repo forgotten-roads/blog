@@ -1,0 +1,354 @@
+Subject: Beartooth Run, 2017
+Subtitle: Day 6
+Header-Image: img/beartooth-2017-day-6-hdr.jpg
+From: oubiwann
+Twitter: oubiwann
+Category: Trips
+Keywords: south dakota,badlands,sioux falls,ecoregions, missouri river
+Comments:
+Content-Type: selmer,md
+Public?: true
+
+The Final leg of this Summer's journey! We made it home today after seeing
+more of South Dakota's stunning scenic beauty: a bit more of the Badlands,
+SD 47 (one of my favourite "forgotten roads"), crossing the Missouri, and
+the James River valley.
+
+{% panel :class "route-summary" %}
+   {% panel-table :title "Day Summary" %}
+      {% panel-row :title "Start:" %}
+        [Interior, SD](https://en.wikipedia.org/wiki/Interior,_South_Dakota)  6:11 am CDT
+      {% end-panel-row %}
+      {% panel-row :title "End:" %}
+        [Sioux Falls, SD](https://en.wikipedia.org/wiki/Sioux_Falls,_South_Dakota)  1:26 pm CDT
+      {% end-panel-row %}
+      {% panel-row :title "Distance:" %}
+        393 mi (632 km)
+      {% end-panel-row %}
+      {% panel-row :title "Food:" %}
+        Breakfast (freeze-dried camp food) @ the Pilot gas station parking lot in [Murdo, SD](https://en.wikipedia.org/wiki/Murdo,_South_Dakota)
+
+        Lunch (snacks and coffee) @ the BP gas station parking lot in [Parker, SD](https://en.wikipedia.org/wiki/Parker,_South_Dakota)
+
+        Dinner @ home in Sioux Falls, SD
+      {% end-panel-row %}
+      {% panel-row :title "Slept:" %}
+        Home, Sioux Falls, SD
+      {% end-panel-row %}
+      {% panel-row :title "Photo Album:" %}
+        [Beartooth Run 2017 - Day 6](https://www.flickr.com/photos/forgottenroadsmx/albums/72157684648319533/) (Flickr)
+      {% end-panel-row %}
+   {% end-panel-table %}
+   {% panel-img :title "Route Map"
+                :src "https://farm5.staticflickr.com/4347/35557598124_7b1d1d2e35_k_d.jpg" %}
+   {% panel-body :title "Beartooth Run, 2017 Series Links" %}
+     * [Prologue](/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html)
+     * [Day 1](/blog/archives/2017-07/06-193659/beartooth-run-2017.html)
+     * [Day 2](/blog/archives/2017-07/07-212540/beartooth-run-2017.html)
+     * [Day 3](/blog/archives/2017-07/08-220414/beartooth-run-2017.html)
+     * [Red Lodge, MT](/blog/archives/2017-07/13-154024/beartooth-run-2017.html)
+     * [Day 4](/blog/archives/2017-07/14-210408/beartooth-run-2017.html)
+     * [Day 5](/blog/archives/2017-07/15-221856/beartooth-run-2017.html)
+     * [Day 6](/blog/archives/2017-07/16-192353/beartooth-run-2017.html)
+   {% end-panel-body %}
+{% end-panel %}
+
+
+## Leaving the Badlands
+
+{% flickr-img :photo-id 35576200830
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 2048 %}
+
+Early morning in the Badlands is breath-taking. Riding next to and through
+the land formations with the low-light conditions but with simultaneous deep
+colors was really fantastic. We've driven through here a bunch, but never at
+dawn -- and this was the first time on a motorcycle :-)
+
+{% flickr-img :photo-id 26854201239
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+{% flickr-img :photo-id 37912756804
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+
+{% flickr-img :photo-id 26854205129
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 2048 %}
+
+{% flickr-img :photo-id 37912759324
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+{% flickr-img :photo-id 37912759934
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+
+{% flickr-img :photo-id 37912760444
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 2048 %}
+
+{% flickr-img :photo-id 37912761274
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 37912760914
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 26854198729
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+
+The colors weren't really captured well by the GoPro in the shots above. There
+was much more contrast, darker shadows, and brilliant oranges, yellows, and
+reds. The pictures do give a sense of it, though :-)
+
+Like highway 20 in Wyoming, after passing through the Badlands, I wanted to
+turn around and do it again ... and again! But home was calling, and this had
+been a long trip.
+
+
+## South Dakota Ecoregions
+
+The next part of the journey was a bit boring; now that I'm home, I thought
+I'd look up what exactly I was riding through and write about that instead
+of just skipping over that part of the ride ;-)
+
+There are severl levels at which the ecorgions of North America, and the US in
+particular, have been qualified: levels I, II, III, and IV. At level I, SD
+falls squarely in the "Great Plains" ecoregion. It gets more interesting,
+though, when you look at the finer gradations of ecoregion.
+
+{% flickr-img :photo-id 38055642135
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+{% flickr-img :photo-id 38940989291
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+
+At level II, South Dakota is split into "West-central Semi-arid Prairies"
+and "Temperate Prairies". At level III, it starts to get interesting. We rode
+through the following further sub-divided, level III ecoregions today:
+
+* Northwestern Great Plains
+* Northwestern Glaciated Plains
+* Northern Glaciated Plains
+* Western Cornbelt Plains
+
+{% flickr-img :photo-id 24077334157
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 2048 %}
+
+Level IV is too subdivided to describe easily, but this is really the level
+at which you can observe from the seat of a motorcycle. The route we took to
+get home intersected the following ecoregions, in order of traversal:
+
+* 43h - White River Badlands
+* 43f - Subhumid Pierre Shale Plains
+* 43c - River Breaks
+* 43f - Subhumid Pierre Shale Plains
+* 42g - Ponca Plains
+* 42h - Southern River Breaks
+* 42f - Southern Missouri Coteau Slope
+* 42e - Southern Missouri Coteau
+* 46n - James River Lowland
+* 47a - Loess Prairies
+
+Wow. Looking at the maps and seeing which roads were good through this area
+was actually pretty interesting! I'm going to do more of that for next year's
+rides ...
+
+
+## The Shale Plains
+
+{% flickr-img :photo-id 38574192336
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 24757774618
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 24757776348
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+
+Those are some shots of the "Subhumid Pierre Shale Plains", which we rode
+through after the Badlands. This was on SD 248 heading East, running along
+I-90.
+
+Not many curves, though some nice rolling hills scattered here and there. I
+think there might have been a rodeo or livestock show somewhere in the area, as
+we passed several horse trailers with folks dressed up in their hats and boots,
+looking great!
+
+We gassed up around 10:30am in Reliance, SD and then started heading South
+on SD 47.
+
+
+## River Breaks & Ponca Plains
+
+I've both ridden and driven SD 47 several times, and it's one of my favourite
+roads in South Dakota. (Well, to be honest, it's the 32 miles of road on 47 between Reliance and just after Iona.)
+
+This is a "forgotten road" that many folks don't know about. I chatted with a
+local farmer about it who loved it even more than I do, and was glad to share
+that with someone who appreciated it. Until today, I didn't stop to think about
+what made it so beautiful; doubtless it is due to the Missouri River's action
+on that land (and the source of the ecoregion name of "River Breaks").
+
+In the panoramic shot below, you can see the Missouri snaking off to the right:
+
+{% flickr-img :photo-id 38944215701
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 2048 %}
+
+All the other land formations in the distance there are what makes the next 30
+or so  miles of this ride so great.
+
+{% flickr-img :photo-id 38630420251
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 37742378115
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 37742379115
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+
+{% flickr-img :photo-id 38597743832
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 2048 %}
+
+After Iona, things flatten out a bit as you ride through another extension of
+the Shale Plains. Within a few miles, that gives way to the rolling hills and
+grasses of the Ponca Plans ecoregion, giving more beautiful views.
+
+{% flickr-img :photo-id 38597744432
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 37742382155
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 37742383025
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+
+{% flickr-img :photo-id 38597748332
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 2048 %}
+
+
+## Missouri River
+
+Before settling in to the final straight push into Sioux Falls, there were a
+few more curves -- and thrills -- in store ...
+
+{% flickr-img :photo-id 24757819818
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+{% flickr-img :photo-id 24757820968
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+
+Shortly after this next shot was taken, I was going into a curve a little too
+fast and an on-coming semi was heading up the hill a little too close to the
+yellow line (and *definitely* too fast!) It was touch and go for the passing
+and then a little while longer while I handled the rest of the curves leading to the river crossing ... and waited for my heart rate to return to normal.
+
+{% flickr-img :photo-id 24757821868
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 2048 %}
+
+{% flickr-img :photo-id 24757822918
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+{% flickr-img :photo-id 24757824058
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+
+{% flickr-img :photo-id 24757824928
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+{% flickr-img :photo-id 24757826048
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 371 %}
+
+The was the point at which it really felt like we'd come home; but there was
+still another two hours or so to go ...
+
+
+## Arriving Home
+
+Just after Platte, SD I came up behind a group of Harleys on their Sunday ride:
+
+{% flickr-img :photo-id 24080408047
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 2048 %}
+
+Rode with them for a while, but I didn't want to be up in their business, so
+I chilled a ways back from their sweep. They ended up taking a left to head
+North on one of the many forgotten roads out there that are so full of good
+country riding; we powered onwards, towards home.
+
+As we got closer and closer to Sioux Falls, I started recognizing the corn
+fields; this was very relaxing, so I had to really pony up on the concentration
+and awareness. Sometime between the familiar fields and entering the city
+limits, I started hearing an old Eagles tune play in my head and it was like
+the singing of angles; our own private parade ;-) Then we were in our
+neighborhood ...
+
+
+{% flickr-img :photo-id 24757830838
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 24757831978
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 35203363183
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 244 %}
+
+And shortly after that, we pulled into the driveway -- ready to let the bike
+cool off in the lazy shade of the garage:
+
+{% flickr-img :photo-id 35174439104
+              :album-id 72157684648319533
+              :user forgottenroadsmx
+              :width 2048 %}
+
+Unpacking could wait for after a shower, some food, and a lot of rest!
+
+&#x1F6E3;
