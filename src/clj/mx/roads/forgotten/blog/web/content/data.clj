@@ -1,15 +1,17 @@
 (ns mx.roads.forgotten.blog.web.content.data
-  (:require [clojure.java.io :as io]
-            [clojure.string :as string]
-            [dragon.blog.content.block :as block]
-            [dragon.blog.core :as blog]
-            [dragon.blog.tags :as blog-tags]
-            [dragon.config.core :as config]
-            [markdown.core :as markdown]
-            [taoensso.timbre :as log]))
+  (:require
+    [clojure.java.io :as io]
+    [clojure.string :as string]
+    [dragon.blog.content.block :as block]
+    [dragon.blog.core :as blog]
+    [dragon.blog.tags :as blog-tags]
+    [dragon.config.core :as config]
+    [dragon.data.page :as page-data]
+    [markdown.core :as markdown]
+    [taoensso.timbre :as log]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;   Helper Functions & Data Helpers   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Constants & Helper Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def legal-block-names
@@ -17,59 +19,24 @@
    #{"article-body-ads"
      "article-sidebar-comments-links"}))
 
-(defn posts-stats
-  [posts]
-  {:posts (count posts)
-   :authors (->> posts
-                 (map :author)
-                 set
-                 count)
-   :lines (->> posts
-               (map :line-count)
-               (reduce +))
-   :words (->> posts
-               (map :word-count)
-               (reduce +))
-   :chars (->> posts
-               (map :char-count)
-               (reduce +))})
-
-(defn base
-  [system]
-  {:page-data {
-     :base-path "/blog"
-     :site-title (config/name system)
-     :site-description (config/description system)
-     :index "index"
-     :about "about"
-     :community "community"
-     :archives "archives"
-     :categories "categories"
-     :tags "tags"
-     :authors "authors"
-     :active nil}})
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Base Data Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn common
   ([system]
-    (common {}))
+    (common system {}))
   ([system posts]
-    (assoc (base system)
-           :posts-data posts
-           :posts-stats (posts-stats posts))))
+    (common system posts {}))
+  ([system posts additional-opts]
+    (let [base-opts {:site-title (config/name system)
+                     :site-description (config/description system)}]
+      (page-data/common posts (merge base-opts additional-opts)))))
 
-(def generic-page
-  {:title nil
-   :subtitle nil})
-
-(defn markdown-page
-  [md-file]
-  (merge
-    generic-page
-    {:body (->> md-file
-                (str "markdown/")
-                (io/resource)
-                (slurp)
-                (markdown/md-to-html-string))}))
+(defn about-opts
+  []
+  (assoc (page-data/default-markdown-content-opts)
+         :category-key :about))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Static Pages Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -77,64 +44,67 @@
 
 (defn about
   [system posts]
-  (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "about")
-      (assoc :content (-> "about.md"
-                          (markdown-page)
-                          (assoc :title "About")))))
-
-(defn community
-  [system posts]
-  (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "community")
-      (assoc :content (assoc generic-page :title "Community"))))
+  (common system
+          posts
+          (merge
+            (about-opts)
+            {:title "About"
+             :content-filename "about.md"})))
 
 (defn contact
   [system posts]
-  (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "about")
-      (assoc :content (-> "contact.md"
-                          (markdown-page)
-                          (assoc :title "Contact Us")))))
+  (common system
+          posts
+          (merge
+            (about-opts)
+            {:title "Contact Us"
+             :content-filename "contact.md"})))
 
 (defn powered-by
   [system posts]
-  (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "about")
-      (assoc :content (-> "powered-by.md"
-                          (markdown-page)
-                          (assoc :title "Powered By")))))
+  (common system
+          posts
+          (merge
+            (about-opts)
+            {:title "Powered By"
+             :content-filename "powered-by.md"})))
 
 (defn license
   [system posts]
-  (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "about")
-      (assoc :content (-> "license.md"
-                          (markdown-page)
-                          (assoc :title "Content License")))))
+  (common system
+          posts
+          (merge
+            (about-opts)
+            {:title "Content License"
+             :content-filename "license.md"})))
 
 (defn privacy
   [system posts]
-  (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "about")
-      (assoc :content (-> "privacy.md"
-                          (markdown-page)
-                          (assoc :title "Privacy Policy")))))
+  (common system
+          posts
+          (merge
+            (about-opts)
+            {:title "Privacy Policy"
+             :content-filename "privacy.md"})))
 
 (defn disclosure
   [system posts]
-  (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "about")
-      (assoc :content (-> "disclosure.md"
-                          (markdown-page)
-                          (assoc :title "Disclosure Policy")))))
+  (common system
+          posts
+          (merge
+            (about-opts)
+            {:title "Disclosure Policy"
+             :content-filename "disclosure.md"})))
+
+(defn community
+  [system posts]
+  (let [data-content {:title "Community"}]
+    (common system
+            posts
+            (merge
+              (page-data/default-data-content-opts)
+              data-content
+              {:category-key :community}))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Dynamic Pages Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -143,8 +113,7 @@
 (defn post
   [system posts post-data]
   (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "archives")
+      (common posts {:category-key "archives"})
       (assoc :post-data post-data
              :blocks (block/get-blocks legal-block-names post-data)
              :tags (blog-tags/unique [post-data]))))
@@ -157,8 +126,7 @@
                                  (nthrest above-posts 1))
         below-posts (nthrest top-posts above-fold-count)]
     (-> system
-        (common all-posts)
-        (assoc-in [:page-data :active] "index")
+        (common all-posts {:category-key "index"})
         (assoc :headlines-heading "Headlines"
                :headlines-desc (str "We like to keep things simple at FRMX. "
                                     "Only the most recent headlines are kept "
@@ -187,23 +155,20 @@
       (dissoc :disable-map-gui)))
 
 (defn map-minimal
-  [system map-data]
-  (-> (base system)
-      (assoc-in [:page-data :active] "maps")
-      (assoc :map-data (merge map-base map-data))))
+  [_system map-data]
+  (assoc (page-data/base {:category-key "maps"})
+         :map-data (merge map-base map-data)))
 
 (defn map-common
   [system posts map-data]
   (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "maps")
+      (common posts {:category-key "maps"})
       (assoc :map-data (merge map-base map-data))))
 
 (defn maps-index
   [system posts maps-data]
   (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "maps")
+      (common posts {:category-key "maps"})
       (assoc :topo-data topo-base)
       (assoc :maps-data (map #(merge map-base %) maps-data))))
 
@@ -214,34 +179,42 @@
 (defn archives
   [system posts]
   (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "archives")
-      (assoc :content (assoc generic-page :title "Archives")
-             :posts-data (blog/group-data :archives posts))))
+      (common posts
+              (merge
+                (page-data/default-data-content-opts)
+                {:title "Archives"
+                 :category-key "archives"}))
+      (assoc :posts-data (blog/group-data :archives posts))))
 
 (defn categories
   [system posts]
   (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "categories")
-      (assoc :content (assoc generic-page :title "Categories")
-             :posts-data (blog/group-data :categories posts))))
+      (common posts
+              (merge
+                (page-data/default-data-content-opts)
+                {:title "Categories"
+                 :category-key "categories"}))
+      (assoc :posts-data (blog/group-data :categories posts))))
 
 (defn tags
   [system posts]
   (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "tags")
-      (assoc :content (assoc generic-page :title "Tags")
-             :posts-data (blog/group-data :tags posts))))
+      (common posts
+              (merge
+                (page-data/default-data-content-opts)
+                {:title "Tags"
+                 :category-key "tags"}))
+      (assoc :posts-data (blog/group-data :tags posts))))
 
 (defn authors
   [system posts]
   (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "authors")
-      (assoc :content (assoc generic-page :title "Authors")
-             :posts-data (blog/group-data :authors posts))))
+      (common posts
+              (merge
+                (page-data/default-data-content-opts)
+                {:title "Authors"
+                 :category-key "authors"}))
+      (assoc :posts-data (blog/group-data :authors posts))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Design Pages Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -249,7 +222,9 @@
 
 (defn design
   [system posts]
-  (-> system
-      (common posts)
-      (assoc-in [:page-data :active] "design")
-      (assoc :content (assoc generic-page :title "Design"))))
+  (common system
+          posts
+          (merge
+            (page-data/default-data-content-opts)
+            {:title "Design"
+             :category-key "design"})))
