@@ -14,10 +14,10 @@
 ;;;   Constants & Helper Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(def legal-block-names
+(defn legal-block-names
+  [system]
   (block/legal-block-names
-   #{"article-body-ads"
-     "article-sidebar-comments-links"}))
+    (config/blocks-enabled system)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Base Data Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -109,7 +109,7 @@
           posts
           {:category-key "archives"
            :post-data post-data
-           :blocks (block/get-blocks legal-block-names post-data)
+           :blocks (block/get-blocks (legal-block-names system) post-data)
            :tags (blog-tags/unique [post-data])}))
 
 (defn front-page
