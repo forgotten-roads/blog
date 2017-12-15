@@ -3,10 +3,10 @@
     [clojure.java.io :as io]
     [clojure.string :as string]
     [dragon.blog.content.block :as block]
+    [dragon.blog.content.data :as page-data]
     [dragon.blog.core :as blog]
     [dragon.blog.tags :as blog-tags]
     [dragon.config.core :as config]
-    [dragon.data.page :as page-data]
     [markdown.core :as markdown]
     [taoensso.timbre :as log]))
 
