@@ -45,8 +45,13 @@
         :enabled #{
           "article-body-ads"
           "article-sidebar-comments-links"}}
+      :robots {
+        :disallow #{
+          "/blog/data/"
+          "/blog/design/"
+          "/blog/maps/"}}
       :cli {
-        :log-level :info
+        :log-level :debug
         :log-nss [mx.roads]}
       :workflow {
        :storage :db}

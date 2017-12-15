@@ -7,6 +7,7 @@
 
 (defn url
   [datestamp route]
+  (log/debug "Generating sitemap entry for" route)
   [:url
    [:loc (str "http://forgotten.roads.mx" route)]
    [:lastmod datestamp]
@@ -18,8 +19,12 @@
    (map (partial url datestamp) (keys routes))])
 
 (defn gen
-  [routes]
-  (let [datestamp (util/format-datestamp (util/now :datetime-map))]
+  [system routes]
+  (let [disallowed (config/robots-disallow system)
+        allowed-routes (sort (util/remove-routes disallowed routes))
+        datestamp (util/format-datestamp (util/now :datetime-map))]
+    (log/debug "Disallowed prefixes:" disallowed)
+    (log/trace "Allowed routes:" (keys allowed-routes))
     (xml/emit-str
      (xml/sexp-as-element
-      (urlset datestamp routes)))))
+      (urlset datestamp allowed-routes)))))

@@ -102,7 +102,7 @@
   (let [route "/blog/sitemap.xml"]
     (merge
       routes
-      {route (sitemapper/gen routes)})))
+      {route (sitemapper/gen system routes)})))
 
 (defn routes
   [system posts]
