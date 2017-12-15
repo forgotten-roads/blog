@@ -41,6 +41,10 @@
       :posts-path "/blog/archives"
       :posts-path-src "./posts"
       :feed-count 20
+      :blocks {
+        :enabled #{
+          "article-body-ads"
+          "article-sidebar-comments-links"}}
       :cli {
         :log-level :info
         :log-nss [mx.roads]}
