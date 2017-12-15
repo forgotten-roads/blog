@@ -1,2 +1,5 @@
 User-agent: *
 Allow: /blog/
+Disallow: /blog/data
+Disallow: /blog/maps
+Disallow: /blog/design
