@@ -6,7 +6,7 @@ TOP_DASHED='-h -v --help --version'
 TOP_HELP='new show share'
 NEW_LEVEL='post help'
 POST_LEVEL='md clj edn html rfc5322 help'
-SHOW_LEVEL='config post metadata help'
+SHOW_LEVEL='config port posts metadata help'
 SHARE_LEVEL='subscribers twitter all'
 
 _frmx () {
@@ -55,6 +55,6 @@ _frmx () {
     return 0
 }
 
-complete -F _frmx -o filenames frmx
-complete -F _frmx -o filenames ./bin/frmx
+complete -F _frmx frmx
+complete -F _frmx ./bin/frmx
 #

@@ -3,6 +3,7 @@
             [clojusc.twig :as logger]
             [dragon.config.core :as config]
             [dragon.util :as util]
+            [mx.roads.forgotten.blog.cli.show.posts :as show-posts]
             [taoensso.timbre :as log]
             [trifl.docs :as docs])
   (:refer-clojure :exclude [meta]))
@@ -22,6 +23,7 @@
     port            Display the HTTP port configuration
     metadata        Display the metadata for all posts
     metadata POST   Display the metadata for a given blog post
+    posts           List the posts for the blog
   ```"
   [system [cmd & args]]
   (log/debug "Got cmd:" cmd)
@@ -30,6 +32,7 @@
     :all (pprint (:config system))
     :port (pprint  (config/port system))
     :metadata ;(if-let [post (first args)]
-              (println "\nCurrently this operation is not supported.\n")
+              (println "\nCurrently this operation is not yet supported.\n")
+    :posts (show-posts/run system)
     :help (docs/print-docstring #'run)
     (pprint (:config system))))
