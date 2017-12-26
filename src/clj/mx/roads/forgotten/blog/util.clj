@@ -1,10 +1,13 @@
 (ns mx.roads.forgotten.blog.util
-  (:require [clojure.java.io :as io]
-            [clojure.string :as string]
-            [dragon.blog.content.core :as content]
-            [taoensso.timbre :as log]
-            [trifl.fs :as fs])
-  (:import (java.io ByteArrayInputStream)))
+  (:require
+    [clojure.java.io :as io]
+    [clojure.string :as string]
+    [dragon.blog.content.core :as content]
+    [taoensso.timbre :as log]
+    [trifl.fs :as fs])
+  (:import
+    (java.io
+      ByteArrayInputStream)))
 
 (defn zip
   [& colls]

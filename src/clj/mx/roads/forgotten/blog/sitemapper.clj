@@ -1,9 +1,11 @@
 (ns mx.roads.forgotten.blog.sitemapper
-  (:require [clojure.data.xml :as xml]
-            [clojusc.twig :refer [pprint]]
-            [dragon.config.core :as config]
-            [dragon.util :as util]
-            [taoensso.timbre :as log]))
+  (:require
+    [clojure.data.xml :as xml]
+    [clojusc.twig :refer [pprint]]
+    [dragon.config.core :as config]
+    [dragon.util :as util]
+    [taoensso.timbre :as log]
+    [trifl.xml :as xml-util]))
 
 (defn url
   [datestamp route]
@@ -25,6 +27,7 @@
         datestamp (util/format-datestamp (util/now :datetime-map))]
     (log/debug "Disallowed prefixes:" disallowed)
     (log/trace "Allowed routes:" (keys allowed-routes))
-    (xml/emit-str
-     (xml/sexp-as-element
-      (urlset datestamp allowed-routes)))))
+    (xml-util/pretty-xml
+     (xml/emit-str
+      (xml/sexp-as-element
+       (urlset datestamp allowed-routes))))))
