@@ -34,6 +34,7 @@
     [ltest.core :as ltest]
     [markdown.core :as md]
     [mx.roads.forgotten.blog.cli.core :as cli]
+    [mx.roads.forgotten.blog.cli.show.posts :as cli-show-posts]
     [mx.roads.forgotten.blog.components.system :as system]
     [mx.roads.forgotten.blog.core :as core]
     [mx.roads.forgotten.blog.email.content :as email-content]
@@ -181,6 +182,10 @@
                    (post/get-data processor)
                    :text))
          (pprint))))
+
+(defn show-posts
+  []
+  (cli-show-posts/run system))
 
 (defn generate
   []

@@ -29,7 +29,8 @@
 (defn print-posts
   [system]
   (doseq [post (get-posts system)]
-    (println (format-post post))))
+    (println (format-post post)))
+  :ok)
 
 (defn run
   [system]
