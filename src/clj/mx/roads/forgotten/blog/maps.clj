@@ -8,7 +8,7 @@
 (def map-style-file (str default-data-path "google-map-styles.json"))
 (def kml-extension ".kml")
 (def html-extension ".html")
-(def revision 7)
+(def revision 8)
 
 (defn get-kml-files
   ([]
