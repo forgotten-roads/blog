@@ -10,7 +10,7 @@ Comments:
 Content-Type: selmer,md
 Public?: true
 
-This is our first post in the category of "Forgotten Road". Today's road
+This is our first post in the category of _Forgotten Road_ . Today's road
 weaves along two lakes that form part of the border between South Dakota
 and Minnesota: MN-7 starting in Ortonville and MN-27 ending in Wheaton.
 
@@ -45,6 +45,7 @@ and Minnesota: MN-7 starting in Ortonville and MN-27 ending in Wheaton.
                 :src "https://c1.staticflickr.com/5/4646/39392904811_f075f3a7b8_o.png" %}
 {% end-panel %}
 
+
 ## The First Forgotten Road
 
 Even though this is the first post, it's actually the second forgotten road
@@ -62,6 +63,7 @@ and fall that you can't see more than a mile ahead, shoulders unmown,
 grass-filled cracks in the roads, not a car or house to be seen for miles:
 just the thunder of the motorcycle, the wind blowing across the prairie, and
 the sun making everything shine with life.
+
 
 ## About the Ecoregions
 
