@@ -1,5 +1,15 @@
 {% extends "templates/base.html" %}
 
+{% block page-title %}
+  {{ post-data.title }}
+  {% block page-subtitle %}
+  {% if post-data.subtitle %}
+    {{ post-data.subtitle }}
+  {% endif %}
+  {% endblock %}
+  🛣 FRMX Blog
+{% endblock %}
+
 {% block google-ad-setup %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
