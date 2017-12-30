@@ -24,7 +24,8 @@ here are the steps you'll want to follow:
       </LineStyle>
     </Style>
 ```
-   * As a child element of the `Placemark` tag, add the following:
+   * As a child element of the `Placemark` tag (sibling to the `LineString`
+     tag), add the following:
 ```html
 <styleUrl>#lineColor</styleUrl>
 ```
