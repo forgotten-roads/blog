@@ -1,0 +1,152 @@
+Subject: MN-7 & MN-27
+Subtitle: A Forgotten Road
+Header-Image: img/fr-mn7mn27-hdr.jpg
+Excerpt:
+From: oubiwann
+Twitter: oubiwann
+Category: Forgotten Road
+Keywords: minnesota,south dakota,lakes,rivers,gis,arcgis,maps
+Comments:
+Content-Type: selmer,md
+Public?: true
+
+This is our first post in the category of "Forgotten Road". Today's road
+weaves along two lakes that form part of the border between South Dakota
+and Minnesota: MN-7 starting in Ortonville and MN-27 ending in Wheaton.
+
+{% panel :class "route-summary" %}
+   {% panel-table :title "Day Summary" %}
+      {% panel-row :title "Start:" %}
+        [Ortonville, MN](https://en.wikipedia.org/wiki/Ortonville,_Minnesota)
+      {% end-panel-row %}
+      {% panel-row :title "End:" %}
+        [Wheaton, MN](https://en.wikipedia.org/wiki/Wheaton,_Minnesota)
+      {% end-panel-row %}
+      {% panel-row :title "Distance:" %}
+        58 mi (94 km)
+      {% end-panel-row %}
+      {% panel-row :title "Qualities:" %}
+        Some nice curves just after Ortonville
+
+        Good views over the lakes
+
+        Great burgers at [Headwaters Grill & Bar](https://goo.gl/pZECGS) in Ortonville
+      {% end-panel-row %}
+      {% panel-row :title "Ecoregions:" %}
+        Level III: Northern Glaciated Plains & Lake Agassiz Plain
+
+        Level IV: Tewaukon/Big Stone Stagnation Moraine & Glacial Lake Agassiz Basin
+      {% end-panel-row %}
+      {% panel-row :title "Photo Album:" %}
+        [Forgotten Road: MN-7 & MN-27](https://www.flickr.com/photos/forgottenroadsmx/albums/72157662110839767/) (Flickr)
+      {% end-panel-row %}
+   {% end-panel-table %}
+   {% panel-img :title "Route Map"
+                :src "https://c1.staticflickr.com/5/4646/39392904811_f075f3a7b8_o.png" %}
+{% end-panel %}
+
+## The First Forgotten Road
+
+Even though this is the first post, it's actually the second forgotten road
+we identified. The first forgotten road -- and the one that helped form the
+seed of Forgotten Roads MX -- is truly forgotten. It lies somewhere in the
+middle of this map, south-west of Sioux Falls, SD:
+
+{% flickr-img :photo-id 38515045015
+              :album-id 72157662110839767
+              :user forgottenroadsmx
+              :width 2048 %}
+
+It was the most unassuming road you ever saw: very straight, just enough rise
+and fall that you can't see more than a mile ahead, shoulders unmown,
+grass-filled cracks in the roads, not a car or house to be seen for miles:
+just the thunder of the motorcycle, the wind blowing across the prairie, and
+the sun making everything shine with life.
+
+## About the Ecoregions
+
+In the post we did for the
+[last day of the Beartooth Pass trip](/blog/archives/2017-07/16-192353/beartooth-run-2017.html),
+we included views of the ecoregions we went through. Since then, we've become
+obsessed with land data and considering it as part of every ride :-)
+
+As part of that, we've discovered a new tool: the ArcGIS web viewer.
+This platform provides a view of
+[US Level III and IV Ecoregions](https://www.arcgis.com/home/webmap/viewer.html?webmap=a550ce1ee2614125b35e522d7ab69770) with zoomable,
+customizable maps. Part of this includes letting you add your own layers ...
+needless to say, we've started adding our planned motorcycle routes and
+Spotwalla GIS data to their maps :-)
+
+Here's a shot of the US Level III and Level IV ecoregions in their map
+viewer:
+
+{% flickr-img :photo-id 24527842327
+              :album-id 72157662110839767
+              :user forgottenroadsmx
+              :width 371 %}
+{% flickr-img :photo-id 38685328924
+              :album-id 72157662110839767
+              :user forgottenroadsmx
+              :width 371 %}
+
+The ArcGIS map also has 12 different base maps you can choose from, which is
+nice:
+
+{% flickr-img :photo-id 24527800657
+              :album-id 72157662110839767
+              :user forgottenroadsmx
+              :width 2048 %}
+
+After uploading the forgotten road route, it was time to play!
+
+The base maps that let us see the roads most easily were "Terrain with Labels",
+"USGS Nation Map", and "National Geographic". Respectively:
+
+{% flickr-img :photo-id 24527801607
+              :album-id 72157684801453550
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 38515425225
+              :album-id 72157684801453550
+              :user forgottenroadsmx
+              :width 244 %}
+{% flickr-img :photo-id 39363212162
+              :album-id 72157684801453550
+              :user forgottenroadsmx
+              :width 244 %}
+
+Their "Open Streetmap" base map layer was also great for this ... but it was
+bumped from the top three by the good-looking "National Geographic".
+
+Next, we selected just the Level III and then just the Level IV ecoregion
+layers to see what riders go through:
+
+{% flickr-img :photo-id 38515424295
+              :album-id 72157662110839767
+              :user forgottenroadsmx
+              :width 371 %}
+{% flickr-img :photo-id 24527800697
+              :album-id 72157662110839767
+              :user forgottenroadsmx
+              :width 371 %}
+
+That may look a little monotonous, but since the views open up through the
+trees fairly often, you can see off into the distance into the west, across
+the lakes. So in addition to the regions listed in the panel above, you also
+get to see Minnesota River Prairie, Prairie Coteau Escarpment, Prairie Coteau,
+and maybe even a bit of Big Sioux Basin.
+
+## Final Thoughts
+
+Our rides there were pre-GoPro purchase, so there's no photos to share, but we
+did go through Ortonville once during the 2016 harvest on the day they were
+having their corn festival -- that was quite a blast! Well worth the pause in
+riding for a taste of local colour.
+
+In 2017, a buddy from the Sioux Falls H.O.G. chapter and I did this ride as
+part of the [Dam Ride](/blog/archives/2017-06/15-223122/dam-ride-2017.html)
+on our way to Fargo, ND.
+
+Both times it was an enjoyable segment of the journey -- a highlight in each
+case. No big thrills, just a pleasant ride in beautiful countryside with some
+water views and nice roads. &#x1F6E3;
