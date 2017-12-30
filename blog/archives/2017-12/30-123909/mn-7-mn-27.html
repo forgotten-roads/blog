@@ -50,46 +50,45 @@
     
     
 <!-- General Metadata (per-page) -->
-<meta name="author" content="bobbermac">
+<meta name="author" content="oubiwann">
 
 <!-- Dublic Core Metadata (per-page) -->
-<meta name="DC.title" lang="en" content="Working with KML and GeoJSON Files">
-<meta name="DC.creator" content="bobbermac">
-<meta name="DC.subject" content="Software">
-<meta name="DC.date" content="2017-07-01">
-<meta name="DC.identifier" scheme="DCTERMS.URI" content="http://forgotten.roads.mx/blog/archives/2017-07/01-123850/working-with-kml-and-geojson-files.html">
-<meta name="DCTERMS.abstract" content="Converting File Formats for Online GPS Services">
+<meta name="DC.title" lang="en" content="MN-7 &amp; MN-27">
+<meta name="DC.creator" content="oubiwann">
+<meta name="DC.subject" content="Forgotten Road">
+<meta name="DC.date" content="2017-12-30">
+<meta name="DC.identifier" scheme="DCTERMS.URI" content="http://forgotten.roads.mx/blog/archives/2017-12/30-123909/mn-7-mn-27.html">
+<meta name="DCTERMS.abstract" content="A Forgotten Road">
 
 <!-- Facebook's OpenGraph Metadata -->
 <meta property="og:site_name" content="Forgotten Roads MX">
-<meta property="og:title" content="Working with KML and GeoJSON Files">
-<meta property="og:url" content="http://forgotten.roads.mx/blog/archives/2017-07/01-123850/working-with-kml-and-geojson-files.html">
+<meta property="og:title" content="MN-7 &amp; MN-27">
+<meta property="og:url" content="http://forgotten.roads.mx/blog/archives/2017-12/30-123909/mn-7-mn-27.html">
 <meta property="og:type" content="blog">
-<meta property="og:description" content="Converting File Formats for Online GPS Services">
-<meta property="og:image" content="http://forgotten.roads.mx/blog/img/gis-beartooth-topo.jpg">
-<meta property="article:author" content="bobbermac">
-<meta property="article:published_time" content="2017-07-01 12:38:50">
-<meta property="article:modified_time" content="2017-11-19 15:59:45">
-<meta property="og:updated_time" content="2017-11-19 15:59:45">
-<meta property="article:section" content="Software">
-<meta property="article:tag" content="data">
-<meta property="article:tag" content="formats">
+<meta property="og:description" content="A Forgotten Road">
+<meta property="og:image" content="http://forgotten.roads.mx/blog/img/fr-mn7mn27-hdr.jpg">
+<meta property="article:author" content="oubiwann">
+<meta property="article:published_time" content="2017-12-30 12:39:09">
+<meta property="article:modified_time" content="2017-12-30 15:51:36">
+<meta property="og:updated_time" content="2017-12-30 15:51:36">
+<meta property="article:section" content="Forgotten Road">
+<meta property="article:tag" content="arcgis">
 <meta property="article:tag" content="gis">
-<meta property="article:tag" content="howtos">
-<meta property="article:tag" content="json">
-<meta property="article:tag" content="kml">
-<meta property="article:tag" content="services">
-<meta property="article:tag" content="technical">
+<meta property="article:tag" content="lakes">
+<meta property="article:tag" content="maps">
+<meta property="article:tag" content="minnesota">
+<meta property="article:tag" content="rivers">
+<meta property="article:tag" content="south dakota">
 
 
 <!-- Twitter Card Metadata -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site:id" content="@ForgottenRdsMX">
-<meta name="twitter:creator:id" content="@bobbermacean">
-<meta name="twitter:title" content="Working with KML and GeoJSON Files">
-<meta name="twitter:url" content="http://forgotten.roads.mx/blog/archives/2017-07/01-123850/working-with-kml-and-geojson-files.html">
-<meta name="twitter:description" content="<p>As anyone familiar (not me) with geographic information systems (or "GIS") data can tell you, working with the multitude of data formats, versions of those ...</p>">
-<meta name="twitter:image" content="http://forgotten.roads.mx/blog/img/gis-beartooth-topo.jpg">
+<meta name="twitter:creator:id" content="@oubiwann">
+<meta name="twitter:title" content="MN-7 &amp; MN-27">
+<meta name="twitter:url" content="http://forgotten.roads.mx/blog/archives/2017-12/30-123909/mn-7-mn-27.html">
+<meta name="twitter:description" content="<p>This is our first post in the category of "Forgotten Road". Today's road weaves along two lakes that form part of the border between South ...</p>">
+<meta name="twitter:image" content="http://forgotten.roads.mx/blog/img/fr-mn7mn27-hdr.jpg">
 
     
     
@@ -274,25 +273,21 @@
           <div class="blog-post">
             <div class="page-header">
               
-                <img src="/blog/img/gis-beartooth-topo.jpg" />
+                <img src="/blog/img/fr-mn7mn27-hdr.jpg" />
               
-              <h2 class="blog-post-title">Working with KML and GeoJSON Files</h2>
+              <h2 class="blog-post-title">MN-7 &amp; MN-27</h2>
               
-              <h3 class="blog-post-subtitle">Converting File Formats for Online GPS Services</h3>
+              <h3 class="blog-post-subtitle">A Forgotten Road</h3>
               
               <div class="blog-post-meta">
-                <p class="date">July
-                                01,
+                <p class="date">December
+                                30,
                                 2017</p>
-                <p class="author">by <a href="/blog/authors/#bobbermac">bobbermac</a></p>
+                <p class="author">by <a href="/blog/authors/#oubiwann">oubiwann</a></p>
                 
               </div>
             </div>
-            <p>As anyone familiar (not me) with geographic information systems (or "GIS") data can tell you, working with the multitude of data formats, versions of those formats, data entry errors, and inconsistencies, makes GIS data processing a pretty time-consuming task. We've just tried to do very simple things, and it has taken us a few days to get things sorted.</p><p>Right now at Forgotten Roads, we're evaluating software and data services for use in motorcycle adventure trips. We think we've got a good selection, at least for a first run or two. But before we go into any details on that, we wanted to provide a prelude blog post that can be a head-start for the eager reader and something that we can reference in later posts.</p><p>Below we'll give a super-quick overview of the main geospatial file formats used by mapping and routes services, and then show you how to work with these files (something that will be very useful when you want to start doing interesting things with your ride routes).</p><h3>File Formats</h3><h4>KML</h4><p>Thanks to Google's ubiquity in so much of the tech world, <code>.kml</code> files (KML stands for "Keyhole Markup Language") are quite popular. <a href='https://en.wikipedia.org/wiki/Keyhole_Markup_Language'>KML</a> is a type of <a href='https://en.wikipedia.org/wiki/XML'>XML</a> developed by the company Keyhole, Inc., which specialized in geospatial visualization software. Google bought them in 2004 and turned their product "Earth Viewer" into "Google Earth".</p><p>There are several versions of this markup language:</p><ul><li>Version 2.1 - The last one produced by Google &ndash; this version is still widely used</li><li>Version 2.2 - The first KML version that was submitted to the   <a href='https://en.wikipedia.org/wiki/Open_Geospatial_Consortium'>Open Geospatial Consortium</a> (OGC) in 2007</li><li>2.3 - Published by the OGC in 2015</li></ul><p>Most of what we see is still version 2.1.</p><p>Really, the thing you need to know about KML is that, among the many, many things that it does, it can specify "traces" or "tracks" (very simple geospatial data, sometimes as little as just latitude and longitude values). The visual routes you see on mapping services like "Google Maps" can be represented in KML files that have this simple data.</p><h4>GeoJSON</h4><p>With the increasing popularity of KML in the mid-2000s, the nearly industry-wide distaste for XML, and rapidly growing adoption of JSON as a preferred human-readable data representation format, a working group for a <a href='https://en.wikipedia.org/wiki/JSON'>JSON</a>-based geospatial data format was begun in 2007. This gave the world GeoJSON. Then, in 2015, a working group was founded at the <a href='https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force'>IETF</a> for GeoJSON, which led to an <a href='https://tools.ietf.org/html/rfc7946'>RFC</a>.</p><p>We've been using this format a fair amount, too &ndash; not directly, but because other tools or services we are using work with it.</p><h4>GPX</h4><p>The last format we'll mention is <a href='https://en.wikipedia.org/wiki/GPS_Exchange_Format'>GPX</a>. We're not making use of any data in this format, but would remiss if we didn't mention it.</p><p>Based upon XML, it was created around the same times as KML and stands for "GPS Exchange Format". In continues to enjoy a great deal of popularity.</p><h3>Converting</h3><p>Okay, now that we have that boring stuff out of the way, we can talk about MORE BORING STUFF! How do I move from one to the other?</p><h4>Validating KML</h4><p>The first thing to keep in mind is that you may download a KML file from a service that has not provided the data fully to spec. Or they may be using an ever older version (and calling it a newer version). This is something that you can check, if you find that services are not letting you upload these KML files.</p><p>For instance, if you download a KML file, open it up and check the version number. You should see a line near the top something like the following:</p><pre><code>&lt;kml xmlns=&quot;http://earth.google.com/kml/2.1&quot;&gt;
-</code></pre><p>The version number is there at the end. KML is an XML format, and XML file formats are defined with schemas. A quick internet search or two turns up the location for the KML version 2.1 schema here:</p><ul><li><a href='https://developers.google.com/kml/schema/kml21.xsd'>https://developers.google.com/kml/schema/kml21.xsd</a>.</li></ul><p> (Here are versions <a href='http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd'>2.2</a> and <a href='http://schemas.opengis.net/kml/2.3/ogckml23.xsd'>2.3</a>).</p><p>We'll use a command-line tool running in a terminal window for this next bit. The command we'll run is <code>xmllint</code>. If you have a recent version of Mac OS X with developer tools installed, <code>xmllint</code> will already be on  your machine. If you are running something like Ubuntu, you may already have <code>libxml2-utils</code> installed (which includes <code>xmllint</code>). Here's how you check that the formatting of the KML file is correct:</p><pre><code>$ xmllint --schema &#126;/Downloads/kml21.xsd &#126;/Downloads/track.kml
-</code></pre><p>We downloaded a KML file from <a href='https://spotwalla.com/'>SpotWalla</a> and found that this command failed on that file. We had to open it up and change a line from this:</p><pre><code>&lt;altitudeMode&gt;relative&lt;/altitudeMode&gt;
-</code></pre><p>to this:</p><pre><code>&lt;altitudeMode&gt;relativeToGround&lt;/altitudeMode&gt;
-</code></pre><h4>KML -> GeoJSON</h4><p>Probably the easiest way to convert a KML file you have downloaded to GeoJSON is to upload it to the "MyGeodata Converter" service:</p><ul><li><a href='https://mygeodata.cloud/converter/kml-to-geojson'>https://mygeodata.cloud/converter/kml-to-geojson</a></li></ul><p>Simply browse for your file when you hit the button, then hit "Continue". Once your file uploads, you'll be asked to set any options (the defaults are fine for most cases; we haven't needed to adjust them yet). Then hit the "Convert now!" button, and a <code>.zip</code> file will download, which you can open up and extract your new <code>.geojson</code> file.</p><p>The same site offers <a href='https://mygeodata.cloud/converter/geojson-to-gpx'>a GPX converter</a>, should you need that.</p><h3>Other Tools</h3><p>We've tried each of the following other tools but they either didn't work for our files or the functionality provided was not quite what we needed. However, they do seem to have a good user following and may be useful for you, so we'll share some links:</p><ul><li><a href='http://merkaartor.be/'>Merkaartor</a> - a mapping program that can be used with  <a href='https://en.wikipedia.org/wiki/OpenStreetMap'>OpenStreetMap</a>; it offers some  import capabilities</li><li><a href='https://www.google.com/earth/download/gep/agree.html'>Google Earth Pro</a> -  Google now provides the "pro" version of their Google Earth software for  free. This is now considered an outdated version; the supported one is the  new Chrome-only Google Earth 9 (released in 2017).</li><li><a href='http://www.gpsvisualizer.com/map_input?form=googleearth'>GPS Visualizer</a> -  only used it once, but it seems pretty good.</li><li>KMLCSV - maybe we were doing it wrong, but I wouldn't even bother with this  one ...</li></ul><h3>Next Up</h3><p>Before too long, you should be seeing another FRMX post about how we use the services that use KML and GeoJSON ... ! &#x1F6E3;</p>
+            <p>This is our first post in the category of "Forgotten Road". Today's road weaves along two lakes that form part of the border between South Dakota and Minnesota: MN-7 starting in Ortonville and MN-27 ending in Wheaton.</p><p><div class="panel panel-default route-summary"> <div class="panel-heading"><h3 class="panel-title">Day Summary</h3></div><div class="panel-body"><form class="form-horizontal"> <div class="form-group"><label for="panel-row" class="col-sm-3 control-label">Start:</label><div id="panel-row" class="col-sm-9"><p><a href='https://en.wikipedia.org/wiki/Ortonville,_Minnesota'>Ortonville, MN</a></p></div></div> <div class="form-group"><label for="panel-row" class="col-sm-3 control-label">End:</label><div id="panel-row" class="col-sm-9"><p><a href='https://en.wikipedia.org/wiki/Wheaton,_Minnesota'>Wheaton, MN</a></p></div></div> <div class="form-group"><label for="panel-row" class="col-sm-3 control-label">Distance:</label><div id="panel-row" class="col-sm-9"><p>58 mi (94 km)</p></div></div> <div class="form-group"><label for="panel-row" class="col-sm-3 control-label">Qualities:</label><div id="panel-row" class="col-sm-9"><p>Some nice curves just after Ortonville</p><p>Good views over the lakes</p><p>Great burgers at <a href='https://goo.gl/pZECGS'>Headwaters Grill & Bar</a> in Ortonville</p></div></div> <div class="form-group"><label for="panel-row" class="col-sm-3 control-label">Ecoregions:</label><div id="panel-row" class="col-sm-9"><p>Level III: Northern Glaciated Plains & Lake Agassiz Plain</p><p>Level IV: Tewaukon/Big Stone Stagnation Moraine & Glacial Lake Agassiz Basin</p></div></div> <div class="form-group"><label for="panel-row" class="col-sm-3 control-label">Photo Album:</label><div id="panel-row" class="col-sm-9"><p><a href='https://www.flickr.com/photos/forgottenroadsmx/albums/72157662110839767/'>Forgotten Road: MN-7 & MN-27</a> (Flickr)</p></div></div> </form></div> <div class="panel-heading"><h3 class="panel-title">Route Map</h3></div><div class="panel-body" style="padding:0; margin: 0"><img src="https://c1.staticflickr.com/5/4646/39392904811_f075f3a7b8_o.png"></div></div></p><h2>The First Forgotten Road</h2><p>Even though this is the first post, it's actually the second forgotten road we identified. The first forgotten road &ndash; and the one that helped form the seed of Forgotten Roads MX &ndash; is truly forgotten. It lies somewhere in the middle of this map, south-west of Sioux Falls, SD:</p><p><a href="https://www.flickr.com/photos/forgottenroadsmx/38515045015/in/album-72157662110839767"><img src="https://farm5.staticflickr.com/4680/38515045015_4ac258eb18_k.jpg" style="width:2048px;height:auto;"></a></p><p>It was the most unassuming road you ever saw: very straight, just enough rise and fall that you can't see more than a mile ahead, shoulders unmown, grass-filled cracks in the roads, not a car or house to be seen for miles: just the thunder of the motorcycle, the wind blowing across the prairie, and the sun making everything shine with life.</p><h2>About the Ecoregions</h2><p>In the post we did for the <a href='/blog/archives/2017-07/16-192353/beartooth-run-2017.html'>last day of the Beartooth Pass trip</a>, we included views of the ecoregions we went through. Since then, we've become obsessed with land data and considering it as part of every ride :-)</p><p>As part of that, we've discovered a new tool: the ArcGIS web viewer. This platform provides a view of <a href='https://www.arcgis.com/home/webmap/viewer.html?webmap=a550ce1ee2614125b35e522d7ab69770'>US Level III and IV Ecoregions</a> with zoomable, customizable maps. Part of this includes letting you add your own layers ... needless to say, we've started adding our planned motorcycle routes and Spotwalla GIS data to their maps :-)</p><p>Here's a shot of the US Level III and Level IV ecoregions in their map viewer:</p><p><a href="https://www.flickr.com/photos/forgottenroadsmx/24527842327/in/album-72157662110839767"><img src="https://farm5.staticflickr.com/4590/24527842327_fdd6ccd394_n.jpg" style="width:371px;height:auto;"></a> <a href="https://www.flickr.com/photos/forgottenroadsmx/38685328924/in/album-72157662110839767"><img src="https://farm5.staticflickr.com/4691/38685328924_3eb8dd16f2_n.jpg" style="width:371px;height:auto;"></a></p><p>The ArcGIS map also has 12 different base maps you can choose from, which is nice:</p><p><a href="https://www.flickr.com/photos/forgottenroadsmx/24527800657/in/album-72157662110839767"><img src="https://farm5.staticflickr.com/4590/24527800657_8e6037812b_b.jpg" style="width:2048px;height:auto;"></a></p><p>After uploading the forgotten road route, it was time to play!</p><p>The base maps that let us see the roads most easily were "Terrain with Labels", "USGS Nation Map", and "National Geographic". Respectively:</p><p><a href="https://www.flickr.com/photos/forgottenroadsmx/24527801607/in/album-72157684801453550"><img src="https://farm5.staticflickr.com/4690/24527801607_0db6f35f32_m.jpg" style="width:244px;height:auto;"></a> <a href="https://www.flickr.com/photos/forgottenroadsmx/38515425225/in/album-72157684801453550"><img src="https://farm5.staticflickr.com/4679/38515425225_f2fdb1cbe7_m.jpg" style="width:244px;height:auto;"></a> <a href="https://www.flickr.com/photos/forgottenroadsmx/39363212162/in/album-72157684801453550"><img src="https://farm5.staticflickr.com/4598/39363212162_fe6d120790_m.jpg" style="width:244px;height:auto;"></a></p><p>Their "Open Streetmap" base map layer was also great for this ... but it was bumped from the top three by the good-looking "National Geographic".</p><p>Next, we selected just the Level III and then just the Level IV ecoregion layers to see what riders go through:</p><p><a href="https://www.flickr.com/photos/forgottenroadsmx/38515424295/in/album-72157662110839767"><img src="https://farm5.staticflickr.com/4639/38515424295_70d936694a_n.jpg" style="width:371px;height:auto;"></a> <a href="https://www.flickr.com/photos/forgottenroadsmx/24527800697/in/album-72157662110839767"><img src="https://farm5.staticflickr.com/4738/24527800697_73a1a5271f_n.jpg" style="width:371px;height:auto;"></a></p><p>That may look a little monotonous, but since the views open up through the trees fairly often, you can see off into the distance into the west, across the lakes. So in addition to the regions listed in the panel above, you also get to see Minnesota River Prairie, Prairie Coteau Escarpment, Prairie Coteau, and maybe even a bit of Big Sioux Basin.</p><h2>Final Thoughts</h2><p>Our rides there were pre-GoPro purchase, so there's no photos to share, but we did go through Ortonville once during the 2016 harvest on the day they were having their corn festival &ndash; that was quite a blast! Well worth the pause in riding for a taste of local colour.</p><p>In 2017, a buddy from the Sioux Falls H.O.G. chapter and I did this ride as part of the <a href='/blog/archives/2017-06/15-223122/dam-ride-2017.html'>Dam Ride</a> on our way to Fargo, ND.</p><p>Both times it was an enjoyable segment of the journey &ndash; a highlight in each case. No big thrills, just a pleasant ride in beautiful countryside with some water views and nice roads. &#x1F6E3;</p>
             
             
           </div>
@@ -301,7 +296,7 @@
           <div class="row">
             <div class="col-xs-6">
               
-              <a href="/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html">
+              <a href="/blog/archives/2017-12/26-164149/winter-dreams.html">
                 <i class="fa fa-arrow-circle-o-left fa-2x"
                    aria-hidden="true"></i>
               </a>
@@ -310,10 +305,8 @@
 
             <div class="col-xs-6 text-right">
               
-              <a href="/blog/archives/2017-07/06-193659/beartooth-run-2017.html">
-                <i class="fa fa-arrow-circle-o-right fa-2x"
+                <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
                    aria-hidden="true"></i>
-              </a>
               
             </div>
           </div>
@@ -333,7 +326,7 @@
             </header>
             <div class="body">
               <p>
-                <a href="/blog/categories/#Software">Software</a>
+                <a href="/blog/categories/#Forgotten Road">Forgotten Road</a>
               </p>
             </div>
           </div>
@@ -346,11 +339,7 @@
               <ul>
                 
                 <li>
-                  <a href="/blog/tags/#data">data</a>
-                </li>
-                
-                <li>
-                  <a href="/blog/tags/#formats">formats</a>
+                  <a href="/blog/tags/#arcgis">arcgis</a>
                 </li>
                 
                 <li>
@@ -358,23 +347,23 @@
                 </li>
                 
                 <li>
-                  <a href="/blog/tags/#howtos">howtos</a>
+                  <a href="/blog/tags/#lakes">lakes</a>
                 </li>
                 
                 <li>
-                  <a href="/blog/tags/#json">json</a>
+                  <a href="/blog/tags/#maps">maps</a>
                 </li>
                 
                 <li>
-                  <a href="/blog/tags/#kml">kml</a>
+                  <a href="/blog/tags/#minnesota">minnesota</a>
                 </li>
                 
                 <li>
-                  <a href="/blog/tags/#services">services</a>
+                  <a href="/blog/tags/#rivers">rivers</a>
                 </li>
                 
                 <li>
-                  <a href="/blog/tags/#technical">technical</a>
+                  <a href="/blog/tags/#south dakota">south dakota</a>
                 </li>
                 
               </ul>
@@ -403,7 +392,7 @@
               <div class="row">
                 <div class="col-xs-6">
                   
-                  <a href="/blog/archives/2017-06/29-115623/beartooth-run-fargo-h-o-g-.html">
+                  <a href="/blog/archives/2017-12/26-164149/winter-dreams.html">
                     <i class="fa fa-arrow-circle-o-left fa-2x"
                        aria-hidden="true"></i>
                   </a>
@@ -411,10 +400,8 @@
                 </div>
                 <div class="col-xs-6">
                   
-                  <a href="/blog/archives/2017-07/06-193659/beartooth-run-2017.html">
-                    <i class="fa fa-arrow-circle-o-right fa-2x"
+                    <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
                        aria-hidden="true"></i>
-                  </a>
                   
                 </div>
               </div>
@@ -426,9 +413,9 @@
               <h3>Post Data</h3>
             </header>
             <div class="body">
-              <p>Lines: 121</p>
-              <p>Words: 1047</p>
-              <p>Characters: 6748</p>
+              <p>Lines: 114</p>
+              <p>Words: 771</p>
+              <p>Characters: 5645</p>
               </p>
             </div>
           </div>
