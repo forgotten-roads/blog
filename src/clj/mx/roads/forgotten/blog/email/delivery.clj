@@ -1,10 +1,11 @@
 (ns mx.roads.forgotten.blog.email.delivery
-  (:require [clojure.java.io :as io]
-            [mx.roads.forgotten.blog.email.content :as email-content]
-            [mx.roads.forgotten.blog.util :as util]
-            [postal.core :as postal]
-            [taoensso.timbre :as log]
-            [trifl.fs :as fs]))
+  (:require
+    [clojure.java.io :as io]
+    [mx.roads.forgotten.blog.email.content :as email-content]
+    [mx.roads.forgotten.blog.util :as util]
+    [postal.core :as postal]
+    [taoensso.timbre :as log]
+    [trifl.fs :as fs]))
 
 (def to "FRMX New Post Announcements <frmx-new-posts@googlegroups.com>")
 (def from "FRMX Blog Updates <blog-updates@forgotten.roads.mx>")

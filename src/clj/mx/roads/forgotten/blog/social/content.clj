@@ -1,13 +1,14 @@
 (ns mx.roads.forgotten.blog.social.content
-  (:require [clojure.java.io :as io]
-            [clojure.data.generators :as generators]
-            [clojusc.twig :refer [pprint]]
-            [dragon.blog.content.core :as content]
-            [dragon.blog.core :as blog]
-            [dragon.selmer.core :refer [render]]
-            [mx.roads.forgotten.blog.web.content.data :as data]
-            [taoensso.timbre :as log]
-            [trifl.fs :as fs]))
+  (:require
+    [clojure.java.io :as io]
+    [clojure.data.generators :as generators]
+    [clojusc.twig :refer [pprint]]
+    [dragon.blog.content.core :as content]
+    [dragon.blog.core :as blog]
+    [dragon.selmer.core :refer [render]]
+    [mx.roads.forgotten.blog.web.content.data :as data]
+    [taoensso.timbre :as log]
+    [trifl.fs :as fs]))
 
 (def new-post-file "new-post.txt")
 

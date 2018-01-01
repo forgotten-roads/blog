@@ -1,13 +1,14 @@
 (ns mx.roads.forgotten.blog.cli.core
-  (:require [dragon.config.core :as config]
-            [dragon.event.system.core :as event]
-            [dragon.event.tag :as tag]
-            [mx.roads.forgotten.blog.cli.new :as new]
-            [mx.roads.forgotten.blog.cli.show :as show]
-            [mx.roads.forgotten.blog.cli.share :as share]
-            [mx.roads.forgotten.blog.core :as core]
-            [taoensso.timbre :as log]
-            [trifl.docs :as docs]))
+  (:require
+    [dragon.config.core :as config]
+    [dragon.event.system.core :as event]
+    [dragon.event.tag :as tag]
+    [mx.roads.forgotten.blog.cli.new :as new]
+    [mx.roads.forgotten.blog.cli.show :as show]
+    [mx.roads.forgotten.blog.cli.share :as share]
+    [mx.roads.forgotten.blog.core :as core]
+    [taoensso.timbre :as log]
+    [trifl.docs :as docs]))
 
 (defn run
   "

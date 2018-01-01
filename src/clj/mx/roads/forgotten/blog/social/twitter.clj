@@ -1,13 +1,14 @@
 (ns mx.roads.forgotten.blog.social.twitter
-  (:require [clojure.java.io :as io]
-            [dragon.blog.content.core :as content]
-            [dragon.config.core :as config]
-            [mx.roads.forgotten.blog.social.content :as social-content]
-            [mx.roads.forgotten.blog.util :as util]
-            [taoensso.timbre :as log]
-            [trifl.fs :as fs]
-            [twitter.api.restful :as twitter]
-            [twitter.oauth :as oath]))
+  (:require
+    [clojure.java.io :as io]
+    [dragon.blog.content.core :as content]
+    [dragon.config.core :as config]
+    [mx.roads.forgotten.blog.social.content :as social-content]
+    [mx.roads.forgotten.blog.util :as util]
+    [taoensso.timbre :as log]
+    [trifl.fs :as fs]
+    [twitter.api.restful :as twitter]
+    [twitter.oauth :as oath]))
 
 (def screen-name "ForgottenRdsMX")
 

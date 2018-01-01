@@ -1,23 +1,25 @@
 (ns mx.roads.forgotten.blog.social.google-plus
-  (:require [clojure.data.json :as json]
-            [clojure.java.io :as io]
-            [clojure.string :as string]
-            [dragon.blog.content.core :as content]
-            [mx.roads.forgotten.blog.social.content :as social-content]
-            [mx.roads.forgotten.blog.util :as util]
-            [taoensso.timbre :as log]
-            [trifl.fs :as fs])
-  (:import (com.google.api.client.googleapis.auth.oauth2 GoogleCredential)
-           (com.google.api.client.googleapis.auth.oauth2 GoogleCredential$Builder)
-           (com.google.api.client.http HttpTransport)
-           (com.google.api.client.http.javanet NetHttpTransport)
-           (com.google.api.client.json JsonFactory)
-           (com.google.api.client.json.jackson2 JacksonFactory)
-           (com.google.api.services.plusDomains PlusDomains)
-           (com.google.api.services.plusDomains PlusDomains$Builder)
-           (com.google.api.services.plusDomains.model
-             Acl Activity Activity$PlusDomainsObject Person
-             PlusDomainsAclentryResource)))
+  (:require
+    [clojure.data.json :as json]
+    [clojure.java.io :as io]
+    [clojure.string :as string]
+    [dragon.blog.content.core :as content]
+    [mx.roads.forgotten.blog.social.content :as social-content]
+    [mx.roads.forgotten.blog.util :as util]
+    [taoensso.timbre :as log]
+    [trifl.fs :as fs])
+  (:import
+    (com.google.api.client.googleapis.auth.oauth2 GoogleCredential)
+    (com.google.api.client.googleapis.auth.oauth2 GoogleCredential$Builder)
+    (com.google.api.client.http HttpTransport)
+    (com.google.api.client.http.javanet NetHttpTransport)
+    (com.google.api.client.json JsonFactory)
+    (com.google.api.client.json.jackson2 JacksonFactory)
+    (com.google.api.services.plusDomains PlusDomains)
+    (com.google.api.services.plusDomains PlusDomains$Builder)
+    (com.google.api.services.plusDomains.model
+     Acl Activity Activity$PlusDomainsObject Person
+     PlusDomainsAclentryResource)))
 
 (def app-name "Google+ Blog Updates")
 (def community-id "111725368799664699976")

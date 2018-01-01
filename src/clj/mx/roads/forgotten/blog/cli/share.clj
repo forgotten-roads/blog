@@ -1,12 +1,13 @@
 (ns mx.roads.forgotten.blog.cli.share
-  (:require [clojure.pprint :refer [pprint]]
-            [clojusc.twig :as logger]
-            [dragon.config.core :as config]
-            [dragon.util :as util]
-            [mx.roads.forgotten.blog.email.delivery :as email-delivery]
-            [mx.roads.forgotten.blog.social.twitter :as twitter]
-            [taoensso.timbre :as log]
-            [trifl.docs :as docs]))
+  (:require
+    [clojure.pprint :refer [pprint]]
+    [clojusc.twig :as logger]
+    [dragon.config.core :as config]
+    [dragon.util :as util]
+    [mx.roads.forgotten.blog.email.delivery :as email-delivery]
+    [mx.roads.forgotten.blog.social.twitter :as twitter]
+    [taoensso.timbre :as log]
+    [trifl.docs :as docs]))
 
 (defn run
   "

@@ -23,12 +23,12 @@
     [org.clojure/clojure]
     [org.clojure/clojurescript]]
   :dependencies [
+    [clojusc/trifl "0.3.0-SNAPSHOT"]
     [dragon "0.5.0-SNAPSHOT"]
     [org.clojure/clojure "1.8.0"]
     [org.clojure/data.generators "0.1.2"]
     [org.clojure/data.xml "0.0.8"]
-    [org.clojure/math.combinatorics "0.1.4"]
-    [clojusc/trifl "0.3.0-SNAPSHOT"]]
+    [org.clojure/math.combinatorics "0.1.4"]]
   :source-paths ["src/clj"]
   :profiles {
     :dragon {

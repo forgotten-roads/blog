@@ -1,7 +1,8 @@
 (ns mx.roads.forgotten.blog.web.content.page
-  (:require [dragon.selmer.core :refer [render]]
-            [dragon.util :as util]
-            [mx.roads.forgotten.blog.web.content.data :as data]))
+  (:require
+    [dragon.selmer.core :refer [render]]
+    [dragon.util :as util]
+    [mx.roads.forgotten.blog.web.content.data :as data]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Static Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

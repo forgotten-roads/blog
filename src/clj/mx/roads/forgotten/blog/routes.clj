@@ -7,16 +7,17 @@
      dynamically.
    * Since the posts have already been generated and saved to disc, their
      routes should be generated dynamically as URI path / slurp call pairs."
-  (:require [clojusc.twig :refer [pprint]]
-            [dragon.blog.core :as blog]
-            [dragon.config.core :as config]
-            [dragon.event.system.core :as event]
-            [dragon.event.tag :as tag]
-            [mx.roads.forgotten.blog.maps :as maps]
-            [mx.roads.forgotten.blog.reader :as reader]
-            [mx.roads.forgotten.blog.sitemapper :as sitemapper]
-            [mx.roads.forgotten.blog.web.content.page :as page]
-            [taoensso.timbre :as log]))
+  (:require
+    [clojusc.twig :refer [pprint]]
+    [dragon.blog.core :as blog]
+    [dragon.config.core :as config]
+    [dragon.event.system.core :as event]
+    [dragon.event.tag :as tag]
+    [mx.roads.forgotten.blog.maps :as maps]
+    [mx.roads.forgotten.blog.reader :as reader]
+    [mx.roads.forgotten.blog.sitemapper :as sitemapper]
+    [mx.roads.forgotten.blog.web.content.page :as page]
+    [taoensso.timbre :as log]))
 
 (defn static-routes
   ([system posts]

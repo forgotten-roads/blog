@@ -1,10 +1,11 @@
 (ns mx.roads.forgotten.blog.cli.new
-  (:require [clojure.pprint :refer [pprint]]
-            [clojusc.twig :as logger]
-            [dragon.util :as util]
-            [mx.roads.forgotten.blog.cli.new.post :as post]
-            [taoensso.timbre :as log]
-            [trifl.docs :as docs]))
+  (:require
+    [clojure.pprint :refer [pprint]]
+    [clojusc.twig :as logger]
+    [dragon.util :as util]
+    [mx.roads.forgotten.blog.cli.new.post :as post]
+    [taoensso.timbre :as log]
+    [trifl.docs :as docs]))
 
 (defn run
   "
