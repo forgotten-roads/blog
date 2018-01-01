@@ -1,11 +1,12 @@
 (ns mx.roads.forgotten.blog.cli.show
-  (:require [clojure.pprint :refer [pprint]]
-            [clojusc.twig :as logger]
-            [dragon.config.core :as config]
-            [dragon.util :as util]
-            [mx.roads.forgotten.blog.cli.show.posts :as show-posts]
-            [taoensso.timbre :as log]
-            [trifl.docs :as docs])
+  (:require
+    [clojure.pprint :refer [pprint]]
+    [clojusc.twig :as logger]
+    [dragon.cli.show.posts :as show-posts]
+    [dragon.config.core :as config]
+    [dragon.util :as util]
+    [taoensso.timbre :as log]
+    [trifl.docs :as docs])
   (:refer-clojure :exclude [meta]))
 
 (defn run
@@ -26,6 +27,7 @@
     posts           List the posts for the blog
   ```"
   [system [cmd & args]]
+  ()
   (log/debug "Got cmd:" cmd)
   (log/debug "Got args:" args)
   (case cmd
