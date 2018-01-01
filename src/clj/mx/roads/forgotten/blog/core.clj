@@ -22,6 +22,7 @@
   [system]
   (let [posts (dragon-core/generate system)
         generated-routes (gen-routes system posts)]
+    (gen/run system generated-routes)
     (email-content/gen system posts)
     (social-content/gen system posts)))
 
