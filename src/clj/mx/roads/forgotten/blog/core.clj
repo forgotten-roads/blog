@@ -4,6 +4,7 @@
     [dragon.blog.core :as blog]
     [dragon.blog.generator :as gen]
     [dragon.config.core :as config]
+    [dragon.core :as dragon-core]
     [dragon.util :as util]
     [mx.roads.forgotten.blog.email.content :as email-content]
     [mx.roads.forgotten.blog.routes :refer [gen-routes routes]]
@@ -19,9 +20,8 @@
 
 (defn generate
   [system]
-  (let [posts (blog/process system)
+  (let [posts (dragon-core/generate system)
         generated-routes (gen-routes system posts)]
-    (gen/run system generated-routes)
     (email-content/gen system posts)
     (social-content/gen system posts)))
 
